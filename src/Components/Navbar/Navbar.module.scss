@@ -1,0 +1,54 @@
+.container {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1920px;
+    max-height: 50px;
+    margin-left: 10px;
+    margin: 0 auto;
+    padding: 8px 25px 8px 25px;
+    
+};
+
+.logo   {
+    display: flex;
+    max-height: 50px;
+    flex-direction: row;
+    align-items: center;
+    
+    a {
+        margin-left: 5px;
+        font-family: montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        color: black;
+    }
+};
+
+.logo img {
+    display: flex;
+    max-height: 50px;
+}
+
+.linkContainer {
+    display: flex;
+    justify-content: space-between;
+    font-family: montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    color: black;
+    
+
+    h1 {
+        margin-right: 75px;
+    }
+};
+
+.searchIcon img {
+    color: black;
+    max-height: 50px; 
+};
+
