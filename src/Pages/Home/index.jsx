@@ -12,8 +12,7 @@ const HomeScreen = () => {
       </div>
       <div className={logo}>
         <div className={desc}>
-        <h1>IKATAN MAHASISWA</h1> 
-        <h1>GEODESI-ITB</h1>
+        <h1>IKATAN MAHASISWA GEODESI-ITB</h1>
         <p>blablablablablablabalbalbalbalbablal</p>
         </div>
         <img src={earth}/>

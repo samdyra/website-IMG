@@ -11,6 +11,7 @@
 
   h2 {
     margin: 0 ;
+    margin-left: 10px;
   }
 
   
@@ -34,9 +35,17 @@
 
 .desc {
   margin-top: 175px ;
+  margin-left: 10px;
+  padding: 0 auto;
+  margin-bottom: 20px;
    h1 {
-    font-size: 50px;
+    font-size: 75px;
+    max-width: 1000px;
+    margin-bottom: 20px;
+   }
 
+   p {
+    margin-left: 10px;
    }
 };
 
