@@ -3,7 +3,7 @@ import style from "./style.module.scss";
 
 const HomeScreen = () => {
   const { container } = style;
-  return <div className={container}>Website IMG</div>;
+  return <div></div>;
 };
 
 export default HomeScreen;
