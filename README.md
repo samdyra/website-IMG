@@ -2,3 +2,4 @@
 
 nambahin homepage
 index+scss
+ (belom selesai)
