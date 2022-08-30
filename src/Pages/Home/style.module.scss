@@ -1,9 +1,53 @@
 .container {
-  background-color: rgba(241, 120, 0, 0.904);
-  display: flex;
-  justify-content: center;
-  height: 60px;
-  font-size: 50px;
   margin: 0 auto;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  max-width: 1920px;
 };
+
+.welcome {
+  display: flex;
+  max-height: 30px;
+  margin-top: 5px;
+
+  h2 {
+    margin: 0 ;
+    margin-left: 10px;
+  }
+
+  
+};
+
+.logo img {
+  display: flex;
+  align-self: center;
+  height: auto;
+  width: 35%;
+  margin-right: 50px;
+  margin-bottom: 50px;
+};
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-grow: 100%;
+};
+
+.desc {
+  margin-top: 175px ;
+  margin-left: 10px;
+  padding: 0 auto;
+  margin-bottom: 20px;
+   h1 {
+    font-size: 75px;
+    max-width: 1000px;
+    margin-bottom: 20px;
+   }
+
+   p {
+    margin-left: 10px;
+   }
+};
+
+
+
