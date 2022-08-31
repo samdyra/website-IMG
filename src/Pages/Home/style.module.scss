@@ -1,8 +1,13 @@
-.container {
+.containerSection {
   margin: 0 auto;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  max-width: 1920px;
+  max-width: 1000x;
+  height: 700px;
+  border: solid black 3px;
+
 };
+
+
 
 .welcome {
   display: flex;
@@ -47,6 +52,45 @@
    p {
     margin-left: 10px;
    }
+};
+
+.judulSection2 {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  margin-top: 50px;
+
+  h1 {
+    font-size: 50px;
+  }
+
+};
+
+.descSection2 {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 150px;
+  margin-left: 150px;
+  margin-top: 75px;
+};
+
+.nilai {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-self: center;
+
+  h2 {
+    align-self: center;
+  }
+
+};
+
+.nilai img {
+  align-self: center;
+  height: auto;
+  width: 75%;
 };
 
 
