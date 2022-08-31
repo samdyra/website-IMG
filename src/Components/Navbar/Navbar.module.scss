@@ -9,6 +9,13 @@
     margin: 0 auto;
     padding: 8px 25px 8px 25px;
     border: solid black 2px;
+    position: sticky;
+    top: 0;
+
+    nav {
+            position: sticky;
+            top: 0;
+        }
     
 };
 

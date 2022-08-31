@@ -2,12 +2,24 @@ import React from 'react';
 import style from './Navbar.module.scss';
 import LogoIMG from '../../assets/images/LogoIMG.png';
 import searchicon from '../../assets/images/search-icon.png';
-
+import { useState } from 'react';
 
 const Navbar = () => {
  const { container, linkContainer, logo, searchIcon } = style;
+ const [ fix, setFix ] = useState(false);
+
+function setFixed() {
+    if (window.scrollY >= 392) {
+        setFix(true)
+    } else {
+        setFix(false)
+    }
+};
+
+window.addEventListener("scroll", setFixed)
+
   return (
-    <div className={ container }>
+    <nav className={ container }>
         <div className={ logo }>
             <img src={LogoIMG}/>
             <a>IMG-ITB</a>
@@ -20,7 +32,7 @@ const Navbar = () => {
         <div className={searchIcon}>
             <img src={searchicon}/>
         </div>
-    </div>
+    </nav>
   )
 };
 
