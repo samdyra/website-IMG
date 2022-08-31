@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./style.module.scss";
 import earth from '../../assets/images/earth.png';
+import diagram from '../../assets/images/diagram.png';
 
 
 const HomeScreen = () => {
@@ -12,7 +13,9 @@ const HomeScreen = () => {
     containerSection,
     judulSection2,
     descSection2,
-    nilai 
+    nilai,
+    judulSection3,
+    organogram 
   } = style;
   return (
     <div className={container}>
@@ -48,6 +51,14 @@ const HomeScreen = () => {
             <h2>Tujuan</h2>
             <p>blablablabla</p>
           </div>
+        </div>
+      </div>
+      <div className={containerSection}>
+        <div className={judulSection3} >
+          <h1>ORGANOGRAM BPH IMG-ITB GACOR</h1>
+        </div>
+        <div className={organogram}>
+          <img src={diagram}/>
         </div>
       </div>
     </div>
