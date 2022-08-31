@@ -19,6 +19,7 @@ const HomeScreen = () => {
   } = style;
   return (
     <div className={container}>
+
       <div className={containerSection}>
       <div className={welcome}>
         <h2>Welcome to IMG-ITB Official Website</h2>
@@ -31,6 +32,7 @@ const HomeScreen = () => {
         <img src={earth}/>
       </div>
       </div>
+
       <div className={containerSection}>
         <div className={judulSection2}>
           <h1>Asas, Sifat, dan Tujuan IMG-ITB</h1>
@@ -53,6 +55,7 @@ const HomeScreen = () => {
           </div>
         </div>
       </div>
+
       <div className={containerSection}>
         <div className={judulSection3} >
           <h1>ORGANOGRAM BPH IMG-ITB GACOR</h1>
@@ -61,6 +64,22 @@ const HomeScreen = () => {
           <img src={diagram}/>
         </div>
       </div>
+
+      <div className={containerSection}>
+        <div className={judulSection2}>
+          <h1>What's on IMG-ITB</h1>
+        </div>
+        <div>
+
+        </div>
+      </div>
+
+      <div className={containerSection}>
+        <div className={judulSection2}>
+          <h1>Our Delightful Moments</h1>
+        </div>
+      </div>
+      
     </div>
   );
 };
