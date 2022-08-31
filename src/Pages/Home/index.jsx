@@ -19,7 +19,7 @@ const HomeScreen = () => {
   } = style;
   return (
     <div className={container}>
-
+      
       <div className={containerSection}>
       <div className={welcome}>
         <h2>Welcome to IMG-ITB Official Website</h2>
@@ -79,7 +79,7 @@ const HomeScreen = () => {
           <h1>Our Delightful Moments</h1>
         </div>
       </div>
-      
+
     </div>
   );
 };
