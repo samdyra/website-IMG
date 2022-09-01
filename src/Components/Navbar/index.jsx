@@ -31,7 +31,9 @@ window.addEventListener("scroll", setFixed)
             <Link to='/Activities'>
             Activities
             </Link>
-            <Dropdown/>
+            <Link to='/Pojokimg'>
+            Pojokimg
+            </Link>
             <Dropdown/>
         </div>
         <div className={searchIcon}>
