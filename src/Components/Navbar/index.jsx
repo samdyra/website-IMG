@@ -3,6 +3,8 @@ import style from './Navbar.module.scss';
 import LogoIMG from '../../assets/images/LogoIMG.png';
 import searchicon from '../../assets/images/search-icon.png';
 import { useState } from 'react';
+import Dropdown from '../Dropdown';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
  const { container, linkContainer, logo, searchIcon } = style;
@@ -19,20 +21,24 @@ function setFixed() {
 window.addEventListener("scroll", setFixed)
 
   return (
+    <>
     <nav className={ container }>
         <div className={ logo }>
             <img src={LogoIMG}/>
             <a>IMG-ITB</a>
         </div>
         <div className={linkContainer}>
-            <h1>Activities</h1>
-            <h1>Karya</h1>
-            <h1>Pojok</h1>
+            <Link to='/Activities'>
+            Activities
+            </Link>
+            <Dropdown/>
+            <Dropdown/>
         </div>
         <div className={searchIcon}>
             <img src={searchicon}/>
         </div>
     </nav>
+    </>
   )
 };
 
