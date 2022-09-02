@@ -37,12 +37,11 @@ let menuName = "activities";
             <Link className={link} to='/Activities'>
             Activities
             </Link>
+            <Dropdown menuName="activities" />
+            <Dropdown menuName="karya" />
             <Link className={link} to='/Pojokimg'>
             Pojokimg
             </Link>
-            <Dropdown menuName="karya" />
-            <Dropdown menuName="activities" />
-            <Dropdown menuName="pojokimg" />
         </div>
         <div className={searchIcon}>
             <img src={searchicon}/>

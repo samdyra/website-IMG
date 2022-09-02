@@ -7,32 +7,42 @@ const Dropdown = (props) => {
 
   return (
     <div className={dropdown}>
-      <button className={dropbtn}>
+      
         { menuName == "activities" ?
-        (  
-        <Link to='/'>
-          Activities
-          </Link>
+        (
+          <>
+            <button className={dropbtn}>  
+              <Link to='/'>
+              Activities
+              </Link>
+            </button>
+            <div className={dropdowncontent}>
+              <a href="#">Internal Event</a>
+              <a href="#">Parade Wisuda</a>
+              <a href="#">Student Chapter</a>
+              <a href="#">Kabar Kesenatoran</a>
+            </div>
+        </>
+
           )
           :menuName == "karya" ?   
           (
-          <Link to='/'>
-          Karya
-          </Link>
+          <>
+            <button className={dropbtn}>  
+              <Link to='/'>
+              Karya
+              </Link>
+            </button>
+            <div className={dropdowncontent}>
+              <a href="#">Georeference</a>
+              <a href="#">Locus</a>
+              <a href="#">Geosphere</a>
+              <a href="#">IMG-X</a>
+            </div>
+          </>
           )
-          :
-          (
-          <Link to='/'>
-          pojok img
-          </Link>
-          )
+          :null
         }
-      </button>
-      <div className={dropdowncontent}>
-        <a href="#">prop</a>
-        <a href="#">prop</a>
-        <a href="#">prop</a>
-      </div>
     </div>
   );
 };
