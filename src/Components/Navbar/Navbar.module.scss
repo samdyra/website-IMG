@@ -1,5 +1,5 @@
 .container {
-    background-color: white;
+    background-color: #4B8579;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,19 +19,36 @@
     
 };
 
+.logotext {
+    display:flex;
+    flex-direction: column;
+}
+
 .logo   {
     display: flex;
     max-height: 50px;
     flex-direction: row;
     align-items: center;
-    
+    text-decoration: none;
+    margin-left: 50px;
+
     a {
         margin-left: 5px;
         font-family: montserrat;
         font-style: normal;
+        font-weight: 100;
+        font-size: 5px;
+        color: white;
+    }
+     h1 {
+        margin-left: 5px;
+        font-family: montserrat;
+        font-style: bold;
         font-weight: 600;
         font-size: 20px;
-        color: black;
+        color: white;
+        margin-bottom: -3px;
+        margin-top: -3px;
     }
 };
 
@@ -50,11 +67,20 @@
     color: black;
     align-self: center;
     border: solid black 2px;
+    margin-right: 135px;
+    
+    
 
     Dropdown + Dropdown {
         margin-left: 20px;
     }
 };
+
+.link {
+    color: white;
+    text-decoration: none;
+    
+}
 
 .searchIcon img {
     color: black;

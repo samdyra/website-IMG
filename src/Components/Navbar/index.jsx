@@ -7,7 +7,7 @@ import Dropdown from '../Dropdown';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
- const { container, linkContainer, logo, searchIcon } = style;
+ const { container, linkContainer, logo, searchIcon, link, logotext } = style;
  const [ fix, setFix ] = useState(false);
 
 function setFixed() {
@@ -24,16 +24,20 @@ window.addEventListener("scroll", setFixed)
     <>
     <nav className={ container }>
         <div>
-            <Link className={ logo } to='/'>
+            <Link  className={ logo } to='/'>
             <img src={LogoIMG}/>
-            <a>IMG-ITB</a>
+            <div className={logotext}>
+            <h1>IMG-ITB</h1>
+            <a>Ikatan Mahasiswa Geodesi</a>
+            <a>Institut Teknologi Bandung</a>
+            </div>
             </Link>
         </div>
         <div className={linkContainer}>
-            <Link to='/Activities'>
+            <Link className={link} to='/Activities'>
             Activities
             </Link>
-            <Link to='/Pojokimg'>
+            <Link className={link} to='/Pojokimg'>
             Pojokimg
             </Link>
             <Dropdown/>
