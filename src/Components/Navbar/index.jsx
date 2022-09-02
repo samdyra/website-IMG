@@ -23,9 +23,11 @@ window.addEventListener("scroll", setFixed)
   return (
     <>
     <nav className={ container }>
-        <div className={ logo }>
+        <div>
+            <Link className={ logo } to='/'>
             <img src={LogoIMG}/>
             <a>IMG-ITB</a>
+            </Link>
         </div>
         <div className={linkContainer}>
             <Link to='/Activities'>
