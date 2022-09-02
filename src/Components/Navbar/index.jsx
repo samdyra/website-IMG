@@ -19,7 +19,7 @@ function setFixed() {
 };
 
 window.addEventListener("scroll", setFixed)
-
+let menuName = "activities";
   return (
     <>
     <nav className={ container }>
@@ -40,7 +40,9 @@ window.addEventListener("scroll", setFixed)
             <Link className={link} to='/Pojokimg'>
             Pojokimg
             </Link>
-            <Dropdown/>
+            <Dropdown menuName="karya" />
+            <Dropdown menuName="activities" />
+            <Dropdown menuName="pojokimg" />
         </div>
         <div className={searchIcon}>
             <img src={searchicon}/>
