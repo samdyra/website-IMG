@@ -40,7 +40,9 @@ let menuName = "activities";
             <Dropdown menuName="activities" />
             <Dropdown menuName="karya" />
             <Link className={link} to='/Pojokimg'>
-            Pojokimg
+            <h1>
+                Pojok IMG
+            </h1>
             </Link>
         </div>
         <div className={searchIcon}>

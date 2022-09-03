@@ -12,9 +12,9 @@ const Dropdown = (props) => {
         (
           <>
             <button className={dropbtn}>  
-              <Link to='/'>
+              <h1>
               Activities
-              </Link>
+              </h1>
             </button>
             <div className={dropdowncontent}>
               <a href="#">Internal Event</a>
@@ -29,9 +29,9 @@ const Dropdown = (props) => {
           (
           <>
             <button className={dropbtn}>  
-              <Link to='/'>
+              <h1>
               Karya
-              </Link>
+              </h1>
             </button>
             <div className={dropdowncontent}>
               <a href="#">Georeference</a>
