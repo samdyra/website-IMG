@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./style.module.scss";
 
-const Activities = () => {
+const Internalevent = () => {
     const { 
     containerSection,
     box1,
@@ -51,4 +51,4 @@ const Activities = () => {
     );
 };
 
-export default Activities;
+export default Internalevent;

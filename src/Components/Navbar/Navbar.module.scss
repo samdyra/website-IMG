@@ -1,9 +1,14 @@
 .container {
     background-color: #4B8579;
+    max-height: 70px;
+
+    
+};
+
+.content{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1920px;
     max-height: 50px;
     margin-left: 10px;
     margin: 0 auto;
@@ -11,16 +16,16 @@
     border: solid black 2px;
     position: sticky;
     top: 0;
+    max-width:  1280px; ;
 
     @media screen and (max-width: 418px) {
-        max-width: 368px;
-    }
-
-    nav {
+            max-width: 368px;
+        }
+    
+        nav {
             position: sticky;
             top: 0;
         }
-    
 };
 
 .logotext {

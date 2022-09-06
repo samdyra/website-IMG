@@ -17,7 +17,7 @@ const Dropdown = (props) => {
               </h1>
             </button>
             <div className={dropdowncontent}>
-              <a href="#">Internal Event</a>
+              <a href="/Internalevent">Internal Event</a>
               <a href="#">Parade Wisuda</a>
               <a href="#">Student Chapter</a>
               <a href="#">Kabar Kesenatoran</a>

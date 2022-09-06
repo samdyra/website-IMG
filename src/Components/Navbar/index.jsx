@@ -7,7 +7,7 @@ import Dropdown from '../Dropdown';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
- const { container, linkContainer, logo, searchIcon, link, logotext } = style;
+ const { container, linkContainer, logo, searchIcon, link, logotext, content } = style;
  const [ fix, setFix ] = useState(false);
 
 function setFixed() {
@@ -23,6 +23,7 @@ let menuName = "activities";
   return (
     <>
     <nav className={ container }>
+        <div className={content}>
         <div>
             <Link  className={ logo } to='/'>
             <img src={LogoIMG}/>
@@ -34,9 +35,6 @@ let menuName = "activities";
             </Link>
         </div>
         <div className={linkContainer}>
-            <Link className={link} to='/Activities'>
-            Activities
-            </Link>
             <Dropdown menuName="activities" />
             <Dropdown menuName="karya" />
             <Link className={link} to='/Pojokimg'>
@@ -47,6 +45,7 @@ let menuName = "activities";
         </div>
         <div className={searchIcon}>
             <img src={searchicon}/>
+        </div>
         </div>
     </nav>
     </>
