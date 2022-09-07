@@ -16,6 +16,18 @@ function App() {
       <Footer/>
     </Router>
   );
-}
+};
+
+const clearCacheData = () => {
+    caches.keys().then((names) => {
+      names.forEach((name) => {
+        caches.delete(name);
+      });
+    });
+    alert('Complete Cache Cleared')
+  };
+  
+  clearCacheData();
+  console.log( clearCacheData())
 
 export default App;
