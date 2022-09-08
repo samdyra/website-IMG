@@ -9,7 +9,10 @@ function App() {
       <Navbar/>
         <Routes>
           <Route path="/" element={<HomeScreen />}></Route>
-          <Route path="/KaryaScreen" element={<KaryaScreen />}></Route>
+          <Route path="/Karya/IMGx" element={<KaryaScreen pageName="IMGX"/>}></Route>
+          <Route path="/Karya/Georeference" element={<KaryaScreen pageName="georeference"/>}></Route>
+          <Route path="/Karya/Locus" element={<KaryaScreen pageName="locus"/>}></Route>
+          <Route path="/Karya/Geosphere" element={<KaryaScreen pageName="geosphere"/>}></Route>
           <Route path="/Internalevent" element={<Internalevent/>}></Route>
           <Route path="/Pojokimg" element={<Pojokimg/>}></Route>
         </Routes>

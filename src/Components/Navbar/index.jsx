@@ -23,6 +23,7 @@ let menuName = "activities";
   return (
     <>
     <nav className={ container }>
+        
         <div className={content}>
         <div>
             <Link  className={ logo } to='/'>
@@ -34,6 +35,7 @@ let menuName = "activities";
             </div>
             </Link>
         </div>
+
         <div className={linkContainer}>
             <Dropdown menuName="activities" />
             <Dropdown menuName="karya" />
@@ -43,6 +45,7 @@ let menuName = "activities";
             </h1>
             </Link>
         </div>
+
         <div className={searchIcon}>
             <img src={searchicon}/>
         </div>

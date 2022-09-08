@@ -1,17 +1,29 @@
-import { NULL } from "node-sass";
+
 import React from "react";
+import style from "./style.module.scss"
 
-const KaryaScreen = () => {
-
-const {pageName} = props.pageName;
+const KaryaScreen = (props) => {
+const { 
+    container,
+    desc, 
+    logo, 
+    welcome, 
+    containerSection,
+    judulSection2,
+    descSection2,
+    nilai,
+    judulSection3,
+    organogram 
+  } = style;
+const pageName = props.pageName;
 
   return( 
-  <>
+  <div>
     {pageName == 'georeference' ?
     (
       <div>
 
-        <div>
+        <div className={containerSection}>
           <div>
             <h3>Majalah Ilmiah</h3>
             <h1>Georeference</h1>
@@ -37,8 +49,7 @@ const {pageName} = props.pageName;
     </div>
     ) :pageName == 'locus' ?
     (
-      <div>
-
+      <div className={containerSection}>
         <div>
           <div>
             <h3>Majalah Internal</h3>
@@ -60,11 +71,11 @@ const {pageName} = props.pageName;
           list majalah
         </div>
       </div>
-
     </div>
+
     ):pageName == 'geosphere' ?
     (
-      <div>
+      <div className={containerSection}>
 
         <div>
           <div>
@@ -89,11 +100,11 @@ const {pageName} = props.pageName;
       </div>
 
     </div>
-    ):pageName == 'IMGX' ?
+    ):pageName == "IMGX" ?
     (
-      <div>
+      <div className={container}>
 
-        <div>
+        <div className={containerSection}>
           <div>
             <h1>IMGx</h1>
             <h3>Colaboration Project</h3>
@@ -103,13 +114,13 @@ const {pageName} = props.pageName;
         </div>
         </div>
 
-      <div>
+      <div className={containerSection}>
         <div>
           list majalah
         </div>
       </div>
 
-      <div>
+      <div className={containerSection}>
         <div>
           list majalah
         </div>
@@ -120,7 +131,7 @@ const {pageName} = props.pageName;
 
     };
   
-  </>
+  </div>
   );
 };
 
