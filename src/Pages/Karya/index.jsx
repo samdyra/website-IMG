@@ -21,7 +21,7 @@ const pageName = props.pageName;
   <div>
     {pageName == 'georeference' ?
     (
-      <div>
+      <div className={container}>
 
         <div className={containerSection}>
           <div>
@@ -34,23 +34,25 @@ const pageName = props.pageName;
         </div>
         </div>
 
-      <div>
+      <div className={containerSection}>
         <div>
           list paper
         </div>
       </div>
 
-      <div>
+      <div className={containerSection}>
         <div>
           list paper
         </div>
       </div>
 
     </div>
+
     ) :pageName == 'locus' ?
     (
-      <div className={containerSection}>
-        <div>
+      <div className={container}>
+
+        <div className={containerSection}>
           <div>
             <h3>Majalah Internal</h3>
             <h1>LOCUS</h1>
@@ -60,24 +62,25 @@ const pageName = props.pageName;
         </div>
         </div>
 
-      <div>
+      <div className={containerSection}>
         <div>
           list majalah
         </div>
       </div>
 
-      <div>
+      <div className={containerSection}>
         <div>
           list majalah
         </div>
       </div>
+
     </div>
 
     ):pageName == 'geosphere' ?
     (
-      <div className={containerSection}>
+      <div className={container}>
 
-        <div>
+        <div className={containerSection}>
           <div>
             <h3>Majalah Keprofesian</h3>
             <h1>GEOSPHERE</h1>
@@ -87,13 +90,13 @@ const pageName = props.pageName;
         </div>
         </div>
 
-      <div>
+      <div className={containerSection}>
         <div>
           list majalah
         </div>
       </div>
 
-      <div>
+      <div className={containerSection}>
         <div>
           list majalah
         </div>

@@ -17,10 +17,10 @@ const Dropdown = (props) => {
               </h1>
             </button>
             <div className={dropdowncontent}>
-              <a href="/Internalevent">Internal Event</a>
-              <a href="#">Parade Wisuda</a>
-              <a href="#">Student Chapter</a>
-              <a href="#">Kabar Kesenatoran</a>
+              <a href="/Activities/InternalEvent">Internal Event</a>
+              <a href="/Activities/ParadeWisuda">Parade Wisuda</a>
+              <a href="/Activities/StudentChapter">Student Chapter</a>
+              <a href="/Activities/KabarkeSenatoran">Kabar Kesenatoran</a>
             </div>
         </>
 
