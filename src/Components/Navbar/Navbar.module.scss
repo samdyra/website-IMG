@@ -1,6 +1,9 @@
 .container {
     background-color: #4B8579;
     max-height: 70px;
+    margin-right: 10px;
+    position: sticky;
+    top: 0;
 
     
 };
@@ -13,7 +16,6 @@
     margin-left: 10px;
     margin: 0 auto;
     padding: 8px 25px 8px 25px;
-    border: solid black 2px;
     position: sticky;
     top: 0;
     max-width:  1280px; ;
@@ -76,7 +78,6 @@
     font-size: 10px;
     color: black;
     align-self: center;
-    border: solid black 2px;
     margin-right: 135px;
     
     
@@ -87,8 +88,15 @@
 };
 
 .link {
-    color: white;
     text-decoration: none;
+    color: black;
+    font-size: 15px;
+    background-color: inherit;
+    font-family: sans-serif;
+    margin-top: 11px;
+    margin-left: 15px;
+    
+    
     
 }
 

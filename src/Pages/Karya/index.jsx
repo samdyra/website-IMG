@@ -17,6 +17,8 @@ const {
   } = style;
 const pageName = props.pageName;
 
+
+
   return( 
   <div>
     {pageName == 'georeference' ?
@@ -25,7 +27,7 @@ const pageName = props.pageName;
 
         <div className={containerSection}>
           <div>
-            <h3>Majalah Ilmiah</h3>
+            <h3>Majalah keprofesian</h3>
             <h1>Georeference</h1>
             <h2>Ikatan Mahasiswa Geodesi  ITB</h2>
           </div>
