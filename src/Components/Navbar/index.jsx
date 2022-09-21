@@ -2,25 +2,56 @@ import React from 'react';
 import style from './Navbar.module.scss';
 import LogoIMG from '../../assets/images/LogoIMG.png';
 import searchicon from '../../assets/images/search-icon.png';
-
+import { useState } from 'react';
+import Dropdown from '../Dropdown';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
- const { container, linkContainer, logo, searchIcon } = style;
+ const { container, linkContainer, logo, searchIcon, link, logotext, content } = style;
+ const [ fix, setFix ] = useState(false);
+
+function setFixed() {
+    if (window.scrollY >= 392) {
+        setFix(true)
+    } else {
+        setFix(false)
+    }
+};
+
+window.addEventListener("scroll", setFixed)
+let menuName = "activities";
   return (
-    <div className={ container }>
-        <div className={ logo }>
+    <>
+    <nav className={ container }>
+        
+        <div className={content}>
+        <div>
+            <Link  className={ logo } to='/'>
             <img src={LogoIMG}/>
-            <a>IMG-ITB</a>
+            <div className={logotext}>
+            <h1>IMG-ITB</h1>
+            <a>Ikatan Mahasiswa Geodesi</a>
+            <a>Institut Teknologi Bandung</a>
+            </div>
+            </Link>
         </div>
+
         <div className={linkContainer}>
-            <h1>Activities</h1>
-            <h1>Karya</h1>
-            <h1>Pojok</h1>
+            <Dropdown menuName="activities" />
+            <Dropdown menuName="karya" />
+            <Link className={link} to='/Pojokimg'>
+            <h1>
+                Pojok IMG
+            </h1>
+            </Link>
         </div>
+
         <div className={searchIcon}>
             <img src={searchicon}/>
         </div>
-    </div>
+        </div>
+    </nav>
+    </>
   )
 };
 
