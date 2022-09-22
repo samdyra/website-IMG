@@ -21,7 +21,7 @@ const Dropdown = (props) => {
               <a href="/Activities/ParadeWisuda">Parade Wisuda</a>
               <a href="/Activities/StudentChapter">Student Chapter</a>
               <a href="/Activities/KabarkeSenatoran">Kabar Kesenatoran</a>
-              <a href="#">GEOPOINT</a>
+              <a href="/Geopoint">GEOPOINT</a>
             </div>
         </>
 

@@ -15,8 +15,10 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-firebase-hooks": "^5.0.3",
+    "react-icons": "^4.4.0",
     "react-router-dom": "^6.3.0",
-    "sass": "^1.54.0"
+    "sass": "^1.54.0",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.15",

@@ -1,9 +1,11 @@
 import React from "react";
+import Carousel from "../../Components/Carousel/Carousel";
 
-const Geopoint = (props) => {
+const Geopoint = () => {
 
     return(
         <>
+        <Carousel/>
         </>
     )
 };

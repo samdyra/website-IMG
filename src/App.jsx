@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { HomeScreen, KaryaScreen,  Pojokimg, Activities } from "./Pages";
+import { HomeScreen, KaryaScreen,  Pojokimg, Activities, Geopoint } from "./Pages";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer/Footer";
 
@@ -17,6 +17,7 @@ function App() {
           <Route path="/Activities/ParadeWisuda" element={<Activities pageName="paradewisuda"/>}></Route>
           <Route path="/Activities/StudentChapter" element={<Activities pageName="studentchapter"/>}></Route>
           <Route path="/Activities/KabarkeSenatoran" element={<Activities pageName="kabarkesenatoran"/>}></Route>
+          <Route path="/Geopoint" element={<Geopoint/>}></Route>
           <Route path="/Pojokimg" element={<Pojokimg />}></Route>
         </Routes>
       <Footer/>
