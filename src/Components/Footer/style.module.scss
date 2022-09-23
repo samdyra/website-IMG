@@ -1,14 +1,24 @@
 .container {
   background-color: #4b8579;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  max-height: 200px;
   margin-left: 10px;
   margin: 0 auto;
   padding: 8px 25px 8px 25px;
   border: solid black 2px;
   flex-direction: column;
+}
+.container2 {
+  max-width: 1400px;
+}
+
+.contenttop {
+  display: flex;
+  align-items: center;
+  justify-self: start;
+  align-self: flex-start;
+  gap: 50px;
+  max-width: 1400px;
 }
 
 .content {
