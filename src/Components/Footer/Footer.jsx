@@ -34,17 +34,17 @@ const Footer = () => {
 
         <div className={content}>
           <div>
-            <h2>Connect With Us</h2>
+            <h1>Connect With Us</h1>
           </div>
           <div>
-            <h2>Aktivitas</h2>
+            <h1>Aktivitas</h1>
             <h3>Internal</h3>
             <h3>Wisuda IMG</h3>
             <h3>Geopoint</h3>
             <h3>Student Chapter</h3>
           </div>
           <div className={karya}>
-            <h2>Karya</h2>
+            <h1>Karya</h1>
             <h3>Georeference</h3>
             <h3>Locus</h3>
             <h3>Geosphere</h3>

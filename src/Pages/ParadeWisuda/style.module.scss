@@ -1,36 +1,31 @@
+.container {
+  background-color: white;
+}
+
 .containerSection {
   margin: 0 auto;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  max-width: 1600px;
+  max-width: 1280px;
   height: 800px;
-  z-index: 1;
+  border: solid black 3px;
 }
 
-.containerSectionKegiatan {
-  margin: 0 auto;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  max-width: 1600px;
-  height: 800px;
-  z-index: 1;
-  background-color: #4b8579;
+.box1 {
+  background-color: orange;
+  width: 500px;
+  height: 50px;
+  border: solid black 3px;
 }
 
-.containerSectionTop {
-  margin: 0 auto;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  max-width: 1600px;
-  height: 800px;
-  z-index: 1;
-  background-image: url("../../assets/images/background.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: white;
+.box2 {
+  background-color: orangered;
+  width: 500px;
+  height: 50px;
+  border: solid black 3px;
 }
 
 .welcome {
   display: flex;
-  z-index: 1;
   max-height: 30px;
   margin-top: 5px;
 
@@ -51,7 +46,6 @@
 
 .logo {
   display: flex;
-  z-index: 1;
   justify-content: space-between;
   align-content: center;
   flex-grow: 100%;
@@ -59,9 +53,10 @@
 
 .desc {
   margin-top: 175px;
-  margin-left: 150px;
+  margin-left: 10px;
   padding: 0 auto;
   margin-bottom: 20px;
+
   h1 {
     font-size: 75px;
     max-width: 1000px;
@@ -71,10 +66,6 @@
   p {
     margin-left: 10px;
   }
-
-  h2 {
-    margin-bottom: -50px;
-  }
 }
 
 .judulSection2 {
@@ -82,16 +73,9 @@
   align-self: center;
   justify-content: center;
   margin-top: 50px;
-  flex-direction: column;
-  align-items: center;
 
   h1 {
     font-size: 50px;
-  }
-
-  h3 {
-    text-align: center;
-    margin-top: -20px;
   }
 }
 

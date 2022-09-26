@@ -7,43 +7,32 @@ const Dropdown = (props) => {
 
   return (
     <div className={dropdown}>
-      
-        { menuName == "activities" ?
-        (
-          <>
-            <button className={dropbtn}>  
-              <h1>
-              Activities
-              </h1>
-            </button>
-            <div className={dropdowncontent}>
-              <a href="/Activities/InternalEvent">Internal Event</a>
-              <a href="/Activities/ParadeWisuda">Parade Wisuda</a>
-              <a href="/Activities/StudentChapter">Student Chapter</a>
-              <a href="/Activities/KabarkeSenatoran">Kabar Kesenatoran</a>
-              <a href="/Geopoint">GEOPOINT</a>
-            </div>
+      {menuName == "activities" ? (
+        <>
+          <button className={dropbtn}>
+            <h1>Activities</h1>
+          </button>
+          <div className={dropdowncontent}>
+            <a href="/InternalEvent">Internal Event</a>
+            <a href="/ParadeWisuda">Parade Wisuda</a>
+            <a href="/StudentChapter">Student Chapter</a>
+            <a href="/KabarkeSenatoran">Kabar Kesenatoran</a>
+            <a href="/Geopoint">GEOPOINT</a>
+          </div>
         </>
-
-          )
-          :menuName == "karya" ?   
-          (
-          <>
-            <button className={dropbtn}>  
-              <h1>
-              Karya
-              </h1>
-            </button>
-            <div className={dropdowncontent}>
-              <a href="/Karya/Georeference">Georeference</a>
-              <a href="/Karya/Locus">Locus</a>
-              <a href="/Karya/Geosphere">Geosphere</a>
-              <a href="/Karya/IMGx">IMG-X</a>
-            </div>
-          </>
-          )
-          :null
-        }
+      ) : menuName == "karya" ? (
+        <>
+          <button className={dropbtn}>
+            <h1>Karya</h1>
+          </button>
+          <div className={dropdowncontent}>
+            <a href="/Karya/Georeference">Georeference</a>
+            <a href="/Karya/Locus">Locus</a>
+            <a href="/Karya/Geosphere">Geosphere</a>
+            <a href="/Karya/IMGx">IMG-X</a>
+          </div>
+        </>
+      ) : null}
     </div>
   );
 };
