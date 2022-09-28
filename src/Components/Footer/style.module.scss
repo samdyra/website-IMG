@@ -1,12 +1,89 @@
 .container {
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1920px;
-    height: 200px;
-    margin-left: 10px;
-    margin: 0 auto;
-    padding: 8px 25px 8px 25px;
-    border: solid black 2px;
-};
+  background-color: #4b8579;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin: 0 auto;
+  padding: 8px 25px 8px 25px;
+  flex-direction: column;
+}
+.container2 {
+  max-width: 1400px;
+}
+
+.contenttop {
+  display: flex;
+  align-items: center;
+  justify-self: start;
+  align-self: flex-start;
+  gap: 50px;
+  max-width: 1400px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+  width: 100%;
+  color: white;
+  max-width: 1400px;
+}
+
+.karya {
+  margin-right: 100px;
+}
+
+.logotext {
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    color: white;
+  }
+}
+
+.logo {
+  display: flex;
+  max-height: 50px;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+
+  a {
+    margin-left: 5px;
+    font-family: montserrat;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 5px;
+    color: white;
+  }
+  h1 {
+    margin-left: 5px;
+    font-family: montserrat;
+    font-style: bold;
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+    margin-bottom: -3px;
+    margin-top: -3px;
+  }
+}
+
+.logo img {
+  display: flex;
+  max-height: 50px;
+}
+
+.bottom {
+  color: white;
+  border-top: white solid 2px;
+  width: 1400px;
+
+  h1 {
+    font-size: 20px;
+    align-content: center;
+    justify-self: center;
+    text-align: center;
+  }
+}
