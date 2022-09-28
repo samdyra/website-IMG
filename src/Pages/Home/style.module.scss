@@ -96,6 +96,10 @@
   }
 }
 
+.judulz {
+  // animation: fadeIn 3s
+}
+
 .judulSection2 {
   display: flex;
   align-self: center;
@@ -113,6 +117,11 @@
     text-align: center;
     margin-top: -20px;
   }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 .descSection2 {
