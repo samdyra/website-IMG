@@ -7,6 +7,7 @@ import { SliderData, SliderText } from "../../assets/object/SliderData";
 import Carousel from "../../Components/Carousel/Carousel";
 import Gallery from "../../Components/Slider";
 import { useState } from "react";
+import { useEffect } from "react";
 
 const HomeScreen = () => {
   const {
@@ -29,10 +30,20 @@ const HomeScreen = () => {
     desctujuan,
     descsifat,
     linetujuan,
+    judulz
   } = style;
 
   const [index, setIndex] = useState(0);
 
+  useEffect(() => {
+    let interval = setInterval(() => {
+        if (index != 2) {
+        return setIndex(index + 1)}
+        else return setIndex(0)
+    }, 3000); //each count lasts for a second
+
+    return () => clearInterval(interval);
+  }, [index]);
   return (
     <div className={container}>
       <div className={containerSectionTop}>
@@ -48,15 +59,15 @@ const HomeScreen = () => {
 
       <div className={containerSection2}>
         <div className={judulSection2}>
-          <h1 onClick={() => setIndex(0)}>Asas,</h1>
-          <h1 onClick={() => setIndex(1)}>Sifat,</h1>
+          <h1 style={index == 0 ? {borderBottom: "5px solid black", cursor: "pointer"} :  {cursor: "pointer"}} className={judulz} onClick={() => setIndex(0)}>Asas,</h1>
+          <h1 style={index == 1 ? {borderBottom: "5px solid black", cursor: "pointer"} :  {cursor: "pointer"}} onClick={() => setIndex(1)}>Sifat,</h1>
           <h1>dan</h1>
-          <h1 onClick={() => setIndex(2)}>Tujuan</h1>
+          <h1 style={index == 2 ? {borderBottom: "5px solid black", cursor: "pointer"} :  {cursor: "pointer"}} onClick={() => setIndex(2)}>Tujuan</h1>
           <h1>IMG-ITB</h1>
         </div>
         {index === 0 && (
           <>
-            <div className={descSection2}>
+            <div className={descSection2} style={{marginTop: "20px"}}>
               <h1>{SliderText[0].title}</h1>
               <p>{SliderText[0].desc}</p>
             </div>
