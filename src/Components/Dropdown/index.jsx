@@ -26,10 +26,10 @@ const Dropdown = (props) => {
             <h1>Karya</h1>
           </button>
           <div className={dropdowncontent}>
-            <a href="/Karya/Georeference">Georeference</a>
-            <a href="/Karya/Locus">Locus</a>
-            <a href="/Karya/Geosphere">Geosphere</a>
-            <a href="/Karya/IMGx">IMG-X</a>
+            <a href="/Georeference">Georeference</a>
+            <a href="/Locus">Locus</a>
+            <a href="/Geosphere">Geosphere</a>
+            <a href="/IMGx">IMG-X</a>
           </div>
         </>
       ) : null}
