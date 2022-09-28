@@ -1,16 +1,17 @@
 .container {
   background-color: #4b8579;
-  max-height: 70px;
+  max-height: 58px;
   position: sticky;
   top: 0;
+  z-index: 10;
+  justify-content: space-around;
 }
 
 .content {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   max-height: 50px;
-  margin-left: 10px;
   margin: 0 auto;
   padding: 8px 25px 8px 25px;
   position: sticky;
@@ -36,33 +37,25 @@
   display: flex;
   max-height: 50px;
   flex-direction: row;
-  align-items: center;
+  align-content: center;
   text-decoration: none;
-  margin-left: 50px;
+  margin-bottom: 5px;
 
-  a {
-    margin-left: 5px;
-    font-family: montserrat;
-    font-style: normal;
-    font-weight: 100;
-    font-size: 5px;
-    color: white;
-  }
   h1 {
     margin-left: 5px;
     font-family: montserrat;
     font-style: bold;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 10px;
     color: white;
     margin-bottom: -3px;
-    margin-top: -3px;
+    margin-top: 5px;
   }
 }
 
 .logo img {
   display: flex;
-  max-height: 50px;
+  max-height: 35px;
 }
 
 .linkContainer {
@@ -74,7 +67,6 @@
   font-size: 10px;
   color: white;
   align-self: center;
-  margin-right: 135px;
 
   Dropdown + Dropdown {
     margin-left: 20px;
@@ -84,11 +76,18 @@
 .link {
   text-decoration: none;
   color: white;
-  font-size: 15px;
+  font-size: 10px;
   background-color: inherit;
   font-family: sans-serif;
-  margin-top: 11px;
+  align-self: center;
   margin-left: 15px;
+}
+
+.searchIcon {
+  width: 197px;
+  display: flex;
+  justify-content: flex-end;
+  border: 3px solid black;
 }
 
 .searchIcon img {

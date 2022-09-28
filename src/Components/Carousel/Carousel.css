@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 0;
 }
 
 .image {
@@ -12,13 +13,13 @@
   border-radius: 10px;
 }
 
-.rightarrow {
+.right-arrow {
   position: absolute;
   top: 50%;
   right: 32px;
   font-size: 3rem;
   color: #000;
-  z-index: 10;
+  z-index: 0;
   cursor: pointer;
   user-select: none;
 }
@@ -29,7 +30,7 @@
   left: 32px;
   font-size: 3rem;
   color: #000;
-  z-index: 10;
+  z-index: 0;
   cursor: pointer;
   user-select: none;
 }

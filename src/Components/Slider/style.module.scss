@@ -1,0 +1,170 @@
+.galleryElementContainer img {
+  /* margin-inline: 1px; */
+  height: 220px;
+  width: 275px;
+  margin-left: 10px;
+  object-fit: cover;
+  border-radius: 20px;
+  filter: drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.558));
+}
+
+.galleryElementContainer {
+  margin-top: 50px;
+}
+.galleryWrapper {
+  width: 1300px;
+  height: 800px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.galleryCarousel {
+  height: 500px;
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.galleryCarousel:hover {
+  cursor: grab;
+}
+
+.madeElementContainer {
+  height: 470px;
+  max-width: 300px;
+  background: #5ea496;
+  box-shadow: 8px 9px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 46px;
+  justify-content: space-between;
+}
+
+.madeElementTitle {
+  font-family: poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  display: flex;
+  color: #000000;
+  margin-top: -5px;
+  text-align: center;
+}
+
+.madeElementImage img {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px 10px 0 0;
+  margin: 0 0 0 0;
+  object-fit: fill;
+  margin-left: -25px;
+}
+
+.madeElementContent {
+  font-family: poppins;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #000000;
+  padding-inline: 2px;
+  margin-top: -5px;
+  margin-bottom: 30px;
+
+  h1 {
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  p {
+    width: 250px;
+    text-align: justify;
+    text-justify: center;
+  }
+
+  h3 {
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    margin-top: -23px;
+  }
+}
+
+.madeElementButton {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  align-items: center;
+  text-align: center;
+  border-radius: 11px;
+  padding: 9px 25px;
+  margin-bottom: 25px;
+  text-decoration: none;
+  width: 75px;
+  height: 8px;
+  margin-inline: 63px;
+  background: #ff8735;
+  border-bottom: none;
+
+  a {
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  p {
+    margin: 0 0 0 0;
+    text-align: center;
+    font-style: normal;
+    text-decoration: none;
+    margin: 0 0 0 0;
+    margin-top: -5px;
+    color: white;
+    border-bottom: none;
+  }
+}
+
+.madeElementButton:hover {
+  background: white;
+  border-radius: 11px;
+  cursor: pointer;
+  transition-duration: 300ms;
+
+  p {
+    color: #ff8735;
+  }
+}
+
+.madeElementWrapper {
+  width: 1300px;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+  margin-top: 20px;
+
+  Slider {
+    height: 600px;
+    border: solid red 3px;
+  }
+}
+
+.madeElementCard {
+  height: 400px;
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.madeElementContainer .madeElementImage {
+  /* border: 3px solid red; */
+  margin-inline: 25px;
+  border-radius: 24px;
+}

@@ -3,6 +3,9 @@ import style from "./style.module.scss";
 import earth from "../../assets/images/earth.png";
 import diagram from "../../assets/images/diagram.png";
 import background from "../../assets/images/background.png";
+import { SliderData } from "../../assets/object/SliderData";
+import Carousel from "../../Components/Carousel/Carousel";
+import Gallery from "../../Components/Slider";
 
 const HomeScreen = () => {
   const {
@@ -18,6 +21,7 @@ const HomeScreen = () => {
     organogram,
     containerSectionTop,
     containerSectionKegiatan,
+    containerSection2,
   } = style;
   return (
     <div className={container}>
@@ -32,7 +36,7 @@ const HomeScreen = () => {
         </div>
       </div>
 
-      <div className={containerSection}>
+      <div className={containerSection2}>
         <div className={judulSection2}>
           <h1>Asas, Sifat, dan Tujuan IMG-ITB</h1>
         </div>
@@ -57,27 +61,32 @@ const HomeScreen = () => {
 
       <div className={containerSection}>
         <div className={judulSection3}>
-          <h1>ORGANOGRAM BPH IMG-ITB GACOR</h1>
+          <h1>Kepengurusan IMG-ITB 2022/2023</h1>
         </div>
         <div className={organogram}>
-          <img src={diagram} />
+          <Carousel slides={SliderData} />
         </div>
       </div>
 
       <div className={containerSectionKegiatan}>
-        <div className={judulSection2}>
-          <h1>Kegiatan IMG-ITB</h1>
+        <div className={judulSection3}>
+          <div>
+            <h1>Kegiatan IMG-ITB</h1>
+          </div>
           <div>
             <h3>Ketinggalan Informasi</h3>
             <h3>Berikut Redaksi Acara IMG-ITB yang dapat kamu baca kembali!</h3>
           </div>
         </div>
-        <div></div>
+        <Gallery sliderName="card" />
       </div>
 
       <div className={containerSection}>
-        <div className={judulSection2}>
+        <div className={judulSection3}>
           <h1>Our Delightful Moments</h1>
+        </div>
+        <div>
+          <Gallery sliderName="gallery" />
         </div>
       </div>
     </div>

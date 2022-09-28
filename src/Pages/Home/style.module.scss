@@ -4,6 +4,24 @@
   max-width: 1600px;
   height: 800px;
   z-index: 1;
+  background-image: url("../../assets/images/backgroundhome2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.containerSection2 {
+  margin: 0 auto;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  max-width: 1600px;
+  height: 1500px;
+  z-index: 2;
+  border-radius: 10px;
+  background-image: url("../../assets/images/backgroundhome2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  margin-top: -200px;
 }
 
 .containerSectionKegiatan {
@@ -22,9 +40,10 @@
   height: 800px;
   z-index: 1;
   background-image: url("../../assets/images/background.png");
+  background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
   color: white;
 }
 
@@ -81,11 +100,11 @@
   display: flex;
   align-self: center;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 0px;
   flex-direction: column;
   align-items: center;
-
   h1 {
+    margin-top: 300px;
     font-size: 50px;
   }
 
@@ -131,11 +150,19 @@
   align-self: center;
   justify-content: center;
   align-items: center;
+  margin-bottom: -10px;
+  flex-direction: column;
 
   h1 {
-    font-size: 50px;
-    max-width: 400px;
+    font-size: 30px;
+    margin-top: 60px;
     text-align: center;
+    margin-bottom: 0px;
+  }
+
+  h3 {
+    text-align: center;
+    margin-bottom: -11px;
   }
 }
 
