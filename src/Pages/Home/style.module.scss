@@ -2,19 +2,19 @@
   margin: 0 auto;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   max-width: 1600px;
-  height: 800px;
+  height: 720px;
   z-index: 1;
-  background-image: url("../../assets/images/backgroundhome2.png");
+  background: white;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
+  margin-top: 50px;
 }
 
 .containerSection2 {
   margin: 0 auto;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   max-width: 1600px;
-  height: 1500px;
+  height: 160vh;
   z-index: 2;
   border-radius: 10px;
   background-image: url("../../assets/images/backgroundhome2.png");
@@ -26,16 +26,16 @@
 
 .containerSectionKegiatan {
   margin: 0 auto;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
   max-width: 1600px;
   height: 800px;
   z-index: 1;
   background-color: #4b8579;
+  padding-top: 150px;
 }
 
 .containerSectionTop {
   margin: 0 auto;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   max-width: 1600px;
   height: 800px;
   z-index: 1;
@@ -101,11 +101,12 @@
   align-self: center;
   justify-content: center;
   margin-top: 0px;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   h1 {
     margin-top: 300px;
     font-size: 50px;
+    margin-inline: 10px;
   }
 
   h3 {
@@ -117,9 +118,17 @@
 .descSection2 {
   display: flex;
   justify-content: space-between;
-  margin-right: 150px;
-  margin-left: 150px;
-  margin-top: 75px;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    border-bottom: solid orange 2px;
+  }
+
+  p {
+    font-size: 25px;
+    font-weight: -100;
+  }
 }
 
 .nilai {
@@ -150,14 +159,52 @@
   align-self: center;
   justify-content: center;
   align-items: center;
-  margin-bottom: -10px;
   flex-direction: column;
 
   h1 {
     font-size: 30px;
-    margin-top: 60px;
+    margin-top: 0px;
     text-align: center;
-    margin-bottom: 0px;
+    margin-bottom: 30px;
+  }
+
+  h3 {
+    text-align: center;
+    margin-bottom: -11px;
+  }
+}
+
+.judulSection5 {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    font-size: 30px;
+    margin-top: 0px;
+    text-align: center;
+    margin-bottom: -100px;
+  }
+
+  h3 {
+    text-align: center;
+    margin-bottom: -11px;
+  }
+}
+
+.judulSection4 {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    font-size: 30px;
+    margin-top: -80px;
+    text-align: center;
   }
 
   h3 {
@@ -167,8 +214,54 @@
 }
 
 .organogram img {
+  margin-top: 100px;
+  position: relative;
   display: flex;
-  max-width: 850px;
-  max-height: auto;
-  margin: 0 auto;
+  flex-shrink: calc(100% / 3);
+}
+
+.desctujuan {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  margin-bottom: 50px;
+
+  h2 {
+    align-self: center;
+    text-align: center;
+  }
+
+  p {
+    max-width: 348px;
+    font-size: 20px;
+    text-align: center;
+    margin-inline: 30px;
+  }
+}
+
+.descsifat {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  margin-bottom: 50px;
+
+  h2 {
+    align-self: center;
+    text-align: center;
+  }
+
+  p {
+    max-width: 300px;
+    font-size: 20px;
+    text-align: center;
+    margin-inline: 40px;
+  }
+}
+
+.linetujuan {
+  width: 1px;
+  height: 200px;
+  background-color: black;
 }
