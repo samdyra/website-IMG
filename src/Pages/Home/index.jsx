@@ -40,23 +40,7 @@ const HomeScreen = () => {
         <div className={judulSection2}>
           <h1>Asas, Sifat, dan Tujuan IMG-ITB</h1>
         </div>
-        <div className={descSection2}>
-          <div className={nilai}>
-            <img src={earth} />
-            <h2>Asas</h2>
-            <p>blablablabla</p>
-          </div>
-          <div className={nilai}>
-            <img src={earth} />
-            <h2>Sifat</h2>
-            <p>blablablabla</p>
-          </div>
-          <div className={nilai}>
-            <img src={earth} />
-            <h2>Tujuan</h2>
-            <p>blablablabla</p>
-          </div>
-        </div>
+        <div className={descSection2}></div>
       </div>
 
       <div className={containerSection}>
