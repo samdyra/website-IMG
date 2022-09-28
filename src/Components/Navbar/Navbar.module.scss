@@ -13,11 +13,9 @@
   align-items: center;
   max-height: 50px;
   margin: 0 auto;
-  padding: 8px 25px 8px 25px;
   position: sticky;
-  top: 0;
   max-width: 1280px;
-
+  padding-block: 5px;
   @media screen and (max-width: 418px) {
     max-width: 368px;
   }
@@ -67,7 +65,7 @@
   font-size: 10px;
   color: white;
   align-self: center;
-
+  margin-top: -5px;
   Dropdown + Dropdown {
     margin-left: 20px;
   }
@@ -87,10 +85,9 @@
   width: 197px;
   display: flex;
   justify-content: flex-end;
-  border: 3px solid black;
 }
 
 .searchIcon img {
   color: black;
-  max-height: 50px;
+  max-height: 30px;
 }

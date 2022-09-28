@@ -1,5 +1,10 @@
 /* Basic Settings  */
 
+@font-face {
+  font-family: jakarta;
+  src: url(./assets/fonts/PlusJakartaDisplay-Regular.otf);
+}
+
 body {
   margin: 0;
 
@@ -10,6 +15,7 @@ body {
 * {
   scrollbar-width: 8px;
   scrollbar-color: #6a6a6a #ffffff;
+  font-family: jakarta;
 }
 
 /* Chrome, Edge, and Safari */
@@ -30,3 +36,4 @@ body {
 input:focus {
   outline: none;
 }
+
