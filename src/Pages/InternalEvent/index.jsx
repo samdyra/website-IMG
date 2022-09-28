@@ -1,8 +1,9 @@
 import React from "react";
 import style from "./style.module.scss";
+import Gallery from "../../Components/Slider";
 
 const internalEvent = () => {
-  const { container, containerSection, box1, box2 } = style;
+  const { container, containerSection } = style;
 
   return (
     <>
@@ -12,13 +13,10 @@ const internalEvent = () => {
             <h1>Internal Events in IMG-ITB</h1>
           </div>
           <div>
-            <div className={box1}>asdasdasd</div>
-            <div className={box2}></div>
+            <h2>Our Internal Event Dates</h2>
+            <button>Click Here</button>
           </div>
-          <div>
-            <h1>Our Internal Event Dates</h1>
-            <button>click here</button>
-          </div>
+          <Gallery sliderName="verticalcard" />
         </div>
       </div>
     </>

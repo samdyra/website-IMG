@@ -11,6 +11,7 @@ const Gallery = (props) => {
   const {
     wrapperCard,
     wrapperGallery,
+    wrapperVerticalCard,
     galleryElementContainer,
     galleryWrapper,
     galleryCarousel,
@@ -19,6 +20,11 @@ const Gallery = (props) => {
     madeElementContent,
     madeElementButton,
     madeElementWrapper,
+    verticalCardContainer,
+    verticalCardImage,
+    verticalCardContent,
+    verticalCardButton,
+    verticalCardWrapper,
   } = style;
 
   const sliderName = props.sliderName;
@@ -27,7 +33,7 @@ const Gallery = (props) => {
     infinite: true,
     speed: 1000,
     slidesToShow: 4,
-    slidesToScroll: 3,
+    swipeToSlide: true,
     autoplay: true,
     autoplaySpeed: 2000,
     arrows: false,
@@ -39,17 +45,29 @@ const Gallery = (props) => {
     infinite: true,
     speed: 1000,
     slidesToShow: 4,
-    slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
     arrows: false,
+    swipeToSlide: true,
+  };
+
+  const verticalcardSettings = {
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 3,
+    autoplay: false,
+    autoplaySpeed: 2000,
+    arrows: false,
+    vertical: true,
+    verticalSwiping: true,
+    swipeToSlide: true,
   };
 
   const gallerySettings2 = {
     infinite: true,
     speed: 1000,
     slidesToShow: 4,
-    slidesToScroll: 3,
+    swipeToSlide: true,
     autoplay: true,
     autoplaySpeed: 2000,
     rtl: true,
@@ -61,7 +79,7 @@ const Gallery = (props) => {
   const ReversedData = SliderData.slice(0).reverse();
 
   return (
-    <div wrapper>
+    <div>
       {sliderName == "gallery" ? (
         <div className={galleryWrapper}>
           <div className={galleryCarousel}>
@@ -108,6 +126,30 @@ const Gallery = (props) => {
                         <p>View</p>
                       </div>
                     </a>
+                  </div>
+                </div>
+              );
+            })}
+          </Slider>
+        </div>
+      ) : sliderName == "verticalcard" ? (
+        <div>
+          <Slider {...verticalcardSettings} className={wrapperVerticalCard}>
+            {SliderData.map((slide) => {
+              return (
+                <div className={verticalCardContainer}>
+                  <div className={verticalCardImage}>
+                    <img src={slide.image}></img>
+                    <div className={verticalCardContent}>
+                      <h1>WEBGIS</h1>
+                      <p>
+                        Web based GIS (Geographic Information System) of ITB
+                        Kampus Jatinangor. We hope this feature would contribute
+                        to realized a continuous monitoring and sustainable
+                        development of ITB Kampus Jatinangor.
+                      </p>
+                      <button className={verticalCardButton}>Click Here</button>
+                    </div>
                   </div>
                 </div>
               );
