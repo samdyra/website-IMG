@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./style.module.scss";
 import Slider from "react-slick";
 import { SliderData } from "../../assets/object/SliderData";
@@ -6,17 +6,19 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const Gallery = (props) => {
+  const [currentText, setCurrenText] = useState(0);
+
   const {
+    wrapperCard,
+    wrapperGallery,
     galleryElementContainer,
     galleryWrapper,
     galleryCarousel,
     madeElementContainer,
     madeElementImage,
-    madeElementTitle,
     madeElementContent,
     madeElementButton,
     madeElementWrapper,
-    madeElementCard,
   } = style;
 
   const sliderName = props.sliderName;
@@ -26,18 +28,19 @@ const Gallery = (props) => {
     speed: 1000,
     slidesToShow: 4,
     slidesToScroll: 3,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 2000,
     arrows: false,
     centerMode: true,
+    centerPadding: "200px",
   };
 
   const cardSettings = {
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 2000,
     arrows: false,
   };
@@ -52,16 +55,17 @@ const Gallery = (props) => {
     rtl: true,
     centerMode: true,
     arrows: false,
+    centerPadding: "200px",
   };
 
   const ReversedData = SliderData.slice(0).reverse();
 
   return (
-    <>
+    <div wrapper>
       {sliderName == "gallery" ? (
         <div className={galleryWrapper}>
           <div className={galleryCarousel}>
-            <Slider {...gallerySettings}>
+            <Slider {...gallerySettings} className={wrapperGallery}>
               {SliderData.map((slide) => {
                 return (
                   <div className={galleryElementContainer}>
@@ -70,7 +74,7 @@ const Gallery = (props) => {
                 );
               })}
             </Slider>
-            <Slider {...gallerySettings2}>
+            <Slider {...gallerySettings2} className={wrapperGallery}>
               {ReversedData.map((slide) => {
                 return (
                   <div className={galleryElementContainer}>
@@ -83,7 +87,7 @@ const Gallery = (props) => {
         </div>
       ) : sliderName == "card" ? (
         <div className={madeElementWrapper}>
-          <Slider {...cardSettings}>
+          <Slider {...cardSettings} className={wrapperCard}>
             {SliderData.map((slide) => {
               return (
                 <div className={madeElementContainer}>
@@ -111,7 +115,7 @@ const Gallery = (props) => {
           </Slider>
         </div>
       ) : null}
-    </>
+    </div>
   );
 };
 

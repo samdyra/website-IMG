@@ -1,6 +1,6 @@
 .slider {
   position: relative;
-  height: 100vh;
+  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +16,7 @@
 .right-arrow {
   position: absolute;
   top: 50%;
-  right: 250px;
+  right: 180px;
   font-size: 3rem;
   color: #4e887c;
   z-index: 0;
@@ -27,7 +27,7 @@
 .left-arrow {
   position: absolute;
   top: 50%;
-  left: 250px;
+  left: 180px;
   font-size: 3rem;
   color: #4e887c;
   z-index: 0;
