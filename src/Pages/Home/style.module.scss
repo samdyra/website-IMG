@@ -96,9 +96,24 @@
   }
 }
 
-.judulz {
-  // animation: fadeIn 3s
+.fadeOut{
+  border-bottom: 0px solid black;
+  transition: border-bottom 0.3s;
+  cursor: pointer;
 }
+
+.fadeIn{
+  border-bottom: 5px solid black;
+  transition: border-bottom 0.3s;
+  cursor: pointer;
+}
+
+.fadedOut{
+  opacity:0;
+  transition: opacity 0.5s;
+}
+
+
 
 .judulSection2 {
   display: flex;
@@ -119,17 +134,15 @@
   }
 }
 
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
+
 
 .descSection2 {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
-
+  opacity:1;
+  transition: opacity 0.5s;
   h1 {
     border-bottom: solid orange 2px;
   }

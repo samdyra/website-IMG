@@ -30,7 +30,9 @@ const HomeScreen = () => {
     desctujuan,
     descsifat,
     linetujuan,
-    judulz
+    fadeIn,
+    fadeOut,
+    fadedOut
   } = style;
 
   const [index, setIndex] = useState(0);
@@ -44,6 +46,7 @@ const HomeScreen = () => {
 
     return () => clearInterval(interval);
   }, [index]);
+
   return (
     <div className={container}>
       <div className={containerSectionTop}>
@@ -59,15 +62,15 @@ const HomeScreen = () => {
 
       <div className={containerSection2}>
         <div className={judulSection2}>
-          <h1 style={index == 0 ? {borderBottom: "5px solid black", cursor: "pointer"} :  {cursor: "pointer"}} className={judulz} onClick={() => setIndex(0)}>Asas,</h1>
-          <h1 style={index == 1 ? {borderBottom: "5px solid black", cursor: "pointer"} :  {cursor: "pointer"}} onClick={() => setIndex(1)}>Sifat,</h1>
+          <h1 className={index == 0 ? fadeIn : fadeOut} onClick={() => setIndex(0)}>Asas,</h1>
+          <h1 className={index == 1 ? fadeIn : fadeOut} onClick={() => setIndex(1)}>Sifat,</h1>
           <h1>dan</h1>
-          <h1 style={index == 2 ? {borderBottom: "5px solid black", cursor: "pointer"} :  {cursor: "pointer"}} onClick={() => setIndex(2)}>Tujuan</h1>
+          <h1 className={index == 2 ? fadeIn : fadeOut} onClick={() => setIndex(2)}>Tujuan</h1>
           <h1>IMG-ITB</h1>
         </div>
         {index === 0 && (
           <>
-            <div className={descSection2} style={{marginTop: "20px"}}>
+            <div className={index == 0 ? descSection2 : fadedOut} style={{marginTop: "20px"}}>
               <h1>{SliderText[0].title}</h1>
               <p>{SliderText[0].desc}</p>
             </div>
