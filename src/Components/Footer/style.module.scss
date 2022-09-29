@@ -6,7 +6,10 @@
   margin: 0 auto;
   padding: 8px 25px 8px 25px;
   flex-direction: column;
+  z-index: 6;
+  position: relative;
 }
+
 .container2 {
   max-width: 1400px;
 }
