@@ -6,6 +6,7 @@ const Dropdown = (props) => {
   const menuName = props.menuName;
 
   return (
+    <div style={{marginRight: 12}}>
     <div className={dropdown}>
       {menuName == "activities" ? (
         <>
@@ -33,6 +34,7 @@ const Dropdown = (props) => {
           </div>
         </>
       ) : null}
+    </div>
     </div>
   );
 };

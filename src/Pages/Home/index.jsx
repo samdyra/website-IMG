@@ -69,12 +69,10 @@ const HomeScreen = () => {
           <h1>IMG-ITB</h1>
         </div>
         {index === 0 && (
-          <>
             <div className={index == 0 ? descSection2 : fadedOut} style={{marginTop: "20px"}}>
               <h1>{SliderText[0].title}</h1>
               <p>{SliderText[0].desc}</p>
             </div>
-          </>
         )}
         ;
         {index === 1 && (

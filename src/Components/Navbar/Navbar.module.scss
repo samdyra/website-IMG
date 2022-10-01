@@ -40,14 +40,9 @@
   margin-bottom: 5px;
 
   h1 {
-    margin-left: 5px;
-    font-family: montserrat;
     font-style: bold;
     font-weight: 600;
-    font-size: 10px;
     color: white;
-    margin-bottom: -3px;
-    margin-top: 5px;
   }
 }
 
@@ -59,26 +54,24 @@
 .linkContainer {
   display: flex;
   justify-content: center;
-  font-family: montserrat;
   font-style: normal;
-  font-weight: 600;
-  font-size: 10px;
   color: white;
   align-self: center;
-  margin-top: -5px;
+  cursor: pointer;
   Dropdown + Dropdown {
-    margin-left: 20px;
+  }
+  div {
   }
 }
+
+
 
 .link {
   text-decoration: none;
   color: white;
-  font-size: 10px;
   background-color: inherit;
-  font-family: sans-serif;
   align-self: center;
-  margin-left: 15px;
+  font-size: 15px;
 }
 
 .searchIcon {

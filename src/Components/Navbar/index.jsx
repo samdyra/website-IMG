@@ -45,8 +45,8 @@ const Navbar = () => {
           <div className={linkContainer}>
             <Dropdown menuName="activities" />
             <Dropdown menuName="karya" />
-            <Link className={link} to="/Pojokimg">
-              <h1>Pojok IMG</h1>
+            <Link className={link}  to="/Pojokimg">
+              <div>Pojok IMG</div>
             </Link>
           </div>
 
