@@ -3,7 +3,7 @@ import { SliderData } from "../../assets/object/SliderData";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 import "./Carousel.css";
 
-const Carousel = ({ slides }) => {
+const Carousel = ({ slides, props }) => {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
 

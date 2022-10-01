@@ -1,6 +1,5 @@
 .containerSection {
   margin: 0 auto;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   max-width: 1600px;
   height: 720px;
   z-index: 1;
@@ -96,24 +95,22 @@
   }
 }
 
-.fadeOut{
+.fadeOut {
   border-bottom: 0px solid black;
   transition: border-bottom 0.3s;
   cursor: pointer;
 }
 
-.fadeIn{
+.fadeIn {
   border-bottom: 5px solid black;
   transition: border-bottom 0.3s;
   cursor: pointer;
 }
 
-.fadedOut{
-  opacity:0;
+.fadedOut {
+  opacity: 0;
   transition: opacity 0.5s;
 }
-
-
 
 .judulSection2 {
   display: flex;
@@ -148,7 +145,7 @@
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  opacity:1;
+  opacity: 1;
   transition: opacity 0.5s;
   h1 {
     border-bottom: solid orange 2px;
