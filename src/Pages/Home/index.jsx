@@ -32,32 +32,37 @@ const HomeScreen = () => {
     linetujuan,
     fadeIn,
     fadeOut,
-    fadedOut
+    fadedOut,
+    asas
   } = style;
 
   const [index, setIndex] = useState(0);
 
-  useEffect(() => {
-    let interval = setInterval(() => {
-        if (index != 2) {
-        return setIndex(index + 1)}
-        else return setIndex(0)
-    }, 3000); //each count lasts for a second
+  // useEffect(() => {
+  //   let interval = setInterval(() => {
+  //       if (index != 2) {
+  //       return setIndex(index + 1)}
+  //       else return setIndex(0)
+  //   }, 3000); 
 
-    return () => clearInterval(interval);
-  }, [index]);
+  //   return () => clearInterval(interval);
+  // }, [index]);
 
   return (
     <div className={container}>
       <div className={containerSectionTop}>
-        <div className={logo}>
+        <div style={{display: "flex", justifyContent: "space-around"}}>
           <div className={desc}>
             <h2>Welcome to IMG-ITB Official Website</h2>
-            <h1>IKATAN MAHASISWA GEODESI-ITB</h1>
-            <p>blablablablablablabalbalbalbalbablal</p>
+            <h1>IKATAN MAHASISWA <br></br> GEODESI-ITB</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Sint doloribus, fuga molestiase at asperiores minima fugit, 
+              sapiente rem voluptates eum id dolor ullam ipsam architecto tenetur sequi iusto. Aliquid, sit.</p>
           </div>
+          <div className={logo}>
           <img src={earth} />
-        </div>
+          </div>
+          </div>
       </div>
 
       <div className={containerSection2}>
@@ -69,9 +74,11 @@ const HomeScreen = () => {
           <h1>IMG-ITB</h1>
         </div>
         {index === 0 && (
-            <div className={index == 0 ? descSection2 : fadedOut} style={{marginTop: "20px"}}>
+            <div className={descSection2} >
+              <div className={asas}>
               <h1>{SliderText[0].title}</h1>
               <p>{SliderText[0].desc}</p>
+              </div>
             </div>
         )}
         ;
