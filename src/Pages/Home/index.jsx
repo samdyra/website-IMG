@@ -38,15 +38,15 @@ const HomeScreen = () => {
 
   const [index, setIndex] = useState(0);
 
-  // useEffect(() => {
-  //   let interval = setInterval(() => {
-  //       if (index != 2) {
-  //       return setIndex(index + 1)}
-  //       else return setIndex(0)
-  //   }, 3000); 
+  useEffect(() => {
+    let interval = setInterval(() => {
+        if (index != 2) {
+        return setIndex(index + 1)}
+        else return setIndex(0)
+    }, 3000); 
 
-  //   return () => clearInterval(interval);
-  // }, [index]);
+    return () => clearInterval(interval);
+  }, [index]);
 
   return (
     <div className={container}>
