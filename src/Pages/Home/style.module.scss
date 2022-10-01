@@ -16,12 +16,13 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
-  margin-top: -200px;
+  margin-top: -100px;
+  margin-bottom: 50px;
+  border-radius: 0 0 20px 20px;
 }
 
 .containerSectionKegiatan {
   margin: 0 auto;
-
   height: 800px;
   z-index: 1;
   background-color: #4b8579;
@@ -39,8 +40,8 @@
   background-position: bottom;
   color: white;
   display: flex;
-  padding-inline: 10px
-
+  padding-inline: 10px;
+  justify-content: center;
 }
 
 .welcome {
