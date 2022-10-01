@@ -29,6 +29,9 @@
 .logotext {
   display: flex;
   flex-direction: column;
+  margin-left: 10px;
+  font-size: 12px;
+  margin-block: auto;
 }
 
 .logo {
@@ -40,8 +43,7 @@
   margin-bottom: 5px;
 
   h1 {
-    font-style: bold;
-    font-weight: 600;
+ 
     color: white;
   }
 }
@@ -83,4 +85,5 @@
 .searchIcon img {
   color: black;
   max-height: 30px;
+  opacity: 68%;
 }

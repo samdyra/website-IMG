@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./Navbar.module.scss";
 import LogoIMG from "../../assets/images/LogoIMG.png";
-import searchicon from "../../assets/images/search-icon.png";
+import login from "../../assets/images/login.png";
 import { useState } from "react";
 import Dropdown from "../Dropdown";
 import { Link } from "react-router-dom";
@@ -36,7 +36,7 @@ const Navbar = () => {
             <Link className={logo} to="/">
               <img src={LogoIMG} />
               <div className={logotext}>
-                <h1>IKATAN MAHASISWA GEODESI</h1>
+                <h1 style={{fontFamily : "jakartabold"}}>IKATAN MAHASISWA GEODESI</h1>
                 <h1>INSTITUT TEKNOLOGI BANDUNG</h1>
               </div>
             </Link>
@@ -51,7 +51,7 @@ const Navbar = () => {
           </div>
 
           <div className={searchIcon}>
-            <img src={searchicon} />
+            <img src={login} />
           </div>
         </div>
       </nav>
