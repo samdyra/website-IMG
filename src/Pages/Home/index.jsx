@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useRef, Suspense, useEffect } from "react";
 import style from "./style.module.scss";
-import earth from "../../assets/images/earth.png";
+import { useState } from "react";
+
+//THREE
+import { Canvas, useFrame } from "@react-three/fiber";
+import { OrbitControls, useGLTF } from "@react-three/drei";
+
+//Styling
 import diagram from "../../assets/images/diagram.png";
 import background from "../../assets/images/background.png";
 import { SliderData, SliderText } from "../../assets/object/SliderData";
 import Carousel from "../../Components/Carousel/Carousel";
 import Gallery from "../../Components/Slider";
-import { useState } from "react";
-import { useEffect } from "react";
-
 const HomeScreen = () => {
   const {
     container,
@@ -38,15 +41,37 @@ const HomeScreen = () => {
 
   const [index, setIndex] = useState(0);
 
-  // useEffect(() => {
-  //   let interval = setInterval(() => {
-  //       if (index != 2) {
-  //       return setIndex(index + 1)}
-  //       else return setIndex(0)
-  //   }, 3000);
+  useEffect(() => {
+    let interval = setInterval(() => {
+      if (index != 2) {
+        return setIndex(index + 1);
+      } else return setIndex(0);
+    }, 3000);
 
-  //   return () => clearInterval(interval);
-  // }, [index]);
+    return () => clearInterval(interval);
+  }, [index]);
+
+  function Model(props) {
+    const models = useRef();
+    const { nodes, materials } = useGLTF("./globe.glb");
+    useFrame(({ clock }) => {
+      models.current.rotation.x = clock.getElapsedTime() / 5;
+      models.current.rotation.y = clock.getElapsedTime() / 3;
+    });
+    return (
+      <group {...props} dispose={null} ref={models}>
+        <mesh
+          geometry={nodes.Cube.geometry}
+          material={materials["Material.002"]}
+          scale={18.01}
+        />
+        <mesh
+          geometry={nodes.Sphere001.geometry}
+          material={materials["Material.003"]}
+        />
+      </group>
+    );
+  }
 
   return (
     <div className={container}>
@@ -63,6 +88,21 @@ const HomeScreen = () => {
               rem voluptates eum id dolor ullam ipsam architecto tenetur sequi
               iusto. Aliquid, sit.
             </p>
+          </div>
+          <div className={logo}>
+            <Canvas camera={{ fov: 70, position: [0, 0, 65] }}>
+              <ambientLight></ambientLight>
+              <directionalLight
+                intensity={2}
+                position={[50, 50, 50]}
+              ></directionalLight>
+              <OrbitControls
+                enablePan={true}
+                enableZoom={true}
+                enableRotate={true}
+              ></OrbitControls>
+              <Model></Model>
+            </Canvas>
           </div>
         </div>
       </div>
