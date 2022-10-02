@@ -19,22 +19,54 @@
   align-content: center;
 }
 
-.galleryElementContainer {
-  height: 250px;
+.descContainer {
+  height: 200px;
   width: 600px;
+  display: flex;
+  background: #ff7045;
+  border-radius: 40px;
+  margin: 0 auto;
+
+  p {
+    margin: 0;
+    margin-top: 30px;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
 }
-.galleryElementContainer img {
-  /* margin-inline: 1px; */
-  height: 220px;
-  width: 550px;
-  object-fit: cover;
-  border-radius: 20px;
-  margin-top: 10px;
-  filter: drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.558));
+
+.madeElementButton {
+  align-items: center;
+  text-align: center;
+  border-radius: 25px;
+  padding: 9px 25px;
+  margin-top: 20px;
+  width: 150px;
+  height: 20px;
+  background: #ff9f78;
+  border-bottom: none;
+  margin: 0 auto;
+  border: 3px black solid;
+
+  a {
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  p {
+    margin: 0 0 0 0;
+    text-align: center;
+    font-style: normal;
+    text-decoration: none;
+    margin: 0 0 0 0;
+    border-bottom: none;
+    font-size: 17px;
+  }
 }
 
 .galleryElementContainer2 {
-  height: 600px;
+  height: 625px;
   width: 600px;
 }
 .galleryElementContainer2 img {
@@ -44,7 +76,6 @@
   object-fit: cover;
   border-radius: 20px;
   margin-top: 10px;
-  filter: drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.558));
 }
 
 .title {
@@ -68,6 +99,7 @@
   height: 720px;
   display: flex;
   border: 3px solid red;
+  background-color: gainsboro;
 }
 
 .halfpage {
@@ -76,16 +108,15 @@
   display: flex;
   flex-direction: column;
   padding: 0 20px;
-  border: #000000 solid 2px;
 }
 
 .slider1 {
   display: flex;
   margin-top: 100px;
-  border: black solid 2px;
+  margin-left: 35px;
 }
 .slider2 {
   display: flex;
   margin-top: 50px;
-  border: black solid 2px;
+  max-width: 565px;
 }

@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from "react";
 import style from "./style.module.scss";
 import Slider from "react-slick";
-import { SliderData } from "../../assets/object/SliderData";
+import { SliderData, SliderText } from "../../assets/object/SliderData";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function DoubleSlider() {
   const {
-    galleryElementContainer,
+    descContainer,
     galleryElementContainer2,
     containerSection,
     halfpage,
     slider1,
     slider2,
     title,
+    madeElementButton,
   } = style;
 
   const [nav1, setNav1] = useState();
@@ -29,11 +30,17 @@ export default function DoubleSlider() {
           asNavFor={nav2}
           ref={(slider1) => setNav1(slider1)}
           className={slider1}
+          fade={true}
+          arrows={false}
         >
-          {SliderData.map((data, index) => {
+          {SliderText.map((text, index) => {
             return (
-              <div className={galleryElementContainer}>
-                <img src={data.image} alt="gallery" />
+              <div className={descContainer}>
+                <p style={{ paddingInline: "20px" }}>{text.desc}</p>
+
+                <div href="/WebGIS" className={madeElementButton}>
+                  <p>Click Here to Read</p>
+                </div>
               </div>
             );
           })}
@@ -48,6 +55,7 @@ export default function DoubleSlider() {
           swipeToSlide={true}
           focusOnSelect={true}
           className={slider2}
+          arrows={true}
         >
           {SliderData.map((data, index) => {
             return (
