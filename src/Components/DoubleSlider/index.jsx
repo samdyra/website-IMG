@@ -1,20 +1,24 @@
 import React, { useEffect, useState } from "react";
 import style from "./style.module.scss";
 import Slider from "react-slick";
-import { SliderData } from "../../assets/object/SliderData";
+import { SliderData, SliderText } from "../../assets/object/SliderData";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-export default function DoubleSlider() {
+export default function DoubleSlider(props) {
   const {
-    galleryElementContainer,
+    descContainer,
     galleryElementContainer2,
     containerSection,
     halfpage,
     slider1,
     slider2,
     title,
+    madeElementButton,
+    titleMajalah,
+    descContainer2,
   } = style;
+  const sliderName = props.sliderName;
 
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
@@ -23,17 +27,36 @@ export default function DoubleSlider() {
     <div className={containerSection}>
       <div className={halfpage}>
         <div className={title}>
-          <h1>Majalah Parade Wisuda</h1>
+          {sliderName === "paradewisuda" ? (
+            <h1>Majalah Parade Wisuda</h1>
+          ) : sliderName === "locus" ? (
+            <h1 style={{ marginTop: "60px" }}>Majalah LOCUS</h1>
+          ) : sliderName === "geosphere" ? (
+            <h1 style={{ marginTop: "60px" }}>Majalah GEOSHPERE</h1>
+          ) : null}
         </div>
         <Slider
           asNavFor={nav2}
           ref={(slider1) => setNav1(slider1)}
           className={slider1}
+          fade={true}
+          arrows={false}
         >
-          {SliderData.map((data, index) => {
+          {SliderText.map((text, index) => {
             return (
-              <div className={galleryElementContainer}>
-                <img src={data.image} alt="gallery" />
+              <div>
+                <div className={titleMajalah}>
+                  <h2>{text.title}</h2>
+                </div>
+                <div className={descContainer}>
+                  <div className={descContainer2}>
+                    <p style={{ paddingInline: "20px" }}>{text.desc}</p>
+                  </div>
+
+                  <div href="/WebGIS" className={madeElementButton}>
+                    <p>Click Here to Read</p>
+                  </div>
+                </div>
               </div>
             );
           })}
@@ -48,6 +71,7 @@ export default function DoubleSlider() {
           swipeToSlide={true}
           focusOnSelect={true}
           className={slider2}
+          arrows={true}
         >
           {SliderData.map((data, index) => {
             return (
