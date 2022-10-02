@@ -2,11 +2,11 @@
   margin-top: 0px;
   height: 700px;
   display: flex;
-  max-width: 1400px;
+  max-width: 1280px;
   justify-self: center;
   align-self: center;
   align-content: center;
-  margin-right: 54px;
+  margin-right: 0 54px;
 }
 
 .wrapperGallery {
@@ -57,7 +57,6 @@
 }
 
 .madeElementContainer {
-  height: 450px;
   max-width: 300px;
   background: #5ea496;
   border-radius: 10px;
@@ -65,10 +64,7 @@
   flex-direction: column;
   align-items: center;
   margin-top: 30px;
-  margin-bottom: 20px;
   justify-content: space-between;
-  margin-left: 24px;
-
   filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
 }
 
@@ -171,19 +167,12 @@
 }
 
 .madeElementWrapper {
-  width: 1600px;
-  height: 800px;
+  width: 1280px;
   display: flex;
   flex-direction: column;
-  margin: 50px auto;
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin: 0 auto;
   z-index: 5;
 
-  Slider {
-    height: 600px;
-    border: solid red 3px;
-  }
 }
 
 .madeElementCard {
@@ -203,7 +192,7 @@
 .wrapperVerticalCard {
   margin-top: 20px;
   height: 100px;
-  width: 1280px;
+  width: 1600px;
 }
 
 .verticalCardContainer {

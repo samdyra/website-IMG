@@ -1,0 +1,91 @@
+.wrapperCard {
+  margin-top: 0px;
+  height: 700px;
+  display: flex;
+  max-width: 1400px;
+  justify-self: center;
+  align-self: center;
+  align-content: center;
+  margin-right: 54px;
+}
+
+.wrapperGallery {
+  margin-top: 20px;
+  height: 800px;
+  display: flex;
+  width: 1600px;
+  justify-self: center;
+  align-self: center;
+  align-content: center;
+}
+
+.galleryElementContainer {
+  height: 250px;
+  width: 600px;
+}
+.galleryElementContainer img {
+  /* margin-inline: 1px; */
+  height: 220px;
+  width: 550px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-top: 10px;
+  filter: drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.558));
+}
+
+.galleryElementContainer2 {
+  height: 600px;
+  width: 600px;
+}
+.galleryElementContainer2 img {
+  /* margin-inline: 1px; */
+  height: 600px;
+  width: 560px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-top: 10px;
+  filter: drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.558));
+}
+
+.title {
+  display: flex;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 30px;
+  font-weight: 600;
+  color: #4b8579;
+
+  h1 {
+    font-size: 100px;
+    font-weight: 600;
+    color: #4b8579;
+  }
+}
+
+.containerSection {
+  margin: 0 auto;
+  max-width: 1280px;
+  height: 720px;
+  display: flex;
+  border: 3px solid red;
+}
+
+.halfpage {
+  max-width: 596px;
+  height: 720px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  border: #000000 solid 2px;
+}
+
+.slider1 {
+  display: flex;
+  margin-top: 100px;
+  border: black solid 2px;
+}
+.slider2 {
+  display: flex;
+  margin-top: 50px;
+  border: black solid 2px;
+}

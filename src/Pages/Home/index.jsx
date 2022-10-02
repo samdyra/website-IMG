@@ -121,13 +121,9 @@ const HomeScreen = () => {
 
       <div className={containerSectionKegiatan}>
         <div className={judulSection4}>
-          <div>
             <h1>Kegiatan IMG-ITB</h1>
-          </div>
-          <div>
-            <h3>Ketinggalan Informasi</h3>
+            <h2>Ketinggalan Informasi</h2>
             <h3>Berikut Redaksi Acara IMG-ITB yang dapat kamu baca kembali!</h3>
-          </div>
         </div>
         <Gallery sliderName="card" />
       </div>
