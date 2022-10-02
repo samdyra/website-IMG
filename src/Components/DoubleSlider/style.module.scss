@@ -21,19 +21,13 @@
 
 .descContainer {
   height: 200px;
-  width: 600px;
+  max-width: 600px;
   display: flex;
   background: #ff7045;
-  border-radius: 40px;
+  border-radius: 25px;
   margin: 0 auto;
-
-  p {
-    margin: 0;
-    margin-top: 30px;
-    font-size: 20px;
-    text-align: center;
-    margin-bottom: 20px;
-  }
+  display: flex;
+  flex-direction: column;
 }
 
 .madeElementButton {
@@ -47,7 +41,6 @@
   background: #ff9f78;
   border-bottom: none;
   margin: 0 auto;
-  border: 3px black solid;
 
   a {
     text-decoration: none;
@@ -81,15 +74,18 @@
 .title {
   display: flex;
   margin-top: 20px;
-  margin-left: 20px;
   font-size: 30px;
   font-weight: 600;
   color: #4b8579;
+  margin-bottom: 25px;
 
   h1 {
-    font-size: 100px;
-    font-weight: 600;
+    font-size: 80px;
+    max-width: 80px;
+    font-weight: 300;
     color: #4b8579;
+    margin-left: 35px;
+    font-family: jakartabold;
   }
 }
 
@@ -98,7 +94,7 @@
   max-width: 1280px;
   height: 720px;
   display: flex;
-  border: 3px solid red;
+
   background-color: gainsboro;
 }
 
@@ -119,4 +115,26 @@
   display: flex;
   margin-top: 50px;
   max-width: 565px;
+}
+
+.titleMajalah {
+  h2 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #4b8579;
+    margin-bottom: 20px;
+    margin-left: 50px;
+  }
+}
+
+.descContainer2 {
+  height: 140px;
+  overflow-y: hidden;
+  p {
+    margin: 0;
+    margin-top: 30px;
+    font-size: 20px;
+    text-align: justify;
+    margin-bottom: 20px;
+  }
 }

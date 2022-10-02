@@ -5,7 +5,7 @@ import { SliderData, SliderText } from "../../assets/object/SliderData";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-export default function DoubleSlider() {
+export default function DoubleSlider(props) {
   const {
     descContainer,
     galleryElementContainer2,
@@ -15,7 +15,10 @@ export default function DoubleSlider() {
     slider2,
     title,
     madeElementButton,
+    titleMajalah,
+    descContainer2,
   } = style;
+  const sliderName = props.sliderName;
 
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
@@ -24,7 +27,13 @@ export default function DoubleSlider() {
     <div className={containerSection}>
       <div className={halfpage}>
         <div className={title}>
-          <h1>Majalah Parade Wisuda</h1>
+          {sliderName === "paradewisuda" ? (
+            <h1>Majalah Parade Wisuda</h1>
+          ) : sliderName === "locus" ? (
+            <h1 style={{ marginTop: "60px" }}>Majalah LOCUS</h1>
+          ) : sliderName === "geosphere" ? (
+            <h1 style={{ marginTop: "60px" }}>Majalah GEOSHPERE</h1>
+          ) : null}
         </div>
         <Slider
           asNavFor={nav2}
@@ -35,11 +44,18 @@ export default function DoubleSlider() {
         >
           {SliderText.map((text, index) => {
             return (
-              <div className={descContainer}>
-                <p style={{ paddingInline: "20px" }}>{text.desc}</p>
+              <div>
+                <div className={titleMajalah}>
+                  <h2>{text.title}</h2>
+                </div>
+                <div className={descContainer}>
+                  <div className={descContainer2}>
+                    <p style={{ paddingInline: "20px" }}>{text.desc}</p>
+                  </div>
 
-                <div href="/WebGIS" className={madeElementButton}>
-                  <p>Click Here to Read</p>
+                  <div href="/WebGIS" className={madeElementButton}>
+                    <p>Click Here to Read</p>
+                  </div>
                 </div>
               </div>
             );

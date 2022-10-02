@@ -11,7 +11,7 @@ const paradeWisuda = () => {
     <div>
       <Header />
       <div className={containerSection}>
-        <DoubleSlider />
+        <DoubleSlider sliderName="paradewisuda" />
       </div>
       <div className={containerSection}>
         <h1>Dokumentasi Parade Wisuda IMG-ITB</h1>
