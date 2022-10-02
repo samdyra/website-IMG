@@ -33,53 +33,70 @@ const HomeScreen = () => {
     fadeIn,
     fadeOut,
     fadedOut,
-    asas
+    asas,
   } = style;
 
   const [index, setIndex] = useState(0);
 
-  useEffect(() => {
-    let interval = setInterval(() => {
-        if (index != 2) {
-        return setIndex(index + 1)}
-        else return setIndex(0)
-    }, 3000); 
+  // useEffect(() => {
+  //   let interval = setInterval(() => {
+  //       if (index != 2) {
+  //       return setIndex(index + 1)}
+  //       else return setIndex(0)
+  //   }, 3000);
 
-    return () => clearInterval(interval);
-  }, [index]);
+  //   return () => clearInterval(interval);
+  // }, [index]);
 
   return (
     <div className={container}>
       <div className={containerSectionTop}>
-        <div style={{display: "flex", justifyContent: "space-around"}}>
+        <div style={{ display: "flex", justifyContent: "space-around" }}>
           <div className={desc}>
             <h2>Welcome to IMG-ITB Official Website</h2>
-            <h1>IKATAN MAHASISWA <br></br> GEODESI-ITB</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Sint doloribus, fuga molestiase at asperiores minima fugit, 
-              sapiente rem voluptates eum id dolor ullam ipsam architecto tenetur sequi iusto. Aliquid, sit.</p>
+            <h1>
+              IKATAN MAHASISWA <br></br> GEODESI-ITB
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+              doloribus, fuga molestiase at asperiores minima fugit, sapiente
+              rem voluptates eum id dolor ullam ipsam architecto tenetur sequi
+              iusto. Aliquid, sit.
+            </p>
           </div>
-          <div className={logo}>
-          <img src={earth} />
-          </div>
-          </div>
+        </div>
       </div>
 
       <div className={containerSection2}>
         <div className={judulSection2}>
-          <h1 className={index == 0 ? fadeIn : fadeOut} onClick={() => setIndex(0)}>Asas,</h1>
-          <h1 className={index == 1 ? fadeIn : fadeOut} onClick={() => setIndex(1)}>Sifat,</h1>
+          <h1
+            className={index == 0 ? fadeIn : fadeOut}
+            onClick={() => setIndex(0)}
+          >
+            Asas,
+          </h1>
+          <h1
+            className={index == 1 ? fadeIn : fadeOut}
+            onClick={() => setIndex(1)}
+          >
+            Sifat,
+          </h1>
           <h1>dan</h1>
-          <h1 className={index == 2 ? fadeIn : fadeOut} onClick={() => setIndex(2)}>Tujuan</h1>
+          <h1
+            className={index == 2 ? fadeIn : fadeOut}
+            onClick={() => setIndex(2)}
+          >
+            Tujuan
+          </h1>
           <h1>IMG-ITB</h1>
         </div>
         {index === 0 && (
-            <div className={descSection2} >
-              <div className={asas}>
+          <div className={descSection2}>
+            <div className={asas}>
               <h1>{SliderText[0].title}</h1>
               <p>{SliderText[0].desc}</p>
-              </div>
             </div>
+          </div>
         )}
         ;
         {index === 1 && (
@@ -121,9 +138,13 @@ const HomeScreen = () => {
 
       <div className={containerSectionKegiatan}>
         <div className={judulSection4}>
+          <div>
             <h1>Kegiatan IMG-ITB</h1>
-            <h2>Ketinggalan Informasi</h2>
+          </div>
+          <div>
+            <h3>Ketinggalan Informasi</h3>
             <h3>Berikut Redaksi Acara IMG-ITB yang dapat kamu baca kembali!</h3>
+          </div>
         </div>
         <Gallery sliderName="card" />
       </div>
