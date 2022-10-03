@@ -32,7 +32,7 @@ const Gallery = (props) => {
   const gallerySettings = {
     infinite: true,
     speed: 1000,
-    slidesToShow: 4,
+    slidesToShow: 3,
     swipeToSlide: true,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -49,6 +49,7 @@ const Gallery = (props) => {
     autoplaySpeed: 2000,
     arrows: false,
     swipeToSlide: true,
+
   };
 
   const verticalcardSettings = {
@@ -66,7 +67,7 @@ const Gallery = (props) => {
   const gallerySettings2 = {
     infinite: true,
     speed: 1000,
-    slidesToShow: 4,
+    slidesToShow: 3,
     swipeToSlide: true,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -112,7 +113,7 @@ const Gallery = (props) => {
                   <div className={madeElementImage}>
                     <img src={slide.image}></img>
                     <div className={madeElementContent}>
-                      <h1>WEBGIS</h1>
+                      <h1>Webgis</h1>
                       <h3>10 september 2021</h3>
                       <p>
                         Web based GIS (Geographic Information System) of ITB
@@ -121,11 +122,9 @@ const Gallery = (props) => {
                         development of ITB Kampus Jatinangor.
                       </p>
                     </div>
-                    <a href="/WebGIS">
-                      <div className={madeElementButton}>
-                        <p>View</p>
+                      <div href="/WebGIS" className={madeElementButton}>
+                        <p>Lihat Selengkapnya</p>
                       </div>
-                    </a>
                   </div>
                 </div>
               );
