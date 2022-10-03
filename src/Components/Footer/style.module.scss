@@ -2,16 +2,17 @@
   background-color: #4b8579;
   display: flex;
   align-items: center;
-  margin-left: 10px;
   margin: 0 auto;
-  padding: 8px 25px 8px 25px;
   flex-direction: column;
   z-index: 6;
   position: relative;
+  font-size: 16px;
+  
 }
 
 .container2 {
-  max-width: 1280px;
+  width: 1180px;
+  
 }
 
 .contenttop {
@@ -20,16 +21,22 @@
   justify-self: start;
   align-self: flex-start;
   gap: 50px;
-  max-width: 1400px;
 }
 
 .content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100%;
   color: white;
-  max-width: 1400px;
+}
+
+.connect {
+  display: flex;
+  flex-direction: column;
+  h1 {
+    font-family: jakartaBold;
+    font-size: 20px;
+  }
 }
 
 .karya {
@@ -56,17 +63,14 @@
     margin-left: 5px;
     font-style: normal;
     font-weight: 100;
-    font-size: 5px;
     color: white;
   }
   h1 {
     margin-left: 5px;
     font-style: bold;
     font-weight: 600;
-    font-size: 10px;
     color: white;
-    margin-bottom: -3px;
-    margin-top: -3px;
+
   }
 }
 
@@ -77,14 +81,45 @@
 
 .bottom {
   color: white;
-  border-top: white solid 2px;
-  width: 1280px;
-
+  border-top: white solid 1px;
   h1 {
-    font-size: 10px;
+    margin-block: 20px;
     align-content: center;
     justify-self: center;
     text-align: center;
+    font-family: jakartaBold;
   }
 }
 
+.imageContainer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  img {
+    height: 27px;
+    margin-right: 7px;
+  }
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.detailAddress {
+  display: flex;
+  align-items: center;
+  width: 270px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+
+  img {
+    width: 23px;
+    margin-right: 10px;
+  }
+}
+
+.karya {
+  h3 {
+    margin-bottom: 15px;
+  }
+}
