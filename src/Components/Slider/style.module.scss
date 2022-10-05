@@ -1,31 +1,26 @@
 .wrapperCard {
-  margin-top: 0px;
-  height: 700px;
   display: flex;
   max-width: 1280px;
   justify-self: center;
   align-self: center;
   align-content: center;
-  margin-right: 0 54px;
+  margin-bottom: 100px;
 }
 
 .wrapperGallery {
-  margin-top: 20px;
   height: 800px;
   display: flex;
-  width: 1600px;
+  width: 100vw;
   justify-self: center;
   align-self: center;
   align-content: center;
+
 }
 
 .galleryElementContainer {
-  height: 250px;
-  width: 100%;
-  margin-top: -40px;
+
 }
 .galleryElementContainer img {
-  /* margin-inline: 1px; */
   height: 220px;
   width: 275px;
   object-fit: cover;
@@ -34,15 +29,11 @@
   filter: drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.558));
 }
 
-.galleryElementContainer {
-  margin-top: 10px;
-}
+
 .galleryWrapper {
-  width: 1300px;
-  height: 800px;
-  margin: 50px auto;
   display: flex;
   flex-direction: column;
+  margin: 20px 0 75px 0;
 }
 
 .galleryCarousel {
@@ -65,7 +56,6 @@
   align-items: center;
   margin-top: 30px;
   justify-content: space-between;
-  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
 }
 
 .madeElementTitle {
@@ -84,86 +74,70 @@
   width: 300px;
   height: 200px;
   border-radius: 10px 10px 0 0;
-  margin: 0 0 0 0;
+  margin: 0;
   object-fit: fill;
-  margin-left: -25px;
+  margin-bottom: 10px;
 }
 
 .madeElementContent {
   font-family: poppins;
   font-style: normal;
-  font-weight: 400;
   font-size: 12px;
   line-height: 18px;
-  color: #000000;
+  color: #fff;
   padding-inline: 2px;
-  margin-top: -5px;
   margin-bottom: 30px;
+  text-align: center;
+  padding-inline: 10px;
+
 
   h1 {
     text-align: center;
     font-style: normal;
-    font-weight: 500;
     font-size: 24px;
     line-height: 36px;
+    font-family: jakartabold;
+    color: #FFF
+
   }
 
   p {
-    width: 250px;
-    text-align: justify;
-    text-justify: center;
+    text-align: center;
   }
 
   h3 {
     text-align: center;
     font-style: normal;
-    font-weight: 500;
-    margin-top: -23px;
+    padding-bottom: 30px;
   }
 }
 
 .madeElementButton {
-  font-style: normal;
-  font-weight: 500;
   font-size: 14px;
   align-items: center;
   text-align: center;
   border-radius: 11px;
   padding: 9px 25px;
   margin-bottom: 25px;
-  text-decoration: none;
-  width: 75px;
-  height: 8px;
-  margin-inline: 63px;
-  background: #ff8735;
-  border-bottom: none;
+  cursor: pointer;
 
-  a {
-    text-decoration: none;
-    border-bottom: none;
-  }
+  margin-inline: 63px;
+  background: #FF4A01;
 
   p {
-    margin: 0 0 0 0;
     text-align: center;
     font-style: normal;
     text-decoration: none;
-    margin: 0 0 0 0;
-    margin-top: -5px;
     color: white;
     border-bottom: none;
+    
   }
 }
 
 .madeElementButton:hover {
-  background: white;
-  border-radius: 11px;
+  background:  #fa7b49;
   cursor: pointer;
-  transition-duration: 300ms;
-
-  p {
-    color: #ff8735;
-  }
+  transition-duration: 500ms;
 }
 
 .madeElementWrapper {
@@ -172,6 +146,7 @@
   flex-direction: column;
   margin: 0 auto;
   z-index: 5;
+
 
 }
 
@@ -185,14 +160,13 @@
 
 .madeElementContainer .madeElementImage {
   /* border: 3px solid red; */
-  margin-inline: 25px;
   border-radius: 24px;
 }
 
 .wrapperVerticalCard {
   margin-top: 20px;
   height: 100px;
-  width: 1600px;
+  width: 1280px;
 }
 
 .verticalCardContainer {

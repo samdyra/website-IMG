@@ -1,3 +1,7 @@
+.container {
+
+}
+
 .containerSection {
   margin: 0 auto;
   z-index: 1;
@@ -237,6 +241,8 @@
   h1 {
     font-size: 30px;
     text-align: center;
+    font-family: jakartabold;
+    color: #FFF;
   }
 
   h2 {
@@ -246,6 +252,7 @@
   h3 {
     text-align: center;
     margin-top: 10px;
+    color: #FFF;
   }
 }
 
