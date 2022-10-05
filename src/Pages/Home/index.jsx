@@ -52,18 +52,17 @@ const HomeScreen = () => {
   }, [index]);
 
   function Model(props) {
-    const { nodes, materials } = useGLTF("/globefix.glb");
+    const { nodes, materials } = useGLTF("/gray.glb");
     return (
       <group {...props} dispose={null}>
         <mesh
-          geometry={nodes.Sphere001.geometry}
-          material={materials["Material.005"]}
+          geometry={nodes.Sphere.geometry}
+          material={materials["Material.001"]}
+          scale={17}
         />
       </group>
     );
   }
-
-  useGLTF.preload("/globefix.glb");
 
   // function Model(props) {
   //   const models = useRef();
@@ -181,14 +180,15 @@ const HomeScreen = () => {
             </p>
           </div>
           <div className={logo}>
-            <Canvas camera={{ fov: 70, position: [0, 0, 65] }}>
-              <ambientLight></ambientLight>
+            <Canvas camera={{ fov: 35, position: [0, 0, 65] }}>
+              <ambientLight color={200} intensity={10}></ambientLight>
               <directionalLight
+                castShadow={true}
                 intensity={2}
                 position={[50, 50, 50]}
               ></directionalLight>
               <OrbitControls
-                enablePan={true}
+                enablePan={false}
                 enableZoom={true}
                 enableRotate={true}
               ></OrbitControls>
@@ -269,7 +269,7 @@ const HomeScreen = () => {
 
       <div className={containerSectionKegiatan}>
         <div className={judulSection4}>
-            <h1>Kegiatan IMG-ITB</h1>
+          <h1>Kegiatan IMG-ITB</h1>
           <div>
             <h3>Ketinggalan Informasi</h3>
             <h3>Berikut Redaksi Acara IMG-ITB yang dapat kamu baca kembali!</h3>
@@ -278,13 +278,13 @@ const HomeScreen = () => {
         <Gallery sliderName="card" />
       </div>
 
-        <div className={judulSection5}>
-          <h1>Our Delightful Moments</h1>
-        </div>
-        <div>
-          <Gallery sliderName="gallery" />
-        </div>
+      <div className={judulSection5}>
+        <h1>Our Delightful Moments</h1>
       </div>
+      <div>
+        <Gallery sliderName="gallery" />
+      </div>
+    </div>
   );
 };
 
