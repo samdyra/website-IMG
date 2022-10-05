@@ -1,6 +1,6 @@
 import React, { useRef, Suspense, useEffect } from "react";
 import style from "./style.module.scss";
-import { useState } from "react";
+import { useState, useUpdate } from "react";
 
 //THREE
 import { Canvas, useFrame } from "@react-three/fiber";
@@ -52,26 +52,117 @@ const HomeScreen = () => {
   }, [index]);
 
   function Model(props) {
-    const models = useRef();
-    const { nodes, materials } = useGLTF("./globe.glb");
-    useFrame(({ clock }) => {
-      models.current.rotation.x = clock.getElapsedTime() / 5;
-      models.current.rotation.y = clock.getElapsedTime() / 3;
-    });
+    const { nodes, materials } = useGLTF("/globefix.glb");
     return (
-      <group {...props} dispose={null} ref={models}>
-        <mesh
-          geometry={nodes.Cube.geometry}
-          material={materials["Material.002"]}
-          scale={18.01}
-        />
+      <group {...props} dispose={null}>
         <mesh
           geometry={nodes.Sphere001.geometry}
-          material={materials["Material.003"]}
+          material={materials["Material.005"]}
         />
       </group>
     );
   }
+
+  useGLTF.preload("/globefix.glb");
+
+  // function Model(props) {
+  //   const models = useRef();
+  //   const ref = useRef((models) => {
+  //     models.rotateY(0, 1000, 0);
+  //   }, []);
+  //   const { nodes, materials } = useGLTF("./globefix.gltf");
+  //   useFrame(({ clock }) => {
+  //     models.current.rotation.x = clock.getElapsedTime() / 7;
+  //     models.current.rotation.y = clock.getElapsedTime() / 5;
+  //   });
+  //   return (
+  //     <group {...props} dispose={null} ref={models}>
+  //       <group
+  //         scale={0.2}
+  //         rotation={[-Math.PI / 2, 0, 0]}
+  //         position={[0.01, 0, 0]}
+  //         ref={ref}
+  //       >
+  //         <mesh
+  //           geometry={nodes.Ground.geometry}
+  //           material={materials.Sand}
+  //           position={[-5.54, -74.67, 83.97]}
+  //           rotation={[-Math.PI / 2, 0, Math.PI]}
+  //           scale={18.19}
+  //         />
+  //         <mesh
+  //           geometry={nodes.Grass.geometry}
+  //           material={materials.Grass}
+  //           position={[-4.57, -77.39, 66.77]}
+  //           rotation={[-Math.PI / 2, 0, Math.PI]}
+  //           scale={18.19}
+  //         />
+  //         <mesh
+  //           geometry={nodes.Water.geometry}
+  //           material={materials.Water}
+  //           position={[-2.16, -68.18, 75.35]}
+  //           rotation={[-Math.PI / 2, 0, Math.PI]}
+  //           scale={18.19}
+  //         />
+  //         <mesh
+  //           geometry={nodes.Mountains.geometry}
+  //           material={materials.Rock}
+  //           position={[-13.17, -57.3, 26.59]}
+  //           rotation={[-Math.PI / 2, 0, Math.PI]}
+  //           scale={18.19}
+  //         />
+  //         <mesh
+  //           geometry={nodes.Mountaintop.geometry}
+  //           material={materials["Grey material"]}
+  //           position={[47.07, 37.11, 9.66]}
+  //           rotation={[-Math.PI / 2, 0, Math.PI]}
+  //           scale={18.19}
+  //         />
+  //         <mesh
+  //           geometry={nodes.Rocky_Mountains.geometry}
+  //           material={materials.Rocks}
+  //           position={[-5.32, -81.5, 109.21]}
+  //           rotation={[-Math.PI / 2, 0, Math.PI]}
+  //           scale={18.19}
+  //         />
+  //         <mesh
+  //           geometry={nodes.Volcano.geometry}
+  //           material={materials["Volcanic rocks"]}
+  //           position={[10.1, -16.09, 147.75]}
+  //           rotation={[-Math.PI / 2, 0, Math.PI]}
+  //           scale={18.19}
+  //         />
+  //         <mesh
+  //           geometry={nodes.Lava.geometry}
+  //           material={materials.Lava}
+  //           position={[4.37, -7.17, 156.32]}
+  //           rotation={[-Math.PI / 2, 0, Math.PI]}
+  //           scale={18.19}
+  //         />
+  //         <mesh
+  //           geometry={nodes.City.geometry}
+  //           material={materials.Metal}
+  //           position={[19.9, 18.79, 61.46]}
+  //           rotation={[0, 0, Math.PI]}
+  //           scale={18.19}
+  //         />
+  //         <mesh
+  //           geometry={nodes.Forest.geometry}
+  //           material={materials.Trees}
+  //           position={[-21.64, -24.76, 10.59]}
+  //           rotation={[0, 0, Math.PI]}
+  //           scale={18.19}
+  //         />
+  //         <mesh
+  //           geometry={nodes.Smoke.geometry}
+  //           material={materials.Fume}
+  //           position={[13.83, 4.85, 159.67]}
+  //           scale={18.19}
+  //         />
+  //       </group>
+  //     </group>
+  //   );
+  // }
 
   return (
     <div className={container}>

@@ -59,12 +59,12 @@
 }
 
 .galleryElementContainer2 {
-  height: 625px;
+  height: 93vh;
   width: 600px;
 }
 .galleryElementContainer2 img {
   /* margin-inline: 1px; */
-  height: 600px;
+  height: 89vh;
   width: 560px;
   object-fit: cover;
   border-radius: 20px;
@@ -92,7 +92,7 @@
 .containerSection {
   margin: 0 auto;
   max-width: 1280px;
-  height: 720px;
+  height: 100vh;
   display: flex;
 
   background-color: gainsboro;
@@ -108,12 +108,12 @@
 
 .slider1 {
   display: flex;
-  margin-top: 100px;
+  margin-top: 20px;
   margin-left: 35px;
 }
 .slider2 {
   display: flex;
-  margin-top: 50px;
+
   max-width: 565px;
 }
 
