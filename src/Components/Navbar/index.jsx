@@ -5,8 +5,14 @@ import login from "../../assets/images/login.png";
 import { useState } from "react";
 import Dropdown from "../Dropdown";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  const location = useLocation();
+
+  const linkName = location.pathname;
+
+  const [navbar, setNavbar] = useState(false);
   const {
     container,
     linkContainer,
@@ -14,9 +20,35 @@ const Navbar = () => {
     searchIcon,
     link,
     logotext,
-    content,
+    containerbig,
+    containeractive,
+    containerGeopoint,
   } = style;
   const [fix, setFix] = useState(false);
+
+  const changeBackground = () => {
+    if (window.scrollY >= 680) {
+      setNavbar(false);
+    } else {
+      setNavbar(true);
+    }
+  };
+
+  window.addEventListener("scroll", changeBackground);
+
+  // const navbarOpacity = () => {
+  //   if (window.scrollY >= 300) {
+  //     setOpacity(100);
+  //   } else {
+  //     setOpacity(50);
+  //   }
+  // };
+
+  const [offset, setOffset] = useState(0);
+
+  window.addEventListener("scroll", (e) => {
+    return setOffset(window.pageYOffset / 700);
+  });
 
   function setFixed() {
     if (window.scrollY >= 392) {
@@ -27,35 +59,97 @@ const Navbar = () => {
   }
 
   window.addEventListener("scroll", setFixed);
-  let menuName = "activities";
   return (
-    <>
-      <nav className={container}>
-        <div className={content}>
-          <div>
-            <Link className={logo} to="/">
-              <img src={LogoIMG} />
-              <div className={logotext}>
-                <h1 style={{fontFamily : "jakartabold"}}>IKATAN MAHASISWA GEODESI</h1>
-                <h1>INSTITUT TEKNOLOGI BANDUNG</h1>
-              </div>
-            </Link>
-          </div>
+    <div>
+      {linkName === "/" ? (
+        <div
+          className={containeractive}
+          style={{ background: `rgba(75,133,121, ${offset})` }}
+        >
+          <div className={container}>
+            <div>
+              <Link className={logo} to="/">
+                <img src={LogoIMG} />
+                <div className={logotext}>
+                  <h1 style={{ fontFamily: "jakartabold" }}>
+                    IKATAN MAHASISWA GEODESI
+                  </h1>
+                  <h1>INSTITUT TEKNOLOGI BANDUNG</h1>
+                </div>
+              </Link>
+            </div>
 
-          <div className={linkContainer}>
-            <Dropdown menuName="activities" />
-            <Dropdown menuName="karya" />
-            <Link className={link}  to="/Pojokimg">
-              <div>Pojok IMG</div>
-            </Link>
-          </div>
+            <div className={linkContainer}>
+              <Dropdown menuName="activities" />
+              <Dropdown menuName="karya" />
+              <Link className={link} to="/Pojokimg">
+                <div>Pojok IMG</div>
+              </Link>
+            </div>
 
-          <div className={searchIcon}>
-            <img src={login} />
+            <div className={searchIcon}>
+              <img src={login} />
+            </div>
           </div>
         </div>
-      </nav>
-    </>
+      ) : linkName === "/Geopoint" ? (
+        <div className={containerGeopoint}>
+          <div className={container}>
+            <div>
+              <Link className={logo} to="/">
+                <img src={LogoIMG} />
+                <div className={logotext}>
+                  <h1 style={{ fontFamily: "jakartabold" }}>
+                    IKATAN MAHASISWA GEODESI
+                  </h1>
+                  <h1>INSTITUT TEKNOLOGI BANDUNG</h1>
+                </div>
+              </Link>
+            </div>
+
+            <div className={linkContainer}>
+              <Dropdown menuName="activities" />
+              <Dropdown menuName="karya" />
+              <Link className={link} to="/Pojokimg">
+                <div>Pojok IMG</div>
+              </Link>
+            </div>
+
+            <div className={searchIcon}>
+              <img src={login} />
+            </div>
+          </div>
+        </div>
+      ) : (
+        <div className={containeractive}>
+          <div className={container}>
+            <div>
+              <Link className={logo} to="/">
+                <img src={LogoIMG} />
+                <div className={logotext}>
+                  <h1 style={{ fontFamily: "jakartabold" }}>
+                    IKATAN MAHASISWA GEODESI
+                  </h1>
+                  <h1>INSTITUT TEKNOLOGI BANDUNG</h1>
+                </div>
+              </Link>
+            </div>
+
+            <div className={linkContainer}>
+              <Dropdown menuName="activities" />
+              <Dropdown menuName="karya" />
+              <Link className={link} to="/Pojokimg">
+                <div>Pojok IMG</div>
+              </Link>
+            </div>
+
+            <div className={searchIcon}>
+              <img src={login} />
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
   );
 };
 

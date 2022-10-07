@@ -1,29 +1,43 @@
-.container {
-  background-color: #4b8579;
-  max-height: 58px;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  justify-content: space-around;
+.containerbig {
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+}
+.containerGeopoint {
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  background: #281f64;
+}
 
+.container {
+  display: flex;
+  margin: 0 auto;
+  width: 1280px;
+  background: none;
+  background-color: none;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.containeractive {
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  // background: #4b8579;
 }
 
 .content {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  background: none;
   max-height: 50px;
-  margin: 0 auto;
-  position: sticky;
-  max-width: 1280px;
   padding-block: 5px;
+  align-items: center;
+
   @media screen and (max-width: 418px) {
     max-width: 368px;
-  }
-
-  nav {
-    position: sticky;
-    top: 0;
   }
 }
 
@@ -41,10 +55,8 @@
   flex-direction: row;
   align-content: center;
   text-decoration: none;
-  margin-bottom: 5px;
 
   h1 {
- 
     color: white;
   }
 }
@@ -66,8 +78,6 @@
   div {
   }
 }
-
-
 
 .link {
   text-decoration: none;

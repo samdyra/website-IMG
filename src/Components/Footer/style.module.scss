@@ -7,12 +7,21 @@
   z-index: 6;
   position: relative;
   font-size: 16px;
-  
+}
+
+.containerGeopoint {
+  background: #281f64;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  flex-direction: column;
+  z-index: 6;
+  position: relative;
+  font-size: 16px;
 }
 
 .container2 {
   width: 1180px;
-  
 }
 
 .contenttop {
@@ -70,7 +79,6 @@
     font-style: bold;
     font-weight: 600;
     color: white;
-
   }
 }
 

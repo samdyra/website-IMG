@@ -1,13 +1,14 @@
 import React from "react";
 import { SliderData } from "../../assets/object/SliderData";
-import Carousel from "../../Components/Carousel/Carousel";
-import "./style.module.scss";
+import { Carousel3D } from "../../Components";
+import style from "./style.module.scss";
 
 const Geopoint = () => {
+  const { container, carouselcontainer } = style;
   return (
-    <>
-      <Carousel slides={SliderData} />
-    </>
+    <div className={container}>
+      <Carousel3D />
+    </div>
   );
 };
 

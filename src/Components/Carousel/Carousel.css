@@ -1,17 +1,15 @@
-.slider {
+.sliderWin {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 0;
-
 }
 
 .image {
   width: 1000px;
   height: 600px;
   border-radius: 10px;
-
 }
 
 .right-arrow {
@@ -36,12 +34,12 @@
   user-select: none;
 }
 
-.slide {
+.slideWin {
   opacity: 0;
   transition-duration: 1s ease;
 }
 
-.slide.active {
+.slideWin.active {
   opacity: 1;
   transition-duration: 1s;
   transform: scale(1.08);

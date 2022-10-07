@@ -1,10 +1,7 @@
-.container {
-}
-
 .containerSection {
   margin: 0 auto;
   z-index: 1;
-  background: white;
+  background: #ff4a01;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -42,6 +39,8 @@
   display: flex;
   padding-inline: 10px;
   justify-content: center;
+  padding-top: none;
+  margin-top: none;
 }
 
 .welcome {
@@ -58,18 +57,16 @@
 
 .logo img {
   height: 400px;
-  margin-top: 120px;
 }
 
 .logo {
   z-index: 1;
-  height: 600px;
-  width: 600px;
+  height: 550px;
+  width: 550px;
 }
 
 .desc {
   width: 40%;
-  margin-top: 200px;
 
   h2 {
     font-size: 24px;

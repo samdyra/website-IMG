@@ -20,13 +20,13 @@ const Carousel = ({ slides, props }) => {
   }
 
   return (
-    <section className="slider">
+    <section className="sliderWin">
       <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
       <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
       {slides.map((slide, index) => {
         return (
           <div
-            className={index === current ? "slide active" : "slide"}
+            className={index === current ? "slideWin active" : "slideWin"}
             key={index}
           >
             {index === current && (
