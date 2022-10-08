@@ -87,7 +87,6 @@ const ProgressBarCarousel = () => {
           return (
             <div className={madeElementContainer}>
               <img src={slide.image}></img>
-
               <h1>Webgis</h1>
               <p>
                 Web based GIS (Geographic Information System) of ITB Kampus
