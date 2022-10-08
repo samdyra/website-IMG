@@ -121,7 +121,7 @@ const Navbar = () => {
           </div>
         </div>
       ) : (
-        <div className={containeractive}>
+        <div className={containerbig}>
           <div className={container}>
             <div>
               <Link className={logo} to="/">
