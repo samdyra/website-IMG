@@ -1,0 +1,269 @@
+.wrapperCard {
+  display: flex;
+  max-width: 1280px;
+  justify-self: center;
+  align-self: center;
+  align-content: center;
+  margin-bottom: 100px;
+}
+
+.wrapperGallery {
+  height: 800px;
+  display: flex;
+  width: 100vw;
+  justify-self: center;
+  align-self: center;
+  align-content: center;
+}
+
+.galleryElementContainer {
+}
+.galleryElementContainer img {
+  height: 220px;
+  width: 275px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-top: 10px;
+  filter: drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.558));
+}
+
+.galleryWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0 75px 0;
+}
+
+.galleryCarousel {
+  height: 500px;
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.galleryCarousel:hover {
+  cursor: grab;
+}
+
+.madeElementContainer {
+  max-width: 300px;
+  background: #5ea496;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  justify-content: space-between;
+}
+
+.madeElementTitle {
+  font-family: poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  display: flex;
+  color: #000000;
+  margin-top: -5px;
+  text-align: center;
+}
+
+.madeElementImage img {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px 10px 0 0;
+  margin: 0;
+  object-fit: fill;
+  margin-bottom: 10px;
+}
+
+.madeElementContent {
+  font-family: poppins;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 18px;
+  color: #fff;
+  padding-inline: 2px;
+  margin-bottom: 30px;
+  text-align: center;
+  padding-inline: 10px;
+
+  h1 {
+    text-align: center;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 36px;
+    font-family: jakartabold;
+    color: #fff;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  h3 {
+    text-align: center;
+    font-style: normal;
+    padding-bottom: 30px;
+  }
+}
+
+.madeElementButton {
+  font-size: 14px;
+  align-items: center;
+  text-align: center;
+  border-radius: 11px;
+  padding: 9px 25px;
+  margin-bottom: 25px;
+  cursor: pointer;
+
+  margin-inline: 63px;
+  background: #ff4a01;
+
+  p {
+    text-align: center;
+    font-style: normal;
+    text-decoration: none;
+    color: white;
+    border-bottom: none;
+  }
+}
+
+.madeElementButton:hover {
+  background: #fa7b49;
+  cursor: pointer;
+  transition-duration: 500ms;
+}
+
+.madeElementWrapper {
+  width: 1280px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  z-index: 5;
+}
+
+.madeElementCard {
+  height: 400px;
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.madeElementContainer .madeElementImage {
+  /* border: 3px solid red; */
+  border-radius: 24px;
+}
+
+.wrapperVerticalCard {
+  margin-top: 20px;
+  height: 100px;
+  width: 1280px;
+}
+
+.verticalCardContainer {
+  display: block;
+  max-width: 1100px;
+  max-height: 213px;
+  background: #d9d9d9;
+  border-radius: 25px;
+  margin-left: 89px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+}
+
+.verticalCardContainer:hover {
+  cursor: grab;
+}
+
+.verticalCardImage {
+  width: 1050px;
+  display: flex;
+}
+.verticalCardImage img {
+  width: 300px;
+  height: 213px;
+  border-radius: 25px 0 0 25px;
+  margin: 0 0 0 0;
+  object-fit: fill;
+  margin-left: -25px;
+}
+
+.verticalCardContent {
+  width: 900px;
+  display: flex;
+  font-weight: 400;
+  font-size: 12px;
+  color: #000000;
+  flex-direction: column;
+  padding-left: 50px;
+  text-align: left;
+
+  h1 {
+    max-width: fit-content;
+    text-align: left;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+  }
+}
+
+.verticalCardButton {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  align-items: left;
+  text-align: center;
+  border-radius: 11px;
+  padding: 9px 25px;
+  margin-bottom: 25px;
+  text-decoration: none;
+  max-width: 150px;
+  max-height: 13px;
+
+  background: #ff8735;
+  border-bottom: none;
+
+  a {
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  p {
+    margin: 0 0 0 0;
+    text-align: center;
+    font-style: normal;
+    text-decoration: none;
+    margin: 0 0 0 0;
+    margin-top: -5px;
+    color: white;
+    border-bottom: none;
+  }
+}
+
+.verticalCardButton:hover {
+  background: white;
+  border-radius: 11px;
+  cursor: pointer;
+  transition-duration: 300ms;
+
+  p {
+    color: #ff8735;
+  }
+}
+
+.verticalCardCard {
+  height: 400px;
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.verticalCardContainer .verticalCardImage {
+  /* border: 3px solid red; */
+  margin-inline: 25px;
+  border-radius: 24px;
+}

@@ -62,7 +62,7 @@ const HomeScreen = () => {
         <mesh
           geometry={nodes.Sphere.geometry}
           material={materials["Material.001"]}
-          scale={17}
+          scale={18}
         />
       </group>
     );
@@ -92,22 +92,13 @@ const HomeScreen = () => {
           </div>
           <div className={logo}>
             <Canvas
-              camera={{ fov: 36, position: [0, 50, 45] }}
-              shadows
-              castShadow
+              camera={{
+                fov: 36,
+                position: [30, 30, 45],
+              }}
             >
               <ambientLight color={300} intensity={10}></ambientLight>
-              <SpotLight
-                distance={5}
-                angle={0.15}
-                attenuation={5}
-                anglePower={5} // Diffuse-cone anglePower (default: 5)
-              />
-              <directionalLight
-                castShadow={true}
-                intensity={10}
-                position={[0, 0, 0]}
-              ></directionalLight>
+
               <OrbitControls
                 enablePan={false}
                 enableZoom={false}
