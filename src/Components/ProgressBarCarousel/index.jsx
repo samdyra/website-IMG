@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Slider from "react-slick";
 import style from "./style.module.scss";
 import { SliderData } from "../../assets/object/SliderData";
@@ -11,7 +11,15 @@ const ProgressBarCarousel = () => {
     madeElementImage,
     madeElementButton,
     madeElementContent,
+    dots,
+    dotsactive,
   } = style;
+
+  const [state, setState] = useState(0);
+  const image = useRef();
+  useEffect(() => {
+    image.current.click();
+  }, []);
 
   const settings = {
     dots: true,
@@ -20,6 +28,11 @@ const ProgressBarCarousel = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     fade: true,
+    arrows: false,
+    beforeChange: (prev, next) => {
+      setState({ currentSlide: next });
+    },
+
     appendDots: (dots) => (
       <div style={{ marginTop: "30px" }}>
         <ul
@@ -34,59 +47,54 @@ const ProgressBarCarousel = () => {
             rowGap: "10px",
           }}
         >
-          {" "}
-          {dots}{" "}
+          {dots}
         </ul>
         <div
           style={{
             position: "relative",
             zIndex: "-1",
-            top: "12px",
+            top: "25px",
             left: "10px",
 
             backgroundColor: "#D5A33B",
             width: "1270px",
-            height: "7px",
+            height: "6px",
           }}
         ></div>
       </div>
     ),
     customPaging: (i) => (
-      <div
-        style={{
-          width: "25px",
-          height: "25px",
-          color: "blue",
-          border: "2px blue solid",
-          backgroundColor: "white",
-          borderRadius: "100%",
-          marginTop: "20px",
-        }}
-      ></div>
+      <div>
+        <div>
+          <h1 style={{ color: "white" }}>click</h1>
+        </div>
+        <div
+          className={i === state.currentSlide ? dotsactive : dots}
+          ref={i === 0 ? image : null}
+        ></div>
+        <div>
+          <h1 style={{ color: "white", marginTop: "10px" }}>click</h1>
+        </div>
+      </div>
     ),
   };
+
+  console.log(state);
   return (
     <div className={madeElementWrapper}>
       <Slider {...settings} className={wrapperCard}>
         {SliderData.map((slide) => {
           return (
             <div className={madeElementContainer}>
-              <div className={madeElementImage}>
-                <img src={slide.image}></img>
-                <div className={madeElementContent}>
-                  <h1>Webgis</h1>
-                  <h3>10 september 2021</h3>
-                  <p>
-                    Web based GIS (Geographic Information System) of ITB Kampus
-                    Jatinangor. We hope this feature would contribute to
-                    realized a continuous monitoring and sustainable development
-                    of ITB Kampus Jatinangor.
-                  </p>
-                </div>
-                <div href="/WebGIS" className={madeElementButton}>
-                  <p>Lihat Selengkapnya</p>
-                </div>
-              </div>
+              <img src={slide.image}></img>
+
+              <h1>Webgis</h1>
+              <p>
+                Web based GIS (Geographic Information System) of ITB Kampus
+                Jatinangor. We hope this feature would contribute to realized a
+                continuous monitoring and sustainable development of ITB Kampus
+                Jatinangor.
+              </p>
             </div>
           );
         })}
