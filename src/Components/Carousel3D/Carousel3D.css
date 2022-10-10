@@ -2,6 +2,11 @@
   display: none;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+}
+
 #slider3D {
   display: flex;
 
