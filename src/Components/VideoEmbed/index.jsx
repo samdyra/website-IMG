@@ -12,9 +12,8 @@ const VideoEmbed = () => {
               style={{ borderRadius: "25px" }}
               className="embed-responsive-item"
               src="https://www.youtube.com/embed/hVaeQUr_RXo"
-              frameborder="0"
-              allow="`gyroscope` `accelerometer` `picture-in-picture` `encrypted-media` `clipboard-write`"
-              allowfullscreen
+              frameBorder="0"
+              allowFullScreen
             ></iframe>
           </div>
         </div>
