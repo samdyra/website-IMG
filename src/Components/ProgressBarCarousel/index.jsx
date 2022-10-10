@@ -79,7 +79,6 @@ const ProgressBarCarousel = () => {
     ),
   };
 
-  console.log(state);
   return (
     <div className={madeElementWrapper}>
       <Slider {...settings} className={wrapperCard}>

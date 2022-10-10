@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useRef, useCallback } from "react";
 import "./Carousel3D.css";
 import { SliderData } from "../../assets/object/SliderData";
 import { useEffect } from "react";
-import { useRef } from "react";
+
+import { BrowserRouter as Router, Link, useNavigate } from "react-router-dom";
 
 const Carousel3D = () => {
+  const navigate = useNavigate();
+  // const checkboxref = useRef();
+  // const handleOnClick = useCallback(() => {
+  //   const node = checkboxref.current.checked;
+  //   node ? navigate("/") : null;
+  // }, []);
   const image = useRef();
 
   useEffect(() => {
@@ -22,8 +29,9 @@ const Carousel3D = () => {
         <input type="radio" name="slider3D" id="s5" ref={image} />
 
         <label for="s1" id="slide1">
-          <img src={SliderData[1].image} />
+          <img src={SliderData[3].image} />
         </label>
+
         <label for="s2" id="slide2">
           <img src={SliderData[1].image} />
         </label>
@@ -34,7 +42,7 @@ const Carousel3D = () => {
           <img src={SliderData[1].image} />
         </label>
         <label for="s5" id="slide5">
-          <img src={SliderData[1].image} />
+          <img src={SliderData[1].image} onDoubleClick={() => navigate("/")} />
         </label>
       </section>
     </div>
