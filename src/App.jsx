@@ -14,7 +14,7 @@ import {
 } from "./Pages";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer/Footer";
-
+import DpmScreen from "./Pages/DPM/DpmScreen";
 function App() {
   return (
     <Router>
@@ -31,6 +31,7 @@ function App() {
         <Route path="/KabarkeSenatoran" element={<KabarKesenatoran />}></Route>
         <Route path="/Geopoint" element={<Geopoint />}></Route>
         <Route path="/Pojokimg" element={<Pojokimg />}></Route>
+        <Route path="/DPM" element={<DpmScreen />}></Route>
       </Routes>
       <Footer />
     </Router>

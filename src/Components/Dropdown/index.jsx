@@ -19,6 +19,7 @@ const Dropdown = (props) => {
             <a href="/StudentChapter">Student Chapter</a>
             <a href="/KabarkeSenatoran">Kabar Kesenatoran</a>
             <a href="/Geopoint">GEOPOINT</a>
+            <a href="/dpm">DPM</a>
           </div>
         </>
       ) : menuName == "karya" ? (

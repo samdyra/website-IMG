@@ -1,4 +1,7 @@
 /* Basic Settings  */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /* Basic Settings  */
 html,
 body,
@@ -87,7 +90,6 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  font-family: jakarta;
 }
 
 article,
@@ -185,6 +187,8 @@ input:focus {
   outline: none;
 }
 
+
+
 @font-face {
   font-family: jakarta;
   src: url(./assets/fonts/PlusJakartaDisplay-Regular.otf);
@@ -193,6 +197,13 @@ input:focus {
   font-family: jakartabold;
   src: url(./assets/fonts/PlusJakartaText-Bold.otf);
 }
+
+@font-face {
+  font-family: cascadiaCode;
+  src: url(./assets/fonts/CascadiaCode.ttf) format("woff2"),
+    url(./assets/fonts/CascadiaCode.woff2) format("truetype");
+}
+
 body {
   margin: 0;
 

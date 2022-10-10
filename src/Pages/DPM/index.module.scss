@@ -1,0 +1,27 @@
+.animate-blink {
+  // animation: blink-animation 0.5s cubic-bezier(0.4, 0, 0.6, 1) infinite
+  // alternate;
+}
+
+.container {
+  background-color: #0d1117;
+  color: #ddd;
+  border: 2px dotted gray;
+  height: 3000px;
+  padding-left: 30px;
+  padding-top: 30px;
+}
+
+.title {
+  font-family: cascadiaCode;
+  display: block;
+}
+
+// @keyframes blink-animation {
+//   from {
+//     opacity: 0;
+//   }
+//   to {
+//     opacity: 1;
+//   }
+// }
