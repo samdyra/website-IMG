@@ -6,6 +6,57 @@
   align-items: center;
 }
 
+.containerMascot {
+  display: flex;
+  height: 100vh;
+  width: 99.5vw;
+  justify-content: center;
+  align-items: center;
+
+  P {
+    color: #d5a33b;
+    width: 500px;
+    font-size: 25px;
+    text-align: justify;
+    line-height: 1.5;
+    letter-spacing: 4px;
+  }
+}
+
+.containerMascot img {
+  width: 600px;
+  padding-inline: 50px;
+}
+
+.buttonMascot {
+  background: #5e2d7b;
+  border-radius: 1000px;
+  width: 150px;
+  height: 35px;
+  color: white;
+  text-align: center;
+  padding-top: 15px;
+  margin-left: auto;
+  margin-top: 50px;
+}
+
+.buttonMascot:hover {
+  cursor: pointer;
+  background: white;
+  color: #5e2d7b;
+  transition: cubic-bezier(0.95, 0.05, 0.795, 0.035) 0.1s;
+}
+
+.containerModal {
+  display: flex;
+
+  width: 99.5vw;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100%;
+}
+
 .title {
   display: flex;
   height: 15vh;

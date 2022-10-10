@@ -7,6 +7,11 @@
   margin-bottom: 100px;
 }
 
+.slidecontainer {
+  height: 240px;
+  width: fit-content;
+}
+
 .wrapperGallery {
   height: 800px;
   display: flex;
@@ -14,11 +19,9 @@
   justify-self: center;
   align-self: center;
   align-content: center;
-
 }
 
 .galleryElementContainer {
-
 }
 .galleryElementContainer img {
   height: 220px;
@@ -28,7 +31,6 @@
   margin-top: 10px;
   filter: drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.558));
 }
-
 
 .galleryWrapper {
   display: flex;
@@ -90,15 +92,13 @@
   text-align: center;
   padding-inline: 10px;
 
-
   h1 {
     text-align: center;
     font-style: normal;
     font-size: 24px;
     line-height: 36px;
     font-family: jakartabold;
-    color: #FFF
-
+    color: #fff;
   }
 
   p {
@@ -122,7 +122,7 @@
   cursor: pointer;
 
   margin-inline: 63px;
-  background: #FF4A01;
+  background: #ff4a01;
 
   p {
     text-align: center;
@@ -130,12 +130,11 @@
     text-decoration: none;
     color: white;
     border-bottom: none;
-    
   }
 }
 
 .madeElementButton:hover {
-  background:  #fa7b49;
+  background: #fa7b49;
   cursor: pointer;
   transition-duration: 500ms;
 }
@@ -146,8 +145,6 @@
   flex-direction: column;
   margin: 0 auto;
   z-index: 5;
-
-
 }
 
 .madeElementCard {

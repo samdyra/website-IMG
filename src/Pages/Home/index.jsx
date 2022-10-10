@@ -1,6 +1,8 @@
-import React, { useRef, Suspense, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import style from "./style.module.scss";
-import { useState, useUpdate } from "react";
+
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 //THREE
 import { Canvas, useFrame } from "@react-three/fiber";
@@ -40,6 +42,10 @@ const HomeScreen = () => {
   } = style;
 
   const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
 
   useEffect(() => {
     let interval = setInterval(() => {
@@ -171,10 +177,15 @@ const HomeScreen = () => {
       </div>
 
       <div className={containerSection}>
-        <div className={judulSection3}>
+        <div className={judulSection3} data-aos="flip-left">
           <h1>Kepengurusan IMG-ITB 2022/2023</h1>
         </div>
-        <div className={organogram}>
+        <div
+          className={organogram}
+          data-aos="flip-left"
+          data-aos-duration="750"
+          data-aos-offset="500"
+        >
           <Carousel slides={SliderData} />
         </div>
       </div>
@@ -187,7 +198,13 @@ const HomeScreen = () => {
             <h3>Berikut Redaksi Acara IMG-ITB yang dapat kamu baca kembali!</h3>
           </div>
         </div>
-        <Gallery sliderName="card" />
+        <div
+          data-aos="slide-left"
+          data-aos-duration="1000"
+          data-aos-offset="400"
+        >
+          <Gallery sliderName="card" />
+        </div>
       </div>
 
       <div className={judulSection5}>

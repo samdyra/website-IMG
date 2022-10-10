@@ -1,12 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import style from "./style.module.scss";
 import Slider from "react-slick";
 import { SliderData } from "../../assets/object/SliderData";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Gallery = (props) => {
   const [currentText, setCurrenText] = useState(0);
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
 
   const {
     wrapperCard,
@@ -25,6 +30,7 @@ const Gallery = (props) => {
     verticalCardContent,
     verticalCardButton,
     verticalCardWrapper,
+    slidecontainer,
   } = style;
 
   const sliderName = props.sliderName;
@@ -49,7 +55,6 @@ const Gallery = (props) => {
     autoplaySpeed: 2000,
     arrows: false,
     swipeToSlide: true,
-
   };
 
   const verticalcardSettings = {
@@ -84,24 +89,38 @@ const Gallery = (props) => {
       {sliderName == "gallery" ? (
         <div className={galleryWrapper}>
           <div className={galleryCarousel}>
-            <Slider {...gallerySettings} className={wrapperGallery}>
-              {SliderData.map((slide) => {
-                return (
-                  <div className={galleryElementContainer}>
-                    <img src={slide.image}></img>
-                  </div>
-                );
-              })}
-            </Slider>
-            <Slider {...gallerySettings2} className={wrapperGallery}>
-              {ReversedData.map((slide) => {
-                return (
-                  <div className={galleryElementContainer}>
-                    <img src={slide.image}></img>
-                  </div>
-                );
-              })}
-            </Slider>
+            <div
+              className={slidecontainer}
+              data-aos="slide-left"
+              data-aos-duration="1000"
+              data-aos-offset="300"
+            >
+              <Slider {...gallerySettings} className={wrapperGallery}>
+                {SliderData.map((slide) => {
+                  return (
+                    <div className={galleryElementContainer}>
+                      <img src={slide.image}></img>
+                    </div>
+                  );
+                })}
+              </Slider>
+            </div>
+            <div
+              className={slidecontainer}
+              data-aos="slide-right"
+              data-aos-duration="1000"
+              data-aos-offset="250"
+            >
+              <Slider {...gallerySettings2} className={wrapperGallery}>
+                {ReversedData.map((slide) => {
+                  return (
+                    <div className={galleryElementContainer}>
+                      <img src={slide.image}></img>
+                    </div>
+                  );
+                })}
+              </Slider>
+            </div>
           </div>
         </div>
       ) : sliderName == "card" ? (
@@ -122,9 +141,9 @@ const Gallery = (props) => {
                         development of ITB Kampus Jatinangor.
                       </p>
                     </div>
-                      <div href="/WebGIS" className={madeElementButton}>
-                        <p>Lihat Selengkapnya</p>
-                      </div>
+                    <div href="/WebGIS" className={madeElementButton}>
+                      <p>Lihat Selengkapnya</p>
+                    </div>
                   </div>
                 </div>
               );
