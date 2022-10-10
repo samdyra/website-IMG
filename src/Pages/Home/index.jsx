@@ -75,7 +75,7 @@ const HomeScreen = () => {
   }
 
   return (
-    <div className={container}>
+    <div className={container} style={{ overflow: "hidden" }}>
       <div className={containerSectionTop}>
         <div
           style={{
@@ -116,7 +116,7 @@ const HomeScreen = () => {
         </div>
       </div>
 
-      <div className={containerSection2}>
+      <div className={containerSection2} style={{ overflow: "hidden" }}>
         <div className={judulSection2}>
           <h1
             className={index == 0 ? fadeIn : fadeOut}
@@ -176,13 +176,13 @@ const HomeScreen = () => {
         )}
       </div>
 
-      <div className={containerSection}>
-        <div className={judulSection3} data-aos="flip-left">
+      <div className={containerSection} style={{ overflow: "hidden" }}>
+        <div className={judulSection3} data-aos="fade-left">
           <h1>Kepengurusan IMG-ITB 2022/2023</h1>
         </div>
         <div
           className={organogram}
-          data-aos="flip-left"
+          data-aos="slide-left"
           data-aos-duration="750"
           data-aos-offset="500"
         >
@@ -190,7 +190,7 @@ const HomeScreen = () => {
         </div>
       </div>
 
-      <div className={containerSectionKegiatan}>
+      <div className={containerSectionKegiatan} style={{ overflow: "hidden" }}>
         <div className={judulSection4}>
           <h1>Kegiatan IMG-ITB</h1>
           <div>
@@ -199,9 +199,10 @@ const HomeScreen = () => {
           </div>
         </div>
         <div
-          data-aos="slide-left"
+          data-aos="fade-left"
           data-aos-duration="1000"
           data-aos-offset="400"
+          style={{ overflow: "hidden" }}
         >
           <Gallery sliderName="card" />
         </div>
@@ -210,7 +211,7 @@ const HomeScreen = () => {
       <div className={judulSection5}>
         <h1>Our Delightful Moments</h1>
       </div>
-      <div>
+      <div style={{ overflow: "hidden" }}>
         <Gallery sliderName="gallery" />
       </div>
     </div>

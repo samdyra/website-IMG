@@ -92,7 +92,7 @@ const Gallery = (props) => {
             <div
               className={slidecontainer}
               data-aos="slide-left"
-              data-aos-duration="1000"
+              data-aos-duration="1200"
               data-aos-offset="300"
             >
               <Slider {...gallerySettings} className={wrapperGallery}>

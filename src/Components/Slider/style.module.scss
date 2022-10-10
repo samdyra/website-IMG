@@ -5,11 +5,13 @@
   align-self: center;
   align-content: center;
   margin-bottom: 100px;
+  overflow: hidden;
 }
 
 .slidecontainer {
   height: 240px;
-  width: fit-content;
+  width: 99.6vw;
+  overflow: hidden;
 }
 
 .wrapperGallery {
@@ -19,6 +21,7 @@
   justify-self: center;
   align-self: center;
   align-content: center;
+  overflow: hidden;
 }
 
 .galleryElementContainer {
