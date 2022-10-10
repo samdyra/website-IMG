@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { SliderData } from "../../assets/object/SliderData";
-import { Carousel3D, ProgressBarCarousel, Modal } from "../../Components";
+import {
+  Carousel3D,
+  ProgressBarCarousel,
+  Modal,
+  VideoEmbed,
+} from "../../Components";
 import style from "./style.module.scss";
 
 import Aos from "aos";
@@ -15,6 +20,9 @@ const Geopoint = () => {
     containerModal,
     containerMascot,
     buttonMascot,
+    mascotText,
+    titleText,
+    teaser,
   } = style;
 
   const [openModal, setOpenModal] = useState(false);
@@ -31,11 +39,13 @@ const Geopoint = () => {
   return (
     <>
       <Modal open={openModal} onClose={() => setOpenModal(false)}></Modal>
-
+      {/* Geopoint IMG-ITB 2023 */}
       <div className={pageBackground}>
         <div className={title}>
-          <h1>Geopoint IMG-ITB 2023</h1>
-          <h2>Spread The Joy in Our Journey</h2>
+          <div className={titleText}>
+            <h1>Ferrari 458 Speciale</h1>
+            <h2>Spread The Joy in Our Journey</h2>
+          </div>
         </div>
         <div className={container}>
           <Carousel3D />
@@ -47,11 +57,18 @@ const Geopoint = () => {
             data-aos-duration="600"
             data-aos-offset="300"
           >
-            <p>
-              Perkenalkan, Gegep dan Eggy! Dua sejoli ini adalah teman
-              perjalanan kamu di Geopoint IMG–ITB yang akan menemani dan
-              memberikan informasi yang kamu butuhkan.
-            </p>
+            <div className={mascotText}>
+              <p>
+                The Ferrari 458 Italia (Type F142) is a mid-engine sports car
+                produced by Ferrari. The F458 is the successor of the F430, and
+                was first officially unveiled at the 2009 Frankfurt Motor Show.
+                It was succeeded by the 488 GTB (Gran Turismo Berlinetta), which
+                was unveiled at the 2015 Geneva Motor Show.
+                {/* Perkenalkan, Gegep dan Eggy! Dua sejoli ini adalah teman
+                perjalanan kamu di Geopoint IMG–ITB yang akan menemani dan
+                memberikan informasi yang kamu butuhkan. */}
+              </p>
+            </div>
             <div
               className={buttonMascot}
               onClick={() => {
@@ -72,8 +89,20 @@ const Geopoint = () => {
         <div className={container}>
           <ProgressBarCarousel />
         </div>
-        <div className={container}></div>
-        <div className={container}></div>
+        <div
+          className={container}
+          style={{ flexDirection: "column" }}
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-offset="300"
+        >
+          <div className={teaser}>
+            <h1>Teaser Geopoint IMG-ITB 2023</h1>
+          </div>
+          <div>
+            <VideoEmbed />
+          </div>
+        </div>
       </div>
     </>
   );

@@ -12,14 +12,22 @@
   width: 99.5vw;
   justify-content: center;
   align-items: center;
+  color: white;
+}
+
+.mascotText {
+  background: linear-gradient(153.18deg, #d5a33b -3.98%, #f5fcb5 70.27%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 
   P {
-    color: #d5a33b;
     width: 500px;
-    font-size: 25px;
+    font-size: 18px;
     text-align: justify;
     line-height: 1.5;
-    letter-spacing: 4px;
+    letter-spacing: 1px;
   }
 }
 
@@ -63,7 +71,7 @@
   width: 99.5vw;
   justify-content: center;
   align-items: center;
-  color: #d5a33b;
+
   flex-direction: column;
 
   h1 {
@@ -74,6 +82,36 @@
   h2 {
     font-size: 30px;
     margin-top: 10px;
+  }
+}
+
+.titleText {
+  background: linear-gradient(117.97deg, #d5a33b -4.84%, #5e2d7b 75.47%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+
+  width: 800px;
+  height: 700px;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  h1 {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 200px;
+    font-family: "Bambino-Black";
+    font-size: 70px;
+  }
+
+  h2 {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: "Bambino-Black";
+    font-size: 35px;
   }
 }
 .carouselcontainer {
@@ -89,4 +127,21 @@
     #356777 59.75%,
     #292645 91.05%
   );
+  padding-top: 10px;
+}
+
+.teaser {
+  background: linear-gradient(91.43deg, #d5a33b 13.77%, #f5fcb5 97.8%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+
+  h1 {
+    font-family: "Bambino-Black";
+    font-size: 50px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
 }
