@@ -70,7 +70,7 @@ const ProgressBarCarousel = () => {
         </div>
         <div
           className={i === state.currentSlide ? dotsactive : dots}
-          ref={i === 0 ? image : null}
+          ref={i === 1 ? image : null}
         ></div>
         <div>
           <h1 style={{ color: "white", marginTop: "10px" }}>click</h1>
