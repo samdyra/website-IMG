@@ -9,12 +9,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@googlemaps/react-wrapper": "^1.1.35",
     "@react-three/drei": "8.18.6",
     "@react-three/fiber": "7.0.26",
     "aos": "^2.3.4",
     "bootstrap": "^5.2.2",
     "dotenv": "^16.0.1",
     "firebase": "^9.9.1",
+    "google-maps-react": "^2.0.6",
     "node-sass": "^7.0.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",

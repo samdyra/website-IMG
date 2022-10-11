@@ -7,9 +7,8 @@ import {
   VideoEmbed,
 } from "../../Components";
 import style from "./style.module.scss";
-import { CountDown } from "./Components";
-import { GegepNavi1 } from "../../assets";
-
+import { CountDown, ProgressBar } from "./Components";
+import { GegepNavi1, rundown } from "../../assets";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -36,6 +35,9 @@ const Navigacity = () => {
     rutePetaButton,
     rutePetaButtonContainer,
     containerTop,
+    countDownContainer,
+    countDownTitle,
+    gegepHeader,
   } = style;
 
   const [openModal, setOpenModal] = useState(false);
@@ -53,8 +55,12 @@ const Navigacity = () => {
     <>
       <Modal open={openModal} onClose={() => setOpenModal(false)}></Modal>
       {/* Geopoint IMG-ITB 2023 */}
+
       <div className={pageBackground}>
         <div className={containerTop}>
+          <div className={gegepHeader}>
+            <img src={GegepNavi1} alt="gegepnavi1" />
+          </div>
           <div className={title}>
             <div className={titleTextH2}>
               <h2>Navigacity:</h2>
@@ -62,13 +68,31 @@ const Navigacity = () => {
             <div className={titleText}>
               <h1>FUN RUN</h1>
             </div>
-            <div className={titleTextH2}>
-              <h2 style={{ fontSize: "35px" }}>Sabtu, 4 Februari 2023</h2>
-              <button></button>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <div className={titleTextH2}>
+                <h2 style={{ fontSize: "35px" }}>Sabtu, 4 Februari 2023</h2>
+              </div>
+              <div className={buttonMascot}>Daftar Sekarang!</div>
             </div>
-            <div>
-              <h3>Pendaftaran ditutup dalam:</h3>
-              <CountDown />
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "flex-end",
+                marginTop: "45px",
+              }}
+            >
+              <div className={countDownContainer}>
+                <div className={countDownTitle}>
+                  <h3>Pendaftaran ditutup dalam:</h3>
+                </div>
+                <CountDown />
+              </div>
             </div>
           </div>
         </div>
@@ -129,7 +153,11 @@ const Navigacity = () => {
               <div className={rutePetaContainer}></div>
             </div>
           ) : (
-            <div>
+            <div
+              data-aos="fade-right"
+              data-aos-duration="600"
+              data-aos-offset="300"
+            >
               <div className={rutePetaButtonContainer}>
                 <div
                   className={rutePetaButton}
@@ -151,22 +179,27 @@ const Navigacity = () => {
             data-aos-offset="300"
           ></div>
         </div>
+        <div className={container}>
+          <ProgressBar />
+        </div>
         <div
           className={container}
           style={{
-            flexDirection: "column",
             paddingBottom: "170px",
-            marginTop: "180px",
+            marginTop: "103px",
           }}
           data-aos="fade-up"
           data-aos-duration="600"
           data-aos-offset="300"
         >
-          <div className={teaser}>
-            <h1>Teaser Geopoint IMG-ITB 2023</h1>
-          </div>
-          <div>
-            <VideoEmbed />
+          <div className={container} style={{ gap: "45px" }}>
+            <img src={rundown} alt="rundown" />
+            <div style={{ paddingTop: "120px" }}>
+              <div className={buttonMascot}>Race Guidelines</div>
+              <div className={buttonMascot} style={{ marginTop: "32px" }}>
+                Twibbon
+              </div>
+            </div>
           </div>
         </div>
       </div>
