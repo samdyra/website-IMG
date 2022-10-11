@@ -1,0 +1,55 @@
+.dateContainer {
+  width: 94px;
+  height: 124px;
+  display: flex;
+  flex-direction: column;
+
+  background: #4b3479;
+  opacity: 100%;
+  border-radius: 17px;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+
+  //   border: #f5fcb5 2.5px solid;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.dateTitle {
+  background: rgba(94, 45, 123, 0.62);
+  border-radius: 0px 0px 17px 17px;
+  width: 94px;
+  height: 25px;
+  margin-bottom: -30px;
+  overflow: hidden;
+
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 12px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerBorder {
+  border-radius: 17px;
+
+  background: linear-gradient(
+    rgba(245, 252, 181, 1),
+    rgba(219, 180, 83, 1),
+    rgba(213, 163, 59, 1)
+  );
+  padding: 2px;
+  overflow: hidden;
+  background-clip: padding-box;
+}

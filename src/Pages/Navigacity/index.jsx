@@ -8,6 +8,7 @@ import {
 } from "../../Components";
 import style from "./style.module.scss";
 import { CountDown } from "./Components";
+import { GegepNavi1 } from "../../assets";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -28,11 +29,13 @@ const Navigacity = () => {
     buttonMascot,
     mascotText,
     titleText,
+    titleTextH2,
     teaser,
     fasilitasContainer,
     rutePetaContainer,
     rutePetaButton,
     rutePetaButtonContainer,
+    containerTop,
   } = style;
 
   const [openModal, setOpenModal] = useState(false);
@@ -51,14 +54,23 @@ const Navigacity = () => {
       <Modal open={openModal} onClose={() => setOpenModal(false)}></Modal>
       {/* Geopoint IMG-ITB 2023 */}
       <div className={pageBackground}>
-        <div className={title}>
-          <div className={titleText}>
-            <h1>Ferrari 458 Speciale</h1>
-            <h2>Spread The Joy in Our Journey</h2>
+        <div className={containerTop}>
+          <div className={title}>
+            <div className={titleTextH2}>
+              <h2>Navigacity:</h2>
+            </div>
+            <div className={titleText}>
+              <h1>FUN RUN</h1>
+            </div>
+            <div className={titleTextH2}>
+              <h2 style={{ fontSize: "35px" }}>Sabtu, 4 Februari 2023</h2>
+              <button></button>
+            </div>
+            <div>
+              <h3>Pendaftaran ditutup dalam:</h3>
+              <CountDown />
+            </div>
           </div>
-        </div>
-        <div className={container}>
-          <CountDown />
         </div>
         <div className={containerMascot}>
           <div>
@@ -99,7 +111,11 @@ const Navigacity = () => {
         </div>
         <div className={container}>
           {petaRute === false ? (
-            <div>
+            <div
+              data-aos="fade-right"
+              data-aos-duration="600"
+              data-aos-offset="300"
+            >
               <div className={rutePetaButtonContainer}>
                 <div className={rutePetaButton}>Rute</div>
                 <div
@@ -128,7 +144,12 @@ const Navigacity = () => {
             </div>
           )}
 
-          <div className={fasilitasContainer}></div>
+          <div
+            className={fasilitasContainer}
+            data-aos="fade-left"
+            data-aos-duration="600"
+            data-aos-offset="300"
+          ></div>
         </div>
         <div
           className={container}

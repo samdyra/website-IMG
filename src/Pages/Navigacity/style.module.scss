@@ -3,7 +3,57 @@
   height: 100vh;
   width: 99.5vw;
   justify-content: center;
-  align-items: center;
+}
+
+.containerTop {
+  display: flex;
+  height: 100vh;
+  width: 99.5vw;
+  flex-direction: column;
+  padding-left: 50px;
+}
+
+.title {
+  display: flex;
+
+  flex-direction: column;
+  height: fit-content;
+  width: fit-content;
+}
+
+.titleText {
+  background: linear-gradient(91.43deg, #d5a33b 13.77%, #f5fcb5 97.8%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));
+
+  h1 {
+    font-size: 150px;
+    text-align: center;
+    font-stretch: expanded;
+    font-family: sans-serif, "Helvetica Neue", "Lucida Grande", Arial;
+    font-weight: 800;
+    margin-left: -10px;
+  }
+}
+.titleTextH2 {
+  background: radial-gradient(50% 50% at 50% 50%, #d5a33b 0%, #f5fcb5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));
+
+  h2 {
+    font-size: 50px;
+    margin-top: 10px;
+    height: 60px;
+    font-weight: 800;
+
+    font-family: "Bambino-Black";
+  }
 }
 
 .containerMascot {
@@ -82,55 +132,6 @@
   height: 100%;
 }
 
-.title {
-  display: flex;
-  height: 15vh;
-  width: 99.5vw;
-  justify-content: center;
-  align-items: center;
-
-  flex-direction: column;
-
-  h1 {
-    font-size: 50px;
-    margin-top: 200px;
-  }
-
-  h2 {
-    font-size: 30px;
-    margin-top: 10px;
-  }
-}
-
-.titleText {
-  background: linear-gradient(117.97deg, #d5a33b -4.84%, #5e2d7b 75.47%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-
-  width: 800px;
-  height: 700px;
-
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-  h1 {
-    font-size: 50px;
-    text-align: center;
-    margin-top: 200px;
-    font-family: "Bambino-Black";
-    font-size: 70px;
-  }
-
-  h2 {
-    font-size: 30px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    text-align: center;
-    font-family: "Bambino-Black";
-    font-size: 35px;
-  }
-}
 .carouselcontainer {
   margin-top: 50px;
 }
@@ -138,13 +139,14 @@
 .pageBackground {
   background: linear-gradient(
     180deg,
-    #ffffff 0%,
-    #2e5d87 24.18%,
+    #ffffff -15%,
+    #2e5d87 5.18%,
+
     #281f64 40.78%,
     #356777 59.75%,
     #292645 91.05%
   );
-  padding-top: 10px;
+  padding-top: 100px;
 }
 
 .teaser {

@@ -5,3 +5,4 @@ export { default as phone } from "./images/phone.png";
 export { default as tiktok } from "./images/tiktok.png";
 export { default as twitter } from "./images/twitter.png";
 export { default as youtube } from "./images/youtube.png";
+export { default as GegepNavi1 } from "./images/GegepNavi1.png";

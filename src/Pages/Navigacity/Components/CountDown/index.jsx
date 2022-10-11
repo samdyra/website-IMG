@@ -1,13 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import style from "./style.module.scss";
 
 function calculateTimeLeft() {
   const year = new Date().getFullYear();
-  // console.log(new Date());
-  const difference = +new Date(`${year}-10-12`) - +new Date();
 
-  // const d = new Date(`${year}-03-25T12:00:00`);
-  // console.log(d);
+  const difference = +new Date(`${year}-11-11`) - +new Date();
 
   let timeLeft = {};
 
@@ -24,6 +22,7 @@ function calculateTimeLeft() {
 
 export const CountDown = () => {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const { dateContainer, container, containerBorder, dateTitle } = style;
 
   useEffect(() => {
     const id = setTimeout(() => {
@@ -39,10 +38,27 @@ export const CountDown = () => {
     return timeLeft[interval];
   });
 
-  // console.log(timerComponents[0]);
-
   return (
-    <div>{timerComponents.length ? timerComponents : <span>0 0 0</span>}</div>
+    <div className={container}>
+      <div className={containerBorder}>
+        <div className={dateContainer}>
+          {timerComponents[0]}
+          <div className={dateTitle}>HARI</div>
+        </div>
+      </div>
+      <div className={containerBorder}>
+        <div className={dateContainer}>
+          {timerComponents[1]}
+          <div className={dateTitle}>JAM</div>
+        </div>
+      </div>
+      <div className={containerBorder}>
+        <div className={dateContainer}>
+          {timerComponents[2]}
+          <div className={dateTitle}>MENIT</div>
+        </div>
+      </div>
+    </div>
   );
 };
 
