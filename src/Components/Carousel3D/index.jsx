@@ -42,7 +42,10 @@ const Carousel3D = () => {
           <img src={SliderData[1].image} />
         </label>
         <label for="s5" id="slide5">
-          <img src={SliderData[1].image} onDoubleClick={() => navigate("/")} />
+          <img
+            src={SliderData[1].image}
+            onDoubleClick={() => navigate("/Geopoint/Navigacity")}
+          />
         </label>
       </section>
     </div>

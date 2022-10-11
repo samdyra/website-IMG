@@ -21,13 +21,30 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 100px;
 
   P {
-    width: 500px;
+    width: 778px;
     font-size: 18px;
     text-align: justify;
     line-height: 1.5;
     letter-spacing: 1px;
+  }
+  h1 {
+    font-size: 64px;
+    line-height: 150%;
+    letter-spacing: -0.022em;
+    width: 300px;
+  }
+
+  h2 {
+    font-size: 36px;
+    line-height: 150%;
+    /* or 54px */
+
+    letter-spacing: -0.023em;
   }
 }
 
@@ -144,4 +161,50 @@
     margin-top: 50px;
     margin-bottom: 25px;
   }
+}
+
+.fasilitasContainer {
+  width: 453px;
+  height: 504px;
+  margin-left: 50px;
+  background: linear-gradient(180deg, #f5fcb5 0%, #356777 100%);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 19px;
+}
+
+.rutePetaContainer {
+  width: 653px;
+  height: 504px;
+
+  background: linear-gradient(180deg, #f5fcb5 0%, #356777 100%);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 19px;
+  position: relative;
+  z-index: 1;
+}
+
+.rutePetaButton {
+  width: 113px;
+  height: 145px;
+
+  background: #f5fcb5;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 19px;
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 10px;
+  color: #d5a33b;
+}
+
+.rutePetaButton:hover {
+  cursor: pointer;
+}
+
+.rutePetaButtonContainer {
+  display: flex;
+  position: absolute;
+  margin-top: -50px;
+  margin-left: 50px;
+  z-index: 0;
 }

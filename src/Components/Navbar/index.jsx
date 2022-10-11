@@ -92,7 +92,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-      ) : linkName === "/Geopoint" ? (
+      ) : linkName === "/Geopoint" || linkName === "/Geopoint/Navigacity" ? (
         <div className={containerGeopoint}>
           <div className={container}>
             <div>

@@ -9,3 +9,4 @@ export { default as Locus } from "./Locus";
 export { default as IMGX } from "./IMGX";
 export { default as Geosphere } from "./Geosphere";
 export { default as Georeference } from "./Georeference";
+export { default as Navigacity } from "./Navigacity";

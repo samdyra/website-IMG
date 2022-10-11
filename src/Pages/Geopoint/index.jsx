@@ -91,7 +91,11 @@ const Geopoint = () => {
         </div>
         <div
           className={container}
-          style={{ flexDirection: "column" }}
+          style={{
+            flexDirection: "column",
+            paddingBottom: "170px",
+            marginTop: "180px",
+          }}
           data-aos="fade-up"
           data-aos-duration="600"
           data-aos-offset="300"

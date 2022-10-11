@@ -11,6 +11,7 @@ import {
   Locus,
   Geosphere,
   Georeference,
+  Navigacity,
 } from "./Pages";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer/Footer";
@@ -32,6 +33,7 @@ function App() {
         <Route path="/Geopoint" element={<Geopoint />}></Route>
         <Route path="/Pojokimg" element={<Pojokimg />}></Route>
         <Route path="/DPM" element={<DpmScreen />}></Route>
+        <Route path="/Geopoint/Navigacity" element={<Navigacity />}></Route>
       </Routes>
       <Footer />
     </Router>

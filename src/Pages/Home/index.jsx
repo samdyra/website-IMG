@@ -182,7 +182,7 @@ const HomeScreen = () => {
         </div>
         <div
           className={organogram}
-          data-aos="slide-left"
+          data-aos="fade-up"
           data-aos-duration="750"
           data-aos-offset="500"
         >
@@ -199,7 +199,7 @@ const HomeScreen = () => {
           </div>
         </div>
         <div
-          data-aos="fade-left"
+          data-aos="slide-left"
           data-aos-duration="1000"
           data-aos-offset="400"
           style={{ overflow: "hidden" }}
