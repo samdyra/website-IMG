@@ -18,10 +18,22 @@
   z-index: 6;
   position: relative;
   font-size: 16px;
+  height: 460px;
+}
+
+.containertopcontact {
+  display: flex;
+  margin-bottom: 50px;
+
+  background: #396a60;
+
+  width: 100vw;
+  height: 80.25px;
 }
 
 .container2 {
   width: 1180px;
+  margin-bottom: 20px;
 }
 
 .contenttop {
@@ -37,6 +49,7 @@
   flex-direction: row;
   justify-content: space-between;
   color: white;
+  margin-bottom: 30px;
 }
 
 .connect {
@@ -88,8 +101,11 @@
 }
 
 .bottom {
+  display: flex;
   color: white;
-  border-top: white solid 1px;
+  border-top: 1.05589px solid rgba(255, 255, 255, 0.1);
+
+  justify-content: space-between;
   h1 {
     margin-block: 20px;
     align-content: center;
@@ -111,19 +127,33 @@
 
 .detail {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  gap: 393.75px;
 }
 
 .detailAddress {
   display: flex;
   align-items: center;
-  width: 270px;
-  margin-bottom: 20px;
+  gap: 16px;
+  color: white;
   line-height: 1.2;
+}
 
+.contactLogoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #4b8579;
+
+  border-radius: 100%;
+  width: 56.25px;
+  height: 56.25px;
   img {
-    width: 23px;
-    margin-right: 10px;
+    width: 36px;
+    height: 36px;
   }
 }
 
