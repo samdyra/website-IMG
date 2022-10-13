@@ -86,10 +86,11 @@ const Navbar = () => {
                 <div>Pojok IMG</div>
               </Link>
             </div>
-
-            <div className={searchIcon}>
-              <img src={login} />
-            </div>
+            <a href="/login">
+              <div className={searchIcon}>
+                <img src={login} />
+              </div>
+            </a>
           </div>
         </div>
       ) : linkName === "/Geopoint" || linkName === "/Geopoint/Navigacity" ? (
@@ -114,10 +115,11 @@ const Navbar = () => {
                 <div>Pojok IMG</div>
               </Link>
             </div>
-
-            <div className={searchIcon}>
-              <img src={login} />
-            </div>
+            <a href="/login">
+              <div className={searchIcon}>
+                <img src={login} />
+              </div>
+            </a>
           </div>
         </div>
       ) : linkName === "/dpm" ? null : (
@@ -142,10 +144,11 @@ const Navbar = () => {
                 <div>Pojok IMG</div>
               </Link>
             </div>
-
-            <div className={searchIcon}>
-              <img src={login} />
-            </div>
+            <a href="/login">
+              <div className={searchIcon}>
+                <img src={login} />
+              </div>
+            </a>
           </div>
         </div>
       )}

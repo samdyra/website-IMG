@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Link, useNavigate } from "react-router-dom";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { useAuthState } from "react-firebase-hooks/auth";
+import {auth} from "../../Config/firebase/index"
 
 //THREE
 import { Canvas, useFrame } from "@react-three/fiber";
@@ -45,6 +47,8 @@ const HomeScreen = () => {
   } = style;
 
   const [index, setIndex] = useState(0);
+  const [user] = useAuthState(auth);
+  console.log(user)
 
   useEffect(() => {
     Aos.init({ duration: 2000 });
