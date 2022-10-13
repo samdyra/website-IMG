@@ -6,6 +6,7 @@ import "./index.css";
 import { useAuthState } from "react-firebase-hooks/auth";
 import AddMessage from "./AddMessage";
 import DeleteMessage from "./DeleteMessage";
+import NavbarAdmin from "../components/NavbarAdmin";
 
 const Messages = () => {
   const [message, setMessage] = useState([]);
@@ -24,12 +25,7 @@ const Messages = () => {
 
   return (
     <div>
-      <div className="admin-navbar">
-        <a href="/admin/kelompok">Kamerad</a>
-        <a href="/admin/Gallery">Gallery</a>
-        <a href="/admin/kesanpesan">Kesan Pesan</a>
-        <a href="/admin/story">Kotak Pesan</a>
-      </div>
+     <NavbarAdmin></NavbarAdmin>
       <div className="warning">
         kasih kesan pesan yg lucu lucu sedih sedih atau serem2 <br></br>
         gass, tp inget jangan yg kasar yaa.. muncul di landing page soalnya

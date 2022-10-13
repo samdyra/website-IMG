@@ -6,6 +6,7 @@ import AddKamerad from "./AddKamerad";
 import "./index.css";
 import DeleteKamerad from "./DeleteKamerad";
 import { useAuthState } from "react-firebase-hooks/auth";
+import NavbarAdmin from "../components/NavbarAdmin";
 
 const Kamerads = () => {
   const [kamerad, setKamerad] = useState([]);
@@ -32,12 +33,7 @@ const Kamerads = () => {
   return (
     <div>
 
-      <div className="admin-navbar">
-        <a href="/admin/kelompok">Kamerad</a>
-        <a href="/admin/Gallery">Gallery</a>
-        <a href="/admin/kesanpesan">Kesan Pesan</a>
-        <a href="/admin/story">Kotak Pesan</a>
-      </div>
+      <NavbarAdmin></NavbarAdmin>
       <div className="warning">
         Jangan delete yang punya orang lain ya..
         <br></br>boleh delete yg diri sendiri, terus publish yang diri sendiri

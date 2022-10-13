@@ -1,38 +1,30 @@
-import { signInWithEmailAndPassword, getAuth } from "firebase/auth";
 import React, { useState } from "react";
-import { auth } from "../../Config/firebase/index";
-import { useNavigate } from "react-router-dom";
+import { createUserWithEmailAndPassword  } from "firebase/auth";
+import { auth } from "../../../Config/firebase/index";
 import { toast } from "react-toastify";
-// import style from "bootstrap/dist/css/bootstrap.min.css";
-import "./login.css";
-import { isUserLevel9 } from "../../Helpers";
+import "../login.css";
+import NavbarAdmin from "../../components/NavbarAdmin";
 
 export default function Login() {
-  let navigate = useNavigate();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  let isAdmin = false
-
-  const handleLogin = async () => {
-    await signInWithEmailAndPassword(auth, email, password)
-      .then(() => {
-        const user = getAuth();
-        isAdmin = user.currentUser.displayName === "userLevel9"
-      })
-      .then(() => {
-        if (isAdmin) {
-          navigate("/admin/kelompok")
-        } else navigate("/Pojokimg")
-      })
-      .catch(() => toast(error.code, { type: "error" }))
-  };
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+  
+    const handleSignup = async () => {
+      try {
+        await createUserWithEmailAndPassword(auth, email, password);
+        toast("super admin is born", { type: "success" });
+      } catch (error) {
+        toast(error.code, { type: "error" });
+      }
+    };
   return (
-    <div style={{ paddingTop: 100, paddingBottom: 100 }}>
+    <div style={{paddingBottom: 100}}>
+        <NavbarAdmin></NavbarAdmin>
       <div class="login-wrap">
         <div class="login-html">
           <input id="tab-1" type="radio" name="tab" class="sign-in" checked />
           <label for="tab-1" class="tab">
-            Sign In
+            Sign Up Massa
           </label>
           <input id="tab-2" type="radio" name="tab" class="sign-up" />
           <label for="tab-2" class="tab"></label>
@@ -74,7 +66,7 @@ export default function Login() {
                   type="submit"
                   class="button"
                   value="Sign In"
-                  onClick={handleLogin}
+                  onClick={handleSignup}
                 />
               </div>
               <div class="hr"></div>

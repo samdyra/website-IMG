@@ -7,6 +7,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import DeleteStory from "./DeleteStory";
 import AddStory from "./AddStory";
 import { orderBy } from "firebase/firestore";
+import NavbarAdmin from "../components/NavbarAdmin";
 const Stories = () => {
   const [story, setStory] = useState([]);
   const [user] = useAuthState(auth);
@@ -24,12 +25,7 @@ const Stories = () => {
 
   return (
     <div>
-      <div className="admin-navbar">
-        <a href="/admin/kelompok">Kamerad</a>
-        <a href="/admin/Gallery">Gallery</a>
-        <a href="/admin/kesanpesan">Kesan Pesan</a>
-        <a href="/admin/story">Kotak Pesan</a>
-      </div>
+      <NavbarAdmin></NavbarAdmin>
       <div className="warning">
         Silahkan bagi yang ingin berkeluh kesah tentang Kemker <br></br>
         atau mau sambat ke tim M dan Q silahkan.

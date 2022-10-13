@@ -6,7 +6,7 @@ import "./index.css";
 import { useAuthState } from "react-firebase-hooks/auth";
 import AddImage from "./AddImage";
 import DeleteImage from "./DeleteImage";
-
+import NavbarAdmin from "../components/NavbarAdmin";
 const Gallery = () => {
   const [image, setImage] = useState([]);
   const [user] = useAuthState(auth);
@@ -23,12 +23,7 @@ const Gallery = () => {
   }, []);
   return (
     <div>
-      <div className="admin-navbar">
-        <a href="/admin/kelompok">Kamerad</a>
-        <a href="/admin/Gallery">Gallery</a>
-        <a href="/admin/kesanpesan">Kesan Pesan</a>
-        <a href="/admin/story">Kotak Pesan</a>
-      </div>
+      <NavbarAdmin></NavbarAdmin>
       <div className="warning">
         foto2 yang dimasukin kesini bakal muncul di gallery <br></br>
         di landing page guys, jangan masukin foto yang engga engga ya, nangisss

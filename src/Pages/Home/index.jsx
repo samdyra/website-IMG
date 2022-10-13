@@ -48,7 +48,6 @@ const HomeScreen = () => {
 
   const [index, setIndex] = useState(0);
   const [user] = useAuthState(auth);
-  console.log(user)
 
   useEffect(() => {
     Aos.init({ duration: 2000 });
