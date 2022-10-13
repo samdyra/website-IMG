@@ -4,18 +4,18 @@
   justify-content: center;
   align-items: center;
   z-index: 0;
+  filter: drop-shadow(0px 30px 50px rgba(0, 0, 0, 0.5));
 }
 
 .image {
-  width: 1000px;
-  height: 600px;
+  width: 700px;
+  height: 450px;
   border-radius: 10px;
 }
 
 .right-arrow {
-  position: absolute;
-  top: 50%;
-  right: 50px;
+  position: relative;
+  left: 785px;
   font-size: 3rem;
   color: #4e887c;
   z-index: 1;
@@ -24,9 +24,9 @@
 }
 
 .left-arrow {
-  position: absolute;
-  top: 50%;
-  left: 50px;
+  position: relative;
+
+  left: 5px;
   font-size: 3rem;
   color: #4e887c;
   z-index: 1;

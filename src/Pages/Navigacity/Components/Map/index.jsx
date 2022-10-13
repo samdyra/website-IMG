@@ -1,25 +1,26 @@
-import { useMemo } from "react";
-import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
+import React from "react";
+import { GoogleMap, LoadScript } from "@react-google-maps/api";
 
-export default function Home() {
-  const { isLoaded } = useLoadScript({
-    googleMapsApiKey: process.env.GMAPS_API_KEY,
-  });
+const containerStyle = {
+  width: "400px",
+  height: "400px",
+};
 
-  if (!isLoaded) return <div>Loading...</div>;
-  return <Map />;
-}
+const center = {
+  lat: -3.745,
+  lng: -38.523,
+};
 
-function Map() {
-  const center = useMemo(() => ({ lat: 44, lng: -80 }), []);
-
+function MyComponent() {
   return (
-    <GoogleMap
-      zoom={10}
-      center={center}
-      style={{ width: "500px", height: "700px" }}
-    >
-      <Marker position={center} />
-    </GoogleMap>
+    <LoadScript googleMapsApiKey="AIzaSyC2Ngzc1lA29zqYtCDEdr0ocN7kkEqScWE">
+      <GoogleMap
+        mapContainerStyle={containerStyle}
+        center={center}
+        zoom={10}
+      ></GoogleMap>
+    </LoadScript>
   );
 }
+
+export default React.memo(MyComponent);

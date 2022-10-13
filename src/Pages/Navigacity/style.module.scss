@@ -145,16 +145,15 @@
 }
 
 .pageBackground {
-  background: black;
-  // background: linear-gradient(
-  //   180deg,
-  //   #ffffff -15%,
-  //   #2e5d87 5.18%,
+  background: linear-gradient(
+    180deg,
+    #ffffff -15%,
+    #2e5d87 5.18%,
 
-  //   #281f64 40.78%,
-  //   #356777 59.75%,
-  //   #292645 91.05%
-  // );
+    #281f64 40.78%,
+    #356777 59.75%,
+    #292645 91.05%
+  );
   padding-top: 100px;
 }
 
@@ -186,7 +185,7 @@
 .rutePetaContainer {
   width: 653px;
   height: 504px;
-
+  // border: 3px solid red;
   background: linear-gradient(180deg, #f5fcb5 0%, #356777 100%);
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 19px;

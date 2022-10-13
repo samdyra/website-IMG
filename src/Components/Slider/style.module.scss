@@ -1,11 +1,12 @@
 .wrapperCard {
   display: flex;
-  max-width: 1280px;
-  justify-self: center;
+  max-width: 95vw;
+  height: 700px;
   align-self: center;
   align-content: center;
-  margin-bottom: 100px;
+  margin-top: 50px;
   overflow: hidden;
+  margin: 0 auto;
 }
 
 .slidecontainer {
@@ -53,14 +54,14 @@
 }
 
 .madeElementContainer {
-  max-width: 300px;
-  background: #5ea496;
-  border-radius: 10px;
+  max-width: 340px;
+  margin: 20px;
+  height: 500px;
+  background: white;
+  border-radius: 25px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-top: 30px;
-  justify-content: space-between;
+  filter: drop-shadow(0px 5px 5px rgba(0.5, 0.5, 0.5, 0.5));
 }
 
 .madeElementTitle {
@@ -76,55 +77,68 @@
 }
 
 .madeElementImage img {
-  width: 300px;
-  height: 200px;
-  border-radius: 10px 10px 0 0;
+  width: 340px;
+  height: 226.98px;
+  border-radius: 25px 25px 0 0;
   margin: 0;
   object-fit: fill;
-  margin-bottom: 10px;
 }
 
 .madeElementContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: poppins;
   font-style: normal;
-  font-size: 12px;
+
   line-height: 18px;
-  color: #fff;
-  padding-inline: 2px;
-  margin-bottom: 30px;
+  color: black;
+
   text-align: center;
   padding-inline: 10px;
 
   h1 {
-    text-align: center;
     font-style: normal;
     font-size: 24px;
     line-height: 36px;
     font-family: jakartabold;
-    color: #fff;
   }
 
   p {
-    text-align: center;
+    max-width: 300px;
+    text-align: justify;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
   }
 
   h3 {
-    text-align: center;
     font-style: normal;
-    padding-bottom: 30px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+
+    color: #c7c9d9;
   }
 }
 
 .madeElementButton {
-  font-size: 14px;
+  width: 300px;
+  height: 40px;
+  font-size: 16px;
+
   align-items: center;
   text-align: center;
-  border-radius: 11px;
-  padding: 9px 25px;
-  margin-bottom: 25px;
+  border-radius: 15px;
+  padding: 10px 25px;
+
+  margin-top: 10px;
+  margin-bottom: 20px;
   cursor: pointer;
 
-  margin-inline: 63px;
   background: #ff4a01;
 
   p {
@@ -143,12 +157,27 @@
 }
 
 .madeElementWrapper {
-  width: 1280px;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  z-index: 5;
+  // display: flex;
+  // flex-direction: column;
+  // margin: 0 auto;
+  // border: black 3px solid;
 }
+
+// .madeElementWrapper .slick-list {
+//   width: 400px;
+// }
+
+// .madeElementWrapper .slick-slide {
+//   width: 600px;
+// }
+
+// .madeElementWrapper .slide_item {
+//   width: 400px;
+// }
+
+// .slick-track .slick-list {
+//   width: 400px;
+// }
 
 .madeElementCard {
   height: 400px;
@@ -156,11 +185,6 @@
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-}
-
-.madeElementContainer .madeElementImage {
-  /* border: 3px solid red; */
-  border-radius: 24px;
 }
 
 .wrapperVerticalCard {

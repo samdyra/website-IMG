@@ -182,16 +182,20 @@ const HomeScreen = () => {
       </div>
 
       <div className={containerSection} style={{ overflow: "hidden" }}>
-        <div className={judulSection3} data-aos="fade-left">
-          <h1>Kepengurusan IMG-ITB 2022/2023</h1>
-        </div>
         <div
-          className={organogram}
-          data-aos="fade-up"
+          className={judulSection3}
+          data-aos="fade-right"
           data-aos-duration="750"
-          data-aos-offset="500"
+          data-aos-offset="448"
         >
-          <Carousel slides={SliderData} />
+          <h1>Susunan Kepengurusan IMG-ITB 2022/2023</h1>
+          <h2>Struktur IMG-ITB (BPH, DPM, dan BSO)</h2>
+        </div>
+        <div data-aos="fade-left" data-aos-duration="750" data-aos-offset="500">
+          <Carousel
+            slides={SliderData}
+            style={{ border: "20px solid black" }}
+          />
         </div>
       </div>
 
@@ -204,9 +208,9 @@ const HomeScreen = () => {
           </div>
         </div>
         <div
-          data-aos="slide-left"
-          data-aos-duration="1000"
-          data-aos-offset="400"
+          // data-aos="slide-left"
+          // data-aos-duration="1000"
+          // data-aos-offset="400"
           style={{ overflow: "hidden" }}
         >
           <Gallery sliderName="card" />

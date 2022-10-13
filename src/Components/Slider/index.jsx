@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import style from "./style.module.scss";
 import Slider from "react-slick";
 import { SliderData } from "../../assets/object/SliderData";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -12,6 +11,7 @@ const Gallery = (props) => {
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
+  const screenWidth = window.innerWidth;
 
   const {
     wrapperCard,
@@ -50,8 +50,8 @@ const Gallery = (props) => {
   const cardSettings = {
     infinite: true,
     speed: 1000,
-    slidesToShow: 4,
-    autoplay: true,
+    slidesToShow: screenWidth <= 1280 ? 3 : 4,
+    autoplay: false,
     autoplaySpeed: 2000,
     arrows: false,
     swipeToSlide: true,
@@ -131,16 +131,23 @@ const Gallery = (props) => {
                 <div className={madeElementContainer}>
                   <div className={madeElementImage}>
                     <img src={slide.image}></img>
-                    <div className={madeElementContent}>
+                  </div>
+                  <div className={madeElementContent}>
+                    <div
+                      style={{
+                        display: "flex",
+                        gap: "90px",
+                        marginTop: "30px",
+                      }}
+                    >
                       <h1>Webgis</h1>
                       <h3>10 september 2021</h3>
-                      <p>
-                        Web based GIS (Geographic Information System) of ITB
-                        Kampus Jatinangor. We hope this feature would contribute
-                        to realized a continuous monitoring and sustainable
-                        development of ITB Kampus Jatinangor.
-                      </p>
                     </div>
+                    <p>
+                      Web based GIS (Geographic Information System) of ITB
+                      Kampus Jatinangor. We hope this feature would contribute
+                      to realized a continuous monitoring
+                    </p>
                     <div href="/WebGIS" className={madeElementButton}>
                       <p>Lihat Selengkapnya</p>
                     </div>
