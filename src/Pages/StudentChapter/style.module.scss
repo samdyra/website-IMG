@@ -5,13 +5,9 @@
 .containerSection {
   margin: 0 auto;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  max-width: 1280px;
+  display: flex;
+  justify-content: center;
   height: 720px;
-
-  background-image: url("../../assets/images/backgroundhome2.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
 }
 
 .box1 {

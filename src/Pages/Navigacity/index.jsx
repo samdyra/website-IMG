@@ -7,7 +7,7 @@ import {
   VideoEmbed,
 } from "../../Components";
 import style from "./style.module.scss";
-import { CountDown, ProgressBar } from "./Components";
+import { CountDown, ProgressBar, Map } from "./Components";
 import { GegepNavi1, rundown } from "../../assets";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -168,7 +168,14 @@ const Navigacity = () => {
                 </div>
                 <div className={rutePetaButton}>Peta</div>
               </div>
-              <div className={rutePetaContainer}></div>
+              <div className={rutePetaContainer}>
+                {/* <iframe
+                  src="https://maps.google.com/maps?q=Tangesir%20Dates%20Products&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                  style={{ width: "300px", height: "150px" }}
+                  allowfullscreen
+                ></iframe> */}
+                <Map />
+              </div>
             </div>
           )}
 

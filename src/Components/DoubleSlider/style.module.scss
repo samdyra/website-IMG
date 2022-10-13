@@ -1,101 +1,88 @@
-.wrapperCard {
-  margin-top: 0px;
-  height: 700px;
-  display: flex;
-  max-width: 1280px;
-  justify-self: center;
-  align-self: center;
-  align-content: center;
-  margin-right: 54px;
-}
-
-.wrapperGallery {
-  margin-top: 20px;
-  height: 800px;
-  display: flex;
-  width: 1280px;
-  justify-self: center;
-  align-self: center;
-  align-content: center;
-}
-
 .descContainer {
-  height: 200px;
-  max-width: 600px;
+  width: 600px;
+  height: 220px;
   display: flex;
   background: #ff7045;
   border-radius: 25px;
   margin: 0 auto;
   display: flex;
+  gap: 20px;
   flex-direction: column;
+  justify-content: center;
 }
 
 .madeElementButton {
-  align-items: center;
-  text-align: center;
   border-radius: 25px;
-  padding: 9px 25px;
-  margin-top: 20px;
-  width: 150px;
-  height: 20px;
+  padding: 0 auto;
+  padding-top: 15px;
+  width: 200px;
+  height: 48px;
   background: #ff9f78;
-  border-bottom: none;
+
   margin: 0 auto;
 
-  a {
-    text-decoration: none;
-    border-bottom: none;
-  }
-
   p {
-    margin: 0 0 0 0;
     text-align: center;
     font-style: normal;
     text-decoration: none;
-    margin: 0 0 0 0;
-    border-bottom: none;
+
     font-size: 17px;
   }
 }
 
+.kontur {
+  position: absolute;
+  height: 770px;
+}
+.kontur img {
+  position: absolute;
+  height: 700px;
+}
+
+.madeElementButton:hover {
+  background: white;
+  color: #fb8252;
+}
+.slider2 {
+  display: flex;
+
+  max-width: 595px;
+}
+
 .galleryElementContainer2 {
-  height: 93vh;
-  width: 600px;
+  width: 595px;
+  height: 700sssssssspx;
 }
 .galleryElementContainer2 img {
   /* margin-inline: 1px; */
-  height: 89vh;
-  width: 560px;
+  width: 595px;
+  height: 700px;
   object-fit: cover;
   border-radius: 20px;
-  margin-top: 10px;
 }
 
 .title {
   display: flex;
-  margin-top: 20px;
-  font-size: 30px;
-  font-weight: 600;
-  color: #4b8579;
-  margin-bottom: 25px;
+  justify-content: flex-start;
 
   h1 {
-    font-size: 80px;
-    max-width: 80px;
+    max-width: 350px;
+
+    font-size: 89px;
     font-weight: 300;
     color: #4b8579;
-    margin-left: 35px;
     font-family: jakartabold;
   }
 }
 
 .containerSection {
   margin: 0 auto;
-  max-width: 1280px;
-  height: 100vh;
-  display: flex;
 
-  background-color: gainsboro;
+  height: 720px;
+  display: flex;
+  justify-content: center;
+  gap: 78px;
+  align-items: center;
 }
 
 .halfpage {
@@ -103,23 +90,16 @@
   height: 720px;
   display: flex;
   flex-direction: column;
-  padding: 0 20px;
+  gap: 125px;
 }
 
 .slider1 {
   display: flex;
-  margin-top: 20px;
-  margin-left: 35px;
-}
-.slider2 {
-  display: flex;
-
-  max-width: 565px;
 }
 
 .titleMajalah {
   h2 {
-    font-size: 30px;
+    font-size: 32px;
     font-weight: 600;
     color: #4b8579;
     margin-bottom: 20px;
@@ -128,13 +108,10 @@
 }
 
 .descContainer2 {
-  height: 140px;
+  height: 100px;
   overflow-y: hidden;
   p {
-    margin: 0;
-    margin-top: 30px;
     font-size: 20px;
     text-align: justify;
-    margin-bottom: 20px;
   }
 }

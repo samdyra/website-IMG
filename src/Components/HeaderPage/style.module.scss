@@ -1,17 +1,17 @@
 .container {
   margin: 0 auto;
-  max-width: 1280px;
-  height: 558px;
-  background: white;
+
+  height: 720px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
-  margin-top: 50px;
-  align-items: center;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("../../assets/images/backgroundhome2.png");
+  background-image: url("../../assets/images/backgroundheader.svg");
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;

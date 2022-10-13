@@ -1,12 +1,13 @@
 .container {
   background-color: white;
+  overflow: hidden;
 }
 
 .containerSection {
   margin: 0 auto;
-  max-width: 1280px;
+
   height: 720px;
-  border: solid black 3px;
+  overflow: hidden;
 
   h1 {
     text-align: center;

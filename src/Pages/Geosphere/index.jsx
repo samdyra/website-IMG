@@ -4,7 +4,7 @@ import { Header, DoubleSlider } from "../../Components";
 
 const Geosphere = () => {
   return (
-    <div>
+    <div style={{ paddingTop: "100px" }}>
       <DoubleSlider sliderName="geosphere" />
     </div>
   );

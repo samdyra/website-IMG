@@ -6,7 +6,7 @@ import Gallery from "../../Components/Slider";
 const studentChapter = () => {
   const { container, containerSection, box1, box2 } = style;
   return (
-    <div>
+    <div className={container}>
       <Header />
       <div className={containerSection}></div>
       <div className={containerSection}></div>

@@ -4,7 +4,7 @@ import { Header, DoubleSlider } from "../../Components";
 
 const Locus = () => {
   return (
-    <div>
+    <div style={{ paddingTop: "100px" }}>
       <DoubleSlider sliderName="locus" />
     </div>
   );

@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import { SliderData, SliderText } from "../../assets/object/SliderData";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import kontur1 from "../../assets/images/kontur1.svg";
 
 export default function DoubleSlider(props) {
   const {
@@ -17,6 +18,7 @@ export default function DoubleSlider(props) {
     madeElementButton,
     titleMajalah,
     descContainer2,
+    kontur,
   } = style;
   const sliderName = props.sliderName;
 
@@ -25,63 +27,64 @@ export default function DoubleSlider(props) {
 
   return (
     <div className={containerSection}>
+      <img src={kontur1} className={kontur} />
       <div className={halfpage}>
         <div className={title}>
           {sliderName === "paradewisuda" ? (
             <h1>Majalah Parade Wisuda</h1>
           ) : sliderName === "locus" ? (
-            <h1 style={{ marginTop: "60px" }}>Majalah LOCUS</h1>
+            <h1>Majalah LOCUS</h1>
           ) : sliderName === "geosphere" ? (
-            <h1 style={{ marginTop: "60px" }}>Majalah GEOSHPERE</h1>
+            <h1>Majalah GEOSHPERE</h1>
           ) : null}
         </div>
-        <Slider
-          asNavFor={nav2}
-          ref={(slider1) => setNav1(slider1)}
-          className={slider1}
-          fade={true}
-          arrows={false}
-        >
-          {SliderText.map((text, index) => {
-            return (
-              <div>
-                <div className={titleMajalah}>
-                  <h2>{text.title}</h2>
-                </div>
-                <div className={descContainer}>
-                  <div className={descContainer2}>
-                    <p style={{ paddingInline: "20px" }}>{text.desc}</p>
-                  </div>
 
-                  <div href="/WebGIS" className={madeElementButton}>
-                    <p>Click Here to Read</p>
+        <div>
+          <Slider
+            asNavFor={nav2}
+            ref={(slider1) => setNav1(slider1)}
+            className={slider1}
+            fade={true}
+            arrows={false}
+          >
+            {SliderText.map((text, index) => {
+              return (
+                <div>
+                  <div className={titleMajalah}>
+                    <h2>{text.title}</h2>
+                  </div>
+                  <div className={descContainer}>
+                    <div className={descContainer2}>
+                      <p style={{ paddingInline: "20px" }}>{text.desc}</p>
+                    </div>
+                    <div href="/WebGIS" className={madeElementButton}>
+                      <p>Click Here to Read</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
-        </Slider>
+              );
+            })}
+          </Slider>
+        </div>
       </div>
 
-      <div className={halfpage}>
-        <Slider
-          asNavFor={nav1}
-          ref={(slider2) => setNav2(slider2)}
-          slidesToShow={1}
-          swipeToSlide={true}
-          focusOnSelect={true}
-          className={slider2}
-          arrows={true}
-        >
-          {SliderData.map((data, index) => {
-            return (
-              <div className={galleryElementContainer2}>
-                <img src={data.image} alt="gallery" />
-              </div>
-            );
-          })}
-        </Slider>
-      </div>
+      <Slider
+        asNavFor={nav1}
+        ref={(slider2) => setNav2(slider2)}
+        slidesToShow={1}
+        swipeToSlide={true}
+        focusOnSelect={true}
+        className={slider2}
+        arrows={true}
+      >
+        {SliderData.map((data, index) => {
+          return (
+            <div className={galleryElementContainer2}>
+              <img src={data.image} alt="gallery" />
+            </div>
+          );
+        })}
+      </Slider>
     </div>
   );
 }

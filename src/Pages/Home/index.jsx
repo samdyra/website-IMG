@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import style from "./style.module.scss";
+import { BrowserRouter as Router, Link, useNavigate } from "react-router-dom";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -9,12 +10,13 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, useGLTF, SpotLight } from "@react-three/drei";
 
 //Styling
-import diagram from "../../assets/images/diagram.png";
-import background from "../../assets/images/background.png";
+
 import { SliderData, SliderText } from "../../assets/object/SliderData";
 import Carousel from "../../Components/Carousel/Carousel";
 import Gallery from "../../Components/Slider";
 const HomeScreen = () => {
+  const navigate = useNavigate();
+
   const {
     container,
     desc,
@@ -39,6 +41,7 @@ const HomeScreen = () => {
     fadeOut,
     fadedOut,
     asas,
+    easteregg1,
   } = style;
 
   const [index, setIndex] = useState(0);
@@ -76,6 +79,7 @@ const HomeScreen = () => {
 
   return (
     <div className={container} style={{ overflow: "hidden" }}>
+      <div className={easteregg1} onClick={() => navigate("/dpm")}></div>
       <div className={containerSectionTop}>
         <div
           style={{
@@ -86,6 +90,7 @@ const HomeScreen = () => {
         >
           <div className={desc}>
             <h2>Welcome to IMG-ITB Official Website</h2>
+
             <h1>
               IKATAN MAHASISWA <br></br> GEODESI-ITB
             </h1>
