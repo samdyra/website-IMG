@@ -20,9 +20,9 @@ const ProgressBar = () => {
           </h2>
         </div>
         <div className={dotsContainer}>
-          <h2 style={{ width: "150px" }}>1 Februari 2023</h2>
+          <h2 style={{ width: "160px" }}>15 November 2022</h2>
           <div className={dots}></div>
-          <h2 style={{ width: "150px" }}>Pembagian race pack</h2>
+          <h2 style={{ width: "170px" }}>Penutupan penjualan tiket reguler</h2>
         </div>
         <div className={dotsContainer}>
           <h2 style={{ width: "150px" }}>1 Februari 2023</h2>

@@ -5,7 +5,7 @@ import style from "./style.module.scss";
 function calculateTimeLeft() {
   const year = new Date().getFullYear();
 
-  const difference = +new Date(`${year}-11-11`) - +new Date();
+  const difference = +new Date(`${year}-11-16`) - +new Date();
 
   let timeLeft = {};
 
