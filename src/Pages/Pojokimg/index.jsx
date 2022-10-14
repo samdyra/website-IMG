@@ -71,7 +71,6 @@ const Pojokimg = () => {
           <h2>Mau confess? Mau cerita? Disini aman kok! </h2>
           <div className={curhatWrapper}>
             <div className={curhatContainer}>
-              {" "}
               ferrari 458 speciale is my dream car
             </div>
           </div>

@@ -4,15 +4,21 @@
 
 .containerSection {
   margin: 0 auto;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   height: 720px;
   display: flex;
-  justify-content: center;
-  background-image: url("../../assets/images/backgroundhome2.png");
+  align-items: center;
 
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
+  margin-top: 50px;
+
+  flex-direction: column;
+
+  h1 {
+    font-family: "Plus Jakarta Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 140%;
+  }
 }
 
 .box1 {
