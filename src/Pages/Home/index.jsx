@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Link, useNavigate } from "react-router-dom";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useAuthState } from "react-firebase-hooks/auth";
-import {auth} from "../../Config/firebase/index"
+import { auth } from "../../Config/firebase/index";
 
 //THREE
 import { Canvas, useFrame } from "@react-three/fiber";
@@ -44,6 +44,8 @@ const HomeScreen = () => {
     fadedOut,
     asas,
     easteregg1,
+    ketuaContainer,
+    ketuaImage,
   } = style;
 
   const [index, setIndex] = useState(0);
@@ -189,7 +191,7 @@ const HomeScreen = () => {
           className={judulSection3}
           data-aos="fade-right"
           data-aos-duration="750"
-          data-aos-offset="448"
+          data-aos-offset="430"
         >
           <h1>Susunan Kepengurusan IMG-ITB 2022/2023</h1>
           <h2>Struktur IMG-ITB (BPH, DPM, dan BSO)</h2>
@@ -211,12 +213,43 @@ const HomeScreen = () => {
           </div>
         </div>
         <div
-          // data-aos="slide-left"
-          // data-aos-duration="1000"
-          // data-aos-offset="400"
+          data-aos="slide-left"
+          data-aos-duration="1000"
+          data-aos-offset="400"
           style={{ overflow: "hidden" }}
         >
           <Gallery sliderName="card" />
+        </div>
+      </div>
+
+      <div className={container}>
+        <div
+          className={ketuaContainer}
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-offset="400"
+        >
+          <div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+              aliquam, purus sit amet luctus venenatis, lectus magna fringilla
+              urna, porttitor rhoncus dolor purus non enim praesent”{" "}
+            </p>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: "20px",
+            }}
+          >
+            <div className={ketuaImage}></div>
+            <div>
+              <h1>M. Daffa Rizki El-Islami .S</h1>
+              <h2>Ketua Umum BPH IMG-ITB 2022/2023</h2>
+            </div>
+          </div>
         </div>
       </div>
 

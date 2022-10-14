@@ -315,3 +315,56 @@
   right: 49.3%;
   border-radius: 100%;
 }
+
+.ketuaContainer {
+  display: flex;
+  width: 1140px;
+  height: 455px;
+  margin: 0 auto;
+
+  justify-content: center;
+  align-items: center;
+  gap: 122px;
+
+  background: #ff4a01;
+  border-radius: 25px;
+  color: #ffffff;
+  margin-bottom: 150px;
+
+  p {
+    font-family: "Plus Jakarta Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    width: 438px;
+  }
+
+  h1 {
+    text-align: center;
+    font-family: "Plus Jakarta Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  h2 {
+    text-align: center;
+    font-family: "Plus Jakarta Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+
+.ketuaImage {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #ffffff;
+  border-radius: 100%;
+  background-color: #ffffff;
+}
