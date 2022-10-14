@@ -9,10 +9,10 @@ import { Link } from "react-router-dom";
 export default function AddKamerad() {
   const [user] = useAuthState(auth);
   const [formData, setFormData] = useState({
-    Nama: "",
+    judul: "",
     image: "",
-    kelompok: "",
-    klmpkID: "",
+    date: "3 Agustus 2022",
+    redaksi: "",
   });
 
   const [progress, setProgress] = useState(0);
@@ -26,12 +26,12 @@ export default function AddKamerad() {
   };
 
   const handlePublish = () => {
-    if (!formData.Nama || !formData.image || !formData.kelompok) {
+    if (!formData.judul || !formData.image || !formData.date) {
       toast("Please fill all the fields");
       return;
     }
 
-    const storageRef = ref(storage, `/image/${formData.image.name}`);
+    const storageRef = ref(storage, `/kegiatan/${formData.image.name}`);
 
     const uploadImage = uploadBytesResumable(storageRef, formData.image);
 
@@ -48,25 +48,26 @@ export default function AddKamerad() {
       },
       () => {
         setFormData({
-          Nama: "",
-          kelompok: "",
+          judul: "",
           image: "",
+          date: "",
+          redaksi: ""
         });
 
         getDownloadURL(uploadImage.snapshot.ref).then((url) => {
-          const kameradRef = collection(db, "kamerad");
+          const kameradRef = collection(db, "kegiatan");
           addDoc(kameradRef, {
-            Nama: formData.Nama,
+            judul: formData.judul,
             image: url,
-            kelompok: parseInt(formData.kelompok),
-            klmpkID: `kelompok ${formData.kelompok}`,
+            date: formData.date,
+            redaksi: formData.redaksi,
           })
             .then(() => {
-              toast("kamerad pun lahir", { type: "success" });
+              toast("keigatan lahir", { type: "success" });
               setProgress(0);
             })
             .catch((err) => {
-              toast("Error adding kamerad", { type: "error" });
+              toast("Error", { type: "error" });
             });
         });
       }
@@ -83,23 +84,32 @@ export default function AddKamerad() {
         </>
       ) : (
         <div className="formadmincontainer">
-          <dic className="formtitle">Create kamerad</dic>
+          <dic className="formtitle">Create</dic>
 
           <div className="formadmin">
-            <label htmlFor="">Nama</label>
+            <label htmlFor="">Judul</label>
             <textarea
-              name="Nama"
+              name="judul"
               className="form-control"
-              value={formData.Nama}
+              value={formData.judul}
               onChange={(e) => handleChange(e)}
             />
           </div>
           <div className="formadmin">
-            <label htmlFor="">kelompok</label>
+            <label htmlFor="">Date</label>
             <textarea
-              name="kelompok"
+              name="date"
               className="form-control"
-              value={formData.kelompok}
+              value={formData.date}
+              onChange={(e) => handleChange(e)}
+            />
+          </div>
+          <div className="formadmin">
+            <label htmlFor="">redaksi</label>
+            <textarea
+              name="redaksi"
+              className="form-control"
+              value={formData.redaksi}
               onChange={(e) => handleChange(e)}
             />
           </div>

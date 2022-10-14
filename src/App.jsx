@@ -19,7 +19,7 @@ import DpmScreen from "./Pages/DPM/DpmScreen";
 import {
   LoginScreen,
   Gallery,
-  Kamerads,
+  Kegiatan,
   Messages,
   Stories,
   SignUpUserLevel9,
@@ -52,7 +52,7 @@ function App() {
         {/* Admin Screens */}
         {isUserLevel9() && (
           <>
-            <Route path="/admin/kelompok" element={<Kamerads />}></Route>
+            <Route path="/admin/kegiatan" element={<Kegiatan />}></Route>
             <Route path="/admin/gallery" element={<Gallery />}></Route>
             <Route path="/admin/kesanpesan" element={<Messages />}></Route>
             <Route path="/admin/story" element={<Stories />}></Route>
