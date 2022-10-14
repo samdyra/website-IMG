@@ -30,16 +30,16 @@ const Kamerads = () => {
 
   useEffect(() => {
     const kameradRef = collection(db, "foto");
-    const q = query(kameradRef, orderBy("date"));
+    const q = query(kameradRef);
     onSnapshot(q, (snapshot) => {
       const kamerads = snapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
       }));
-      setFoto(foto);
+      setFoto(kamerads);
     });
   }, []);
-
+  console.log(foto)
   const groupedKamerad = kamerad.reduce((groupedKamerad, kamerad) => {
     const kelompok = kamerad.klmpkID;
     if (groupedKamerad[kelompok] == null) groupedKamerad[kelompok] = [];
@@ -79,13 +79,13 @@ const Kamerads = () => {
         <div className="warning">FOTO</div>
         <div className="testContainer">
           <div className="adminContainer">
-            {kamerad.length === 0 ? (
+            {foto.length === 0 ? (
               <span className="visually-hidden">Loading...</span>
             ) : (
               foto.map(({ id, image }) => (
                 <div className="kameradContainerz">
                   <div key={id} className="kamerad-container-id">
-                    <img src={image} style={{ width: 135, height: 135 }}></img>
+                    <img src={image} style={{ width: 150, height: 150 }}></img>
                     <div className="kamerad-idz">
                       {user && <DeleteImage id={id} image={image} />}
                     </div>

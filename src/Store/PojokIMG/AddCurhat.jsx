@@ -5,10 +5,9 @@ import { toast } from "react-toastify";
 import { collection, addDoc } from "firebase/firestore";
 import { Link } from "react-router-dom";
 
-const AddStory = () => {
+const AddCurhat = () => {
   const [formData, setFormData] = useState({
-    nama: "",
-    cerita: "",
+    curhat: "",
   });
   const [user] = useAuthState(auth);
 
@@ -17,21 +16,20 @@ const AddStory = () => {
   };
 
   const handlePublish = (e) => {
-    if (!formData.nama || !formData.cerita) {
+    if (!formData.curhat) {
       toast("Please fill all the fields");
       return;
     }
 
-    const storyRef = collection(db, "story");
+    const storyRef = collection(db, "curhat");
     addDoc(storyRef, {
-      nama: formData.nama,
-      cerita: formData.cerita,
+      curhat: formData.curhat,
     })
       .then(() => {
-        toast("story added successfully", { type: "success" });
+        toast("added successfully", { type: "success" });
       })
       .catch((err) => {
-        toast("Error adding story", { type: "error" });
+        toast("adding story", { type: "error" });
       });
   };
 
@@ -45,26 +43,15 @@ const AddStory = () => {
         </>
       ) : (
         <div className="formadmincontainer">
-          <div className="formtitle">Form Cerita</div>
+          <div className="formtitle">Form</div>
           <div className="formadmin">
-            <label htmlFor="">Nama (Boleh Anonim)</label>
+            <label htmlFor="">Curhat</label>
             <input
               type="text"
-              name="nama"
+              name="curhat"
               className="formik"
-              value={formData.nama}
+              value={formData.curhat}
               onChange={(e) => handleChange(e)}
-            />
-          </div>
-
-          <div className="formadmin">
-            <label htmlFor="">Curhatan</label>
-            <textarea
-              name="cerita"
-              className="formik"
-              value={formData.cerita}
-              onChange={(e) => handleChange(e)}
-              rows="7"
             />
           </div>
           <button className="formbutton" onClick={handlePublish}>
@@ -76,4 +63,4 @@ const AddStory = () => {
   );
 };
 
-export default AddStory;
+export default AddCurhat;

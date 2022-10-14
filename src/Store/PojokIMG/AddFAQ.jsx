@@ -4,13 +4,11 @@ import { auth, db } from "../../Config/firebase/index"
 import { toast } from "react-toastify";
 import { collection, addDoc } from "firebase/firestore";
 import { Link } from "react-router-dom";
-import "../PojokIMG/index.css";
 
-const AddMessage = () => {
+const AddStory = () => {
   const [formData, setFormData] = useState({
-    message: "",
-    nama: "",
-    nim: "",
+    tanya: "",
+    jawab: "",
   });
   const [user] = useAuthState(auth);
 
@@ -19,22 +17,21 @@ const AddMessage = () => {
   };
 
   const handlePublish = (e) => {
-    if (!formData.message || !formData.nama || !formData.nim) {
+    if (!formData.tanya || !formData.jawab) {
       toast("Please fill all the fields");
       return;
     }
 
-    const messageRef = collection(db, "message");
-    addDoc(messageRef, {
-      message: formData.message,
-      nama: formData.nama,
-      nim: formData.nim,
+    const storyRef = collection(db, "FAQ");
+    addDoc(storyRef, {
+      tanya: formData.tanya,
+      jawab: formData.jawab,
     })
       .then(() => {
-        toast("message added successfully", { type: "success" });
+        toast("added successfully", { type: "success" });
       })
       .catch((err) => {
-        toast("Error adding article", { type: "error" });
+        toast("adding story", { type: "error" });
       });
   };
 
@@ -48,39 +45,28 @@ const AddMessage = () => {
         </>
       ) : (
         <div className="formadmincontainer">
-          <div className="formtitle">Kesan Pesan</div>
+          <div className="formtitle">Form</div>
           <div className="formadmin">
-            <label htmlFor="">Nama</label>
+            <label htmlFor="">Questions</label>
             <input
               type="text"
-              name="nama"
+              name="tanya"
               className="formik"
-              value={formData.nama}
+              value={formData.tanya}
               onChange={(e) => handleChange(e)}
             />
           </div>
 
           <div className="formadmin">
-            <label htmlFor="">NIM / Jabatan</label>
-            <input
-              type="text"
-              name="nim"
-              className="formik"
-              value={formData.nim}
-              onChange={(e) => handleChange(e)}
-            />
-          </div>
-
-          <div className="formadmin">
-            <label htmlFor="">kesan pesan</label>
+            <label htmlFor="">Answers</label>
             <textarea
-              name="message"
+              name="jawab"
               className="formik"
-              value={formData.message}
+              value={formData.jawab}
               onChange={(e) => handleChange(e)}
+              rows="7"
             />
           </div>
-
           <button className="formbutton" onClick={handlePublish}>
             Publish
           </button>
@@ -90,4 +76,4 @@ const AddMessage = () => {
   );
 };
 
-export default AddMessage;
+export default AddStory;

@@ -3,14 +3,14 @@ import React from "react";
 import { db } from "../../Config/firebase/index"
 import { toast } from "react-toastify";
 
-export default function DeleteStory({ id }) {
+export default function DeleteCurhat({ id }) {
   const handleDelete = async () => {
-    if (window.confirm("Are you sure you want to delete this Story?")) {
+    if (window.confirm("Are you sure you want to delete this FAQ?")) {
       try {
-        await deleteDoc(doc(db, "story", id));
-        toast("story deleted successfully", { type: "success" });
+        await deleteDoc(doc(db, "curhat", id));
+        toast("deleted successfully", { type: "success" });
       } catch (error) {
-        toast("Error deleting article", { type: "error" });
+        toast("deleting article", { type: "error" });
       }
     }
   };

@@ -21,7 +21,7 @@ import {
   Gallery,
   Kegiatan,
   Messages,
-  Stories,
+  FAQ,
   SignUpUserLevel9,
   SignUp,
 } from "./Store";
@@ -55,7 +55,7 @@ function App() {
             <Route path="/admin/kegiatan" element={<Kegiatan />}></Route>
             <Route path="/admin/gallery" element={<Gallery />}></Route>
             <Route path="/admin/kesanpesan" element={<Messages />}></Route>
-            <Route path="/admin/story" element={<Stories />}></Route>
+            <Route path="/admin/FAQ" element={<FAQ />}></Route>
             <Route path="/admin/signup" element={<SignUp />}></Route>
             <Route
               path="/admin/signupuserlevel9"
