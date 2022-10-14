@@ -19,14 +19,12 @@ import DpmScreen from "./Pages/DPM/DpmScreen";
 import {
   LoginScreen,
   Gallery,
-  Kamerads,
+  Kegiatan,
   Messages,
-  Stories,
+  FAQ,
   SignUpUserLevel9,
   SignUp,
 } from "./Store";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "./Config/firebase/index";
 import isUserLevel9 from "./Helpers/isUserLevel9";
 
 function App() {
@@ -54,10 +52,10 @@ function App() {
         {/* Admin Screens */}
         {isUserLevel9() && (
           <>
-            <Route path="/admin/kelompok" element={<Kamerads />}></Route>
+            <Route path="/admin/kegiatan" element={<Kegiatan />}></Route>
             <Route path="/admin/gallery" element={<Gallery />}></Route>
             <Route path="/admin/kesanpesan" element={<Messages />}></Route>
-            <Route path="/admin/story" element={<Stories />}></Route>
+            <Route path="/admin/FAQ" element={<FAQ />}></Route>
             <Route path="/admin/signup" element={<SignUp />}></Route>
             <Route
               path="/admin/signupuserlevel9"
