@@ -25,8 +25,6 @@ import {
   SignUpUserLevel9,
   SignUp,
 } from "./Store";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "./Config/firebase/index";
 import isUserLevel9 from "./Helpers/isUserLevel9";
 
 function App() {
