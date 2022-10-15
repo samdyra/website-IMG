@@ -42,13 +42,13 @@ const Geopoint = () => {
       <Modal open={openModal} onClose={() => setOpenModal(false)}></Modal>
       {/* Geopoint IMG-ITB 2023 */}
       <div className={pageBackground}>
-        <div className={title}>
-          <div className={titleText}>
-            <h1>Ferrari 458 Speciale</h1>
-            <h2>Spread The Joy in Our Journey</h2>
+        <div className={container} style={{ flexDirection: "column" }}>
+          <div className={title}>
+            <div className={titleText}>
+              <h1>Geopoint IMG-ITB 2023</h1>
+              <h2>Spread The Joy in Our Journey</h2>
+            </div>
           </div>
-        </div>
-        <div className={container}>
           <Carousel3D />
         </div>
         <div className={containerMascot}>

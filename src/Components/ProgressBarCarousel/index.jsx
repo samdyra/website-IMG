@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Slider from "react-slick";
 import style from "./style.module.scss";
-import { SliderData } from "../../assets/object/SliderData";
+import { GeopointSlider } from "../../assets/object/GeopointSlider.js";
 
 const ProgressBarCarousel = () => {
   const {
@@ -66,14 +66,16 @@ const ProgressBarCarousel = () => {
     customPaging: (i) => (
       <div>
         <div>
-          <h1 style={{ color: "white" }}>click</h1>
+          <h1 style={{ color: "white" }}>{GeopointSlider[i].date}</h1>
         </div>
         <div
           className={i === state.currentSlide ? dotsactive : dots}
           ref={i === 1 ? image : null}
         ></div>
         <div>
-          <h1 style={{ color: "white", marginTop: "10px" }}>click</h1>
+          <h1 style={{ color: "white", marginTop: "10px" }}>
+            {GeopointSlider[i].title}
+          </h1>
         </div>
       </div>
     ),
@@ -82,17 +84,12 @@ const ProgressBarCarousel = () => {
   return (
     <div className={madeElementWrapper}>
       <Slider {...settings} className={wrapperCard}>
-        {SliderData.map((slide) => {
+        {GeopointSlider.map((slide) => {
           return (
             <div className={madeElementContainer}>
               <img src={slide.image}></img>
-              <h1>Webgis</h1>
-              <p>
-                Web based GIS (Geographic Information System) of ITB Kampus
-                Jatinangor. We hope this feature would contribute to realized a
-                continuous monitoring and sustainable development of ITB Kampus
-                Jatinangor.
-              </p>
+              <h1>{slide.title}</h1>
+              <p>{slide.desc}</p>
             </div>
           );
         })}

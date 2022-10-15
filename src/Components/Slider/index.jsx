@@ -181,6 +181,27 @@ const Gallery = (props) => {
             })}
           </Slider>
         </div>
+      ) : sliderName == "modalimg" ? (
+        <div className={galleryWrapper}>
+          <div className={galleryCarousel}>
+            <div
+              className={slidecontainer}
+              data-aos="slide-left"
+              data-aos-duration="1200"
+              data-aos-offset="300"
+            >
+              <Slider {...gallerySettings} className={wrapperGallery}>
+                {SliderData.map((slide) => {
+                  return (
+                    <div className={galleryElementContainer}>
+                      <img src={slide.image}></img>
+                    </div>
+                  );
+                })}
+              </Slider>
+            </div>
+          </div>
+        </div>
       ) : null}
     </div>
   );

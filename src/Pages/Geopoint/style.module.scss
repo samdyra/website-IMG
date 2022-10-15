@@ -67,22 +67,13 @@
 
 .title {
   display: flex;
-  height: 15vh;
-  width: 99.5vw;
+
+  width: 99.8vw;
   justify-content: center;
   align-items: center;
+  margin-block: 50px;
 
   flex-direction: column;
-
-  h1 {
-    font-size: 50px;
-    margin-top: 200px;
-  }
-
-  h2 {
-    font-size: 30px;
-    margin-top: 10px;
-  }
 }
 
 .titleText {
@@ -92,23 +83,21 @@
   background-clip: text;
   text-fill-color: transparent;
   font-family: bambino;
-  width: 800px;
-  height: 700px;
+
+  height: 130px;
+
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
   h1 {
-    font-size: 50px;
+    font-size: 60px;
     text-align: center;
-    margin-top: 200px;
-    font-size: 70px;
   }
 
   h2 {
     font-size: 30px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: 25px;
+
     text-align: center;
-    font-size: 35px;
   }
 }
 .carouselcontainer {
