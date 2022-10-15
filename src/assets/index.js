@@ -15,3 +15,7 @@ export { default as slidergeospasial } from "./images/slidergeospasial.png";
 export { default as gegepdesc } from "./images/gegepdesc.png";
 export { default as gegepmodal } from "./images/gegepmodal.png";
 export { default as bintanghome } from "./images/bintanghome.png";
+export { default as gegep1 } from "./images/gegep1.png";
+export { default as gegep2 } from "./images/gegep2.png";
+
+

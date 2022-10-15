@@ -33,15 +33,46 @@
   margin-bottom: 100px;
 }
 
+.type {
+  font-family: jakarta;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  height: 80px;
+  font-size:16px;
+  text-align: center;
+  align-items: center;
+  z-index: 200;
+  border: 2px solid rgba(235, 124, 27, 0.723);
+  background: #e1b78959;
+  color:rgb(199, 122, 22);
+  border-radius: 30px;
+  top: 63vh;
+  left: 66vw;
+  font-weight: 600;
+}
+
+.gegep img{
+  position: absolute;
+  height: 320px;
+  width: 210px;
+  // border: 3px solid red;
+  z-index: 100;
+  top: 63vh;
+  left: 77vw
+}
+
 .oval {
   position: absolute;
   background: white;
-  z-index: inherit;
+  // z-index: inherit;
   top: 90vh;
   height: 20vh;
   width: 100vw;
   border-radius: 100%;
   overflow: hidden;
+  // border: 3px solid red;
 }
 
 .containerSectionKegiatan {
