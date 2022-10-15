@@ -118,21 +118,24 @@ const Navigacity = () => {
                 data-aos-offset="300"
               >
                 <p>
-                  The Ferrari 458 Italia (Type F142) is a mid-engine sports car
-                  produced by Ferrari. The F458 is the successor of the F430,
-                  and was first officially unveiled at the 2009 Frankfurt Motor
-                  Show. It was succeeded by the 488 GTB (Gran Turismo
-                  Berlinetta), which was unveiled at the 2015 Geneva Motor Show.
-                  {/* Perkenalkan, Gegep dan Eggy! Dua sejoli ini adalah teman
-                perjalanan kamu di Geopoint IMG–ITB yang akan menemani dan
-                memberikan informasi yang kamu butuhkan. */}
+                  Navigacity merupakan salah satu rangkaian acara pada kegiatan
+                  Geopoint IMG-ITB 2023: Spread the Joy in Our Journey yang
+                  bertujuan untuk memperkenalkan keilmuan Teknik Geodesi dan
+                  Geomatika serta peranannya di dalam industri, pembangunan,
+                  permasalahan lingkungan, kebencanaan, dan lain-lain kepada
+                  masyarakat umum. Navigacity dikemas dalam kegiatan fun run
+                  yang diberi nama “Navigacity: “Geospatial Run”.
                 </p>
                 <p>
-                  The Ferrari 458 Italia (Type F142) is a mid-engine sports car
-                  produced by Ferrari. The F458 is the successor of the F430,
-                  and was first officially unveiled at the 2009 Frankfurt Motor
-                  Show. It was succeeded by the 488 GTB (Gran Turismo
-                  Berlinetta), which was unveiled at the 2015 Geneva Motor Show.
+                  Navigacity merupakan sebuah konsep fun run dengan titik-titik
+                  rahasia disajikan dalam acara ini. Navigacity memberikan 2
+                  pilihan kategori yang dapat dipilih oleh peserta, yaitu Fun
+                  Run 5 km dan Geotagging Run 5km dengan teknis yang dijelaskan
+                  pada Guidebook Fun Run Geopoint IMG-ITB 2023. Konsep ini
+                  dikemas sebagai upaya kami untuk memperkenalkan Teknik Geodesi
+                  dan Geomatika dengan metode yang dapat diterima di masyarakat
+                  secara luas. Harapannya, Navigacity dapat menjadi ajang
+                  masyarakat untuk lebih mengenal Teknik Geodesi dan Geomatika.
                 </p>
               </div>
             </div>
