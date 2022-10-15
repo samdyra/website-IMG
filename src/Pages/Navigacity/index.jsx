@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { SliderData } from "../../assets/object/SliderData";
+import { BrowserRouter as Router, Link, useNavigate } from "react-router-dom";
+
 import {
   Carousel3D,
   ProgressBarCarousel,
@@ -13,6 +15,8 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 const Navigacity = () => {
+  const navigate = useNavigate();
+
   const [petaRute, setPetaRute] = useState(false);
 
   useEffect(() => {
@@ -202,7 +206,16 @@ const Navigacity = () => {
           <div className={container} style={{ gap: "45px" }}>
             <img src={rundown} alt="rundown" />
             <div style={{ paddingTop: "120px" }}>
-              <div className={buttonMascot}>Race Guidelines</div>
+              <Link
+                to={{
+                  pathname:
+                    "https://drive.google.com/file/d/1Vdf3tKSgP05bMI5uMoIpMXB-mLe-TWRm/view?usp=sharing",
+                }}
+                target="_blank"
+              >
+                <div className={buttonMascot}>Race Guidelines</div>
+              </Link>
+
               <div className={buttonMascot} style={{ marginTop: "32px" }}>
                 Twibbon
               </div>
