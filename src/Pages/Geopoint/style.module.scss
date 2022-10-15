@@ -67,12 +67,10 @@
 
 .title {
   display: flex;
-
   width: 99.8vw;
   justify-content: center;
   align-items: center;
   margin-block: 50px;
-
   flex-direction: column;
 }
 
@@ -83,8 +81,8 @@
   background-clip: text;
   text-fill-color: transparent;
   font-family: bambino;
-
-  height: 130px;
+  height: 150px;
+  padding-top: 20px;
 
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
@@ -114,6 +112,7 @@
     #292645 91.05%
   );
   padding-top: 10px;
+  // border: 1px solid red;
 }
 
 .teaser {
