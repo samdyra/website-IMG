@@ -204,7 +204,7 @@ input:focus {
 
 @font-face {
   font-family: BambinoBlack;
-  src: url(./assets/fonts/BambinoBlack.ttf) format("truetype");
+  src: url(./assets/fonts/BambinoBlack.ttf);
 }
 
 body {
