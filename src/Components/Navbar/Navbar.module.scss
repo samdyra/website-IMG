@@ -78,6 +78,7 @@
 .linkContainer {
   display: flex;
   justify-content: center;
+  font-family: jakarta;
   font-style: normal;
   color: white;
   align-self: center;
@@ -85,6 +86,8 @@
   Dropdown + Dropdown {
   }
   div {
+    font-size: 15px;
+  font-family: jakarta;
   }
 }
 

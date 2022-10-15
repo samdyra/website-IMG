@@ -166,7 +166,7 @@ const HomeScreen = () => {
           onMouseEnter={() => setGegepImage(gegep2)}
           onMouseLeave={() => setGegepImage(gegep1)}
           onClick={() => {
-            navigate("/geopoint");
+            navigate("/Geopoint");
           }}
           src={gegepImage}
         ></img>
@@ -206,7 +206,7 @@ const HomeScreen = () => {
             <p>{SliderText[0].desc}</p>
           </div>
         )}
-        ;
+        
         {index === 1 && (
           <>
             <div className={descSection2}>
@@ -218,7 +218,7 @@ const HomeScreen = () => {
             </div>
           </>
         )}
-        ;
+        
         {index === 2 && (
           <>
             <div className={descSection2}>
