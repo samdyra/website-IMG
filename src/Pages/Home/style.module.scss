@@ -58,7 +58,7 @@
   height: 320px;
   width: 210px;
   // border: 3px solid red;
-  z-index: 100;
+  z-index: 99;
   top: 63vh;
   left: 77vw
 }
@@ -187,7 +187,7 @@
   padding: 18px 36px;
   gap: 20px;
   margin-top: 20px;
-
+font-family: jakarta;
   width: 185px;
   height: 45px;
 
@@ -197,9 +197,10 @@
 }
 
 .learnMoreButton:hover {
-  border: 3px solid orange;
+  border: 1px solid orange;
   color: orange;
   cursor: pointer;
+  transition: 300ms;
 
   .arrow {
     border: solid orange;
@@ -261,8 +262,9 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-
+  margin-top: 40px;
   gap: 50px;
+  font-family: jakarta;
 
   height: 300px;
 
@@ -281,9 +283,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  font-family: jakarta;
   gap: 50px;
-  margin-top: 20px;
+  margin-top: 40px;
 
   height: 300px;
 
@@ -399,6 +401,8 @@
   flex-direction: column;
   padding-top: 50px;
   color: black;
+  font-family: jakarta;
+
   h1 {
     font-size: 30px;
     text-align: center;
