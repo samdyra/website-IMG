@@ -9,8 +9,9 @@ const NavbarAdmin = () => {
       <a href="/admin/parwis">PARWIS</a>
       <a href="/admin/kesenatoran">KESENATORAN</a>
       <a href="/admin/studentchapter">STUDENT CHAPTER</a>
-      <a href="/admin/signup">Sign Up</a>
-      <a href="/admin/signupuserlevel9">Super Admin</a>
+      <a href="/admin/georeference">GEOREFERENCE</a>
+      <a href="/admin/signup">SIGN UP</a>
+      <a href="/admin/signupuserlevel9">USER LEVEL 9</a>
     </div>
   );
 };

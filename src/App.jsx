@@ -25,7 +25,8 @@ import {
   InternalActivities,
   Parwis,
   Kesenatoran,
-  StudentChapterAdmin
+  StudentChapterAdmin,
+  GeoreferenceAdmin
 } from "./Store";
 import isUserLevel9 from "./Helpers/isUserLevel9";
 
@@ -55,6 +56,7 @@ function App() {
         {isUserLevel9() && (
           <>
             <Route path="/admin/kegiatan" element={<Kegiatan />}></Route>
+            <Route path="/admin/georeference" element={<GeoreferenceAdmin />}></Route>
             <Route path="/admin/studentchapter" element={<StudentChapterAdmin />}></Route>
             <Route path="/admin/parwis" element={<Parwis />}></Route>
             <Route path="/admin/FAQ" element={<FAQ />}></Route>
