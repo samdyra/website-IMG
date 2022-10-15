@@ -43,6 +43,7 @@ const ProgressBarCarousel = () => {
             listStyle: "none",
             padding: "0",
             margin: "0px",
+            fontFamily: "jakarta",
 
             rowGap: "10px",
           }}
@@ -55,6 +56,7 @@ const ProgressBarCarousel = () => {
             zIndex: "-1",
             top: "25px",
             left: "10px",
+            fontFamily: "jakarta",
 
             backgroundColor: "#D5A33B",
             width: "1270px",
