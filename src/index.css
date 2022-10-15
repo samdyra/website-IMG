@@ -203,8 +203,8 @@ input:focus {
 }
 
 @font-face {
-  font-family: BambinoBlack;
-  src: url(./assets/fonts/BambinoBlack.ttf);
+  font-family: bambino;
+  src: url(./assets/fonts/BambinoBlack.ttf) format("woff2")
 }
 
 body {
@@ -221,7 +221,7 @@ body {
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 8px;
+  width: 0px;
 }
 
 *::-webkit-scrollbar-track {
