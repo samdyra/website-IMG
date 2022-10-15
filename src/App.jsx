@@ -23,7 +23,8 @@ import {
   SignUpUserLevel9,
   SignUp,
   InternalActivities,
-  Parwis
+  Parwis,
+  Kesenatoran
 } from "./Store";
 import isUserLevel9 from "./Helpers/isUserLevel9";
 
@@ -56,6 +57,7 @@ function App() {
             <Route path="/admin/parwis" element={<Parwis />}></Route>
             <Route path="/admin/FAQ" element={<FAQ />}></Route>
             <Route path="/admin/signup" element={<SignUp />}></Route>
+            <Route path="/admin/kesenatoran" element={<Kesenatoran />}></Route>
             <Route
               path="/admin/signupuserlevel9"
               element={<SignUpUserLevel9 />}
