@@ -12,9 +12,6 @@ import { GegepNavi1, rundown } from "../../assets";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-import MapScreen from "./Components/Map";
-import HomeScreen from "../Home";
-
 const Navigacity = () => {
   const [petaRute, setPetaRute] = useState(false);
 
@@ -60,7 +57,7 @@ const Navigacity = () => {
       {/* Geopoint IMG-ITB 2023 */}
 
       <div className={pageBackground}>
-        <div style={{ border: "3px solid red", zIndex: 100 }}></div>
+        <div style={{ zIndex: 100 }}></div>
         <div className={containerTop}>
           <div className={gegepHeader}>
             <img src={GegepNavi1} alt="gegepnavi1" />
@@ -173,7 +170,11 @@ const Navigacity = () => {
                 <div className={rutePetaButton}>Peta</div>
               </div>
               <div className={rutePetaContainer}>
-                <MapScreen></MapScreen>
+                <iframe
+                  src="https://www.google.com/maps/d/u/0/embed?mid=1SQn2DlLSLLhichXo1RGfh50IAlTKjlY&ehbc=2E312F"
+                  width="600"
+                  height="400"
+                ></iframe>
               </div>
             </div>
           )}

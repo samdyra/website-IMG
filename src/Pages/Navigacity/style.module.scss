@@ -185,6 +185,9 @@
 .rutePetaContainer {
   width: 653px;
   height: 504px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   // border: 3px solid red;
   background: linear-gradient(180deg, #f5fcb5 0%, #356777 100%);
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
