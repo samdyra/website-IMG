@@ -18,12 +18,14 @@ import Footer from "./Components/Footer/Footer";
 import DpmScreen from "./Pages/DPM/DpmScreen";
 import {
   LoginScreen,
-  Gallery,
   Kegiatan,
-  Messages,
   FAQ,
   SignUpUserLevel9,
   SignUp,
+  InternalActivities,
+  Parwis,
+  Kesenatoran,
+  StudentChapterAdmin
 } from "./Store";
 import isUserLevel9 from "./Helpers/isUserLevel9";
 
@@ -53,13 +55,18 @@ function App() {
         {isUserLevel9() && (
           <>
             <Route path="/admin/kegiatan" element={<Kegiatan />}></Route>
-            <Route path="/admin/gallery" element={<Gallery />}></Route>
-            <Route path="/admin/kesanpesan" element={<Messages />}></Route>
+            <Route path="/admin/studentchapter" element={<StudentChapterAdmin />}></Route>
+            <Route path="/admin/parwis" element={<Parwis />}></Route>
             <Route path="/admin/FAQ" element={<FAQ />}></Route>
             <Route path="/admin/signup" element={<SignUp />}></Route>
+            <Route path="/admin/kesenatoran" element={<Kesenatoran />}></Route>
             <Route
               path="/admin/signupuserlevel9"
               element={<SignUpUserLevel9 />}
+            ></Route>
+            <Route
+              path="/admin/internal"
+              element={<InternalActivities />}
             ></Route>
           </>
         )}

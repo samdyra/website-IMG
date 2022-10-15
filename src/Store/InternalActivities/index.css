@@ -1,0 +1,81 @@
+.testContainer {
+  display: flex;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 20px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.adminContainer {
+  display: flex;
+  flex-direction: column;
+  /* position: absolute; */
+}
+
+.warning {
+  text-align: center;
+  font-family: poppins;
+}
+
+.kameradContainerz {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  border-bottom: 1px solid black;
+}
+
+.kamerad-container-id {
+  display: flex;
+  /* border: 3px solid red; */
+}
+
+.kamerad-container-id img {
+  border-radius: 20px;
+  object-fit: cover;
+  /* border: 3px solid red; */
+}
+
+.kamerad-idz {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  justify-content: space-between;
+  font-family: poppins;
+}
+
+.admin-navbar a {
+  padding-right: 40px;
+  text-decoration: none;
+  color: rgb(9, 9, 115);
+  text-align: center;
+  font-family: poppins;
+}
+
+.admin-navbar a:hover {
+  color: blue;
+}
+
+.admin-navbar {
+  width: 1280px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding-block: 20px;
+}
+
+.deleteButton button {
+  border: 2px solid red;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 128, 0);
+  color: red;
+}
+
+.deleteButton button:hover {
+  cursor: pointer;
+  color: rgb(252, 81, 81);
+  border: 2px solid rgb(242, 98, 98);
+}
