@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import style from "./style.module.scss";
 import Slider from "react-slick";
 import { SliderData } from "../../assets/object/SliderData";
+import { Modal } from "../../Components";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -32,6 +33,8 @@ const Gallery = (props) => {
     verticalCardWrapper,
     slidecontainer,
   } = style;
+
+  const [openModal, setOpenModal] = useState(false);
 
   const sliderName = props.sliderName;
 
@@ -124,38 +127,45 @@ const Gallery = (props) => {
           </div>
         </div>
       ) : sliderName == "card" ? (
-        <div className={madeElementWrapper}>
-          <Slider {...cardSettings} className={wrapperCard}>
-            {SliderData.map((slide) => {
-              return (
-                <div className={madeElementContainer}>
-                  <div className={madeElementImage}>
-                    <img src={slide.image}></img>
-                  </div>
-                  <div className={madeElementContent}>
-                    <div
-                      style={{
-                        display: "flex",
-                        gap: "90px",
-                        marginTop: "30px",
-                      }}
-                    >
-                      <h1>Webgis</h1>
-                      <h3>10 september 2021</h3>
+        <div>
+          <div className={madeElementWrapper}>
+            <Slider {...cardSettings} className={wrapperCard}>
+              {SliderData.map((slide) => {
+                return (
+                  <div className={madeElementContainer}>
+                    <div className={madeElementImage}>
+                      <img src={slide.image}></img>
                     </div>
-                    <p>
-                      Web based GIS (Geographic Information System) of ITB
-                      Kampus Jatinangor. We hope this feature would contribute
-                      to realized a continuous monitoring
-                    </p>
-                    <div href="/WebGIS" className={madeElementButton}>
-                      <p>Lihat Selengkapnya</p>
+                    <div className={madeElementContent}>
+                      <div
+                        style={{
+                          display: "flex",
+                          gap: "90px",
+                          marginTop: "30px",
+                        }}
+                      >
+                        <h1>Webgis</h1>
+                        <h3>10 september 2021</h3>
+                      </div>
+                      <p>
+                        Web based GIS (Geographic Information System) of ITB
+                        Kampus Jatinangor. We hope this feature would contribute
+                        to realized a continuous monitoring
+                      </p>
+                      <div
+                        className={madeElementButton}
+                        onClick={() => {
+                          setOpenModal(true);
+                        }}
+                      >
+                        <p>Lihat Selengkapnya</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
-          </Slider>
+                );
+              })}
+            </Slider>
+          </div>
         </div>
       ) : sliderName == "verticalcard" ? (
         <div>
