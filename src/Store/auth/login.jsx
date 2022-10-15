@@ -21,7 +21,7 @@ export default function Login() {
       })
       .then(() => {
         if (isAdmin) {
-          navigate("/admin/kelompok")
+          navigate("/admin/kegiatan")
         } else navigate("/Pojokimg")
       })
       .catch(() => toast(error.code, { type: "error" }))
