@@ -209,15 +209,7 @@ const Navigacity = () => {
           <div className={container} style={{ gap: "45px" }}>
             <img src={rundown} alt="rundown" />
             <div style={{ paddingTop: "120px" }}>
-              <Link
-                to={{
-                  pathname:
-                    "https://drive.google.com/file/d/1Vdf3tKSgP05bMI5uMoIpMXB-mLe-TWRm/view?usp=sharing",
-                }}
-                target="_blank"
-              >
-                <div className={buttonMascot}>Race Guidelines</div>
-              </Link>
+              <div className={buttonMascot}>Race Guidelines</div>
 
               <div className={buttonMascot} style={{ marginTop: "32px" }}>
                 Twibbon

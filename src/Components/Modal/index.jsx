@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import style from "./style.module.scss";
 import { SliderData } from "../../assets/object/SliderData";
 import { gegepmodal } from "../../assets";
+import Slider from "../Slider";
 
 const Modal = (props, { open, onClose }) => {
   const {
