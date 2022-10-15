@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import style from "./style.module.scss";
 import { BrowserRouter as Router, Link, useNavigate } from "react-router-dom";
+import Typewriter from "typewriter-effect";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -16,6 +17,8 @@ import { OrbitControls, useGLTF, SpotLight } from "@react-three/drei";
 import { SliderData, SliderText } from "../../assets/object/SliderData";
 import Carousel from "../../Components/Carousel/Carousel";
 import Gallery from "../../Components/Slider";
+import { gegep1, gegep2 } from "../../assets";
+
 const HomeScreen = () => {
   const navigate = useNavigate();
 
@@ -50,24 +53,26 @@ const HomeScreen = () => {
     learnMoreButton,
     arrow,
     oval,
+    gegep,
+    type,
   } = style;
 
   const [index, setIndex] = useState(0);
   const [user] = useAuthState(auth);
-
+  const [gegepImage, setGegepImage] = useState(gegep1);
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
 
-  useEffect(() => {
-    let interval = setInterval(() => {
-      if (index != 2) {
-        return setIndex(index + 1);
-      } else return setIndex(0);
-    }, 3000);
+  // useEffect(() => {
+  //   let interval = setInterval(() => {
+  //     if (index != 2) {
+  //       return setIndex(index + 1);
+  //     } else return setIndex(0);
+  //   }, 3000);
 
-    return () => clearInterval(interval);
-  }, [index]);
+  //   return () => clearInterval(interval);
+  // }, [index]);
 
   const container2 = useRef(null);
 
@@ -89,6 +94,17 @@ const HomeScreen = () => {
           scale={18}
         />
       </group>
+    );
+  }
+  function TypeWriter() {
+    return (
+      <Typewriter
+        options={{
+          strings: gegepImage.includes("gegep1") ? ["Hi I'm Gegep! Welcome!", "See more about Geopoint here!"] : ["Click Me!"],
+          autoStart: true,
+          loop: true,
+        }}
+      />
     );
   }
 
@@ -142,7 +158,19 @@ const HomeScreen = () => {
           </div>
         </div>
       </div>
-
+      <div className={type}>
+        <TypeWriter></TypeWriter>
+      </div>
+      <div className={gegep}>
+        <img
+          onMouseEnter={() => setGegepImage(gegep2)}
+          onMouseLeave={() => setGegepImage(gegep1)}
+          onClick={() => {
+            navigate("/geopoint");
+          }}
+          src={gegepImage}
+        ></img>
+      </div>
       <div className={oval}></div>
       <div
         className={containerSection2}

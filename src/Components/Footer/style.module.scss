@@ -2,7 +2,7 @@
   background-color: #4b8579;
   display: flex;
   align-items: center;
-
+  font-family: jakarta;
   flex-direction: column;
   z-index: 6;
   position: relative;
@@ -13,6 +13,7 @@
 .containerGeopoint {
   background: #281f64;
   display: flex;
+  font-family: jakarta;
   align-items: center;
   margin: 0 auto;
   flex-direction: column;
@@ -58,7 +59,7 @@
   display: flex;
   flex-direction: column;
   h1 {
-    font-family: jakartaBold;
+    // font-family: jakartaBold;
     font-size: 20px;
   }
 }
@@ -91,8 +92,8 @@
   }
   h1 {
     margin-left: 5px;
-    font-style: bold;
-    font-weight: 600;
+    // font-style: bold;
+    // font-weight: 600;
     color: white;
   }
 }

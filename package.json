@@ -30,7 +30,8 @@
     "react-toastify": "8.1.0",
     "sass": "^1.54.0",
     "slick-carousel": "^1.8.1",
-    "three": "0.138.3"
+    "three": "0.138.3",
+    "typewriter-effect": "^2.19.0"
   },
   "devDependencies": {
     "@types/jest": "^29.1.2",
