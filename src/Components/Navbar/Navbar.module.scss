@@ -3,15 +3,15 @@
   z-index: 100;
   width: 100vw;
   background: #4b8579;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 .containerGeopoint {
   position: fixed;
   z-index: 100;
   width: 100vw;
   background: #281f64;
-  overflow-x: hidden;
-  overflow-x: hidden;
+  // overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 .container {
@@ -24,14 +24,14 @@
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 .containeractive {
   position: fixed;
   z-index: 100;
   width: 100vw;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   // background: #4b8579;
 }
 
@@ -41,7 +41,7 @@
   max-height: 50px;
   padding-block: 5px;
   align-items: center;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 
   @media screen and (max-width: 418px) {
     max-width: 368px;
