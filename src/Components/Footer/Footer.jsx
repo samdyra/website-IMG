@@ -34,7 +34,7 @@ const Footer = () => {
   } = style;
   return (
     <div>
-      {linkName === "/dpm" ? null : (
+      {linkName === "/DPM" ? null : (
         <div
           className={
             linkName === "/Geopoint" || linkName === "/Geopoint/Navigacity"

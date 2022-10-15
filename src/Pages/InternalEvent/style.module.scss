@@ -1,28 +1,33 @@
 .container {
   background-color: white;
   padding-top: 100px;
+
+  h1 {
+    font-family: jakarta;
+  }
 }
 
 .containerSection {
   margin: 0 auto;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   max-width: 1280px;
-  height: 720px;
-
+  height: 1300px;
   display: flex;
   align-items: center;
   flex-direction: column;
+  gap: 20px;
   h1 {
     font-weight: bold;
     text-align: center;
     font-size: 40px;
     margin-bottom: -5px;
+    font-family: jakartaBold;
   }
 
   h2 {
     text-align: center;
     font-size: 30px;
     margin-bottom: 10px;
+    font-family: jakarta;
   }
 
   button {

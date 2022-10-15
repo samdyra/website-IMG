@@ -60,7 +60,7 @@ const Gallery = (props) => {
   const verticalcardSettings = {
     infinite: true,
     speed: 1000,
-    slidesToShow: 3,
+    slidesToShow: 5,
     autoplay: false,
     autoplaySpeed: 2000,
     arrows: false,

@@ -195,7 +195,7 @@
   flex-direction: column;
 
   h1 {
-    font-family: "Plus Jakarta Sans";
+    font-family: jakarta;
     font-style: normal;
     font-weight: 800;
     font-size: 55px;
@@ -206,7 +206,7 @@
   }
 
   h2 {
-    font-family: "Plus Jakarta Sans";
+    font-family: jakarta;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -216,6 +216,23 @@
     letter-spacing: -0.01em;
 
     color: #ffffff;
+  }
+
+  a {
+    font-family: jakarta;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.01em;
+
+    color: #ffffff;
+  }
+
+  a:hover {
+    cursor: none;
   }
 }
 
@@ -228,9 +245,8 @@
 
   h1 {
     font-size: 30px;
-    margin-top: 0px;
+    margin-bottom: 30px;
     text-align: center;
-    margin-bottom: -100px;
   }
 
   h3 {
@@ -332,7 +348,7 @@
   margin-bottom: 150px;
 
   p {
-    font-family: "Plus Jakarta Sans";
+    font-family: jakarta;
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
@@ -344,7 +360,7 @@
 
   h1 {
     text-align: center;
-    font-family: "Plus Jakarta Sans";
+    font-family: jakarta;
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -353,7 +369,7 @@
 
   h2 {
     text-align: center;
-    font-family: "Plus Jakarta Sans";
+    font-family: jakarta;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;

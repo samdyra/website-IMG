@@ -84,7 +84,6 @@ const HomeScreen = () => {
 
   return (
     <div className={container} style={{ overflow: "hidden" }}>
-      <div className={easteregg1} onClick={() => navigate("/dpm")}></div>
       <div className={containerSectionTop}>
         <div
           style={{
@@ -194,7 +193,11 @@ const HomeScreen = () => {
           data-aos-offset="430"
         >
           <h1>Susunan Kepengurusan IMG-ITB 2022/2023</h1>
-          <h2>Struktur IMG-ITB (BPH, DPM, dan BSO)</h2>
+          <div style={{ display: "flex" }}>
+            <h2>Struktur IMG-ITB (BPH, </h2>
+            <a href="/DPM">DPM,</a>
+            <h2> dan BSO)</h2>
+          </div>
         </div>
         <div data-aos="fade-left" data-aos-duration="750" data-aos-offset="500">
           <Carousel
@@ -256,7 +259,7 @@ const HomeScreen = () => {
       <div className={judulSection5}>
         <h1>Our Delightful Moments</h1>
       </div>
-      <div style={{ overflow: "hidden" }}>
+      <div style={{ overflow: "hidden", marginBottom: "100px" }}>
         <Gallery sliderName="gallery" />
       </div>
     </div>

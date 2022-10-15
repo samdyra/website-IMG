@@ -17,7 +17,7 @@
   position: relative;
   left: 785px;
   font-size: 3rem;
-  color: #4e887c;
+  color: white;
   z-index: 1;
   cursor: pointer;
   user-select: none;
@@ -28,7 +28,7 @@
 
   left: 5px;
   font-size: 3rem;
-  color: #4e887c;
+  color: white;
   z-index: 1;
   cursor: pointer;
   user-select: none;

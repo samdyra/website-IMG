@@ -39,12 +39,11 @@
 .galleryWrapper {
   display: flex;
   flex-direction: column;
-  margin: 20px 0 75px 0;
 }
 
 .galleryCarousel {
   height: 500px;
-  margin-top: 70px;
+
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -187,20 +186,22 @@
 }
 
 .wrapperVerticalCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 20px;
-  height: 100px;
-  width: 1280px;
+  height: 1500px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .verticalCardContainer {
-  display: block;
   max-width: 1100px;
-  max-height: 213px;
+  max-height: 1500px;
   background: #d9d9d9;
   border-radius: 25px;
-  margin-left: 89px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-block: 10px;
+  margin-left: 50px;
 
   filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
 }
@@ -215,7 +216,7 @@
 }
 .verticalCardImage img {
   width: 300px;
-  height: 213px;
+  height: 200px;
   border-radius: 25px 0 0 25px;
   margin: 0 0 0 0;
   object-fit: fill;
@@ -231,6 +232,8 @@
   flex-direction: column;
   padding-left: 50px;
   text-align: left;
+  gap: 20px;
+  padding-top: 20px;
 
   h1 {
     max-width: fit-content;

@@ -10,6 +10,7 @@ import style from "./style.module.scss";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { gegepdesc } from "../../assets";
 
 const Geopoint = () => {
   const {
@@ -59,14 +60,9 @@ const Geopoint = () => {
           >
             <div className={mascotText}>
               <p>
-                The Ferrari 458 Italia (Type F142) is a mid-engine sports car
-                produced by Ferrari. The F458 is the successor of the F430, and
-                was first officially unveiled at the 2009 Frankfurt Motor Show.
-                It was succeeded by the 488 GTB (Gran Turismo Berlinetta), which
-                was unveiled at the 2015 Geneva Motor Show.
-                {/* Perkenalkan, Gegep dan Eggy! Dua sejoli ini adalah teman
+                Perkenalkan, Gegep dan Eggy! Dua sejoli ini adalah teman
                 perjalanan kamu di Geopoint IMG–ITB yang akan menemani dan
-                memberikan informasi yang kamu butuhkan. */}
+                memberikan informasi yang kamu butuhkan.
               </p>
             </div>
             <div
@@ -79,11 +75,11 @@ const Geopoint = () => {
             </div>
           </div>
           <img
-            src={SliderData[1].image}
+            src={gegepdesc}
             alt=""
             data-aos="fade-left"
             data-aos-duration="600"
-            data-aos-offset="300"
+            data-aos-offset="400"
           />
         </div>
         <div className={container}>
