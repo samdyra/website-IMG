@@ -8,6 +8,7 @@ const NavbarAdmin = () => {
       <a href="/admin/internal">INTERNAL</a>
       <a href="/admin/parwis">PARWIS</a>
       <a href="/admin/kesenatoran">KESENATORAN</a>
+      <a href="/admin/studentchapter">STUDENT CHAPTER</a>
       <a href="/admin/signup">Sign Up</a>
       <a href="/admin/signupuserlevel9">Super Admin</a>
     </div>
