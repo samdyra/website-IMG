@@ -187,8 +187,6 @@ input:focus {
   outline: none;
 }
 
-
-
 @font-face {
   font-family: jakarta;
   src: url(./assets/fonts/PlusJakartaDisplay-Regular.otf);
@@ -202,6 +200,11 @@ input:focus {
   font-family: cascadiaCode;
   src: url(./assets/fonts/CascadiaCode.ttf) format("woff2"),
     url(./assets/fonts/CascadiaCode.woff2) format("truetype");
+}
+
+@font-face {
+  font-family: BambinoBlack;
+  src: url(./assets/fonts/BambinoBlack.ttf) format("truetype");
 }
 
 body {
@@ -234,4 +237,3 @@ body {
 input:focus {
   outline: none;
 }
-
