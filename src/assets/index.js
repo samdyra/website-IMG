@@ -13,3 +13,5 @@ export { default as sliderseminar } from "./images/sliderseminar.png";
 export { default as sliderceremony } from "./images/sliderceremony.png";
 export { default as slidergeospasial } from "./images/slidergeospasial.png";
 export { default as gegepdesc } from "./images/gegepdesc.png";
+export { default as gegepmodal } from "./images/gegepmodal.png";
+export { default as bintanghome } from "./images/bintanghome.png";

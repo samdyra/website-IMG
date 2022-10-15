@@ -47,7 +47,7 @@ const Navbar = () => {
   const [offset, setOffset] = useState(0);
 
   window.addEventListener("scroll", (e) => {
-    return setOffset(window.pageYOffset / 700);
+    return setOffset(window.pageYOffset / 600);
   });
 
   function setFixed() {

@@ -46,6 +46,10 @@ const HomeScreen = () => {
     easteregg1,
     ketuaContainer,
     ketuaImage,
+    star,
+    learnMoreButton,
+    arrow,
+    oval,
   } = style;
 
   const [index, setIndex] = useState(0);
@@ -64,6 +68,12 @@ const HomeScreen = () => {
 
     return () => clearInterval(interval);
   }, [index]);
+
+  const container2 = useRef(null);
+
+  const handleClick = () => {
+    container2.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   function Model(props) {
     const models = useRef();
@@ -85,47 +95,60 @@ const HomeScreen = () => {
   return (
     <div className={container} style={{ overflow: "hidden" }}>
       <div className={containerSectionTop}>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-around",
-            alignItems: "center",
-          }}
-        >
-          <div className={desc}>
-            <h2>Welcome to IMG-ITB Official Website</h2>
+        <div className={star}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <div className={desc}>
+              <h2>Welcome to IMG-ITB Official Website</h2>
 
-            <h1>
-              IKATAN MAHASISWA <br></br> GEODESI-ITB
-            </h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
-              doloribus, fuga molestiase at asperiores minima fugit, sapiente
-              rem voluptates eum id dolor ullam ipsam architecto tenetur sequi
-              iusto. Aliquid, sit.
-            </p>
-          </div>
-          <div className={logo}>
-            <Canvas
-              camera={{
-                fov: 36,
-                position: [30, 30, 45],
-              }}
-            >
-              <ambientLight color={300} intensity={10}></ambientLight>
+              <h1>
+                IKATAN MAHASISWA <br></br> GEODESI-ITB
+              </h1>
+              <p>
+                Himpunan mahasiswa Ikatan Mahasiswa Geodesi Institut Teknologi
+                Bandung yang biasa disingkat IMG-ITB merupakan lanjutan dari
+                Ikatan Mahasiswa Geodesi atau IMG yang didirikan pada 16
+                September 1952 di Bandung. IMG-ITB sendiri berkedudukan di
+                tempat jurusan Teknik Geodesi dan Geomatika berada.
+              </p>
+              <div className={learnMoreButton} onClick={handleClick}>
+                Learn More
+                <div className={arrow}></div>
+              </div>
+            </div>
 
-              <OrbitControls
-                enablePan={false}
-                enableZoom={false}
-                enableRotate={true}
-              ></OrbitControls>
-              <Model></Model>
-            </Canvas>
+            <div className={logo}>
+              <Canvas
+                camera={{
+                  fov: 36,
+                  position: [50, 40, 35],
+                }}
+              >
+                <ambientLight color={300} intensity={10}></ambientLight>
+
+                <OrbitControls
+                  enablePan={false}
+                  enableZoom={false}
+                  enableRotate={true}
+                ></OrbitControls>
+                <Model></Model>
+              </Canvas>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className={containerSection2} style={{ overflow: "hidden" }}>
+      <div className={oval}></div>
+      <div
+        className={containerSection2}
+        ref={container2}
+        style={{ overflow: "hidden" }}
+      >
         <div className={judulSection2}>
           <h1
             className={index == 0 ? fadeIn : fadeOut}
@@ -149,11 +172,10 @@ const HomeScreen = () => {
           <h1>IMG-ITB</h1>
         </div>
         {index === 0 && (
-          <div className={descSection2}>
-            <div className={asas}>
-              <h1>{SliderText[0].title}</h1>
-              <p>{SliderText[0].desc}</p>
-            </div>
+          <div className={asas}>
+            <h1>{SliderText[0].title}</h1>
+
+            <p>{SliderText[0].desc}</p>
           </div>
         )}
         ;
@@ -161,7 +183,7 @@ const HomeScreen = () => {
           <>
             <div className={descSection2}>
               <h1>{SliderText[1].title}</h1>
-              <div className={descsifat}>
+              <div className={desctujuan}>
                 <p>{SliderText[1].desc[0]}</p>
                 <p>{SliderText[1].desc[1]}</p>
               </div>
@@ -175,9 +197,9 @@ const HomeScreen = () => {
               <h1>{SliderText[2].title}</h1>
               <div className={desctujuan}>
                 <p>{SliderText[2].desc[0]}</p>
-                <div className={linetujuan}></div>
+
                 <p>{SliderText[2].desc[1]}</p>
-                <div className={linetujuan}></div>
+
                 <p>{SliderText[2].desc[2]}</p>
               </div>
             </div>
@@ -199,11 +221,8 @@ const HomeScreen = () => {
             <h2> dan BSO)</h2>
           </div>
         </div>
-        <div data-aos="fade-left" data-aos-duration="750" data-aos-offset="500">
-          <Carousel
-            slides={SliderData}
-            style={{ border: "20px solid black" }}
-          />
+        <div data-aos="fade-left" data-aos-duration="750" data-aos-offset="430">
+          <Carousel slides={SliderData} />
         </div>
       </div>
 

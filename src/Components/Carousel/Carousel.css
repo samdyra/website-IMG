@@ -8,14 +8,14 @@
 }
 
 .image {
-  width: 700px;
-  height: 450px;
+  width: 600px;
+  height: 350px;
   border-radius: 10px;
 }
 
 .right-arrow {
   position: relative;
-  left: 785px;
+  left: 690px;
   font-size: 3rem;
   color: white;
   z-index: 1;

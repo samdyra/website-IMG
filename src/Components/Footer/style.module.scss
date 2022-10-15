@@ -2,11 +2,12 @@
   background-color: #4b8579;
   display: flex;
   align-items: center;
-  margin: 0 auto;
+
   flex-direction: column;
   z-index: 6;
   position: relative;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 .containerGeopoint {
@@ -19,6 +20,7 @@
   position: relative;
   font-size: 16px;
   height: 460px;
+  overflow-x: hidden;
 }
 
 .containertopcontact {
@@ -26,9 +28,9 @@
   margin-bottom: 50px;
 
   background: #396a60;
-
   width: 100vw;
   height: 80.25px;
+  overflow-x: hidden;
 }
 
 .container2 {

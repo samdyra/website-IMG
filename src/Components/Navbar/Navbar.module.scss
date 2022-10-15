@@ -3,30 +3,35 @@
   z-index: 100;
   width: 100vw;
   background: #4b8579;
+  overflow-x: hidden;
 }
 .containerGeopoint {
   position: fixed;
   z-index: 100;
   width: 100vw;
   background: #281f64;
+  overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 .container {
   display: flex;
-  margin: 0 auto;
-  width: 1280px;
+
   background: none;
   background-color: none;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 200px;
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
+  overflow-x: hidden;
 }
 
 .containeractive {
   position: fixed;
   z-index: 100;
   width: 100vw;
+  overflow-x: hidden;
   // background: #4b8579;
 }
 
@@ -36,6 +41,7 @@
   max-height: 50px;
   padding-block: 5px;
   align-items: center;
+  overflow-x: hidden;
 
   @media screen and (max-width: 418px) {
     max-width: 368px;
