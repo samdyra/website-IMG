@@ -136,8 +136,11 @@ const Gallery = (props) => {
                     <div
                       style={{
                         display: "flex",
-                        gap: "90px",
-                        marginTop: "30px",
+                        marginTop: "20px",
+                        marginBottom: "10px",
+                        justifyContent: "space-between",
+                        width: "100%"
+
                       }}
                     >
                       <h1>Webgis</h1>
