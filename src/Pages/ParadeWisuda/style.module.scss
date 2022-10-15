@@ -5,14 +5,17 @@
 
 .containerSection {
   margin: 0 auto;
-
   height: 720px;
   overflow: hidden;
 
   h1 {
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: -50px;
+    margin-bottom: 30px;
+    font-family: jakarta;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 120%;
   }
 }
 

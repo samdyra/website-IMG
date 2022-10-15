@@ -1,5 +1,13 @@
 .container {
   background-color: white;
+
+  h1 {
+    font-family: jakartaBold;
+  }
+
+  h2 {
+    font-family: jakarta;
+  }
 }
 
 .containerSection {
@@ -13,11 +21,12 @@
   flex-direction: column;
 
   h1 {
-    font-family: "Plus Jakarta Sans";
-    font-style: normal;
+    font-family: jakartaBold;
+    font-style: bold;
     font-weight: 600;
     font-size: 32px;
     line-height: 140%;
+    margin-bottom: 20px;
   }
 }
 

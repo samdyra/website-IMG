@@ -13,8 +13,7 @@ const internalEvent = () => {
             <h1>Internal Events in IMG-ITB</h1>
           </div>
           <div>
-            <h2>Our Internal Event Dates</h2>
-            <button>Click Here</button>
+            <button>Our Internal Event Dates</button>
           </div>
           <Gallery sliderName="verticalcard" />
         </div>

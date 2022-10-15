@@ -2,7 +2,13 @@ import React, { useRef, useCallback } from "react";
 import "./Carousel3D.css";
 import { SliderData } from "../../assets/object/SliderData";
 import { useEffect } from "react";
-
+import {
+  slidernavigacity,
+  slidergts,
+  slidergeospasial,
+  sliderceremony,
+  sliderseminar,
+} from "../../assets";
 import { BrowserRouter as Router, Link, useNavigate } from "react-router-dom";
 
 const Carousel3D = () => {
@@ -29,21 +35,21 @@ const Carousel3D = () => {
         <input type="radio" name="slider3D" id="s5" ref={image} />
 
         <label for="s1" id="slide1">
-          <img src={SliderData[3].image} />
+          <img src={sliderseminar} />
         </label>
 
         <label for="s2" id="slide2">
-          <img src={SliderData[1].image} />
+          <img src={sliderceremony} />
         </label>
         <label for="s3" id="slide3">
-          <img src={SliderData[1].image} />
+          <img src={slidergeospasial} />
         </label>
-        <label for="s4" id="slide4">
-          <img src={SliderData[1].image} />
+        <label className="gts" for="s4" id="slide4">
+          <img src={slidergts} />
         </label>
         <label for="s5" id="slide5">
           <img
-            src={SliderData[1].image}
+            src={slidernavigacity}
             onDoubleClick={() => navigate("/Geopoint/Navigacity")}
           />
         </label>

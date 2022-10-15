@@ -11,7 +11,7 @@ const VideoEmbed = () => {
               height="500px"
               style={{ borderRadius: "25px" }}
               className="embed-responsive-item"
-              src="https://www.youtube.com/embed/hVaeQUr_RXo"
+              src="https://www.youtube.com/embed/WGJWaKeMzOs"
               frameBorder="0"
               allowFullScreen
             ></iframe>

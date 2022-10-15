@@ -8,9 +8,8 @@ const studentChapter = () => {
   return (
     <div className={container}>
       <Header />
-      <div className={containerSection}></div>
-      <div className={containerSection}></div>
-      <div className={containerSection}>
+
+      <div style={{ height: "1300px", marginTop: "100px" }}>
         <Gallery sliderName="verticalcard" />
       </div>
     </div>

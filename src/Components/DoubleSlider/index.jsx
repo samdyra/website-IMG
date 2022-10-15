@@ -5,8 +5,13 @@ import { SliderData, SliderText } from "../../assets/object/SliderData";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import kontur1 from "../../assets/images/kontur1.svg";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function DoubleSlider(props) {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   const {
     descContainer,
     galleryElementContainer2,
@@ -28,7 +33,12 @@ export default function DoubleSlider(props) {
   return (
     <div className={containerSection}>
       <img src={kontur1} className={kontur} />
-      <div className={halfpage}>
+      <div
+        className={halfpage}
+        data-aos="fade-right"
+        data-aos-duration="1200"
+        data-aos-offset="100"
+      >
         <div className={title}>
           {sliderName === "paradewisuda" ? (
             <h1>Majalah Parade Wisuda</h1>
@@ -68,23 +78,25 @@ export default function DoubleSlider(props) {
         </div>
       </div>
 
-      <Slider
-        asNavFor={nav1}
-        ref={(slider2) => setNav2(slider2)}
-        slidesToShow={1}
-        swipeToSlide={true}
-        focusOnSelect={true}
-        className={slider2}
-        arrows={true}
-      >
-        {SliderData.map((data, index) => {
-          return (
-            <div className={galleryElementContainer2}>
-              <img src={data.image} alt="gallery" />
-            </div>
-          );
-        })}
-      </Slider>
+      <div data-aos="fade-left" data-aos-duration="1200" data-aos-offset="100">
+        <Slider
+          asNavFor={nav1}
+          ref={(slider2) => setNav2(slider2)}
+          slidesToShow={1}
+          swipeToSlide={true}
+          focusOnSelect={true}
+          className={slider2}
+          arrows={true}
+        >
+          {SliderData.map((data, index) => {
+            return (
+              <div className={galleryElementContainer2}>
+                <img src={data.image} alt="gallery" />
+              </div>
+            );
+          })}
+        </Slider>
+      </div>
     </div>
   );
 }

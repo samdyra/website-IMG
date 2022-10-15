@@ -10,9 +10,10 @@ const paradeWisuda = () => {
   return (
     <div>
       <Header />
-      <div className={containerSection}>
+      <div style={{ marginTop: "100px" }}>
         <DoubleSlider sliderName="paradewisuda" />
       </div>
+
       <div className={containerSection}>
         <h1>Dokumentasi Parade Wisuda IMG-ITB</h1>
         <Gallery sliderName="gallery" />

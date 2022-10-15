@@ -45,18 +45,19 @@
 }
 .slider2 {
   display: flex;
+  max-height: 600px;
 
-  max-width: 595px;
+  max-width: 500px;
 }
 
 .galleryElementContainer2 {
-  width: 595px;
-  height: 700sssssssspx;
+  max-width: 500px;
+  height: 600px;
 }
 .galleryElementContainer2 img {
   /* margin-inline: 1px; */
-  width: 595px;
-  height: 700px;
+  width: 500px;
+  height: 590px;
   object-fit: cover;
   border-radius: 20px;
 }
@@ -67,7 +68,7 @@
 
   h1 {
     max-width: 350px;
-
+    max-height: 190px;
     font-size: 89px;
     font-weight: 300;
     color: #4b8579;
@@ -77,17 +78,16 @@
 
 .containerSection {
   margin: 0 auto;
-
-  height: 720px;
+  margin-bottom: 100px;
   display: flex;
   justify-content: center;
-  gap: 78px;
+  gap: 30px;
   align-items: center;
 }
 
 .halfpage {
-  max-width: 596px;
-  height: 720px;
+  max-width: 600px;
+  max-height: 700px;
   display: flex;
   flex-direction: column;
   gap: 125px;

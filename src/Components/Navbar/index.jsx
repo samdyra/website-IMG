@@ -122,7 +122,7 @@ const Navbar = () => {
             </a>
           </div>
         </div>
-      ) : linkName === "/dpm" ? null : (
+      ) : linkName === "/DPM" ? null : (
         <div className={containerbig}>
           <div className={container}>
             <div>
