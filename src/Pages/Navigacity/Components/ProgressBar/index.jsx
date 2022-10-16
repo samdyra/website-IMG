@@ -16,7 +16,7 @@ const ProgressBar = () => {
       <div className={progressBar}>
         <div className={dotsContainer}>
           <h2 style={{ width: "150px" }}>15 Oktober 2022</h2>
-          <div className={dotsActives}></div>
+          <div className={dotsActive}></div>
           <h2 style={{ width: "150px" }}>Pembukaan penjualan tiket</h2>
         </div>
         <div className={dotsContainer}>
@@ -34,14 +34,14 @@ const ProgressBar = () => {
         <div className={dotsContainer}>
           <h2 style={{ width: "150px" }}>1 Februari 2023</h2>
           <div className={dots}></div>
-          <h2 style={{ width: "250px", height: "60px" }}>
-            Pembagian race pack
+          <h2 style={{ width: "250px",  }}>
+            Pembagian race <br></br> pack
           </h2>
         </div>
         <div className={dotsContainer}>
           <h2 style={{ width: "150px" }}>4 Februari 2023</h2>
           <div className={dots}></div>
-          <h2 style={{ width: "22s0px" }}>
+          <h2 style={{ width: "220px" }}>
             Hari pelaksanaan dan pengumuman pemenang
           </h2>
         </div>
