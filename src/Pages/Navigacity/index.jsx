@@ -10,7 +10,7 @@ import {
 } from "../../Components";
 import style from "./style.module.scss";
 import { CountDown, ProgressBar } from "./Components";
-import { GegepNavi1, rundown } from "../../assets";
+import { GegepNavi1, rundown, medal, jersey, bib } from "../../assets";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -170,7 +170,13 @@ const Navigacity = () => {
                   Peta
                 </div>
               </div>
-              <div className={rutePetaContainer}></div>
+              <div className={rutePetaContainer}>
+                <iframe
+                  src="https://www.google.com/maps/d/u/0/embed?mid=1SQn2DlLSLLhichXo1RGfh50IAlTKjlY&ehbc=2E312F"
+                  width="600"
+                  height="400"
+                ></iframe>
+              </div>
             </div>
           ) : (
             <div
@@ -203,7 +209,12 @@ const Navigacity = () => {
             data-aos="fade-left"
             data-aos-duration="600"
             data-aos-offset="300"
-          ></div>
+          >
+            <h1>Fasilitas</h1>
+            <img src={jersey} style={{width:250, height:67}}></img>
+            <img src={medal} style={{width:307, height:52}}></img>
+            <img src={bib} style={{width:147, height:42}}></img>
+          </div>
         </div>
         <div className={container}>
           <ProgressBar />

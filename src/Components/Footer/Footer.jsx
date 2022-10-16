@@ -63,7 +63,12 @@ const Footer = () => {
                 >
                   <img src={phone}></img>
                 </div>
-                <div style={{ width: "220px" }}>
+                <div
+                  style={{ width: "220px" }}
+                  onClick={() =>
+                    window.open("https://wa.me/6285641010317", "_blank")
+                  }
+                >
                   Hubungan Luar ITB : 085641010317 (Afnan)
                 </div>
               </div>
@@ -80,7 +85,15 @@ const Footer = () => {
                 >
                   <img src={map}></img>
                 </div>
-                <div style={{ width: "220px" }}>
+                <div
+                  style={{ width: "220px" }}
+                  onClick={() =>
+                    window.open(
+                      "https://www.google.com/maps/place/Ikatan+Mahasiswa+Geodesi+ITB/@-6.8913318,107.6101316,17z/data=!3m1!4b1!4m5!3m4!1s0x2e68e65725dd09cb:0xbec9541178968548!8m2!3d-6.8913371!4d107.6123206?shorturl=1&hl=id",
+                      "_blank"
+                    )
+                  }
+                >
                   Jl. Ganesha No. 10, Coblong Bandung, Jawa Barat, Indonesia
                 </div>
               </div>
@@ -102,11 +115,39 @@ const Footer = () => {
                 </div>
                 <h1>Kunjungi media sosial resmi himpunan kami di sini!</h1>
                 <div className={imageContainer}>
-                  <img src={instagram}></img>
-                  <img src={twitter}></img>
-                  <img src={tiktok}></img>
-                  <img src={email}></img>
-                  <img src={youtube}></img>
+                  <img
+                    src={instagram}
+                    onClick={() =>
+                      window.open("https://instagram.com/imgitb", "_blank")
+                    }
+                  ></img>
+                  <img
+                    src={twitter}
+                    onClick={() =>
+                      window.open("https://twitter.com/imgitb", "_blank")
+                    }
+                  ></img>
+                  <img
+                    src={tiktok}
+                    onClick={() =>
+                      window.open("https://www.tiktok.com/@imgitb", "_blank")
+                    }
+                  ></img>
+                  <img
+                    src={email}
+                    onClick={() =>
+                      window.open("imgitb1952@gmail.com", "_blank")
+                    }
+                  ></img>
+                  <img
+                    src={youtube}
+                    onClick={() =>
+                      window.open(
+                        "https://www.youtube.com/channel/UC2VxpgaGmMF-d9wuubo4Jew",
+                        "_blank"
+                      )
+                    }
+                  ></img>
                 </div>
               </div>
               <div className={karya}>
@@ -119,10 +160,10 @@ const Footer = () => {
                 >
                   Aktivitas
                 </h1>
-                <h3>Internal</h3>
-                <h3>Wisuda IMG</h3>
-                <h3>Geopoint</h3>
-                <h3>Student Chapter</h3>
+                <a href="/InternalEvents">Internal</a>
+                <a href="/ParadeWisuda">Wisuda IMG</a>
+                <a href="/Geopoint">Geopoint</a>
+                {/* <h3>Student Chapter</h3> */}
               </div>
               <div className={karya}>
                 <h1
@@ -134,10 +175,10 @@ const Footer = () => {
                 >
                   Karya
                 </h1>
-                <h3>Georeference</h3>
-                <h3>Locus</h3>
-                <h3>Geosphere</h3>
-                <h3>IMG-X</h3>
+                {/* <h3>Georeference</h3> */}
+                <a href="/Locus">Locus</a>
+                <a href="/Geosphere">Geosphere</a>
+                <a href="/IMGx">IMG-X</a>
               </div>
             </div>
 

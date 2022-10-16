@@ -24,3 +24,7 @@ export { default as gegepgts } from "./images/gegepgts.png";
 export { default as gegepgemas } from "./images/gegepgemas.png";
 export { default as gegep1 } from "./images/gegep1.png";
 export { default as gegep2 } from "./images/gegep2.png";
+export { default as bib } from "./images/bib.png";
+export { default as jersey } from "./images/jersey.png";
+export { default as medal } from "./images/medal.png";
+
