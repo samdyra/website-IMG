@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { SliderData } from "../../assets/object/SliderData";
-import { BrowserRouter as Router, Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import {
   Carousel3D,
@@ -16,8 +16,10 @@ import "aos/dist/aos.css";
 
 const Navigacity = () => {
   const navigate = useNavigate();
-
   const [petaRute, setPetaRute] = useState(false);
+  // useEffect(() => {
+  //   window.open("https://www.google.com", "_blank");
+  // }, []);
 
   useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -68,7 +70,7 @@ const Navigacity = () => {
           </div>
           <div className={title}>
             <div className={titleTextH2}>
-              <h2>Navigacity:</h2>
+              <h1>Navigacity:</h1>
             </div>
             <div className={titleText}>
               <h1>FUN RUN</h1>
@@ -81,9 +83,19 @@ const Navigacity = () => {
               }}
             >
               <div className={titleTextH2}>
-                <h2 style={{ fontSize: "35px" }}>Sabtu, 4 Februari 2023</h2>
+                <h2>Sabtu, 4 Februari 2023</h2>
               </div>
-              <div className={buttonMascot}>Daftar Sekarang!</div>
+              <div
+                className={buttonMascot}
+                onClick={() =>
+                  window.open(
+                    "https://docs.google.com/forms/d/e/1FAIpQLSfcwaxn3v5iwfw6tSZjugCLMr3HaAB94PH4IwsMStXRiL5D-w/viewform",
+                    "_blank"
+                  )
+                }
+              >
+                Daftar Sekarang!
+              </div>
             </div>
             <div
               style={{
@@ -209,9 +221,25 @@ const Navigacity = () => {
           <div className={container} style={{ gap: "45px" }}>
             <img src={rundown} alt="rundown" />
             <div style={{ paddingTop: "120px" }}>
-              <div className={buttonMascot}>Race Guidelines</div>
+              <div
+                className={buttonMascot}
+                onClick={() =>
+                  window.open(
+                    "https://drive.google.com/file/d/1VAOV2XiST6jQgpCigRDgaUaeE8MhRUaQ/view?usp=sharing",
+                    "_blank"
+                  )
+                }
+              >
+                Race Guidelines
+              </div>
 
-              <div className={buttonMascot} style={{ marginTop: "32px" }}>
+              <div
+                className={buttonMascot}
+                style={{ marginTop: "32px" }}
+                onClick={() =>
+                  window.open("https://www.twibbonize.com/navigacity", "_blank")
+                }
+              >
                 Twibbon
               </div>
             </div>

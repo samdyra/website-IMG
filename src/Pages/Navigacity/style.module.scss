@@ -15,7 +15,8 @@
 
 .gegepHeader {
   position: absolute;
-  margin-right: 420px;
+  margin-right: 450px;
+  margin-top: 30px;
 }
 
 .title {
@@ -47,10 +48,13 @@
     font-family: bambino;
 
     font-size: 150px;
-    text-align: center;
+    align-items: center;
+    padding-top: 20px;
+    // text-align: center;
     font-stretch: expanded;
+    font-family: bambino;
     font-weight: 800;
-    margin-left: -10px;
+    // margin-left: -10px;
   }
 }
 
@@ -112,12 +116,28 @@
   background-clip: text;
   text-fill-color: transparent;
   filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));
+  padding-top: 10px;
+  margin-right: 20px;
 
   h2 {
-    font-size: 50px;
+    font-size: 30px;
     font-weight: 800;
 
+<<<<<<< HEAD
     font-family: BambinoBlack;
+=======
+    font-family: bambino;
+  }
+
+  h1 {
+    font-size: 36px;
+    font-weight: 800;
+    padding-bottom: 30px;
+
+    font-family: bambino;
+
+
+>>>>>>> a2d4661b9d48be14775a8bd2b2cb34327061630b
   }
 }
 
@@ -172,6 +192,7 @@
     #292645 91.05%
   );
   padding-top: 100px;
+  font-family: bambino;
 }
 
 .teaser {
@@ -182,7 +203,7 @@
   text-fill-color: transparent;
 
   h1 {
-    font-family: "Bambino-Black";
+    font-family: bambino;
     font-size: 50px;
     text-align: center;
     margin-top: 50px;
