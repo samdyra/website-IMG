@@ -24,14 +24,16 @@
   flex-direction: column;
   font-family: bambino;
 
+
   h1 {
     font-family: bambino;
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
     line-height: 125%;
-    text-align: center;
+    // text-align: center;
     color: #000000;
+
   }
 }
 
@@ -48,7 +50,7 @@
     font-family: bambino;
 
     font-size: 150px;
-    align-items: center;
+    // align-items: center;
     padding-top: 20px;
     // text-align: center;
     font-stretch: expanded;
@@ -117,34 +119,30 @@
   text-fill-color: transparent;
   filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));
   padding-top: 10px;
-  margin-right: 20px;
+  // margin-right: 20px;
 
   h2 {
     font-size: 30px;
     font-weight: 800;
 
-<<<<<<< HEAD
-    font-family: BambinoBlack;
-=======
     font-family: bambino;
   }
 
   h1 {
     font-size: 36px;
     font-weight: 800;
-    padding-bottom: 30px;
+    // padding-bottom: 20px;
 
     font-family: bambino;
 
 
->>>>>>> a2d4661b9d48be14775a8bd2b2cb34327061630b
   }
 }
 
 .buttonMascot {
   background: #281f64;
   border-radius: 1000px;
-  width: 374px;
+  width: 300px;
   padding-block: 13px;
   text-align: center;
   color: white;
