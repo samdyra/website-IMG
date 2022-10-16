@@ -39,7 +39,11 @@ const Geopoint = () => {
 
   return (
     <>
-      <Modal open={openModal} onClose={() => setOpenModal(false)}></Modal>
+      <Modal
+        ModalName="geopoint"
+        open={openModal}
+        onClose={() => setOpenModal(false)}
+      ></Modal>
       {/* Geopoint IMG-ITB 2023 */}
       <div className={pageBackground}>
         <div className={container} style={{ flexDirection: "column" }}>

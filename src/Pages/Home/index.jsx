@@ -17,7 +17,7 @@ import { OrbitControls, useGLTF, SpotLight } from "@react-three/drei";
 import { SliderData, SliderText } from "../../assets/object/SliderData";
 import Carousel from "../../Components/Carousel/Carousel";
 import Gallery from "../../Components/Slider";
-import { gegep1, gegep2 } from "../../assets";
+import { gegep1, gegep2, daki } from "../../assets";
 
 import {
   Carousel3D,
@@ -343,7 +343,9 @@ const HomeScreen = () => {
                 gap: "20px",
               }}
             >
-              <div className={ketuaImage}></div>
+              <div className={ketuaImage}>
+                <img src={daki} alt="daki" />
+              </div>
               <div>
                 <h1>M. Daffa Rizki El-Islami .S</h1>
                 <h2>Ketua Umum BPH IMG-ITB 2022/2023</h2>
