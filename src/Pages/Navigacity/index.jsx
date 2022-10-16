@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { SliderData } from "../../assets/object/SliderData";
-import { BrowserRouter as Router, Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import {
   Carousel3D,
@@ -68,7 +68,7 @@ const Navigacity = () => {
           </div>
           <div className={title}>
             <div className={titleTextH2}>
-              <h2>Navigacity:</h2>
+              <h1>Navigacity:</h1>
             </div>
             <div className={titleText}>
               <h1>FUN RUN</h1>
@@ -81,9 +81,11 @@ const Navigacity = () => {
               }}
             >
               <div className={titleTextH2}>
-                <h2 style={{ fontSize: "35px" }}>Sabtu, 4 Februari 2023</h2>
+                <h2>Sabtu, 4 Februari 2023</h2>
               </div>
-              <div className={buttonMascot}>Daftar Sekarang!</div>
+              <a href="google.com" target="_blank" rel="noreferrer">
+                <div className={buttonMascot}>Daftar Sekarang!</div>
+              </a>
             </div>
             <div
               style={{
