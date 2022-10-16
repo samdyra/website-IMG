@@ -73,13 +73,14 @@ const Navigacity = () => {
               <h1>Navigacity:</h1>
             </div>
             <div className={titleText}>
-              <h1>FUN RUN</h1>
+              <div>FUN RUN</div>
             </div>
             <div
               style={{
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
+                marginTop: 20
               }}
             >
               <div className={titleTextH2}>
