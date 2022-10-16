@@ -117,17 +117,17 @@ const Navigacity = () => {
           <div>
             <div className={mascotText}>
               <div
-                data-aos="fade-right"
-                data-aos-duration="600"
-                data-aos-offset="300"
+                // data-aos="fade-right"
+                // data-aos-duration="600"
+                // data-aos-offset="300"
               >
                 <h2>Navigacity:</h2>
                 <h1>FUN RUN</h1>
               </div>
               <div
-                data-aos="fade-left"
-                data-aos-duration="600"
-                data-aos-offset="300"
+                // data-aos="fade-left"
+                // data-aos-duration="600"
+                // data-aos-offset="300"
               >
                 <p>
                   Navigacity merupakan salah satu rangkaian acara pada kegiatan
