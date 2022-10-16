@@ -40,27 +40,27 @@
   justify-content: center;
   width: 200px;
   height: 80px;
-  font-size:16px;
+  font-size: 16px;
   text-align: center;
   align-items: center;
   z-index: 200;
   border: 2px solid rgba(235, 124, 27, 0.723);
   background: #e1b78959;
-  color:rgb(199, 122, 22);
+  color: rgb(199, 122, 22);
   border-radius: 30px;
   top: 63vh;
   left: 66vw;
   font-weight: 600;
 }
 
-.gegep img{
+.gegep img {
   position: absolute;
   height: 320px;
   width: 210px;
   // border: 3px solid red;
   z-index: 99;
   top: 63vh;
-  left: 77vw
+  left: 77vw;
 }
 
 .oval {
@@ -187,7 +187,7 @@
   padding: 18px 36px;
   gap: 20px;
   margin-top: 20px;
-font-family: jakarta;
+  font-family: jakarta;
   width: 185px;
   height: 45px;
 
@@ -380,6 +380,7 @@ font-family: jakarta;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-family: jakartaBold;
 
   h1 {
     font-size: 30px;
@@ -488,11 +489,12 @@ font-family: jakarta;
     font-family: jakarta;
     font-style: normal;
     font-weight: 700;
-    font-size: 28px;
+    font-size: 20px;
     line-height: 35px;
     display: flex;
     align-items: center;
-    width: 438px;
+    width: 550px;
+    text-align: justify;
   }
 
   h1 {

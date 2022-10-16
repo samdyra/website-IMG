@@ -325,9 +325,14 @@ const HomeScreen = () => {
           >
             <div>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-                aliquam, purus sit amet luctus venenatis, lectus magna fringilla
-                urna, porttitor rhoncus dolor purus non enim praesent”{" "}
+                Banyak proses yang sudah dijalani, Jatuh bangun telah dilewati,
+                Menangis dan tertawa sudah pasti, Pertanyaannya, akan jadi apa
+                IMG kedepannya? Ketahuilah Kamerad, Jawaban tersebut ada di
+                tangan kita semua Bersama-sama membangun IMG-ITB Menyalakan api
+                gelora semangat dalam jiwa kita, dalam hati kita. Jiwa
+                persatuan, demi satu tujuan. Kejayaan IMG-ITB. Akhir kata, IMG
+                Sampai Mampus! Sekali Kamerad, Selamanya Kamerad! IMG Satu Jiwa,
+                Kita Kompak Pasti Jaya!
               </p>
             </div>
             <div

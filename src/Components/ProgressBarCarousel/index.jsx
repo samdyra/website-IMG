@@ -38,13 +38,12 @@ const ProgressBarCarousel = () => {
         <ul
           style={{
             display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
+            justifyContent: "space-around",
+            // alignItems: "center",
             listStyle: "none",
-            padding: "0",
-            margin: "0px",
-
-            rowGap: "10px",
+            fontFamily: "jakarta",
+            rowGap: "30px",
+            // marginRight: 300
           }}
         >
           {dots}
@@ -53,11 +52,11 @@ const ProgressBarCarousel = () => {
           style={{
             position: "relative",
             zIndex: "-1",
-            top: "25px",
-            left: "10px",
-
+            top: "40px",
+            left: "100px",
+            fontFamily: "jakarta",
             backgroundColor: "#D5A33B",
-            width: "1270px",
+            width: "1100px",
             height: "6px",
           }}
         ></div>
@@ -65,15 +64,41 @@ const ProgressBarCarousel = () => {
     ),
     customPaging: (i) => (
       <div>
-        <div>
-          <h1 style={{ color: "white" }}>{GeopointSlider[i].date}</h1>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            textAlign: "center",
+            alignItems: "center",
+            width: 120,
+            height: 30,
+            // marginBottom: 30
+          }}
+        >
+          <h1
+            style={{
+              color: "white",
+              fontSize: 12,
+
+            }}
+          >
+            {GeopointSlider[i].date}
+          </h1>
         </div>
         <div
           className={i === state.currentSlide ? dotsactive : dots}
           ref={i === 1 ? image : null}
         ></div>
         <div>
-          <h1 style={{ color: "white", marginTop: "10px" }}>
+          <h1
+            style={{
+              color: "white",
+              marginTop: "20px",
+              width: 100,
+              fontSize: 13,
+              alignContent: "center",
+            }}
+          >
             {GeopointSlider[i].title}
           </h1>
         </div>

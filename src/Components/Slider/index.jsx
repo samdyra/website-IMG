@@ -146,44 +146,44 @@ const Gallery = (props) => {
           </div>
         </div>
       ) : sliderName == "card" ? (
-        <div>
-          <div className={madeElementWrapper}>
-            <Slider {...cardSettings} className={wrapperCard}>
-              {SliderData.map((slide) => {
-                return (
-                  <div className={madeElementContainer}>
-                    <div className={madeElementImage}>
-                      <img src={slide.image}></img>
+        <divasd className={madeElementWrapper}>
+          <Slider {...cardSettings} className={wrapperCard}>
+            {SliderData.map((slide) => {
+              return (
+                <div className={madeElementContainer}>
+                  <div className={madeElementImage}>
+                    <img src={slide.image}></img>
+                  </div>
+                  <div className={madeElementContent}>
+                    <div
+                      style={{
+                        display: "flex",
+                        marginTop: "20px",
+                        marginBottom: "10px",
+                        justifyContent: "space-between",
+                        width: "100%",
+                      }}
+                    >
+                      <h1>Webgis</h1>
+                      <h3>10 september 2021</h3>
                     </div>
-                    <div className={madeElementContent}>
-                      <div
-                        style={{
-                          display: "flex",
-                          gap: "90px",
-                          marginTop: "30px",
-                        }}
-                      >
-                        <h1>Webgis</h1>
-                        <h3>10 september 2021</h3>
-                      </div>
-                      <p>
-                        Web based GIS (Geographic Information System) of ITB
-                        Kampus Jatinangor. We hope this feature would contribute
-                        to realized a continuous monitoring
-                      </p>
-                      <div
-                        className={madeElementButton}
-                        onClick={handlePressItem}
-                      >
-                        <p>Lihat Selengkapnya</p>
-                      </div>
+                    <p>
+                      Web based GIS (Geographic Information System) of ITB
+                      Kampus Jatinangor. We hope this feature would contribute
+                      to realized a continuous monitoring
+                    </p>
+                    <div
+                      className={madeElementButton}
+                      onClick={handlePressItem}
+                    >
+                      <p>Lihat Selengkapnya</p>
                     </div>
                   </div>
-                );
-              })}
-            </Slider>
-          </div>
-        </div>
+                </div>
+              );
+            })}
+          </Slider>
+        </divasd>
       ) : sliderName == "verticalcard" ? (
         <div>
           <Slider {...verticalcardSettings} className={wrapperVerticalCard}>
