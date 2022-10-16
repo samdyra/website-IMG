@@ -35,6 +35,7 @@ const Navigacity = () => {
     mascotText,
     titleText,
     titleTextH2,
+    titleTextH3,
     teaser,
     fasilitasContainer,
     rutePetaContainer,
@@ -80,10 +81,10 @@ const Navigacity = () => {
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
-                marginTop: 20
+                // marginTop: 20
               }}
             >
-              <div className={titleTextH2}>
+              <div className={titleTextH3}>
                 <h2>Sabtu, 4 Februari 2023</h2>
               </div>
               <div

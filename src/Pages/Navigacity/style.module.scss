@@ -43,16 +43,17 @@
   text-fill-color: transparent;
   filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));
   font-family: bambino;
-  border: 3px solid red;
+  padding-top: 20px;
+  margin-bottom: 10px;
   div {
     font-family: bambino;
     
     font-size: 150px;
     // align-items: center;
-    padding-top: 20px;
-    margin-bottom: -20px;
+    // padding-top: 10px;
+    // margin-bottom: -20px;
     // text-align: center;
-    font-stretch: expanded;
+    // font-stretch: expanded;
     font-family: bambino;
     font-weight: 800;
     // margin-left: -10px;
@@ -117,9 +118,7 @@
   background-clip: text;
   text-fill-color: transparent;
   filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));
-  padding-top: 10px;
-  // padding-bottom: 10px;
-  // margin-bottom: ;
+  margin-bottom: 10px;
 
   // margin-right: 20px;
 
@@ -137,6 +136,29 @@
 
     font-family: bambino;
   }
+}
+
+.titleTextH3 {
+  background: radial-gradient(50% 50% at 50% 50%, #d5a33b 0%, #f5fcb5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));
+  padding-top: 10px;
+  // padding-bottom: 10px;
+  // margin-bottom: 20px ;
+  // border: 3px solid red;
+
+  // margin-right: 20px;
+
+  h2 {
+    font-size: 30px;
+    font-weight: 800;
+    font-family: bambino;
+  }
+
+
 }
 
 .buttonMascot {
