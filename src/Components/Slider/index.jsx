@@ -32,12 +32,14 @@ const Gallery = (props) => {
     verticalCardButton,
     verticalCardWrapper,
     slidecontainer,
+    modalImgContainer,
+    modalImgSlider,
   } = style;
 
   const [openModal, setOpenModal] = useState(false);
 
   const sliderName = props.sliderName;
-
+  const handlePressItem = props.pressItem;
   const gallerySettings = {
     infinite: true,
     speed: 1000,
@@ -58,6 +60,23 @@ const Gallery = (props) => {
     autoplaySpeed: 2000,
     arrows: false,
     swipeToSlide: true,
+  };
+
+  const modalImgSettings = {
+    // infinite: true,
+    // speed: 1000,
+    // swipeToSlide: true,
+    // autoplay: true,
+    // autoplaySpeed: 2000,
+    // arrows: false,
+    // dots: true,
+    // centerMode: true,
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
   };
 
   const verticalcardSettings = {
@@ -154,9 +173,7 @@ const Gallery = (props) => {
                       </p>
                       <div
                         className={madeElementButton}
-                        onClick={() => {
-                          setOpenModal(true);
-                        }}
+                        onClick={handlePressItem}
                       >
                         <p>Lihat Selengkapnya</p>
                       </div>
@@ -192,25 +209,21 @@ const Gallery = (props) => {
           </Slider>
         </div>
       ) : sliderName == "modalimg" ? (
-        <div className={galleryWrapper}>
-          <div className={galleryCarousel}>
-            <div
-              className={slidecontainer}
-              data-aos="slide-left"
-              data-aos-duration="1200"
-              data-aos-offset="300"
-            >
-              <Slider {...gallerySettings} className={wrapperGallery}>
-                {SliderData.map((slide) => {
-                  return (
-                    <div className={galleryElementContainer}>
-                      <img src={slide.image}></img>
-                    </div>
-                  );
-                })}
-              </Slider>
-            </div>
-          </div>
+        <div
+
+        // data-aos="slide-left"
+        // data-aos-duration="1200"
+        // data-aos-offset="300"
+        >
+          <Slider {...modalImgSettings} className={modalImgSlider}>
+            {SliderData.map((slide) => {
+              return (
+                <div className={modalImgContainer}>
+                  <img src={slide.image}></img>
+                </div>
+              );
+            })}
+          </Slider>
         </div>
       ) : null}
     </div>

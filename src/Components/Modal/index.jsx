@@ -4,11 +4,13 @@ import { SliderData } from "../../assets/object/SliderData";
 import { gegepmodal } from "../../assets";
 import Slider from "../Slider";
 
-const Modal = (props, { open, onClose }) => {
+const Modal = ({ ModalName, open, onClose }) => {
   const {
     modalButton,
     overlay,
     modalContainer,
+    modalContainer2,
+    content2,
     modalRight,
     closeBtn,
     content,
@@ -18,8 +20,6 @@ const Modal = (props, { open, onClose }) => {
     bold,
     heading,
   } = style;
-
-  const modalName = props.modalName;
 
   // `${container} isTrue && ${suatukkelas}`;
   const windowOffset = window.scrollY;
@@ -37,16 +37,27 @@ const Modal = (props, { open, onClose }) => {
             onScroll={(e) => {
               e.stopPropagation();
             }}
-            className={modalContainer}
+            className={modalContainer2}
           >
-            <div className={modalRight}>
-              <p className={closeBtn} onClick={onClose}>
-                X
-              </p>
+            <p className={closeBtn} onClick={onClose}>
+              X
+            </p>
+            <div className={content2}>
+              <div>
+                <h1>event 1</h1>
+                <h2>tanggal</h2>
+                <p>
+                  Overwork is the expression used to define the cause of working
+                  too hard, too much, or too long. It can be also related to the
+                  act of working beyond one's strength or capacity, causing
+                  physical and/or mental distress in the process.
+                </p>
+              </div>
+              <Slider sliderName="modalimg" />
             </div>
           </div>
         </div>
-      ) : (
+      ) : ModalName === "geopoint" ? (
         <div onClick={onClose} className={overlay}>
           <div
             onClick={(e) => {
@@ -64,7 +75,7 @@ const Modal = (props, { open, onClose }) => {
             </div>
           </div>
         </div>
-      )}
+      ) : null}
     </div>
   );
 };

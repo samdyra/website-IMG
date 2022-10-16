@@ -34,6 +34,47 @@
   background-size: cover;
 }
 
+.modalContainer2 {
+  width: 1100px;
+  height: 600px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 40px;
+  justify-content: center;
+  align-items: center;
+
+  background-color: white;
+  background-size: cover;
+
+  .content2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+    h1 {
+      font-family: jakartaBold;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 80px;
+      line-height: 125%;
+      color: #000000;
+    }
+
+    h2 {
+      margin-block: 20px;
+    }
+
+    p {
+      width: 450px;
+    }
+  }
+}
+
 .modalContainer img {
   width: 800px;
   object-fit: cover;

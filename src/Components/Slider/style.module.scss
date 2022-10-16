@@ -15,6 +15,25 @@
   overflow: hidden;
 }
 
+.modalImgContainer {
+  display: flex;
+  width: 400px;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalImgSlider {
+  display: flex;
+  max-width: 400px;
+  max-height: 300px;
+}
+
+.modalImgContainer img {
+  max-width: 400px;
+  max-height: 400px;
+}
+
 .wrapperGallery {
   height: 800px;
   display: flex;
@@ -94,7 +113,7 @@
   // border: 1px solid red;
   line-height: 18px;
   color: black;
-// margin-bottom: 30px;
+  // margin-bottom: 30px;
   text-align: center;
   padding-inline: 20px;
 
