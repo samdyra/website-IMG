@@ -79,10 +79,15 @@ const Geopoint = () => {
             alt=""
             data-aos="fade-left"
             data-aos-duration="600"
-            data-aos-offset="400"
+            data-aos-offset="300"
           />
         </div>
-        <div className={container}>
+        <div
+          className={container}
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-offset="625"
+        >
           <ProgressBarCarousel />
         </div>
         <div

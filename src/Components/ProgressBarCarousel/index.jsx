@@ -38,12 +38,13 @@ const ProgressBarCarousel = () => {
         <ul
           style={{
             display: "flex",
-            justifyContent: "space-around",
+            justifyContent: "space-between",
+            margin: "0 auto",
             // alignItems: "center",
             listStyle: "none",
             fontFamily: "jakarta",
-            rowGap: "30px",
-            // marginRight: 300
+            width: "1100px",
+            marginRight: 135,
           }}
         >
           {dots}
@@ -56,7 +57,7 @@ const ProgressBarCarousel = () => {
             left: "100px",
             fontFamily: "jakarta",
             backgroundColor: "#D5A33B",
-            width: "1100px",
+            width: "1080px",
             height: "6px",
           }}
         ></div>
@@ -72,29 +73,39 @@ const ProgressBarCarousel = () => {
             alignItems: "center",
             width: 120,
             height: 30,
+
             // marginBottom: 30
           }}
         >
           <h1
             style={{
-              color: "white",
+              color: "#f5fcb5",
               fontSize: 12,
-
             }}
           >
             {GeopointSlider[i].date}
           </h1>
         </div>
         <div
-          className={i === state.currentSlide ? dotsactive : dots}
-          ref={i === 1 ? image : null}
-        ></div>
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            width: 120,
+            fontSize: 13,
+            alignContent: "center",
+          }}
+        >
+          <div
+            className={i === state.currentSlide ? dotsactive : dots}
+            ref={i === 1 ? image : null}
+          ></div>
+        </div>
         <div>
           <h1
             style={{
-              color: "white",
+              color: "#f5fcb5",
               marginTop: "20px",
-              width: 100,
+              width: 120,
               fontSize: 13,
               alignContent: "center",
             }}

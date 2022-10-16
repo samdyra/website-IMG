@@ -1,10 +1,19 @@
 import React from "react";
 import style from "./style.module.scss";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+
 const Dropdown = (props) => {
-  const { dropdown, dropbtn, dropdowncontent } = style;
+  const { dropdown, dropbtn, dropdowncontent, dropdowncontentGeopoint } = style;
   const menuName = props.menuName;
 
+  const location = useLocation();
+
+  const linkName = location.pathname;
+
+  console.log(linkName);
+
+  // : linkName === "/Geopoint" || linkName === "/Geopoint/Navigacity" ?
   return (
     <div style={{ marginRight: 12 }}>
       <div className={dropdown}>
@@ -13,7 +22,13 @@ const Dropdown = (props) => {
             <button className={dropbtn}>
               <h1>Activities</h1>
             </button>
-            <div className={dropdowncontent}>
+            <div
+              className={
+                linkName === "/Geopoint" || linkName === "/Geopoint/Navigacity"
+                  ? dropdowncontentGeopoint
+                  : dropdowncontent
+              }
+            >
               <a href="/InternalEvent">Internal Event</a>
               <a href="/ParadeWisuda">Parade Wisuda</a>
 
@@ -26,7 +41,13 @@ const Dropdown = (props) => {
             <button className={dropbtn}>
               <h1>Karya</h1>
             </button>
-            <div className={dropdowncontent}>
+            <div
+              className={
+                linkName === "/Geopoint" || linkName === "/Geopoint/Navigacity"
+                  ? dropdowncontentGeopoint
+                  : dropdowncontent
+              }
+            >
               <a href="/Locus">Locus</a>
               <a href="/Geosphere">Geosphere</a>
               <a href="/IMGx">IMG-X</a>

@@ -27,6 +27,16 @@
   color: white;
 }
 
+.dropdowncontentGeopoint {
+  display: none;
+  margin-top: 35px;
+  position: absolute;
+  background-color: #281f64;
+  min-width: 80px;
+  z-index: 3;
+  color: white;
+}
+
 .dropdowncontent a {
   float: none;
   color: black;
@@ -44,6 +54,30 @@
 }
 
 .dropdown:hover .dropdowncontent {
+  display: block;
+
+  transition: transform 5s;
+
+  transform: scale3d(1, 1, 1);
+}
+
+.dropdowncontentGeopoint a {
+  float: none;
+  color: black;
+  padding: 12px 12px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: small;
+  color: white;
+}
+
+.dropdowncontentGeopoint a:hover {
+  background-color: #493d93;
+  transform: translateY(7px);
+}
+
+.dropdown:hover .dropdowncontentGeopoint {
   display: block;
 
   transition: transform 5s;
