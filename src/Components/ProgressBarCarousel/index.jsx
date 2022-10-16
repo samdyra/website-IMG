@@ -38,11 +38,11 @@ const ProgressBarCarousel = () => {
         <ul
           style={{
             display: "flex",
-            justifyContent: "space-between",
+            justifyContent: "space-around",
             // alignItems: "center",
             listStyle: "none",
             fontFamily: "jakarta",
-            // rowGap: "10px",
+            rowGap: "30px",
             // marginRight: 300
           }}
         >
@@ -53,10 +53,10 @@ const ProgressBarCarousel = () => {
             position: "relative",
             zIndex: "-1",
             top: "40px",
-            left: "7px",
+            left: "100px",
             fontFamily: "jakarta",
             backgroundColor: "#D5A33B",
-            width: "1270px",
+            width: "1100px",
             height: "6px",
           }}
         ></div>
