@@ -35,6 +35,7 @@ const Navigacity = () => {
     mascotText,
     titleText,
     titleTextH2,
+    titleTextH3,
     teaser,
     fasilitasContainer,
     rutePetaContainer,
@@ -73,16 +74,17 @@ const Navigacity = () => {
               <h1>Navigacity:</h1>
             </div>
             <div className={titleText}>
-              <h1>FUN RUN</h1>
+              <div>FUN RUN</div>
             </div>
             <div
               style={{
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
+                // marginTop: 20
               }}
             >
-              <div className={titleTextH2}>
+              <div className={titleTextH3}>
                 <h2>Sabtu, 4 Februari 2023</h2>
               </div>
               <div
@@ -117,17 +119,17 @@ const Navigacity = () => {
           <div>
             <div className={mascotText}>
               <div
-                data-aos="fade-right"
-                data-aos-duration="600"
-                data-aos-offset="300"
+                // data-aos="fade-right"
+                // data-aos-duration="600"
+                // data-aos-offset="300"
               >
                 <h2>Navigacity:</h2>
                 <h1>FUN RUN</h1>
               </div>
               <div
-                data-aos="fade-left"
-                data-aos-duration="600"
-                data-aos-offset="300"
+                // data-aos="fade-left"
+                // data-aos-duration="600"
+                // data-aos-offset="300"
               >
                 <p>
                   Navigacity merupakan salah satu rangkaian acara pada kegiatan
