@@ -44,13 +44,21 @@
   text-align: center;
   align-items: center;
   z-index: 200;
-  border: 2px solid rgba(235, 124, 27, 0.723);
-  background: #e1b78959;
+
+  background: #ffffffdd;
   color: rgb(199, 122, 22);
   border-radius: 30px;
   top: 63vh;
   left: 66vw;
   font-weight: 600;
+
+  @media screen and (max-width: 420px) {
+    top: 78vh;
+    left: 10vw;
+    width: 230px;
+    height: 40px;
+    font-size: 13px;
+  }
 }
 
 .gegep img {
@@ -61,6 +69,13 @@
   z-index: 99;
   top: 63vh;
   left: 77vw;
+
+  @media screen and (max-width: 420px) {
+    height: 200px;
+    width: 120px;
+    top: 77vh;
+    left: 60vw;
+  }
 }
 
 .oval {
@@ -73,6 +88,12 @@
   border-radius: 100%;
   overflow: hidden;
   // border: 3px solid red;
+
+  @media screen and (max-width: 420px) {
+    height: 15vh;
+    width: 100vw;
+    top: 93vh;
+  }
 }
 
 .containerSectionKegiatan {
@@ -94,6 +115,10 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
+
+  @media screen and (max-width: 420px) {
+    height: 100vh;
+  }
 }
 
 .star {
@@ -111,6 +136,13 @@
   justify-content: center;
   padding-top: none;
   margin-top: none;
+  border: red solid 3px;
+
+  @media screen and (max-width: 420px) {
+    height: 100vh;
+
+    padding-bottom: 20vh;
+  }
 }
 
 .welcome {
@@ -125,14 +157,14 @@
   }
 }
 
-.logo img {
-  height: 400px;
-}
-
 .logo {
   z-index: 1;
   height: 550px;
   width: 550px;
+
+  @media screen and (max-width: 420px) {
+    height: 300px;
+  }
 }
 
 .desc {
@@ -167,6 +199,22 @@
 
     text-align: justify;
     letter-spacing: 0.005em;
+  }
+
+  @media screen and (max-width: 420px) {
+    h1 {
+      font-size: 30px;
+      line-height: 25px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+    h2 {
+      margin-bottom: 5px;
+    }
   }
 }
 
@@ -523,4 +571,27 @@
   border-radius: 100%;
   background-color: #ffffff;
   overflow: hidden;
+}
+
+//mobilestyling
+
+.landingPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 420px) {
+    flex-direction: column-reverse;
+    h1 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+
+    h2 {
+      font-size: 12px;
+    }
+  }
 }

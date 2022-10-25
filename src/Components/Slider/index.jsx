@@ -3,6 +3,7 @@ import style from "./style.module.scss";
 import Slider from "react-slick";
 import { SliderData } from "../../assets/object/SliderData";
 import { Modal } from "../../Components";
+import { isMobile } from "../../Helpers/mobileResponsive";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -43,7 +44,7 @@ const Gallery = (props) => {
   const gallerySettings = {
     infinite: true,
     speed: 1000,
-    slidesToShow: 3,
+    slidesToShow: isMobile ? 1 : 3,
     swipeToSlide: true,
     autoplay: true,
     autoplaySpeed: 2000,

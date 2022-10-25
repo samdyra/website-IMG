@@ -25,6 +25,7 @@ import {
   Modal,
   VideoEmbed,
 } from "../../Components";
+import { isMobile } from "../../Helpers/mobileResponsive";
 
 const HomeScreen = () => {
   const navigate = useNavigate();
@@ -62,6 +63,7 @@ const HomeScreen = () => {
     oval,
     gegep,
     type,
+    landingPage,
   } = style;
 
   const [index, setIndex] = useState(0);
@@ -98,7 +100,7 @@ const HomeScreen = () => {
         <mesh
           geometry={nodes.Sphere.geometry}
           material={materials["Material.001"]}
-          scale={18}
+          scale={isMobile ? 10 : 18}
         />
       </group>
     );
@@ -147,19 +149,18 @@ const HomeScreen = () => {
       <div className={container} style={{ overflow: "hidden" }}>
         <div className={containerSectionTop}>
           <div className={star}>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
+            <div className={landingPage}>
               <div className={desc}>
                 <h2>Welcome to IMG-ITB Official Website</h2>
 
-                <h1>
-                  IKATAN MAHASISWA <br></br> GEODESI-ITB
-                </h1>
+                {isMobile ? (
+                  <h1>IKATAN MAHASISWA GEODESI-ITB</h1>
+                ) : (
+                  <h1>
+                    IKATAN MAHASISWA <br></br> GEODESI-ITB
+                  </h1>
+                )}
+
                 <p>
                   Himpunan mahasiswa Ikatan Mahasiswa Geodesi Institut Teknologi
                   Bandung yang biasa disingkat IMG-ITB merupakan lanjutan dari
@@ -167,18 +168,27 @@ const HomeScreen = () => {
                   September 1952 di Bandung. IMG-ITB sendiri berkedudukan di
                   tempat jurusan Teknik Geodesi dan Geomatika berada.
                 </p>
-                <div className={learnMoreButton} onClick={handleClick}>
-                  Learn More
-                  <div className={arrow}></div>
-                </div>
+                {isMobile ? null : (
+                  <div className={learnMoreButton} onClick={handleClick}>
+                    Learn More
+                    <div className={arrow}></div>
+                  </div>
+                )}
               </div>
 
               <div className={logo}>
                 <Canvas
-                  camera={{
-                    fov: 36,
-                    position: [50, 40, 35],
-                  }}
+                  camera={
+                    isMobile
+                      ? {
+                          fov: 20,
+                          position: [50, 40, 35],
+                        }
+                      : {
+                          fov: 36,
+                          position: [50, 40, 35],
+                        }
+                  }
                 >
                   <ambientLight color={300} intensity={10}></ambientLight>
 
