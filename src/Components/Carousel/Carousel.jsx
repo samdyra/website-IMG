@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { SliderData } from "../../assets/object/SliderData";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 import "./Carousel.css";
+import { isMobile } from "../../Helpers/mobileResponsive";
 
 const Carousel = ({ slides, props }) => {
   const [current, setCurrent] = useState(0);
@@ -21,8 +22,14 @@ const Carousel = ({ slides, props }) => {
 
   return (
     <section className="sliderWin">
-      <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
-      <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
+      <FaArrowAltCircleLeft
+        className={isMobile ? "left-arrow-mobile" : "left-arrow"}
+        onClick={prevSlide}
+      />
+      <FaArrowAltCircleRight
+        className={isMobile ? "right-arrow-mobile" : "right-arrow"}
+        onClick={nextSlide}
+      />
       {slides.map((slide, index) => {
         return (
           <div
@@ -30,7 +37,11 @@ const Carousel = ({ slides, props }) => {
             key={index}
           >
             {index === current && (
-              <img src={slide.image} alt="travel image" className="image" />
+              <img
+                src={slide.image}
+                alt="travel image"
+                className={isMobile ? "imageSliderMobile" : "imageSlider"}
+              />
             )}
           </div>
         );

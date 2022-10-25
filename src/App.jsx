@@ -26,14 +26,16 @@ import {
   Parwis,
   Kesenatoran,
   StudentChapterAdmin,
-  GeoreferenceAdmin
+  GeoreferenceAdmin,
 } from "./Store";
 import isUserLevel9 from "./Helpers/isUserLevel9";
+import { isMobile } from "./Helpers/mobileResponsive";
 
 function App() {
   return (
     <Router>
-      <Navbar />
+      {isMobile ? null : <Navbar style={{ overflow: "hidden" }} />}
+
       <Routes>
         {/* Main Screens */}
         <Route path="/" element={<HomeScreen />}></Route>
@@ -56,8 +58,14 @@ function App() {
         {isUserLevel9() && (
           <>
             <Route path="/admin/kegiatan" element={<Kegiatan />}></Route>
-            <Route path="/admin/georeference" element={<GeoreferenceAdmin />}></Route>
-            <Route path="/admin/studentchapter" element={<StudentChapterAdmin />}></Route>
+            <Route
+              path="/admin/georeference"
+              element={<GeoreferenceAdmin />}
+            ></Route>
+            <Route
+              path="/admin/studentchapter"
+              element={<StudentChapterAdmin />}
+            ></Route>
             <Route path="/admin/parwis" element={<Parwis />}></Route>
             <Route path="/admin/FAQ" element={<FAQ />}></Route>
             <Route path="/admin/signup" element={<SignUp />}></Route>

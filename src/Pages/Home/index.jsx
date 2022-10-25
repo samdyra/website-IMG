@@ -64,6 +64,7 @@ const HomeScreen = () => {
     gegep,
     type,
     landingPage,
+    sifatMobile,
   } = style;
 
   const [index, setIndex] = useState(0);
@@ -223,25 +224,27 @@ const HomeScreen = () => {
           style={{ overflow: "hidden" }}
         >
           <div className={judulSection2}>
-            <h1
-              className={index == 0 ? fadeIn : fadeOut}
-              onClick={() => setIndex(0)}
-            >
-              Asas,
-            </h1>
-            <h1
-              className={index == 1 ? fadeIn : fadeOut}
-              onClick={() => setIndex(1)}
-            >
-              Sifat,
-            </h1>
-            <h1>dan</h1>
-            <h1
-              className={index == 2 ? fadeIn : fadeOut}
-              onClick={() => setIndex(2)}
-            >
-              Tujuan
-            </h1>
+            <div style={{ display: "flex" }}>
+              <h1
+                className={index == 0 ? fadeIn : fadeOut}
+                onClick={() => setIndex(0)}
+              >
+                Asas,
+              </h1>
+              <h1
+                className={index == 1 ? fadeIn : fadeOut}
+                onClick={() => setIndex(1)}
+              >
+                Sifat,
+              </h1>
+              <h1>dan</h1>
+              <h1
+                className={index == 2 ? fadeIn : fadeOut}
+                onClick={() => setIndex(2)}
+              >
+                Tujuan
+              </h1>
+            </div>
             <h1>IMG-ITB</h1>
           </div>
           {index === 0 && (
@@ -254,11 +257,23 @@ const HomeScreen = () => {
 
           {index === 1 && (
             <>
-              <div className={descSection2}>
-                <h1>{SliderText[1].title}</h1>
-                <div className={desctujuan}>
-                  <p>{SliderText[1].desc[0]}</p>
-                  <p>{SliderText[1].desc[1]}</p>
+              <div
+                className={isMobile ? null : descSection2}
+                style={
+                  isMobile
+                    ? {
+                        height: "300px",
+                        marginTop: "40px",
+                      }
+                    : null
+                }
+              >
+                <div className={sifatMobile}>
+                  <h1>{SliderText[1].title}</h1>
+                  <div className={desctujuan}>
+                    <p>{SliderText[1].desc[0]}</p>
+                    <p>{SliderText[1].desc[1]}</p>
+                  </div>
                 </div>
               </div>
             </>
@@ -283,22 +298,29 @@ const HomeScreen = () => {
         <div className={containerSection} style={{ overflow: "hidden" }}>
           <div
             className={judulSection3}
-            data-aos="fade-right"
+            data-aos={isMobile ? "fade-up" : "fade-left"}
             data-aos-duration="750"
             data-aos-offset="430"
           >
             <h1>Susunan Kepengurusan IMG-ITB 2022/2023</h1>
-            <div style={{ display: "flex" }}>
+            <div
+              style={
+                isMobile
+                  ? { display: "flex", margin: "0 auto" }
+                  : { display: "flex" }
+              }
+            >
               <h2>Struktur IMG-ITB (BPH, </h2>
               <a href="/DPM">DPM,</a>
               <h2> dan BSO)</h2>
             </div>
           </div>
           <div
-            data-aos="fade-left"
+            data-aos={isMobile ? "fade-up" : "fade-left"}
             data-aos-duration="750"
-            data-aos-offset="430"
+            data-aos-offset={isMobile ? "200" : "430"}
           >
+            {/* {isMobile ? null : <Carousel slides={SliderData} />} */}
             <Carousel slides={SliderData} />
           </div>
         </div>

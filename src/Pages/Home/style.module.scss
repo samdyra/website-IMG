@@ -8,6 +8,14 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+  @media screen and (max-width: 420px) {
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 13vh;
+  }
 }
 
 // .containerSection2 {
@@ -136,7 +144,6 @@
   justify-content: center;
   padding-top: none;
   margin-top: none;
-  border: red solid 3px;
 
   @media screen and (max-width: 420px) {
     height: 100vh;
@@ -294,6 +301,15 @@
   h3 {
     text-align: center;
   }
+
+  @media screen and (max-width: 420px) {
+    flex-direction: column;
+    gap: 10px;
+    h1 {
+      font-size: 30px;
+      margin-inline: 5px;
+    }
+  }
 }
 
 @keyframes fadeIn {
@@ -305,9 +321,37 @@
   }
 }
 
+.sifatMobile {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+
+  gap: 50px;
+  font-family: jakarta;
+
+  height: 300px;
+
+  h1 {
+    border-bottom: solid orange 2px;
+    font-size: 32px;
+    margin-block: none;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  @media screen and (max-width: 420px) {
+    gap: 20px;
+    margin-inline: 20px;
+    height: 100px;
+  }
+}
+
 .descSection2 {
   display: flex;
-  justify-content: center;
+
   flex-direction: column;
   align-items: center;
   margin-top: 40px;
@@ -324,6 +368,11 @@
 
   p {
     font-size: 20px;
+  }
+
+  @media screen and (max-width: 420px) {
+    gap: 20px;
+    margin-inline: 20px;
   }
 }
 
@@ -346,6 +395,15 @@
 
   p {
     font-size: 20px;
+  }
+
+  @media screen and (max-width: 420px) {
+    gap: 20px;
+    p {
+      font-size: 12px;
+      text-align: justify;
+      margin-inline: 30px;
+    }
   }
 }
 
@@ -420,6 +478,29 @@
   a:hover {
     cursor: none;
   }
+
+  @media screen and (max-width: 420px) {
+    margin-left: 0px;
+    gap: 5px;
+    h1 {
+      font-size: 25px;
+      max-width: 280px;
+      line-height: 40px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 10px;
+      line-height: 15px;
+      text-align: center;
+    }
+
+    a {
+      font-size: 10px;
+      line-height: 15px;
+      text-align: center;
+    }
+  }
 }
 
 .judulSection5 {
@@ -482,6 +563,16 @@
     max-width: 348px;
 
     margin-inline: 30px;
+  }
+
+  @media screen and (max-width: 420px) {
+    flex-direction: column;
+    gap: 15px;
+    p {
+      font-size: 13px;
+      margin-inline: 15px;
+      text-align: justify;
+    }
   }
 }
 
@@ -561,6 +652,21 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 25px;
+  }
+
+  @media screen and (max-width: 420px) {
+    width: 90vw;
+    height: 100%;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 50px;
+    padding-block: 10vh;
+
+    p {
+      font-size: 12px;
+      text-align: justify;
+      width: 70vw;
+    }
   }
 }
 

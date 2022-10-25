@@ -7,9 +7,15 @@
   filter: drop-shadow(0px 30px 50px rgba(0, 0, 0, 0.5));
 }
 
-.image {
+.imageSlider {
   width: 600px;
   height: 350px;
+  border-radius: 10px;
+}
+
+.imageSliderMobile {
+  width: 320px;
+  height: 210px;
   border-radius: 10px;
 }
 
@@ -23,11 +29,32 @@
   user-select: none;
 }
 
+.right-arrow-mobile {
+  position: absolute;
+  left: 75vw;
+  font-size: 2.5rem;
+  color: white;
+  z-index: 1;
+  cursor: pointer;
+  user-select: none;
+}
+
 .left-arrow {
   position: relative;
 
   left: 5px;
   font-size: 3rem;
+  color: white;
+  z-index: 1;
+  cursor: pointer;
+  user-select: none;
+}
+
+.left-arrow-mobile {
+  position: absolute;
+
+  left: -8vw;
+  font-size: 2.5rem;
   color: white;
   z-index: 1;
   cursor: pointer;
