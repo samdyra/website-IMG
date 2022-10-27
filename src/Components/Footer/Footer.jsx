@@ -11,6 +11,7 @@ import {
   youtube,
 } from "../../assets";
 import { useLocation } from "react-router-dom";
+import { isMobile } from "../../Helpers/mobileResponsive";
 
 const Footer = () => {
   const location = useLocation();
@@ -64,12 +65,12 @@ const Footer = () => {
                   <img src={phone}></img>
                 </div>
                 <div
-                  style={{ width: "220px" }}
+                  style={isMobile ? null : { width: "220px" }}
                   onClick={() =>
                     window.open("https://wa.me/6285641010317", "_blank")
                   }
                 >
-                  Hubungan Luar ITB : 085641010317 (Afnan)
+                  <h2>Hubungan Luar ITB : 085641010317 (Afnan)</h2>
                 </div>
               </div>
 
@@ -86,7 +87,7 @@ const Footer = () => {
                   <img src={map}></img>
                 </div>
                 <div
-                  style={{ width: "220px" }}
+                  style={isMobile ? null : { width: "220px" }}
                   onClick={() =>
                     window.open(
                       "https://www.google.com/maps/place/Ikatan+Mahasiswa+Geodesi+ITB/@-6.8913318,107.6101316,17z/data=!3m1!4b1!4m5!3m4!1s0x2e68e65725dd09cb:0xbec9541178968548!8m2!3d-6.8913371!4d107.6123206?shorturl=1&hl=id",
@@ -113,7 +114,9 @@ const Footer = () => {
                     </div>
                   </div>
                 </div>
-                <h1>Kunjungi media sosial resmi himpunan kami di sini!</h1>
+                <h1 style={isMobile ? { fontSize: "1rem" } : null}>
+                  Kunjungi media sosial resmi himpunan kami di sini!
+                </h1>
                 <div className={imageContainer}>
                   <img
                     src={instagram}
@@ -150,35 +153,37 @@ const Footer = () => {
                   ></img>
                 </div>
               </div>
-              <div className={karya}>
-                <h1
-                  style={{
-                    fontFamily: "jakartaBold",
-                    fontSize: 20,
-                    marginBottom: 15,
-                  }}
-                >
-                  Aktivitas
-                </h1>
-                <a href="/InternalEvents">Internal</a>
-                <a href="/ParadeWisuda">Wisuda IMG</a>
-                <a href="/Geopoint">Geopoint</a>
-                {/* <h3>Student Chapter</h3> */}
-              </div>
-              <div className={karya}>
-                <h1
-                  style={{
-                    fontFamily: "jakartaBold",
-                    fontSize: 20,
-                    marginBottom: 15,
-                  }}
-                >
-                  Karya
-                </h1>
-                {/* <h3>Georeference</h3> */}
-                <a href="/Locus">Locus</a>
-                <a href="/Geosphere">Geosphere</a>
-                <a href="/IMGx">IMG-X</a>
+              <div style={{ display: "flex" }}>
+                <div className={karya}>
+                  <h1
+                    style={{
+                      fontFamily: "jakartaBold",
+                      fontSize: 20,
+                      marginBottom: 15,
+                    }}
+                  >
+                    Aktivitas
+                  </h1>
+                  <a href="/InternalEvents">Internal</a>
+                  <a href="/ParadeWisuda">Wisuda IMG</a>
+                  <a href="/Geopoint">Geopoint</a>
+                  {/* <h3>Student Chapter</h3> */}
+                </div>
+                <div className={karya}>
+                  <h1
+                    style={{
+                      fontFamily: "jakartaBold",
+                      fontSize: 20,
+                      marginBottom: 15,
+                    }}
+                  >
+                    Karya
+                  </h1>
+                  {/* <h3>Georeference</h3> */}
+                  <a href="/Locus">Locus</a>
+                  <a href="/Geosphere">Geosphere</a>
+                  <a href="/IMGx">IMG-X</a>
+                </div>
               </div>
             </div>
 
