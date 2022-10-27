@@ -70,7 +70,7 @@ const Footer = () => {
                     window.open("https://wa.me/6285641010317", "_blank")
                   }
                 >
-                  <h2>Hubungan Luar ITB : 085641010317 (Afnan)</h2>
+                  Hubungan Luar ITB : 085641010317 (Afnan)
                 </div>
               </div>
 
