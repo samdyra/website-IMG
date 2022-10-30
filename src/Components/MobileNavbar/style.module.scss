@@ -1,0 +1,205 @@
+.containerbig {
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  background: #4b8579;
+  overflow-x: hidden;
+}
+.containerGeopoint {
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  background: #281f64;
+  font-family: jakarta;
+  overflow-x: hidden;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  background: none;
+  background-color: none;
+  justify-content: space-between;
+  margin-left: 20px;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.containeractive {
+  position: fixed;
+  z-index: 100;
+
+  width: 100vw;
+  font-family: jakarta;
+  overflow-x: hidden;
+  background: #4b8579;
+}
+
+.content {
+  display: flex;
+  background: none;
+  max-height: 50px;
+  padding-block: 5px;
+  align-items: center;
+  overflow-x: hidden;
+
+  @media screen and (max-width: 418px) {
+    max-width: 368px;
+  }
+}
+
+.logotext {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  font-size: 10px;
+  margin-block: auto;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  text-decoration: none;
+
+  h1 {
+    color: white;
+  }
+}
+
+.logo img {
+  display: flex;
+  max-height: 40px;
+  max-width: 30px;
+}
+
+.linkContainer {
+  display: flex;
+  justify-content: center;
+  font-family: jakarta;
+  font-style: normal;
+  color: white;
+  align-self: center;
+  cursor: pointer;
+  Dropdown + Dropdown {
+  }
+  div {
+    font-size: 15px;
+    font-family: jakarta;
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  background-color: inherit;
+  align-self: center;
+  font-size: 15px;
+}
+
+.searchIcon {
+  width: 197px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.searchIcon img {
+  color: black;
+  max-height: 30px;
+  opacity: 68%;
+}
+
+.nav {
+  width: 80%;
+  height: 75px;
+  display: flex;
+  justify-content: flex-start;
+  padding: 15px;
+  align-items: center;
+}
+
+.burgermenu {
+  height: 80%;
+  width: 50px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.burgerbar {
+  width: 2em;
+  height: 0.25em;
+  background-color: white;
+  border-radius: 0.5em;
+}
+
+.menu {
+  width: 50%;
+  height: 100vh;
+  background-color: rgb(154, 181, 240);
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.menuVisible {
+  width: 100vw;
+  height: 500px;
+  background-color: white;
+  display: inline-block;
+  position: fixed;
+  top: 75px;
+  z-index: 200;
+}
+
+.menuHidden {
+  display: none;
+}
+
+/* ------------- sliding menu ------------------ */
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: inherit;
+}
+
+/* ----- animations--------- */
+/* clicked */
+.burgerbar2 {
+  width: 2em;
+  height: 0.25em;
+  background-color: white;
+  border-radius: 0.5em;
+}
+
+.burgerbar2:nth-child(1) {
+  transform: translate(0, 11.5px) rotate(45deg);
+  transition: ease-out 0.5s;
+}
+
+.burgerbar2:nth-child(2) {
+  transform: scale(0.1);
+  transition: ease-out 0.5s;
+}
+//  transform: scale(0.1);
+
+.burgerbar2:nth-child(3) {
+  transform: translate(0, -12.5px) rotate(135deg);
+  transition: ease-out 0.5s;
+}
+// rotate(135deg)
+// translate(10px, 12px)
+
+/* unclicked */
+.burgerbarunclicked {
+  width: 2em;
+  height: 0.25em;
+  background-color: white;
+  border-radius: 0.5em;
+  transform: rotate(0) translate(0);
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}

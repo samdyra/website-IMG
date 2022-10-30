@@ -14,6 +14,7 @@ import {
   Navigacity,
 } from "./Pages";
 import Navbar from "./Components/Navbar";
+import MobileNavbar from "./Components/MobileNavbar";
 import Footer from "./Components/Footer/Footer";
 import DpmScreen from "./Pages/DPM/DpmScreen";
 import {
@@ -34,7 +35,7 @@ import { isMobile } from "./Helpers/mobileResponsive";
 function App() {
   return (
     <Router>
-      {isMobile ? null : <Navbar style={{ overflow: "hidden" }} />}
+      {isMobile ? <MobileNavbar /> : <Navbar style={{ overflow: "hidden" }} />}
 
       <Routes>
         {/* Main Screens */}
