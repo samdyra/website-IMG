@@ -1,0 +1,82 @@
+[type="radio"] {
+  display: none;
+}
+
+.containerMobile {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+#slider3DMobile {
+  display: flex;
+  height: 180px;
+  width: 250px;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  border-radius: 20px;
+}
+
+.containerMobile img {
+  height: 180px;
+  width: 250px;
+  object-fit: fill;
+  border-radius: 20px;
+}
+
+#slider3DMobile label {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 170px;
+
+  cursor: pointer;
+  transition: transform 0.5s ease;
+  border-radius: 20px;
+}
+
+#s1Mobile:checked ~ #slide4Mobile,
+#s2Mobile:checked ~ #slide5Mobile,
+#s3Mobile:checked ~ #slide1Mobile,
+#s4Mobile:checked ~ #slide2Mobile,
+#s5Mobile:checked ~ #slide3Mobile {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+  transform: translate3d(-52%, 120px, -300px);
+}
+
+#s1Mobile:checked ~ #slide5Mobile,
+#s2Mobile:checked ~ #slide1Mobile,
+#s3Mobile:checked ~ #slide2Mobile,
+#s4Mobile:checked ~ #slide3Mobile,
+#s5Mobile:checked ~ #slide4Mobile {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+  transform: translate3d(-52%, -80px, -300px);
+}
+
+#s1Mobile:checked ~ #slide1Mobile,
+#s2Mobile:checked ~ #slide2Mobile,
+#s3Mobile:checked ~ #slide3Mobile,
+#s4Mobile:checked ~ #slide4Mobile,
+#s5Mobile:checked ~ #slide5Mobile {
+  box-shadow: 0 13px 25px 0 rgba(0, 0, 0, 0.3), 0 11px 7px 0 rgba(0, 0, 0, 0.19);
+  transform: translate3d(0, 10px, 0);
+}
+
+#s1Mobile:checked ~ #slide2Mobile,
+#s2Mobile:checked ~ #slide3Mobile,
+#s3Mobile:checked ~ #slide4Mobile,
+#s4Mobile:checked ~ #slide5Mobile,
+#s5Mobile:checked ~ #slide1Mobile {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  transform: translate3d(52%, 120px, -300px);
+}
+
+#s1Mobile:checked ~ #slide3Mobile,
+#s2Mobile:checked ~ #slide4Mobile,
+#s3Mobile:checked ~ #slide5Mobile,
+#s4Mobile:checked ~ #slide1Mobile,
+#s5Mobile:checked ~ #slide2Mobile {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+  transform: translate3d(52%, -80px, -300px);
+}

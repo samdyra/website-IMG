@@ -1,5 +1,5 @@
 import React, { useRef, useCallback } from "react";
-import "./Carousel3D.css";
+import "./Carousel3DMobile.css";
 import { SliderData } from "../../assets/object/SliderData";
 import { useEffect } from "react";
 import {
@@ -11,7 +11,7 @@ import {
 } from "../../assets";
 import { BrowserRouter as Router, Link, useNavigate } from "react-router-dom";
 import { isMobile } from "../../Helpers/mobileResponsive";
-const Carousel3D = () => {
+const Carousel3DMobile = () => {
   const navigate = useNavigate();
   // const checkboxref = useRef();
   // const handleOnClick = useCallback(() => {
@@ -26,28 +26,28 @@ const Carousel3D = () => {
     }, 300);
   }, []);
   return (
-    <div className="container">
-      <section id="slider3D">
-        <input type="radio" name="slider3D" id="s1" />
-        <input type="radio" name="slider3D" id="s2" />
-        <input type="radio" name="slider3D" id="s3" />
-        <input type="radio" name="slider3D" id="s4" />
-        <input type="radio" name="slider3D" id="s5" ref={image} />
+    <div className="containerMobile">
+      <section id="slider3DMobile">
+        <input type="radio" name="slider3DMobile" id="s1Mobile" />
+        <input type="radio" name="slider3DMobile" id="s2Mobile" />
+        <input type="radio" name="slider3DMobile" id="s3Mobile" />
+        <input type="radio" name="slider3DMobile" id="s4Mobile" />
+        <input type="radio" name="slider3DMobile" id="s5Mobile" ref={image} />
 
-        <label for="s1" id="slide1">
+        <label for="s1Mobile" id="slide1Mobile">
           <img src={sliderseminar} />
         </label>
 
-        <label for="s2" id="slide2">
+        <label for="s2Mobile" id="slide2Mobile">
           <img src={sliderceremony} />
         </label>
-        <label for="s3" id="slide3">
+        <label for="s3Mobile" id="slide3Mobile">
           <img src={slidergeospasial} />
         </label>
-        <label className="gts" for="s4" id="slide4">
+        <label className="gts" for="s4Mobile" id="slide4Mobile">
           <img src={slidergts} />
         </label>
-        <label for="s5" id="slide5">
+        <label for="s5Mobile" id="slide5Mobile">
           <img
             src={slidernavigacity}
             onDoubleClick={() => navigate("/Geopoint/Navigacity")}
@@ -58,4 +58,4 @@ const Carousel3D = () => {
   );
 };
 
-export default Carousel3D;
+export default Carousel3DMobile;

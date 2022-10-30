@@ -13,6 +13,10 @@
   justify-content: center;
   align-items: center;
   color: white;
+
+  @media screen and (max-width: 420px) {
+    flex-direction: column-reverse;
+  }
 }
 
 .mascotText {
@@ -29,6 +33,20 @@
     text-align: justify;
     line-height: 1.5;
     letter-spacing: 1px;
+  }
+
+  @media screen and (max-width: 420px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    margin-left: 0px;
+
+    P {
+      font-size: 14px;
+      width: 70vw;
+    }
   }
 }
 
@@ -49,6 +67,12 @@
   padding-top: 10px;
   margin-left: auto;
   margin-top: 50px;
+
+  @media screen and (max-width: 420px) {
+    margin-left: 0px;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
 }
 
 .buttonMascot:hover {
@@ -73,7 +97,7 @@
   width: 99.8vw;
   justify-content: center;
   align-items: center;
-  margin-block: 50px;
+  margin-bottom: 50px;
   flex-direction: column;
 }
 
@@ -100,6 +124,18 @@
     margin-top: 25px;
 
     text-align: center;
+  }
+
+  @media screen and (max-width: 420px) {
+    padding-top: 0px;
+    h1 {
+      font-size: 50px;
+    }
+
+    h2 {
+      margin-top: 15px;
+      font-size: 20px;
+    }
   }
 }
 .carouselcontainer {
@@ -131,5 +167,11 @@
     text-align: center;
     margin-top: 50px;
     margin-bottom: 25px;
+  }
+
+  @media screen and (max-width: 420px) {
+    h1 {
+      font-size: 25px;
+    }
   }
 }

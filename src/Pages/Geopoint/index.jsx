@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { SliderData } from "../../assets/object/SliderData";
+import { isMobile } from "../../Helpers/mobileResponsive";
 import {
   Carousel3D,
+  Carousel3DMobile,
   ProgressBarCarousel,
   Modal,
   VideoEmbed,
@@ -49,15 +51,21 @@ const Geopoint = () => {
         <div className={container} style={{ flexDirection: "column" }}>
           <div className={title}>
             <div className={titleText}>
-              <h1>Geopoint IMG-ITB 2023</h1>
+              <h1>
+                Geopoint <br></br> IMG-ITB 2023
+              </h1>
               <h2>Spread The Joy in Our Journey</h2>
             </div>
           </div>
-          <Carousel3D />
+          {isMobile ? <Carousel3DMobile /> : <Carousel3D />}
         </div>
         <div className={containerMascot}>
           <div
-            style={{ flexDirection: "collumn", marginLeft: "50px" }}
+            style={
+              isMobile
+                ? { flexDirection: "collumn" }
+                : { flexDirection: "collumn", marginLeft: "50px" }
+            }
             data-aos="fade-right"
             data-aos-duration="600"
             data-aos-offset="300"
