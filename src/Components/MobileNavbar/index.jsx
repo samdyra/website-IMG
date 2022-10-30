@@ -118,10 +118,15 @@ const MobileNavbar = () => {
               </div>
             </div>
           </div>
-          <div
-            className={menu_class}
-            onClick={() => setIsMenuClicked(true)}
-          ></div>
+          <div className={menu_class} onClick={() => setIsMenuClicked(true)}>
+            <a href="/InternalEvent">Internal Event</a>
+            <a href="/ParadeWisuda">Parade Wisuda</a>
+            <a href="/KabarkeSenatoran">Kabar Kesenatoran</a>
+            <a href="/Geopoint">GEOPOINT</a>
+            <a href="/Locus">Locus</a>
+            <a href="/Geosphere">Geosphere</a>
+            <a href="/IMGx">IMG-X</a>
+          </div>
         </div>
       ) : linkName === "/Geopoint" || linkName === "/Geopoint/Navigacity" ? (
         <div className={containerGeopoint}>
