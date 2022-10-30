@@ -30,6 +30,19 @@
     font-size: 32px;
     line-height: 150%;
   }
+
+  @media screen and (max-width: 420px) {
+    justify-content: center;
+    h1 {
+      font-family: "Plus Jakarta Sans";
+      font-style: normal;
+      font-weight: 800;
+      font-size: 32px;
+      line-height: 140%;
+
+      text-align: center;
+    }
+  }
 }
 
 .content {
@@ -56,5 +69,29 @@
     line-height: 140%;
     text-align: center;
     width: 1200px;
+  }
+
+  @media screen and (max-width: 420px) {
+    justify-content: center;
+    width: 100vw;
+    h1 {
+      font-family: "Plus Jakarta Sans";
+      font-style: normal;
+      font-weight: 800;
+      font-size: 32px;
+      line-height: 140%;
+
+      text-align: center;
+    }
+
+    p {
+      font-family: "Plus Jakarta Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      width: 100vw;
+      text-align: center;
+    }
   }
 }
