@@ -44,7 +44,7 @@ const Gallery = (props) => {
   const gallerySettings = {
     infinite: true,
     speed: 1000,
-    slidesToShow: isMobile ? 1 : 3,
+    slidesToShow: 3,
     swipeToSlide: true,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -56,7 +56,7 @@ const Gallery = (props) => {
   const cardSettings = {
     infinite: true,
     speed: 1000,
-    slidesToShow: screenWidth <= 1280 ? 3 : 4,
+    slidesToShow: screenWidth <= 420 ? 1 : screenWidth <= 1280 ? 3 : 4,
     autoplay: false,
     autoplaySpeed: 2000,
     arrows: false,

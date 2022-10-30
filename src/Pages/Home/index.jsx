@@ -390,7 +390,7 @@ const HomeScreen = () => {
           <h1>Our Delightful Moments</h1>
         </div>
         <div style={{ overflow: "hidden", marginBottom: "100px" }}>
-          <Gallery sliderName="gallery" />
+          <Gallery sliderName="modalimg" />
         </div>
       </div>
     </div>
