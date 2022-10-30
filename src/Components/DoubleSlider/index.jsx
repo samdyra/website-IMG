@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import kontur1 from "../../assets/images/kontur1.svg";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { isMobile } from "../../Helpers/mobileResponsive";
 
 export default function DoubleSlider(props) {
   useEffect(() => {
@@ -40,7 +41,7 @@ export default function DoubleSlider(props) {
         data-aos-offset="100"
       >
         <div className={title}>
-          {sliderName === "paradewisuda" ? (
+          {isMobile ? null : sliderName === "paradewisuda" ? (
             <h1>Majalah Parade Wisuda</h1>
           ) : sliderName === "locus" ? (
             <h1>Majalah LOCUS</h1>
@@ -60,9 +61,12 @@ export default function DoubleSlider(props) {
             {SliderText.map((text, index) => {
               return (
                 <div>
-                  <div className={titleMajalah}>
-                    <h2>{text.title}</h2>
-                  </div>
+                  {isMobile ? null : (
+                    <div className={titleMajalah}>
+                      <h2>{text.title}</h2>
+                    </div>
+                  )}
+
                   <div className={descContainer}>
                     <div className={descContainer2}>
                       <p style={{ paddingInline: "20px" }}>{text.desc}</p>
@@ -97,6 +101,18 @@ export default function DoubleSlider(props) {
           })}
         </Slider>
       </div>
+
+      {isMobile ? (
+        <div className={title}>
+          {sliderName === "paradewisuda" ? (
+            <h1>Majalah Parade Wisuda</h1>
+          ) : sliderName === "locus" ? (
+            <h1>Majalah LOCUS</h1>
+          ) : sliderName === "geosphere" ? (
+            <h1>Majalah GEOSHPERE</h1>
+          ) : null}
+        </div>
+      ) : null}
     </div>
   );
 }
