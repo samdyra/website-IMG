@@ -171,6 +171,33 @@
   }
 }
 
+.menuVisibleGeopoint {
+  display: inline-block;
+  position: fixed;
+  top: 75px;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  gap: none;
+
+  a {
+    height: 45px;
+    width: 100vw;
+    background: #281f64;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: "Plus Jakarta Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    border-top: 0.25px solid rgba(223, 222, 222, 0.913);
+    padding-top: 12.5px;
+  }
+}
+
 .menuHidden {
   display: none;
 }
