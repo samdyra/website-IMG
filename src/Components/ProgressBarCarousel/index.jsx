@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import Slider from "react-slick";
 import style from "./style.module.scss";
 import { GeopointSlider } from "../../assets/object/GeopointSlider.js";
+import { isMobile } from "../../Helpers/mobileResponsive";
 
 const ProgressBarCarousel = () => {
   const {
@@ -43,8 +44,8 @@ const ProgressBarCarousel = () => {
             // alignItems: "center",
             listStyle: "none",
             fontFamily: "jakarta",
-            width: "1100px",
-            marginRight: 135,
+            width: isMobile ? "375px" : "1100px",
+            marginRight: isMobile ? 471 : 135,
           }}
         >
           {dots}
@@ -54,10 +55,10 @@ const ProgressBarCarousel = () => {
             position: "relative",
             zIndex: "-1",
             top: "40px",
-            left: "100px",
+            left: isMobile ? "475px" : "100px",
             fontFamily: "jakarta",
             backgroundColor: "#D5A33B",
-            width: "1080px",
+            width: isMobile ? "375" : "1080px",
             height: "6px",
           }}
         ></div>
@@ -71,7 +72,7 @@ const ProgressBarCarousel = () => {
             justifyContent: "center",
             textAlign: "center",
             alignItems: "center",
-            width: 120,
+            width: isMobile ? 58 : 120,
             height: 30,
 
             // marginBottom: 30
@@ -80,7 +81,7 @@ const ProgressBarCarousel = () => {
           <h1
             style={{
               color: "#f5fcb5",
-              fontSize: 12,
+              fontSize: isMobile ? 8 : 12,
             }}
           >
             {GeopointSlider[i].date}
@@ -90,7 +91,7 @@ const ProgressBarCarousel = () => {
           style={{
             display: "flex",
             justifyContent: "center",
-            width: 120,
+            width: isMobile ? 60 : 120,
             fontSize: 13,
             alignContent: "center",
           }}
@@ -105,8 +106,8 @@ const ProgressBarCarousel = () => {
             style={{
               color: "#f5fcb5",
               marginTop: "20px",
-              width: 120,
-              fontSize: 13,
+              width: isMobile ? 60 : 120,
+              fontSize: isMobile ? 8 : 13,
               alignContent: "center",
             }}
           >

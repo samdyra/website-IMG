@@ -40,6 +40,24 @@
     color: #f5fcb5;
     font-family: jakarta;
   }
+
+  @media screen and (max-width: 420px) {
+    flex-direction: column;
+
+    h1 {
+      bottom: 200px;
+      font-size: 30px;
+      width: 300px;
+      left: 440px;
+      text-align: center;
+    }
+    p {
+      position: absolute;
+      width: 300px;
+      bottom: 20px;
+      left: 495px;
+    }
+  }
 }
 
 .madeElementContainer img {
@@ -52,6 +70,14 @@
   margin: 0;
   object-fit: fill;
   margin-bottom: 10px;
+
+  @media screen and (max-width: 420px) {
+    margin: 0 auto;
+    top: 100px;
+    right: 2%;
+    width: 350px;
+    height: 200px;
+  }
 }
 
 .madeElementImage img {

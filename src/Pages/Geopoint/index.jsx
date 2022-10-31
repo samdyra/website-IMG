@@ -68,7 +68,7 @@ const Geopoint = () => {
             }
             data-aos="fade-right"
             data-aos-duration="600"
-            data-aos-offset="300"
+            data-aos-offset={isMobile ? "175" : "300"}
           >
             <div className={mascotText}>
               <p>
@@ -96,9 +96,9 @@ const Geopoint = () => {
         </div>
         <div
           className={container}
-          data-aos="fade-up"
-          data-aos-duration="600"
-          data-aos-offset="625"
+          // data-aos="fade-up"
+          // data-aos-duration="600"
+          // data-aos-offset="625"
         >
           <ProgressBarCarousel />
         </div>

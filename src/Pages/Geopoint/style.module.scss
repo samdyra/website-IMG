@@ -4,6 +4,10 @@
   width: 99.5vw;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 420px) {
+    height: 90vh;
+  }
 }
 
 .containerMascot {
@@ -16,6 +20,7 @@
 
   @media screen and (max-width: 420px) {
     flex-direction: column-reverse;
+    height: 100vh;
   }
 }
 
@@ -152,6 +157,7 @@
     #292645 91.05%
   );
   padding-top: 10px;
+  overflow: hidden;
   // border: 1px solid red;
 }
 
