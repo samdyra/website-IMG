@@ -58,7 +58,7 @@ const ProgressBarCarousel = () => {
             left: isMobile ? "475px" : "100px",
             fontFamily: "jakarta",
             backgroundColor: "#D5A33B",
-            width: isMobile ? "375" : "1080px",
+            width: isMobile ? "350px" : "1080px",
             height: "6px",
           }}
         ></div>
