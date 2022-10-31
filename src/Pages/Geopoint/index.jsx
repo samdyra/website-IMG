@@ -59,6 +59,34 @@ const Geopoint = () => {
           </div>
           {isMobile ? <Carousel3DMobile /> : <Carousel3D />}
         </div>
+
+        {isMobile ? (
+          <div>
+            <div
+              className={buttonMascot}
+              onClick={() =>
+                window.open(
+                  "https://docs.google.com/forms/d/e/1FAIpQLSfcwaxn3v5iwfw6tSZjugCLMr3HaAB94PH4IwsMStXRiL5D-w/viewform",
+                  "_blank"
+                )
+              }
+            >
+              Daftar Navigacity Disini!
+            </div>
+            <div
+              className={buttonMascot}
+              onClick={() =>
+                window.open(
+                  "https://docs.google.com/forms/d/e/1FAIpQLSfcwaxn3v5iwfw6tSZjugCLMr3HaAB94PH4IwsMStXRiL5D-w/viewform",
+                  "_blank"
+                )
+              }
+            >
+              Daftar Geospasial Disini!
+            </div>
+          </div>
+        ) : null}
+
         <div className={containerMascot}>
           <div
             style={
