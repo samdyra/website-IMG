@@ -34,7 +34,7 @@ const ProgressBar = () => {
         <div className={dotsContainer}>
           <h2 style={{ width: "150px" }}>1 Februari 2023</h2>
           <div className={dots}></div>
-          <h2 style={{ width: "250px",  }}>
+          <h2 style={{ width: "250px" }}>
             Pembagian race <br></br> pack
           </h2>
         </div>

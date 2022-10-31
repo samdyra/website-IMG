@@ -2,6 +2,17 @@
   display: flex;
 
   justify-content: center;
+
+  @media screen and (max-width: 420px) {
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+
+    img {
+      width: 90vw;
+      margin: 0 auto;
+    }
+  }
 }
 
 .containerTop {
@@ -11,12 +22,22 @@
   margin: 0 auto;
   justify-content: flex-end;
   padding-inline: 10px;
+
+  @media screen and (max-width: 420px) {
+    width: 100vw;
+    justify-content: center;
+  }
 }
 
 .gegepHeader {
   position: absolute;
   margin-right: 450px;
   margin-top: 30px;
+
+  @media screen and (max-width: 420px) {
+    width: 275px;
+    margin-left: 350px;
+  }
 }
 
 .title {
@@ -47,7 +68,7 @@
   margin-bottom: 10px;
   div {
     font-family: bambino;
-    
+
     font-size: 150px;
     // align-items: center;
     // padding-top: 10px;
@@ -58,8 +79,21 @@
     font-weight: 800;
     // margin-left: -10px;
   }
-}
 
+  @media screen and (max-width: 420px) {
+    height: 45px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 25px;
+    margin-top: -20px;
+    div {
+      font-size: 45px;
+      margin-left: 130px;
+
+      overflow-y: visible;
+    }
+  }
+}
 .containerMascot {
   display: flex;
   margin-block: 143px;
@@ -104,6 +138,36 @@
 
     letter-spacing: -0.023em;
   }
+
+  @media screen and (max-width: 420px) {
+    flex-direction: column;
+    gap: 0px;
+    P {
+      width: 80vw;
+      font-size: 12px;
+      text-align: justify;
+      line-height: 1.5;
+      letter-spacing: 1px;
+    }
+    h1 {
+      font-family: bambino;
+      text-align: center;
+      font-size: 36px;
+      line-height: 150%;
+      letter-spacing: -0.022em;
+      width: 300px;
+    }
+
+    h2 {
+      font-family: bambino;
+      text-align: center;
+      font-size: 24px;
+      line-height: 150%;
+      /* or 54px */
+
+      letter-spacing: -0.023em;
+    }
+  }
 }
 
 .containerMascot img {
@@ -136,6 +200,14 @@
 
     font-family: bambino;
   }
+  @media screen and (max-width: 420px) {
+    h1 {
+      font-size: 15px;
+      padding-bottom: 10px;
+      margin-top: 30px;
+      margin-left: 132px;
+    }
+  }
 }
 
 .titleTextH3 {
@@ -158,7 +230,14 @@
     font-family: bambino;
   }
 
-
+  @media screen and (max-width: 420px) {
+    h2 {
+      font-size: 12px;
+      padding-bottom: 10px;
+      margin-top: -10px;
+      margin-left: 200px;
+    }
+  }
 }
 
 .buttonMascot {
@@ -178,6 +257,13 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 140%;
+
+  @media screen and (max-width: 420px) {
+    width: 330px;
+
+    padding-block: 5px;
+    margin: 0 auto;
+  }
 }
 
 .buttonMascot:hover {
@@ -202,6 +288,7 @@
 }
 
 .pageBackground {
+  overflow: hidden;
   background: linear-gradient(
     180deg,
     #ffffff -15%,
@@ -260,6 +347,17 @@
     margin-left: 62px;
     margin-block-start: 30px;
   }
+
+  @media screen and (max-width: 420px) {
+    margin: 0 auto;
+    width: 90vw;
+    height: 380px;
+
+    img {
+      margin-left: 30px;
+      margin-block-start: 10px;
+    }
+  }
 }
 
 .rutePetaContainer {
@@ -274,6 +372,13 @@
   border-radius: 19px;
   position: relative;
   z-index: 1;
+
+  @media screen and (max-width: 420px) {
+    margin: 0 auto;
+    width: 90vw;
+    height: 380px;
+    margin-top: 30px;
+  }
 }
 
 .rutePetaButton {
@@ -315,6 +420,12 @@
     font-size: 24px;
     line-height: 140%;
   }
+
+  @media screen and (max-width: 420px) {
+    margin: 0 auto;
+    margin-top: 30px;
+    gap: 25px;
+  }
 }
 
 .countDownTitle {
@@ -331,5 +442,12 @@
     font-weight: 700;
     font-size: 24px;
     line-height: 140%;
+  }
+
+  @media screen and (max-width: 420px) {
+    h3 {
+      font-size: 16px;
+      margin-bottom: 0px;
+    }
   }
 }

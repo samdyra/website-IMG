@@ -13,6 +13,7 @@ import { CountDown, ProgressBar } from "./Components";
 import { GegepNavi1, rundown, medal, jersey, bib } from "../../assets";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { isMobile } from "../../Helpers/mobileResponsive";
 
 const Navigacity = () => {
   const navigate = useNavigate();
@@ -87,17 +88,19 @@ const Navigacity = () => {
               <div className={titleTextH3}>
                 <h2>Sabtu, 4 Februari 2023</h2>
               </div>
-              <div
-                className={buttonMascot}
-                onClick={() =>
-                  window.open(
-                    "https://docs.google.com/forms/d/e/1FAIpQLSfcwaxn3v5iwfw6tSZjugCLMr3HaAB94PH4IwsMStXRiL5D-w/viewform",
-                    "_blank"
-                  )
-                }
-              >
-                Daftar Sekarang!
-              </div>
+              {isMobile ? null : (
+                <div
+                  className={buttonMascot}
+                  onClick={() =>
+                    window.open(
+                      "https://docs.google.com/forms/d/e/1FAIpQLSfcwaxn3v5iwfw6tSZjugCLMr3HaAB94PH4IwsMStXRiL5D-w/viewform",
+                      "_blank"
+                    )
+                  }
+                >
+                  Daftar Sekarang!
+                </div>
+              )}
             </div>
             <div
               style={{
@@ -111,6 +114,19 @@ const Navigacity = () => {
                   <h3>Pendaftaran ditutup dalam:</h3>
                 </div>
                 <CountDown />
+                {!isMobile ? null : (
+                  <div
+                    className={buttonMascot}
+                    onClick={() =>
+                      window.open(
+                        "https://docs.google.com/forms/d/e/1FAIpQLSfcwaxn3v5iwfw6tSZjugCLMr3HaAB94PH4IwsMStXRiL5D-w/viewform",
+                        "_blank"
+                      )
+                    }
+                  >
+                    Daftar Sekarang!
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -119,17 +135,17 @@ const Navigacity = () => {
           <div>
             <div className={mascotText}>
               <div
-                // data-aos="fade-right"
-                // data-aos-duration="600"
-                // data-aos-offset="300"
+              // data-aos="fade-right"
+              // data-aos-duration="600"
+              // data-aos-offset="300"
               >
                 <h2>Navigacity:</h2>
                 <h1>FUN RUN</h1>
               </div>
               <div
-                // data-aos="fade-left"
-                // data-aos-duration="600"
-                // data-aos-offset="300"
+              // data-aos="fade-left"
+              // data-aos-duration="600"
+              // data-aos-offset="300"
               >
                 <p>
                   Navigacity merupakan salah satu rangkaian acara pada kegiatan
@@ -175,8 +191,8 @@ const Navigacity = () => {
               <div className={rutePetaContainer}>
                 <iframe
                   src="https://www.google.com/maps/d/u/0/embed?mid=1SQn2DlLSLLhichXo1RGfh50IAlTKjlY&ehbc=2E312F"
-                  width="600"
-                  height="400"
+                  width={isMobile ? "350" : "600"}
+                  height={isMobile ? "300" : "400"}
                 ></iframe>
               </div>
             </div>
@@ -199,8 +215,8 @@ const Navigacity = () => {
               <div className={rutePetaContainer}>
                 <iframe
                   src="https://www.google.com/maps/d/u/0/embed?mid=1SQn2DlLSLLhichXo1RGfh50IAlTKjlY&ehbc=2E312F"
-                  width="600"
-                  height="400"
+                  width={isMobile ? "350" : "600"}
+                  height={isMobile ? "300" : "400"}
                 ></iframe>
               </div>
             </div>
@@ -210,12 +226,12 @@ const Navigacity = () => {
             className={fasilitasContainer}
             data-aos="fade-left"
             data-aos-duration="600"
-            data-aos-offset="300"
+            data-aos-offset={isMobile ? "150" : "300"}
           >
             <h1>Fasilitas</h1>
-            <img src={jersey} style={{width:250, height:67}}></img>
-            <img src={medal} style={{width:307, height:52}}></img>
-            <img src={bib} style={{width:147, height:42}}></img>
+            <img src={jersey} style={{ width: 250, height: 67 }}></img>
+            <img src={medal} style={{ width: 307, height: 52 }}></img>
+            <img src={bib} style={{ width: 147, height: 42 }}></img>
           </div>
         </div>
         <div className={container}>
