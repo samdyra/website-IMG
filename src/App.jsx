@@ -12,6 +12,7 @@ import {
   Geosphere,
   Georeference,
   Navigacity,
+  Ceremony,
 } from "./Pages";
 import Navbar from "./Components/Navbar";
 import MobileNavbar from "./Components/MobileNavbar";
@@ -54,6 +55,7 @@ function App() {
         {/* Geopoint Screens */}
         <Route path="/Geopoint" element={<Geopoint />}></Route>
         <Route path="/Geopoint/Navigacity" element={<Navigacity />}></Route>
+        <Route path="/Geopoint/Ceremony" element={<Ceremony />}></Route>
         <Route path="/DPM" element={<DpmScreen />}></Route>
         {/* Admin Screens */}
         {isUserLevel9() && (

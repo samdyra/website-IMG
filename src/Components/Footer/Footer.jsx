@@ -38,7 +38,9 @@ const Footer = () => {
       {linkName === "/DPM" ? null : (
         <div
           className={
-            linkName === "/Geopoint" || linkName === "/Geopoint/Navigacity"
+            linkName === "/Geopoint" ||
+            linkName === "/Geopoint/Navigacity" ||
+            linkName === "/Geopoint/Ceremony"
               ? containerGeopoint
               : container
           }
@@ -46,7 +48,9 @@ const Footer = () => {
           <div
             className={containertopcontact}
             style={
-              linkName === "/Geopoint" || linkName === "/Geopoint/Navigacity"
+              linkName === "/Geopoint" ||
+              linkName === "/Geopoint/Navigacity" ||
+              linkName === "/Geopoint/Ceremony"
                 ? { background: "#211954" }
                 : null
             }
@@ -57,7 +61,8 @@ const Footer = () => {
                   className={contactLogoContainer}
                   style={
                     linkName === "/Geopoint" ||
-                    linkName === "/Geopoint/Navigacity"
+                    linkName === "/Geopoint/Navigacity" ||
+                    linkName === "/Geopoint/Ceremony"
                       ? { background: "#281F64" }
                       : null
                   }
@@ -79,7 +84,8 @@ const Footer = () => {
                   className={contactLogoContainer}
                   style={
                     linkName === "/Geopoint" ||
-                    linkName === "/Geopoint/Navigacity"
+                    linkName === "/Geopoint/Navigacity" ||
+                    linkName === "/Geopoint/Ceremony"
                       ? { background: " #281F64" }
                       : null
                   }

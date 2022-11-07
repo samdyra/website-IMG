@@ -48,7 +48,9 @@ const MobileNavbar = () => {
     if (!isMenuClicked) {
       setBurgerClass(burgerbar2);
       setMenuClass(menuVisible);
-      linkName === "/Geopoint" || linkName === "/Geopoint/Navigacity"
+      linkName === "/Geopoint" ||
+      linkName === "/Geopoint/Navigacity" ||
+      linkName === "/Geopoint/Ceremony"
         ? setMenuClass(menuVisibleGeopoint)
         : setMenuClass(menuVisible);
     } else {
@@ -132,7 +134,9 @@ const MobileNavbar = () => {
             <a href="/IMGx">IMG-X</a>
           </div>
         </div>
-      ) : linkName === "/Geopoint" || linkName === "/Geopoint/Navigacity" ? (
+      ) : linkName === "/Geopoint" ||
+        linkName === "/Geopoint/Navigacity" ||
+        linkName === "/Geopoint/Ceremony" ? (
         <div>
           <div className={containerGeopoint}>
             <div className={container}>

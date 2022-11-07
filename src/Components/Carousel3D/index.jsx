@@ -39,7 +39,10 @@ const Carousel3D = () => {
         </label>
 
         <label for="s2" id="slide2">
-          <img src={sliderceremony} />
+          <img
+            src={sliderceremony}
+            onDoubleClick={() => navigate("/Geopoint/Ceremony")}
+          />
         </label>
         <label for="s3" id="slide3">
           <img src={slidergeospasial} />

@@ -93,7 +93,9 @@ const Navbar = () => {
             </a>
           </div>
         </div>
-      ) : linkName === "/Geopoint" || linkName === "/Geopoint/Navigacity" ? (
+      ) : linkName === "/Geopoint" ||
+        linkName === "/Geopoint/Navigacity" ||
+        linkName === "/Geopoint/Ceremony" ? (
         <div className={containerGeopoint}>
           <div className={container}>
             <div>
