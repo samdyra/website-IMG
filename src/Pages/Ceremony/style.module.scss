@@ -24,8 +24,10 @@
   padding-inline: 10px;
 
   @media screen and (max-width: 420px) {
+    padding-inline: 0px;
     width: 100vw;
     justify-content: center;
+    flex-direction: column-reverse;
   }
 }
 
@@ -33,7 +35,6 @@
   width: 60%;
   @media screen and (max-width: 420px) {
     width: 275px;
-    margin-left: 350px;
   }
 }
 
@@ -52,6 +53,15 @@
     line-height: 125%;
     // text-align: center;
     color: #000000;
+  }
+
+  @media screen and (max-width: 420px) {
+    margin: 0 auto;
+    width: 100vw;
+    padding-block: 50px;
+    h1 {
+      font-size: 30px;
+    }
   }
 }
 
@@ -87,7 +97,6 @@
     margin-top: -20px;
     div {
       font-size: 45px;
-      margin-left: 130px;
 
       overflow-y: visible;
     }
@@ -204,8 +213,7 @@
     h1 {
       font-size: 15px;
       padding-bottom: 10px;
-      margin-top: 30px;
-      margin-left: 132px;
+      margin-top: 0;
     }
   }
 }
