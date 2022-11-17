@@ -7,9 +7,12 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import AddImage from "./AddImage";
 import DeleteImage from "./DeleteImage";
 import NavbarAdmin from "../components/NavbarAdmin";
+
 const Gallery = () => {
   const [image, setImage] = useState([]);
+
   const [user] = useAuthState(auth);
+
   useEffect(() => {
     const imageRef = collection(db, "gallery");
     const q = query(imageRef);
@@ -21,6 +24,7 @@ const Gallery = () => {
       setImage(images);
     });
   }, []);
+
   return (
     <div>
       <NavbarAdmin></NavbarAdmin>

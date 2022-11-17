@@ -20,6 +20,8 @@ export { default as gegepwebinar } from "./images/gegepwebinar.png";
 
 export { default as gegepgeospasial } from "./images/gegepgeospasial.png";
 export { default as gegepgts } from "./images/gegepgts.png";
+export { default as gegepcere1 } from "./images/gegep-cere-1.png";
+export { default as fasilitascere } from "./images/fasilitas-cere.png";
 
 export { default as gegepgemas } from "./images/gegepgemas.png";
 export { default as gegep1 } from "./images/gegep1.png";

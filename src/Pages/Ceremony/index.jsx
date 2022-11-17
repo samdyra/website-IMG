@@ -9,15 +9,15 @@ import {
   VideoEmbed,
 } from "../../Components";
 import style from "./style.module.scss";
-import { CountDown, ProgressBar } from "../Navigacity/Components";
-import { GegepNavi1, rundown, medal, jersey, bib } from "../../assets";
+import { CountDown } from "../Navigacity/Components";
+import ProgressBar from "./ProgressBar";
+import { gegepcere1, fasilitascere } from "../../assets";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { isMobile } from "../../Helpers/mobileResponsive";
 
 const Ceremony = () => {
   const navigate = useNavigate();
-  const [petaRute, setPetaRute] = useState(false);
   // useEffect(() => {
   //   window.open("https://www.google.com", "_blank");
   // }, []);
@@ -82,7 +82,7 @@ const Ceremony = () => {
               <div className={countDownTitle}>
                 <h3>Pendaftaran ditutup dalam:</h3>
               </div>
-              <CountDown />
+              <CountDown month={12} day={10} />
               {!isMobile ? null : (
                 <div
                   className={buttonMascot}
@@ -99,16 +99,13 @@ const Ceremony = () => {
             </div>
 
             <div className={countDownTitle}>
-              <h3>hari,0 bulan 2022</h3>
+              <h3>Sabtu,10 Desember 2022</h3>
             </div>
 
             <div
               className={buttonMascot}
               onClick={() =>
-                window.open(
-                  "https://docs.google.com/forms/d/e/1FAIpQLSfcwaxn3v5iwfw6tSZjugCLMr3HaAB94PH4IwsMStXRiL5D-w/viewform",
-                  "_blank"
-                )
+                window.open("https://bit.ly/AtlantisTheGuidebook", "_blank")
               }
             >
               Unduh Guidebook
@@ -117,10 +114,7 @@ const Ceremony = () => {
             <div
               className={buttonMascot}
               onClick={() =>
-                window.open(
-                  "https://docs.google.com/forms/d/e/1FAIpQLSfcwaxn3v5iwfw6tSZjugCLMr3HaAB94PH4IwsMStXRiL5D-w/viewform",
-                  "_blank"
-                )
+                window.open("https://bit.ly/PendaftaranAtlantis", "_blank")
               }
             >
               Daftar Sekarang!
@@ -134,7 +128,7 @@ const Ceremony = () => {
               <h1>Closing Ceremony</h1>
             </div>
             <div className={gegepHeader}>
-              <img src={GegepNavi1} alt="gegepnavi1" />
+              <img src={gegepcere1} alt="gegepnavi1" />
             </div>
           </div>
         </div>
@@ -156,79 +150,44 @@ const Ceremony = () => {
               // data-aos-offset="300"
               >
                 <p>
-                  Navigacity merupakan salah satu rangkaian acara pada kegiatan
-                  Geopoint IMG-ITB 2023: Spread the Joy in Our Journey yang
-                  bertujuan untuk memperkenalkan keilmuan Teknik Geodesi dan
-                  Geomatika serta peranannya di dalam industri, pembangunan,
-                  permasalahan lingkungan, kebencanaan, dan lain-lain kepada
-                  masyarakat umum. Navigacity dikemas dalam kegiatan fun run
-                  yang diberi nama “Navigacity: “Geospatial Run”.
+                  Closing ceremony adalah seremoni/upacara penutupan Geopoint
+                  2023 yang menandai usainya seluruh rangkaian Geopoint. Closing
+                  ceremony juga merupakan perayaan/selebrasi oleh panitia
+                  Geopoint 2023 yang dipersembahkan ke masyarakat umum judul
+                  acara “The Galleon: Following the Compass to Our Mystical
+                  Adventure”. Closing Ceremony akan diisi oleh berbagai
+                  penampil, baik oleh guest star maupun oleh talent hasil
+                  audisi.
                 </p>
                 <p>
-                  Navigacity merupakan sebuah konsep fun run dengan titik-titik
-                  rahasia disajikan dalam acara ini. Navigacity memberikan 2
-                  pilihan kategori yang dapat dipilih oleh peserta, yaitu Fun
-                  Run 5 km dan Geotagging Run 5km dengan teknis yang dijelaskan
-                  pada Guidebook Fun Run Geopoint IMG-ITB 2023. Konsep ini
-                  dikemas sebagai upaya kami untuk memperkenalkan Teknik Geodesi
-                  dan Geomatika dengan metode yang dapat diterima di masyarakat
-                  secara luas. Harapannya, Navigacity dapat menjadi ajang
-                  masyarakat untuk lebih mengenal Teknik Geodesi dan Geomatika.
+                  Audisi Talent Calon Artis (Atlantis) merupakan kegiatan audisi
+                  yang dibuka untuk publik dalam bidang entertainment dan
+                  pertunjukan. Kategori dari pertunjukan tersebut meliputi: band
+                  group, vocal, solo vocal, solo instrument, group
+                  instrument/orchestra, modern dance, traditional dance, dan
+                  stand up comedy. Talent yang lolos audisi akan diberikan
+                  kesempatan untuk tampil di rangkaian acara Geopoint 2023 dan
+                  akan diberikan grand prize dengan total hadiah Rp1.000.000.
                 </p>
               </div>
             </div>
           </div>
         </div>
         <div className={container}>
-          {petaRute === false ? (
-            <div
-              data-aos="fade-right"
-              data-aos-duration="600"
-              data-aos-offset="300"
-            >
-              <div className={rutePetaButtonContainer}>
-                <div className={rutePetaButton}>Rute</div>
-                <div
-                  className={rutePetaButton}
-                  style={{ background: "#4A777E", color: "#F5FCB5" }}
-                  onClick={() => setPetaRute(true)}
-                >
-                  Peta
-                </div>
-              </div>
-              <div className={rutePetaContainer}>
-                <iframe
-                  src="https://www.google.com/maps/d/u/0/embed?mid=1SQn2DlLSLLhichXo1RGfh50IAlTKjlY&ehbc=2E312F"
-                  width={isMobile ? "350" : "600"}
-                  height={isMobile ? "300" : "400"}
-                ></iframe>
-              </div>
+          <div
+            data-aos="fade-right"
+            data-aos-duration="600"
+            data-aos-offset="300"
+          >
+            <div className={rutePetaContainer}>
+              <h1>Denah</h1>
+              <iframe
+                src="https://www.google.com/maps/d/u/0/embed?mid=1SQn2DlLSLLhichXo1RGfh50IAlTKjlY&ehbc=2E312F"
+                width={isMobile ? "350" : "600"}
+                height={isMobile ? "300" : "400"}
+              ></iframe>
             </div>
-          ) : (
-            <div
-              data-aos="fade-right"
-              data-aos-duration="600"
-              data-aos-offset="300"
-            >
-              <div className={rutePetaButtonContainer}>
-                <div
-                  className={rutePetaButton}
-                  style={{ background: "#4A777E", color: "#F5FCB5" }}
-                  onClick={() => setPetaRute(false)}
-                >
-                  Rute
-                </div>
-                <div className={rutePetaButton}>Peta</div>
-              </div>
-              <div className={rutePetaContainer}>
-                <iframe
-                  src="https://www.google.com/maps/d/u/0/embed?mid=1SQn2DlLSLLhichXo1RGfh50IAlTKjlY&ehbc=2E312F"
-                  width={isMobile ? "350" : "600"}
-                  height={isMobile ? "300" : "400"}
-                ></iframe>
-              </div>
-            </div>
-          )}
+          </div>
 
           <div
             className={fasilitasContainer}
@@ -237,9 +196,7 @@ const Ceremony = () => {
             data-aos-offset={isMobile ? "150" : "300"}
           >
             <h1>Fasilitas</h1>
-            <img src={jersey} style={{ width: 250, height: 67 }}></img>
-            <img src={medal} style={{ width: 307, height: 52 }}></img>
-            <img src={bib} style={{ width: 147, height: 42 }}></img>
+            <img src={fasilitascere} style={{ margin: "0 auto" }}></img>
           </div>
         </div>
         <div className={container}>
@@ -254,34 +211,7 @@ const Ceremony = () => {
           data-aos="fade-up"
           data-aos-duration="600"
           data-aos-offset="300"
-        >
-          <div className={container} style={{ gap: "45px" }}>
-            <img src={rundown} alt="rundown" />
-            <div style={{ paddingTop: "120px" }}>
-              <div
-                className={buttonMascot}
-                onClick={() =>
-                  window.open(
-                    "https://drive.google.com/file/d/1VAOV2XiST6jQgpCigRDgaUaeE8MhRUaQ/view?usp=sharing",
-                    "_blank"
-                  )
-                }
-              >
-                Race Guidelines
-              </div>
-
-              <div
-                className={buttonMascot}
-                style={{ marginTop: "32px" }}
-                onClick={() =>
-                  window.open("https://www.twibbonize.com/navigacity", "_blank")
-                }
-              >
-                Twibbon
-              </div>
-            </div>
-          </div>
-        </div>
+        ></div>
       </div>
     </>
   );

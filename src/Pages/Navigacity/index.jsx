@@ -98,7 +98,7 @@ const Navigacity = () => {
                     )
                   }
                 >
-                  Daftar Sekarang!
+                  Pendaftaran Ditutup
                 </div>
               )}
             </div>
@@ -124,7 +124,7 @@ const Navigacity = () => {
                       )
                     }
                   >
-                    Daftar Sekarang!
+                    Pendaftaran Ditutup
                   </div>
                 )}
               </div>

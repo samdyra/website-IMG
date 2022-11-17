@@ -16,35 +16,31 @@ const ProgressBar = ({ page }) => {
       <div className={bar}></div>
       <div className={progressBar}>
         <div className={dotsContainer}>
-          <h2 style={{ width: "150px" }}>15 Oktober 2022</h2>
+          <h2 style={{ width: "150px" }}>13 November 2022</h2>
           <div className={dotsActive}></div>
-          <h2 style={{ width: "150px" }}>Pembukaan penjualan tiket</h2>
-        </div>
-        <div className={dotsContainer}>
-          <h2 style={{ width: "150px" }}>22 Oktober 2022</h2>
-          <div className={dots}></div>
           <h2 style={{ width: "200px" }}>
-            Penutupan penjualan tiket early bird
+            Pembukaan pendaftaran peserta audisi
           </h2>
         </div>
         <div className={dotsContainer}>
-          <h2 style={{ width: "160px" }}>15 November 2022</h2>
+          <h2 style={{ width: "150px" }}>13 Desember 2022</h2>
           <div className={dots}></div>
-          <h2 style={{ width: "170px" }}>Penutupan penjualan tiket reguler</h2>
+          <h2 style={{ width: "150px" }}>Penutupan pendaftaran</h2>
         </div>
         <div className={dotsContainer}>
-          <h2 style={{ width: "150px" }}>1 Februari 2023</h2>
+          <h2 style={{ width: "220px" }}>21—23 November 2022</h2>
           <div className={dots}></div>
-          <h2 style={{ width: "250px" }}>
-            Pembagian race <br></br> pack
-          </h2>
+          <h2 style={{ width: "150px", height: "30px" }}>Pelaksanaan audisi</h2>
+        </div>
+        <div className={dotsContainer}>
+          <h2 style={{ width: "150px" }}>4 Januari 2023</h2>
+          <div className={dots}></div>
+          <h2 style={{ width: "150px" }}>Pengumuman pemenang audisi</h2>
         </div>
         <div className={dotsContainer}>
           <h2 style={{ width: "150px" }}>4 Februari 2023</h2>
           <div className={dots}></div>
-          <h2 style={{ width: "220px" }}>
-            Hari pelaksanaan dan pengumuman pemenang
-          </h2>
+          <h2 style={{ width: "220px" }}>Hari pelaksanaan Closing Ceremony</h2>
         </div>
       </div>
     </div>
