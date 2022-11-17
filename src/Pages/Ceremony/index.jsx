@@ -83,19 +83,6 @@ const Ceremony = () => {
                 <h3>Pendaftaran ditutup dalam:</h3>
               </div>
               <CountDown month={12} day={10} />
-              {!isMobile ? null : (
-                <div
-                  className={buttonMascot}
-                  onClick={() =>
-                    window.open(
-                      "https://docs.google.com/forms/d/e/1FAIpQLSfcwaxn3v5iwfw6tSZjugCLMr3HaAB94PH4IwsMStXRiL5D-w/viewform",
-                      "_blank"
-                    )
-                  }
-                >
-                  Daftar Sekarang!
-                </div>
-              )}
             </div>
 
             <div className={countDownTitle}>
