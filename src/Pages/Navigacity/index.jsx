@@ -98,7 +98,7 @@ const Navigacity = () => {
                     )
                   }
                 >
-                  Pendaftaran Ditutup
+                  Pendaftaran Disini
                 </div>
               )}
             </div>
@@ -113,7 +113,7 @@ const Navigacity = () => {
                 <div className={countDownTitle}>
                   <h3>Pendaftaran ditutup dalam:</h3>
                 </div>
-                <CountDown />
+                <CountDown month={12} day={15} />
                 {!isMobile ? null : (
                   <div
                     className={buttonMascot}
@@ -124,7 +124,7 @@ const Navigacity = () => {
                       )
                     }
                   >
-                    Pendaftaran Ditutup
+                    Pendaftaran Disini
                   </div>
                 )}
               </div>
