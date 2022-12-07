@@ -11,7 +11,7 @@ import {
 import style from "./style.module.scss";
 import { CountDown } from "../Navigacity/Components";
 import ProgressBar from "./ProgressBar";
-import { gegepcere1, fasilitascere } from "../../assets";
+import { gegepcere1, fasilitascere, TBA } from "../../assets";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { isMobile } from "../../Helpers/mobileResponsive";
@@ -168,11 +168,19 @@ const Ceremony = () => {
           >
             <div className={rutePetaContainer}>
               <h1>Denah</h1>
-              <iframe
-                src="https://www.google.com/maps/d/u/0/embed?mid=1SQn2DlLSLLhichXo1RGfh50IAlTKjlY&ehbc=2E312F"
-                width={isMobile ? "350" : "600"}
-                height={isMobile ? "300" : "400"}
-              ></iframe>
+              <img
+                src={TBA}
+                style={
+                  isMobile
+                    ? {
+                        margin: "0 auto",
+                        height: "70%",
+                        width: "auto",
+                        marginBlock: "20px",
+                      }
+                    : { margin: "0 auto", marginBlock: "20px" }
+                }
+              ></img>
             </div>
           </div>
 
@@ -183,7 +191,14 @@ const Ceremony = () => {
             data-aos-offset={isMobile ? "150" : "300"}
           >
             <h1>Fasilitas</h1>
-            <img src={fasilitascere} style={{ margin: "0 auto" }}></img>
+            <img
+              src={fasilitascere}
+              style={
+                isMobile
+                  ? { margin: "0 auto", height: "70%", width: "auto" }
+                  : { margin: "0 auto" }
+              }
+            ></img>
           </div>
         </div>
         <div className={container}>

@@ -31,3 +31,4 @@ export { default as jersey } from "./images/jersey.png";
 export { default as medal } from "./images/medal.png";
 
 export { default as daki } from "./images/daki.jpg";
+export { default as TBA } from "./images/TBA.png";
