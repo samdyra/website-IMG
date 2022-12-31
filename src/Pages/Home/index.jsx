@@ -2,30 +2,17 @@ import React, { useRef, useState, useEffect } from "react";
 import style from "./style.module.scss";
 import { BrowserRouter as Router, Link, useNavigate } from "react-router-dom";
 import Typewriter from "typewriter-effect";
-
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../Config/firebase/index";
-
-//THREE
 import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, useGLTF, SpotLight } from "@react-three/drei";
-
-//Styling
-
+import { OrbitControls, useGLTF } from "@react-three/drei";
 import { SliderData, SliderText } from "../../assets/object/SliderData";
 import Carousel from "../../Components/Carousel/Carousel";
 import Gallery from "../../Components/Slider";
 import { gegep1, gegep2, daki } from "../../assets";
-
-import {
-  Carousel3D,
-  ProgressBarCarousel,
-  Modal,
-  VideoEmbed,
-} from "../../Components";
+import { Modal } from "../../Components";
 import { isMobile } from "../../Helpers/mobileResponsive";
+import useLoadData from "../../Helpers/useLoadData";
 
 const HomeScreen = () => {
   const navigate = useNavigate();
@@ -66,23 +53,12 @@ const HomeScreen = () => {
     landingPage,
     sifatMobile,
   } = style;
-
+  const dataKegiatan = useLoadData("kegiatan", "date")
   const [index, setIndex] = useState(0);
-  const [user] = useAuthState(auth);
   const [gegepImage, setGegepImage] = useState(gegep1);
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
-
-  // useEffect(() => {
-  //   let interval = setInterval(() => {
-  //     if (index != 2) {
-  //       return setIndex(index + 1);
-  //     } else return setIndex(0);
-  //   }, 3000);
-
-  //   return () => clearInterval(interval);
-  // }, [index]);
 
   const container2 = useRef(null);
 
@@ -122,12 +98,6 @@ const HomeScreen = () => {
 
   const [openModal, setOpenModal] = useState(false);
 
-  // useEffect(() => {
-  //   openModal
-  //     ? (document.body.style.overflowY = "hidden")
-  //     : (document.body.style.overflowY = "auto");
-  // }, [openModal]);
-
   const handleOpenModal = () => {
     setOpenModal(true);
   };
@@ -137,7 +107,6 @@ const HomeScreen = () => {
       : (document.body.style.overflowY = "auto");
   }, [openModal]);
 
-  console.log(openModal);
 
   return (
     <div>
@@ -344,7 +313,7 @@ const HomeScreen = () => {
             data-aos-offset="400"
             style={{ overflow: "hidden" }}
           >
-            <Gallery sliderName="card" pressItem={handleOpenModal} />
+            <Gallery sliderName="card" pressItem={handleOpenModal} data={dataKegiatan} />
           </div>
         </div>
 

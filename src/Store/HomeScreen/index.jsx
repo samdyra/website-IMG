@@ -39,7 +39,7 @@ const Kamerads = () => {
       setFoto(kamerads);
     });
   }, []);
-  console.log(foto)
+
   const groupedKamerad = kamerad.reduce((groupedKamerad, kamerad) => {
     const kelompok = kamerad.klmpkID;
     if (groupedKamerad[kelompok] == null) groupedKamerad[kelompok] = [];

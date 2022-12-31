@@ -37,8 +37,7 @@ const Gallery = (props) => {
     modalImgSlider,
   } = style;
 
-  const [openModal, setOpenModal] = useState(false);
-
+  const sliderData = props?.data || []
   const sliderName = props.sliderName;
   const handlePressItem = props.pressItem;
   const gallerySettings = {
@@ -147,9 +146,9 @@ const Gallery = (props) => {
           </div>
         </div>
       ) : sliderName == "card" ? (
-        <divasd className={madeElementWrapper}>
+        <div className={madeElementWrapper}>
           <Slider {...cardSettings} className={wrapperCard}>
-            {SliderData.map((slide) => {
+            {sliderData.map((slide) => {
               return (
                 <div className={madeElementContainer}>
                   <div className={madeElementImage}>
@@ -160,31 +159,29 @@ const Gallery = (props) => {
                       style={{
                         display: "flex",
                         marginTop: "20px",
-                        marginBottom: "10px",
+                        marginBottom: "5px",
                         justifyContent: "space-between",
                         width: "100%",
                       }}
                     >
-                      <h1>Webgis</h1>
-                      <h3>10 september 2021</h3>
+                      <h1>{slide.judul}</h1>
+                      <h3>{slide.date}</h3>
                     </div>
                     <p>
-                      Web based GIS (Geographic Information System) of ITB
-                      Kampus Jatinangor. We hope this feature would contribute
-                      to realized a continuous monitoring
+                      {slide.redaksi}
                     </p>
                     <div
                       className={madeElementButton}
                       onClick={handlePressItem}
                     >
-                      <p>Lihat Selengkapnya</p>
+                      Lihat Selengkapnya
                     </div>
                   </div>
                 </div>
               );
             })}
           </Slider>
-        </divasd>
+        </div>
       ) : sliderName == "verticalcard" ? (
         <div>
           <Slider {...verticalcardSettings} className={wrapperVerticalCard}>
