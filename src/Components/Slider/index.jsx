@@ -38,6 +38,7 @@ const Gallery = (props) => {
   const [openModal, setOpenModal] = useState(false);
 
   const sliderData = props?.data || [];
+  const sliderImage = props?.dataImage || [];
   const sliderName = props.sliderName;
   const handlePressItem = props.pressItem;
   const gallerySettings = {
@@ -105,7 +106,7 @@ const Gallery = (props) => {
     centerPadding: "200px",
   };
 
-  const ReversedData = SliderData.slice(0).reverse();
+  const ReversedData = sliderImage.slice(0).reverse();
   useEffect(() => {
     openModal
       ? (document.body.style.overflowY = "hidden")
@@ -130,7 +131,7 @@ const Gallery = (props) => {
                 data-aos-offset="300"
               >
                 <Slider {...gallerySettings} className={wrapperGallery}>
-                  {SliderData.map((slide) => {
+                  {sliderImage.map((slide) => {
                     return (
                       <div className={galleryElementContainer}>
                         <img src={slide.image}></img>
@@ -146,7 +147,7 @@ const Gallery = (props) => {
                 data-aos-offset="250"
               >
                 <Slider {...gallerySettings2} className={wrapperGallery}>
-                  {ReversedData.map((slide) => {
+                  {sliderImage?.map((slide) => {
                     return (
                       <div className={galleryElementContainer}>
                         <img src={slide.image}></img>

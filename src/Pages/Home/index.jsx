@@ -54,7 +54,8 @@ const HomeScreen = () => {
     sifatMobile,
     containerSection2Mobile
   } = style;
-  const dataKegiatan = useLoadData("kegiatan", "date")
+  const dataKegiatan = useLoadData("kegiatan")
+  const dataFoto = useLoadData("foto")
   const [index, setIndex] = useState(0);
   const [gegepImage, setGegepImage] = useState(gegep1);
   const [dataModal, setDataModal] = useState({})
@@ -362,7 +363,7 @@ const HomeScreen = () => {
           <h1>Our Delightful Moments</h1>
         </div>
         <div style={{ overflow: "hidden", marginBottom: "100px" }}>
-          <Gallery sliderName={isMobile ? "modalimg" : "gallery"} />
+          <Gallery dataImage={dataFoto} sliderName={isMobile ? "modalimg" : "gallery"} />
         </div>
       </div>
     </div>

@@ -7,7 +7,7 @@ const useLoadData = (dbName, order) => {
 
   useEffect(() => {
     const dbCollection = collection(db, dbName);
-    const q = query(dbCollection, orderBy(order));
+    const q = query(dbCollection);
     onSnapshot(q, (snapshot) => {
       const response = snapshot.docs.map((doc) => ({
         id: doc.id,
