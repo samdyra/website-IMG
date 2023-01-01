@@ -11,7 +11,6 @@ const Dropdown = (props) => {
 
   const linkName = location.pathname;
 
-  console.log(linkName);
 
   // : linkName === "/Geopoint" || linkName === "/Geopoint/Navigacity" ?
   return (

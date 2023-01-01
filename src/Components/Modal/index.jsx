@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import style from "./style.module.scss";
-import { SliderData } from "../../assets/object/SliderData";
-import { gegepmodal } from "../../assets";
-import Slider from "../Slider";
+import { isMobile } from "../../Helpers/mobileResponsive";
 
-const Modal = ({ ModalName, open, onClose }) => {
+const Modal = ({ ModalName, open, onClose, data }) => {
   const {
     modalButton,
     overlay,
@@ -13,12 +11,8 @@ const Modal = ({ ModalName, open, onClose }) => {
     content2,
     modalRight,
     closeBtn,
-    content,
-    btnContainer,
-    btnPrimary,
-    btnOutline,
-    bold,
-    heading,
+    modalContainer2Mobile,
+    closeBtnMobile
   } = style;
 
   // `${container} isTrue && ${suatukkelas}`;
@@ -37,23 +31,21 @@ const Modal = ({ ModalName, open, onClose }) => {
             onScroll={(e) => {
               e.stopPropagation();
             }}
-            className={modalContainer2}
+            className={!isMobile ? modalContainer2 : modalContainer2Mobile}
           >
-            <p className={closeBtn} onClick={onClose}>
+            <p className={isMobile ? closeBtnMobile : closeBtn} onClick={onClose}>
               X
             </p>
             <div className={content2}>
               <div>
-                <h1>event 1</h1>
-                <h2>tanggal</h2>
+                <h1>{data.judul}</h1>
+                <h2>{data.date}</h2>
+                {isMobile && <img src={data.image}></img>}
                 <p>
-                  Overwork is the expression used to define the cause of working
-                  too hard, too much, or too long. It can be also related to the
-                  act of working beyond one's strength or capacity, causing
-                  physical and/or mental distress in the process.
+                  {data.redaksi}
                 </p>
               </div>
-              <Slider sliderName="modalimg" />
+              {!isMobile && <img src={data.image}></img>}
             </div>
           </div>
         </div>

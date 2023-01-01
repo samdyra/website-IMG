@@ -52,10 +52,12 @@ const HomeScreen = () => {
     type,
     landingPage,
     sifatMobile,
+    containerSection2Mobile
   } = style;
   const dataKegiatan = useLoadData("kegiatan", "date")
   const [index, setIndex] = useState(0);
   const [gegepImage, setGegepImage] = useState(gegep1);
+  const [dataModal, setDataModal] = useState({})
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
@@ -98,7 +100,8 @@ const HomeScreen = () => {
 
   const [openModal, setOpenModal] = useState(false);
 
-  const handleOpenModal = () => {
+  const handleOpenModal = (item) => {
+    setDataModal(item)
     setOpenModal(true);
   };
   useEffect(() => {
@@ -114,8 +117,8 @@ const HomeScreen = () => {
         ModalName="slider"
         open={openModal}
         onClose={() => setOpenModal(false)}
+        data={dataModal}
       ></Modal>
-
       <div className={container} style={{ overflow: "hidden" }}>
         <div className={containerSectionTop}>
           <div className={star}>
@@ -188,12 +191,12 @@ const HomeScreen = () => {
         </div>
         <div className={oval}></div>
         <div
-          className={containerSection2}
+          className={!isMobile ? containerSection2 : containerSection2Mobile}
           ref={container2}
           style={{ overflow: "hidden" }}
         >
           <div className={judulSection2}>
-            <div style={{ display: "flex" }}>
+            <div style={{ display: "flex", fontFamily: "jakarta" }}>
               <h1
                 className={index == 0 ? fadeIn : fadeOut}
                 onClick={() => setIndex(0)}
@@ -320,9 +323,9 @@ const HomeScreen = () => {
         <div className={container}>
           <div
             className={ketuaContainer}
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-offset="400"
+            // data-aos="fade-up"
+            // data-aos-duration="1000"
+            // data-aos-offset="10"
           >
             <div>
               <p>
