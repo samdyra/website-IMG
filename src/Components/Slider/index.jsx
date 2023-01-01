@@ -227,7 +227,7 @@ const Gallery = (props) => {
           // data-aos-offset="300"
           >
             <Slider {...modalImgSettings} className={modalImgSlider}>
-              {SliderData.map((slide) => {
+              {sliderImage.map((slide) => {
                 return (
                   <div className={modalImgContainer}>
                     <img src={slide.image}></img>

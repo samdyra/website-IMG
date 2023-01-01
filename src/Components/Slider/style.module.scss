@@ -29,6 +29,11 @@
   display: flex;
   max-width: 400px;
   max-height: 300px;
+  img {
+    height: 300px;
+    border-radius: 30px;
+    padding-inline: 20px;
+  }
 }
 
 .modalImgContainer img {
