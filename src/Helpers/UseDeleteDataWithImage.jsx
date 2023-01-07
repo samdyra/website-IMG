@@ -4,9 +4,9 @@ import { db, storage } from "../Config/firebase";
 import { toast } from "react-toastify";
 import { deleteObject, ref } from "firebase/storage";
 
-export default function UseDeleteDataWithImage({
+const UseDeleteDataWithImage = ({
   id, image, type
-}) {
+}) => {
   const handleDelete = async () => {
     if (window.confirm(`Are you sure you want to delete this ${type}?`)) {
       try {
@@ -28,3 +28,5 @@ export default function UseDeleteDataWithImage({
     </div>
   );
 }
+
+export default UseDeleteDataWithImage;
