@@ -36,13 +36,13 @@ const Kamerads = () => {
               <span className="visually-hidden">Loading...</span>
             ) : (
               dataKegiatan.map(({
-                id, nama, image, date, redaksi 
+                id, judul, image, date, redaksi 
               }) => (
                 <div className="kameradContainerz">
                   <div key={id} className="kamerad-container-id">
                     <img src={image} style={{ width: 135, height: 135 }}></img>
                     <div className="kamerad-idz">
-                      <div>{nama}</div>
+                      <div>{judul}</div>
                       <div>{date}</div>
                       <div>{redaksi}</div>
                       {user && <UseDeleteDataWithImage id={id} image={image} type="kegiatan" collection="kegiatan"/>}

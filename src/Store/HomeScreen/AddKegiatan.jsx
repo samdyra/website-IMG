@@ -9,74 +9,77 @@ import {
 import { toast } from "react-toastify";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
+import UseCompressImage from "../../Helpers/useCompressImage";
 
 export default function AddKamerad() {
-  const [ user ] = useAuthState(auth),
-    [ formData, setFormData ] = useState({
-      judul: "",
-      image: "",
-      date: "3 Agustus 2022",
-      redaksi: "",
-    }),
+  const [ user ] = useAuthState(auth);
+  const [ formData, setFormData ] = useState({
+    judul: "",
+    image: "",
+    date: "3 Agustus 2022",
+    redaksi: "",
+  });
 
-    [ progress, setProgress ] = useState(0),
+  const [ progressCompress, setProgressCompress ] = useState(0);
 
-    handleChange = (e) => {
-      setFormData({ ...formData, [e.target.name]: e.target.value });
-    },
+  const [ progress, setProgress ] = useState(0);
 
-    handleImageChange = (e) => {
-      setFormData({ ...formData, image: e.target.files[0] });
-    },
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
-    handlePublish = () => {
-      if (!formData.judul || !formData.image || !formData.date) {
-        toast("Please fill all the fields");
-        return;
-      }
+  const handleImageChange = (e) => {
+    UseCompressImage(e, formData, setFormData, setProgressCompress);
+  };
 
-      const storageRef = ref(storage, `/kegiatan/${formData.image.name}`),
+  const handlePublish = () => {
+    if (!formData.judul || !formData.image || !formData.date) {
+      toast("Please fill all the fields");
+      return;
+    }
 
-        uploadImage = uploadBytesResumable(storageRef, formData.image);
+    const storageRef = ref(storage, `/kegiatan/${formData.image.name}`);
 
-      uploadImage.on(
-        "state_changed",
-        (snapshot) => {
-          const progressPercent = Math.round(
-            (snapshot.bytesTransferred / snapshot.totalBytes) * 100
-          );
-          setProgress(progressPercent);
-        },
-        (err) => {
-          console.log(err);
-        },
-        () => {
-          setFormData({
-            judul: "",
-            image: "",
-            date: "",
-            redaksi: ""
-          });
+    const uploadImage = uploadBytesResumable(storageRef, formData.image);
 
-          getDownloadURL(uploadImage.snapshot.ref).then((url) => {
-            const kameradRef = collection(db, "kegiatan");
-            addDoc(kameradRef, {
-              judul: formData.judul,
-              image: url,
-              date: formData.date,
-              redaksi: formData.redaksi,
+    uploadImage.on(
+      "state_changed",
+      (snapshot) => {
+        const progressPercent = Math.round(
+          (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+        );
+        setProgress(progressPercent);
+      },
+      (err) => {
+        console.log(err);
+      },
+      () => {
+        setFormData({
+          judul: "",
+          image: "",
+          date: "",
+          redaksi: ""
+        });
+
+        getDownloadURL(uploadImage.snapshot.ref).then((url) => {
+          const kameradRef = collection(db, "kegiatan");
+          addDoc(kameradRef, {
+            judul: formData.judul,
+            image: url,
+            date: formData.date,
+            redaksi: formData.redaksi,
+          })
+            .then(() => {
+              toast("keigatan lahir", { type: "success" });
+              setProgress(0);
             })
-              .then(() => {
-                toast("keigatan lahir", { type: "success" });
-                setProgress(0);
-              })
-              .catch(() => {
-                toast("Error", { type: "error" });
-              });
-          });
-        }
-      );
-    };
+            .catch(() => {
+              toast("Error", { type: "error" });
+            });
+        });
+      }
+    );
+  };
 
   return (
     <div>
@@ -134,6 +137,16 @@ export default function AddKamerad() {
                 style={{ width: `${progress}%` }}
               >
                 {`uploading image ${progress}%`}
+              </div>
+            </div>
+          )}
+          {progressCompress === 0 || progressCompress == 100 ? null : (
+            <div className="progress">
+              <div
+                className="progress-bar progress-bar-striped mt-2"
+                style={{ width: `${progressCompress}%` }}
+              >
+                {`compressing image ${progressCompress}%`}
               </div>
             </div>
           )}
