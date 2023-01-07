@@ -1,28 +1,34 @@
 import React, { useState } from "react";
-import { Timestamp, collection, addDoc } from "firebase/firestore";
-import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import { storage, db, auth } from "../../Config/firebase/index";
+import { collection, addDoc } from "firebase/firestore";
+import {
+  ref, uploadBytesResumable, getDownloadURL 
+} from "firebase/storage";
+import {
+  storage, db, auth 
+} from "../../Config/firebase/index";
 import { toast } from "react-toastify";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
+import UseCompressImage from "../../Helpers/useCompressImage";
 
 export default function AddKamerad() {
-  const [user] = useAuthState(auth);
-  const [formData, setFormData] = useState({
+  const [ user ] = useAuthState(auth);
+  const [ formData, setFormData ] = useState({
     judul: "",
     desc: "",
     date: "3 Agustus 2022",
     image: "",
   });
 
-  const [progress, setProgress] = useState(0);
+  const [ progress, setProgress ] = useState(0);
+  const [ progressCompress, setProgressCompress ] = useState(0);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleImageChange = (e) => {
-    setFormData({ ...formData, image: e.target.files[0] });
+    UseCompressImage(e, formData, setFormData, setProgressCompress);
   };
 
   const handlePublish = () => {
@@ -65,7 +71,7 @@ export default function AddKamerad() {
               toast("student chapter lahir", { type: "success" });
               setProgress(0);
             })
-            .catch((err) => {
+            .catch(() => {
               toast("Error", { type: "error" });
             });
         });
@@ -129,6 +135,16 @@ export default function AddKamerad() {
                 style={{ width: `${progress}%` }}
               >
                 {`uploading image ${progress}%`}
+              </div>
+            </div>
+          )}
+          {progressCompress === 0 || progressCompress == 100 ? null : (
+            <div className="progress">
+              <div
+                className="barloadingcompress"
+                style={{ width: `${progressCompress}%` }}
+              >
+                {`compressing image ${progressCompress}%`}
               </div>
             </div>
           )}
