@@ -9,15 +9,16 @@ import {
 import { toast } from "react-toastify";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
+import UseCompressImage from "../../Helpers/useCompressImage";
 
 export default function AddImage() {
   const [ user ] = useAuthState(auth),
     [ formData, setFormData ] = useState({ image: "" }),
-
+    [ progressCompress, setProgressCompress ] = useState(0),
     [ progress, setProgress ] = useState(0),
 
     handleImageChange = (e) => {
-      setFormData({ ...formData, image: e.target.files[0] });
+      UseCompressImage(e, formData, setFormData, setProgressCompress);
     },
 
     handlePublish = () => {
@@ -83,6 +84,16 @@ export default function AddImage() {
                 style={{ width: `${progress}%` }}
               >
                 {`uploading image ${progress}%`}
+              </div>
+            </div>
+          )}
+          {progressCompress === 0 || progressCompress == 100 ? null : (
+            <div className="progress">
+              <div
+                className="barloadingcompress"
+                style={{ width: `${progressCompress}%` }}
+              >
+                {`compressing image ${progressCompress}%`}
               </div>
             </div>
           )}
