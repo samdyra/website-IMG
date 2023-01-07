@@ -33,7 +33,7 @@ const Kamerads = () => {
         <div className="testContainer" style={{ marginBottom: 100 }}>
           <div className="adminContainer">
             {dataKegiatan.length === 0 ? (
-              <span className="visually-hidden">Loading...</span>
+              <span className="visually-hidden">Loading../.</span>
             ) : (
               dataKegiatan.map(({
                 id, judul, image, date, redaksi 
