@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
-import { query, collection, onSnapshot, limit } from "firebase/firestore";
+import {
+  query, collection, onSnapshot, limit 
+} from "firebase/firestore";
 import { db } from "../Config/firebase";
 
 const useLoadDataWithOffset = (dbName, limitData = 5, page = 1) => {
-  const [data, setData] = useState([]);
+  const [ data, setData ] = useState([]);
   const shownData = page * limitData;
 
   useEffect(() => {
@@ -17,7 +19,7 @@ const useLoadDataWithOffset = (dbName, limitData = 5, page = 1) => {
       }));
       setData(response);
     });
-  }, [page]);
+  }, [ page ]);
 
   return data;
 };

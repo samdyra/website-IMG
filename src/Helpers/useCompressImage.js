@@ -1,10 +1,10 @@
 import imageCompression from 'browser-image-compression';
 
-const UseCompressImage = async (e, data, setData, setProgress) => {
+const UseCompressImage = async (e, data, setData, setProgress, maxSize=0.2) => {
   const imageFile = e.target.files[0],
 
     options = {
-      maxSizeMB: 0.2,
+      maxSizeMB: maxSize,
       maxWidthOrHeight: 1920,
       useWebWorker: true,
       onProgress: (progress) => {

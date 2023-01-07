@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
-import { query, collection, onSnapshot, limit } from "firebase/firestore";
+import {
+  query, collection, onSnapshot, limit 
+} from "firebase/firestore";
 import { db } from "../Config/firebase";
 
 const useLoadData = (dbName, limitData=10) => {
-  const [data, setData] = useState([]);
+  const [ data, setData ] = useState([]);
 
   useEffect(() => {
     const dbCollection = collection(db, dbName);

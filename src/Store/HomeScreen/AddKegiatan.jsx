@@ -143,7 +143,7 @@ export default function AddKamerad() {
           {progressCompress === 0 || progressCompress == 100 ? null : (
             <div className="progress">
               <div
-                className="progress-bar progress-bar-striped mt-2"
+                className="barloadingcompress"
                 style={{ width: `${progressCompress}%` }}
               >
                 {`compressing image ${progressCompress}%`}
