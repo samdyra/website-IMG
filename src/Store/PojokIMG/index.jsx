@@ -1,31 +1,22 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import {
-  query, collection, onSnapshot 
-} from "firebase/firestore";
-import { auth, db } from "../../Config/firebase/index"
+import { useState } from "react";
+import { auth } from "../../Config/firebase/index"
 import "./index.css";
 import { useAuthState } from "react-firebase-hooks/auth";
-import DeleteStory from "./DeleteFAQ";
 import AddStory from "./AddFAQ";
 import NavbarAdmin from "../components/NavbarAdmin";
+import useLoadDataWithOffset from "../../Helpers/useLoadDataWithOffset";
+import UseDeleteData from "../../Helpers/UseDeleteData";
 
 const Stories = () => {
-  const [ story, setStory ] = useState([]);
 
   const [ user ] = useAuthState(auth);
 
-  useEffect(() => {
-    const storyRef = collection(db, "FAQ");
-    const q = query(storyRef);
-    onSnapshot(q, (snapshot) => {
-      const story = snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
-      setStory(story);
-    });
-  }, []);
+  const [ offset, setOffset ] = useState(1)
+  const dataFAQ = useLoadDataWithOffset("FAQ", 3, offset)
+  const loadMoreKegiatan = () => {
+    setOffset(offset + 1);
+  }
 
   return (
     <div>
@@ -35,10 +26,10 @@ const Stories = () => {
       </div>
       <div className="testContainer" style={{ marginBottom: 50 }}>
         <div className="adminContainer">
-          {story.length === 0 ? (
+          {dataFAQ.length === 0 ? (
             <span className="visually-hidden">Loading...</span>
           ) : (
-            story.map(({
+            dataFAQ.map(({
               id, tanya, jawab 
             }) => (
               <div className="kameradContainer">
@@ -46,12 +37,15 @@ const Stories = () => {
                   <div className="kamerad-idx">
                     <div className="kmrdnm">{tanya}</div>
                     <div className="kmrdcrt">{jawab}</div>
-                    {user && <DeleteStory id={id} />}
+                    {user && <UseDeleteData id={id} type="FAQ" />}
                   </div>
                 </div>
               </div>
             ))
           )}
+          <button className="buttonLoadMore" onClick={loadMoreKegiatan}>
+            LOAD MORE
+          </button>
         </div>
         <div>
           <AddStory></AddStory>
