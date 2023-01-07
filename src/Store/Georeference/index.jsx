@@ -1,40 +1,36 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import { query, collection, onSnapshot, orderBy } from "firebase/firestore";
-import { auth, db } from "../../Config/firebase/index"
+import { useState } from "react";
+import { auth } from "../../Config/firebase/index"
 import "./index.css";
 import { useAuthState } from "react-firebase-hooks/auth";
 import AddMessage from "./AddMessage";
-import DeleteMessage from "./DeleteMessage";
 import NavbarAdmin from "../components/NavbarAdmin";
+import useLoadDataWithOffset from "../../Helpers/useLoadDataWithOffset";
+import UseDeleteData from "../../Helpers/UseDeleteData";
 
 const Messages = () => {
-  const [message, setMessage] = useState([]);
-  const [user] = useAuthState(auth);
-  useEffect(() => {
-    const messageRef = collection(db, "georeference");
-    const q = query(messageRef);
-    onSnapshot(q, (snapshot) => {
-      const message = snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
-      setMessage(message);
-    });
-  }, []);
+  const [ user ] = useAuthState(auth);
+
+  const [ offset, setOffset ] = useState(1)
+  const dataGeo = useLoadDataWithOffset("georeference", 3, offset)
+  const loadMoreGeo = () => {
+    setOffset(offset + 1);
+  }
 
   return (
     <div>
-     <NavbarAdmin></NavbarAdmin>
+      <NavbarAdmin></NavbarAdmin>
       <div className="warning">
-       GEOREFERENCE
+        GEOREFERENCE
       </div>
       <div className="testContainer">
         <div className="adminContainer">
-          {message.length === 0 ? (
+          {dataGeo.length === 0 ? (
             <span className="visually-hidden">Loading...</span>
           ) : (
-            message.map(({ id, judul, penerbit, kategori, sarjana, tahun, abstrak }) => (
+            dataGeo.map(({
+              id, judul, penerbit, kategori, sarjana, tahun, abstrak 
+            }) => (
               <div className="kameradContainer">
                 <div key={id} className="kamerad-container-id">
                   <div className="kamerad-ids">
@@ -44,12 +40,15 @@ const Messages = () => {
                     <div>{kategori}</div>
                     <div>{sarjana}</div>
                     <div>{tahun}</div>
-                    {user && <DeleteMessage id={id} />}
+                    {user && <UseDeleteData id={id} type="georeference" />}
                   </div>
                 </div>
               </div>
             ))
           )}
+          <button className="buttonLoadMore" onClick={loadMoreGeo}>
+            LOAD MORE
+          </button>
         </div>
         <div>
           <AddMessage></AddMessage>
