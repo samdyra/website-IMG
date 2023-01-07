@@ -1,94 +1,87 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import { query, collection, onSnapshot } from "firebase/firestore";
-import { auth, db } from "../../Config/firebase/index"
+import { useState } from "react";
+import { auth } from "../../Config/firebase/index"
 import "./index.css";
 import { useAuthState } from "react-firebase-hooks/auth";
-import DeleteStory from "./DeleteIsuKampus";
 import AddStory from "./AddIsuKampus";
-// import { orderBy } from "firebase/firestore";
 import NavbarAdmin from "../components/NavbarAdmin";
 import AddCurhat from "./AddHeadline";
-import DeleteCurhat from "./DeleteHeadline";
+import useLoadDataWithOffset from "../../Helpers/useLoadDataWithOffset";
+import UseDeleteDataWithImage from "../../Helpers/UseDeleteDataWithImage";
+import UseDeleteData from "../../Helpers/UseDeleteData";
+
 const Stories = () => {
-  const [story, setStory] = useState([]);
-  const [headline, setHeadline] = useState([]);
+  const [ user ] = useAuthState(auth);
 
-  const [user] = useAuthState(auth);
+  const [ offset, setOffset ] = useState(1)
+  const dataIsuKampus = useLoadDataWithOffset("isuKampus", 3, offset)
+  const loadMoreDataIsuKampus = () => {
+    setOffset(offset + 1);
+  }
 
-  useEffect(() => {
-    const storyRef = collection(db, "isuKampus");
-    const q = query(storyRef);
-    onSnapshot(q, (snapshot) => {
-      const story = snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
-      setStory(story);
-    });
-  }, []);
-
-  useEffect(() => {
-    const storyRef = collection(db, "headlineKesenatoran");
-    const q = query(storyRef);
-    onSnapshot(q, (snapshot) => {
-      const story = snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
-      setHeadline(story);
-    });
-  }, []);
+  const [ offsetSenator, setOffsetSenator ] = useState(1)
+  const dataSenator = useLoadDataWithOffset("headlineKesenatoran", 3, offsetSenator)
+  const loadMoreSenator = () => {
+    setOffsetSenator(offsetSenator + 1);
+  }
 
   return (
     <div>
       <NavbarAdmin></NavbarAdmin>
       <div className="warning">
-      Isu Kampus
+        Isu Kampus
       </div>
-      <div className="testContainer" style={{marginBottom: 50}}>
+      <div className="testContainer" style={{ marginBottom: 50 }}>
         <div className="adminContainer">
-          {story.length === 0 ? (
+          {dataIsuKampus.length === 0 ? (
             <span className="visually-hidden">Loading...</span>
           ) : (
-            story.map(({ id, judul, image, date, desc }) => (
+            dataIsuKampus.map(({
+              id, judul, image, date, desc 
+            }) => (
               <div className="kameradContainerz">
-                  <div key={id} className="kamerad-container-id">
-                    <img src={image} style={{ width: 135, height: 135 }}></img>
-                    <div className="kamerad-idz">
-                      <div>{judul}</div>
-                      <div>{date}</div>
-                      <div>{desc}</div>
-                      {user && <DeleteStory id={id} image={image} />}
-                    </div>
+                <div key={id} className="kamerad-container-id">
+                  <img src={image} style={{ width: 135, height: 135 }}></img>
+                  <div className="kamerad-idz">
+                    <div>{judul}</div>
+                    <div>{date}</div>
+                    <div>{desc}</div>
+                    {user && <UseDeleteDataWithImage id={id} image={image} type="isuKampus" />}
                   </div>
                 </div>
+              </div>
             ))
           )}
+          <button className="buttonLoadMore" onClick={loadMoreDataIsuKampus}>
+            LOAD MORE
+          </button>
         </div>
         <div>
           <AddStory></AddStory>
         </div>
       </div>
       <div className="warning">
-      HEADLINE
+        HEADLINE
       </div>
       <div className="testContainer">
         <div className="adminContainer">
-          {headline.length === 0 ? (
+          {dataSenator.length === 0 ? (
             <span className="visually-hidden">Loading...</span>
           ) : (
-            headline.map(({ id,  headline}) => (
+            dataSenator.map(({ id, headline }) => (
               <div className="kameradContainer">
                 <div key={id} className="kamerad-container-id">
                   <div className="kamerad-idx">
                     <div className="kmrdnm">{headline}</div>
-                    {user && <DeleteCurhat id={id} />}
+                    {user && <UseDeleteData id={id} type="headlineKesenatoran" />}
                   </div>
                 </div>
               </div>
             ))
           )}
+          <button className="buttonLoadMore" onClick={loadMoreSenator}>
+            LOAD MORE
+          </button>
         </div>
         <div>
           <AddCurhat></AddCurhat>
