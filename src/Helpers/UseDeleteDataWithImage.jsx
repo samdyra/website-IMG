@@ -5,18 +5,20 @@ import { toast } from "react-toastify";
 import { deleteObject, ref } from "firebase/storage";
 
 export default function UseDeleteDataWithImage({
-  id, image, type="data", collection
+  id, image, type
 }) {
   const handleDelete = async () => {
     if (window.confirm(`Are you sure you want to delete this ${type}?`)) {
       try {
-        await deleteDoc(doc(db, collection, id));
-        toast(`${type} deleted successfully`, { type: "success" });
+        await deleteDoc(doc(db, type, id))
+        toast(`${type} deleted successfully`, { type: "success" })
         const storageRef = ref(storage, image);
+        console.log("storageRef", storageRef)
         await deleteObject(storageRef);
       }
       catch (error) {
         toast(`Error deleting ${type}`, { type: "error" });
+        console.log("erroe", error)
       }
     }
   };

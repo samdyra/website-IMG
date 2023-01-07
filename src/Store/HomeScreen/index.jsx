@@ -4,7 +4,6 @@ import { auth } from "../../Config/firebase/index";
 import AddKamerad from "./AddKegiatan";
 import AddImage from "./AddImage";
 import "./index.css";
-import DeleteImage from "./DeleteImage";
 import { useAuthState } from "react-firebase-hooks/auth";
 import NavbarAdmin from "../components/NavbarAdmin";
 import useLoadDataWithOffset from "../../Helpers/useLoadDataWithOffset";
@@ -18,9 +17,10 @@ const Kamerads = () => {
     loadMoreKegiatan = () => {
       setOffset(offset + 1);
     },
+    
 
     [ offsetImage, setOffsetImage ] = useState(1),
-    dataFoto = useLoadDataWithOffset("foto", 3, offsetImage),
+    dataFoto = useLoadDataWithOffset("fotoHome", 3, offsetImage),
     loadMoreFoto = () => {
       setOffsetImage(offsetImage + 1);
     };
@@ -70,7 +70,7 @@ const Kamerads = () => {
                   <div key={id} className="kamerad-container-id">
                     <img src={image} style={{ width: 150, height: 150 }}></img>
                     <div className="kamerad-idz">
-                      {user && <DeleteImage id={id} image={image} />}
+                      {user && <UseDeleteDataWithImage id={id} image={image} type="fotoHome" />}
                     </div>
                   </div>
                 </div>

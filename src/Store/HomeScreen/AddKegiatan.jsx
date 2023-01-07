@@ -1,78 +1,82 @@
 import React, { useState } from "react";
-import { Timestamp, collection, addDoc } from "firebase/firestore";
-import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import { storage, db, auth } from "../../Config/firebase/index";
+import { collection, addDoc } from "firebase/firestore";
+import {
+  ref, uploadBytesResumable, getDownloadURL 
+} from "firebase/storage";
+import {
+  storage, db, auth 
+} from "../../Config/firebase/index";
 import { toast } from "react-toastify";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
 
 export default function AddKamerad() {
-  const [user] = useAuthState(auth);
-  const [formData, setFormData] = useState({
-    judul: "",
-    image: "",
-    date: "3 Agustus 2022",
-    redaksi: "",
-  });
+  const [ user ] = useAuthState(auth),
+    [ formData, setFormData ] = useState({
+      judul: "",
+      image: "",
+      date: "3 Agustus 2022",
+      redaksi: "",
+    }),
 
-  const [progress, setProgress] = useState(0);
+    [ progress, setProgress ] = useState(0),
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+    handleChange = (e) => {
+      setFormData({ ...formData, [e.target.name]: e.target.value });
+    },
 
-  const handleImageChange = (e) => {
-    setFormData({ ...formData, image: e.target.files[0] });
-  };
+    handleImageChange = (e) => {
+      setFormData({ ...formData, image: e.target.files[0] });
+    },
 
-  const handlePublish = () => {
-    if (!formData.judul || !formData.image || !formData.date) {
-      toast("Please fill all the fields");
-      return;
-    }
-
-    const storageRef = ref(storage, `/kegiatan/${formData.image.name}`);
-
-    const uploadImage = uploadBytesResumable(storageRef, formData.image);
-
-    uploadImage.on(
-      "state_changed",
-      (snapshot) => {
-        const progressPercent = Math.round(
-          (snapshot.bytesTransferred / snapshot.totalBytes) * 100
-        );
-        setProgress(progressPercent);
-      },
-      (err) => {
-        console.log(err);
-      },
-      () => {
-        setFormData({
-          judul: "",
-          image: "",
-          date: "",
-          redaksi: ""
-        });
-
-        getDownloadURL(uploadImage.snapshot.ref).then((url) => {
-          const kameradRef = collection(db, "kegiatan");
-          addDoc(kameradRef, {
-            judul: formData.judul,
-            image: url,
-            date: formData.date,
-            redaksi: formData.redaksi,
-          })
-            .then(() => {
-              toast("keigatan lahir", { type: "success" });
-              setProgress(0);
-            })
-            .catch((err) => {
-              toast("Error", { type: "error" });
-            });
-        });
+    handlePublish = () => {
+      if (!formData.judul || !formData.image || !formData.date) {
+        toast("Please fill all the fields");
+        return;
       }
-    );
-  };
+
+      const storageRef = ref(storage, `/kegiatan/${formData.image.name}`),
+
+        uploadImage = uploadBytesResumable(storageRef, formData.image);
+
+      uploadImage.on(
+        "state_changed",
+        (snapshot) => {
+          const progressPercent = Math.round(
+            (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+          );
+          setProgress(progressPercent);
+        },
+        (err) => {
+          console.log(err);
+        },
+        () => {
+          setFormData({
+            judul: "",
+            image: "",
+            date: "",
+            redaksi: ""
+          });
+
+          getDownloadURL(uploadImage.snapshot.ref).then((url) => {
+            const kameradRef = collection(db, "kegiatan");
+            addDoc(kameradRef, {
+              judul: formData.judul,
+              image: url,
+              date: formData.date,
+              redaksi: formData.redaksi,
+            })
+              .then(() => {
+                toast("keigatan lahir", { type: "success" });
+                setProgress(0);
+              })
+              .catch(() => {
+                toast("Error", { type: "error" });
+              });
+          });
+        }
+      );
+    };
 
   return (
     <div>
