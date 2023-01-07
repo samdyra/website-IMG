@@ -91,7 +91,7 @@ export default function AddKamerad() {
         </>
       ) : (
         <div className="formadmincontainer">
-          <dic className="formtitle">Create</dic>
+          <div className="formtitle">Create</div>
 
           <div className="formadmin">
             <label htmlFor="">Judul</label>
