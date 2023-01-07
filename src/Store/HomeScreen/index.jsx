@@ -7,7 +7,7 @@ import "./index.css";
 import { useAuthState } from "react-firebase-hooks/auth";
 import NavbarAdmin from "../components/NavbarAdmin";
 import useLoadDataWithOffset from "../../Helpers/useLoadDataWithOffset";
-import UseDeleteDataWithImage from "../../Helpers/useDeleteDataWithImage";
+import UseDeleteDataWithImage from "../../Helpers/UseDeleteDataWithImage";
 
 const Kamerads = () => {
   const [ user ] = useAuthState(auth),
