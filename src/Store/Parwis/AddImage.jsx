@@ -1,21 +1,25 @@
 import React, { useState } from "react";
-import { Timestamp, collection, addDoc } from "firebase/firestore";
-import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import { storage, db, auth } from "../../Config/firebase/index";
+import { collection, addDoc } from "firebase/firestore";
+import {
+  ref, uploadBytesResumable, getDownloadURL 
+} from "firebase/storage";
+import {
+  storage, db, auth 
+} from "../../Config/firebase/index";
 import { toast } from "react-toastify";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
+import UseCompressImage from "../../Helpers/useCompressImage";
 
 export default function AddImage() {
-  const [user] = useAuthState(auth);
-  const [formData, setFormData] = useState({
-    image: ""
-  });
+  const [ user ] = useAuthState(auth);
+  const [ formData, setFormData ] = useState({ image: "" });
 
-  const [progress, setProgress] = useState(0);
+  const [ progress, setProgress ] = useState(0);
+  const [ progressCompress, setProgressCompress ] = useState(0);
 
   const handleImageChange = (e) => {
-    setFormData({ ...formData, image: e.target.files[0] });
+    UseCompressImage(e, formData, setFormData, setProgressCompress);
   };
 
   const handlePublish = () => {
@@ -40,21 +44,16 @@ export default function AddImage() {
         console.log(err);
       },
       () => {
-        setFormData({
-          image: "",
-  
-        });
+        setFormData({ image: "", });
 
         getDownloadURL(uploadImage.snapshot.ref).then((url) => {
           const kameradRef = collection(db, "fotoParwis");
-          addDoc(kameradRef, {
-            image: url,
-          })
+          addDoc(kameradRef, { image: url, })
             .then(() => {
               toast("foto lahir", { type: "success" });
               setProgress(0);
             })
-            .catch((err) => {
+            .catch(() => {
               toast("Error", { type: "error" });
             });
         });
@@ -90,6 +89,16 @@ export default function AddImage() {
                 style={{ width: `${progress}%` }}
               >
                 {`uploading image ${progress}%`}
+              </div>
+            </div>
+          )}
+          {progressCompress === 0 || progressCompress == 100 ? null : (
+            <div className="progress">
+              <div
+                className="barloadingcompress"
+                style={{ width: `${progressCompress}%` }}
+              >
+                {`compressing image ${progressCompress}%`}
               </div>
             </div>
           )}
