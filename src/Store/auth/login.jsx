@@ -24,7 +24,7 @@ export default function Login() {
           navigate("/admin/kegiatan")
         } else navigate("/Pojokimg")
       })
-      .catch(() => toast(error.code, { type: "error" }))
+      .catch((error) => toast(error.code, { type: "error" }))
   };
   return (
     <div style={{ paddingTop: 100, paddingBottom: 100 }}>

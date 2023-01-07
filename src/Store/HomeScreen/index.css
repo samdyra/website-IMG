@@ -79,3 +79,13 @@
   color: rgb(252, 81, 81);
   border: 2px solid rgb(242, 98, 98);
 }
+
+.buttonLoadMore {
+  color: black;
+  border: 2px solid black;
+  margin-top: 20px;
+  margin-inline: 70px;
+  padding-top: 5px;
+  border-radius: 30px;
+  padding-bottom: 5px;
+}
