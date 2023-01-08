@@ -24,6 +24,7 @@
   width: 200px;
   height: 48px;
   background: #ff9f78;
+  font-family: jakarta;
 
   margin: 0 auto;
 
@@ -106,7 +107,7 @@
   @media screen and (max-width: 420px) {
     justify-content: center;
     h1 {
-      font-family: "Plus Jakarta Sans";
+      font-family: jakartaBold;
       font-style: normal;
       font-weight: 800;
       font-size: 32px;
@@ -156,18 +157,21 @@
 }
 
 .titleMajalah {
+  font-family: jakarta;
   h2 {
     font-size: 32px;
     font-weight: 600;
     color: #4b8579;
     margin-bottom: 20px;
-    margin-left: 50px;
+    // margin-left: 50px;
   }
 }
 
 .descContainer2 {
   height: 100px;
   overflow-y: hidden;
+  font-family: jakarta;
+
   p {
     font-size: 20px;
     text-align: justify;
@@ -180,7 +184,7 @@
 
     p {
       text-align: justify;
-      font-family: "Plus Jakarta Sans";
+      font-family: jakarta;
       font-style: normal;
       font-weight: 400;
       font-size: 16px;

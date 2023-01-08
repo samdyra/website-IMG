@@ -5,7 +5,9 @@ import {
 import { db } from "../Config/firebase";
 
 const useLoadData = (dbName, limitData=10) => {
-  const [ data, setData ] = useState([]);
+  const [ data, setData ] = useState([ {
+    judul: "", desc: "", pdf: "", image: "" 
+  } ]);
 
   useEffect(() => {
     const dbCollection = collection(db, dbName);

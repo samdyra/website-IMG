@@ -125,7 +125,7 @@ const Gallery = (props) => {
                 className={slidecontainer}
                 data-aos="slide-left"
                 data-aos-duration="1200"
-                data-aos-offset="300"
+                data-aos-offset="100"
               >
                 <Slider {...gallerySettings} className={wrapperGallery}>
                   {sliderImage.map((slide) => (
@@ -139,7 +139,7 @@ const Gallery = (props) => {
                 className={slidecontainer}
                 data-aos="slide-right"
                 data-aos-duration="1000"
-                data-aos-offset="250"
+                data-aos-offset="10"
               >
                 <Slider {...gallerySettings2} className={wrapperGallery}>
                   {sliderImage?.map((slide) => (

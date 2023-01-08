@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import style from "./style.module.scss";
 import Slider from "react-slick";
-import { SliderData, SliderText } from "../../assets/object/SliderData";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import kontur1 from "../../assets/images/kontur1.svg";
@@ -26,10 +25,18 @@ export default function DoubleSlider(props) {
     descContainer2,
     kontur,
   } = style;
+  const [ dataMajalah, setDataMajalah ] = useState([ {
+    judul: "", desc: "", pdf: "", image: "" 
+  } ])
+
+  useEffect(() => {
+    setDataMajalah(props?.data)
+  }, [ props ])
+
   const sliderName = props.sliderName;
 
-  const [nav1, setNav1] = useState();
-  const [nav2, setNav2] = useState();
+  const [ nav1, setNav1 ] = useState();
+  const [ nav2, setNav2 ] = useState();
 
   return (
     <div className={containerSection}>
@@ -55,29 +62,27 @@ export default function DoubleSlider(props) {
             asNavFor={nav2}
             ref={(slider1) => setNav1(slider1)}
             className={slider1}
-            fade={true}
-            arrows={false}
+            arrows={true}
+            dots={true}
           >
-            {SliderText.map((text, index) => {
-              return (
-                <div>
-                  {isMobile ? null : (
-                    <div className={titleMajalah}>
-                      <h2>{text.title}</h2>
-                    </div>
-                  )}
+            {dataMajalah.map((text) => (
+              <div>
+                {isMobile ? null : (
+                  <div className={titleMajalah}>
+                    <h2>{text?.judul}</h2>
+                  </div>
+                )}
 
-                  <div className={descContainer}>
-                    <div className={descContainer2}>
-                      <p style={{ paddingInline: "20px" }}>{text.desc}</p>
-                    </div>
-                    <div href="/WebGIS" className={madeElementButton}>
-                      <p>Click Here to Read</p>
-                    </div>
+                <div className={descContainer}>
+                  <div className={descContainer2}>
+                    <p style={{ paddingInline: "20px" }}>{text?.desc}</p>
+                  </div>
+                  <div className={madeElementButton}>
+                    <p onClick={() => window.open(text?.pdf)} >See Majalah</p>
                   </div>
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </Slider>
         </div>
       </div>
@@ -91,14 +96,13 @@ export default function DoubleSlider(props) {
           focusOnSelect={true}
           className={slider2}
           arrows={true}
+          dots={true}
         >
-          {SliderData.map((data, index) => {
-            return (
-              <div className={galleryElementContainer2}>
-                <img src={data.image} alt="gallery" />
-              </div>
-            );
-          })}
+          {dataMajalah.map((data) => (
+            <div className={galleryElementContainer2}>
+              <img src={data?.image} alt="gallery" />
+            </div>
+          ))}
         </Slider>
       </div>
 
