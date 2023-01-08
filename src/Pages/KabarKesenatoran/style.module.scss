@@ -12,14 +12,12 @@
 
 .containerSection {
   margin: 0 auto;
-  height: 720px;
   display: flex;
   align-items: center;
-
   margin-top: 50px;
   flex-direction: column;
-  overflow: hidden;
-  
+  height: auto;
+  margin-bottom: 200px;
 
   h1 {
     font-family: jakartaBold;

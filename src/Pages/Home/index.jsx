@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import React, {
   useRef, useState, useEffect 
 } from "react";
@@ -299,10 +300,10 @@ const HomeScreen = () => {
           style={{ overflow: "hidden" }}
         >
           <div className={judulSection4}>
-            <h1>Kegiatan IMG-ITB</h1>
+            <h1 style={{ marginBottom: "20px" }}>Kegiatan IMG-ITB</h1>
             <div>
-              <h3>Ketinggalan Informasi</h3>
-              <h3>
+              <h3>Ketinggalan Informasi?</h3>
+              <h3 style={{ marginBottom: "20px" }}>
                 Berikut Redaksi Acara IMG-ITB yang dapat kamu baca kembali!
               </h3>
             </div>
@@ -358,7 +359,7 @@ const HomeScreen = () => {
         <div className={judulSection5}>
           <h1>Our Delightful Moments</h1>
         </div>
-        <div style={{ overflow: "hidden", marginBottom: "100px" }}>
+        <div style={{ marginBottom: "100px" }}>
           <Gallery dataImage={dataFoto} sliderName={isMobile ? "modalimg" : "gallery"} />
         </div>
       </div>

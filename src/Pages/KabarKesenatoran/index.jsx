@@ -29,13 +29,13 @@ const kabarKesenatoran = () => {
         data={dataModal}
       ></Modal>
       <Header desc={desc} background={background} isSenator/>
-      <div className={containerSection}>
-        <h1>Inkubasi Isu Kampus</h1>
-        <Gallery sliderName="verticalcard" data={dataInternal} pressItem={handleOpenModal}/>
-      </div>
       <div className={containerSectionMedia}>
         <h1>Media Kesenatoran</h1>
         <img onClick={() => window.open("https://www.instagram.com/kesenatoranimg/")} src={insta}></img>
+      </div>
+      <div className={containerSection}>
+        <h1>Inkubasi Isu Kampus</h1>
+        <Gallery sliderName="verticalcard" data={dataInternal} pressItem={handleOpenModal}/>
       </div>
     </div>
   );

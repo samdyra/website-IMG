@@ -53,12 +53,13 @@ const Gallery = (props) => {
 
   const cardSettings = {
     infinite: true,
-    speed: 1000,
+    speed: 1500,
     slidesToShow: screenWidth <= 420 ? 1 : screenWidth <= 1280 ? 3 : 4,
-    autoplay: false,
-    autoplaySpeed: 2000,
+    autoplay: true,
+    autoplaySpeed: 4000,
     arrows: false,
     swipeToSlide: true,
+    dots: true,
   };
 
 
@@ -66,39 +67,37 @@ const Gallery = (props) => {
     // infinite: true,
     // speed: 1000,
     // swipeToSlide: true,
-    // autoplay: true,
-    // autoplaySpeed: 2000,
+    autoplay: true,
+    autoplaySpeed: 4000,
     // arrows: false,
     // dots: true,
     // centerMode: true,
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: false,
   };
 
   const verticalcardSettings = {
     infinite: true,
-    speed: 1000,
+    speed: 1500,
     slidesToShow: 5,
     autoplay: false,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 4000,
     arrows: true,
     vertical: true,
     verticalSwiping: true,
     swipeToSlide: true,
-    dots: true,
   };
 
   const gallerySettings2 = {
     infinite: true,
-    speed: 1000,
+    speed: 1500,
     slidesToShow: 3,
     swipeToSlide: true,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 4000,
     rtl: true,
     centerMode: true,
     arrows: false,
@@ -215,7 +214,7 @@ const Gallery = (props) => {
           // data-aos-duration="1200"
           // data-aos-offset="300"
           >
-            <Slider {...modalImgSettings} className={modalImgSlider}>
+            <Slider {...modalImgSettings} dots={true} className={modalImgSlider}>
               {sliderImage.map((slide) => (
                 <div className={modalImgContainer}>
                   <img src={slide.image}></img>

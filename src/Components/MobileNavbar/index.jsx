@@ -94,7 +94,7 @@ const MobileNavbar = () => {
 
   window.addEventListener("scroll", setFixed);
   return (
-    <div>
+    <div style={{fontFamily: "jakarta"}}>
       {linkName === "/" ? (
         <div>
           <div
