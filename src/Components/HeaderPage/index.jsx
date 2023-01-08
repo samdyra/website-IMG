@@ -1,18 +1,14 @@
 import React from "react";
 import style from "./style.module.scss";
 
-const Header = () => {
+const Header = (props) => {
   const { container, content } = style;
   return (
-    <div className={container}>
+    <div className={container} style={{ backgroundImage: `url(${props.background})` }}>
       <div className={content}>
-        <h1>Ikatan Mahasiswa Geodesi</h1>
+        <h1>{props.title}</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-          Voluptatem enim vero exercitationem animi sequi possimus expedita placeat vel 
-          incidunt maiores nulla blanditiis eum fugit molestias facere aperiam, r
-          epellat porro quaerat eius illum, saepe fuga voluptates numquam quos. Laboriosam maxime,
-          praesentium, natus commodi eaque veritatis perspiciatis error nulla ducimus aperiam laborum?
+          {props.desc}
         </p>
       </div>
     </div>

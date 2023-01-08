@@ -9,7 +9,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("../../assets/images/backgroundheader.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -34,7 +33,7 @@
   @media screen and (max-width: 420px) {
     justify-content: center;
     h1 {
-      font-family: "Plus Jakarta Sans";
+      font-family: jakarta;
       font-style: normal;
       font-weight: 800;
       font-size: 32px;
@@ -75,7 +74,7 @@
     justify-content: center;
     width: 100vw;
     h1 {
-      font-family: "Plus Jakarta Sans";
+      font-family: jakarta;
       font-style: normal;
       font-weight: 800;
       font-size: 32px;
@@ -85,7 +84,7 @@
     }
 
     p {
-      font-family: "Plus Jakarta Sans";
+      font-family: jakarta;
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
