@@ -17,8 +17,9 @@
   align-items: center;
 
   margin-top: 50px;
-
   flex-direction: column;
+  overflow: hidden;
+  
 
   h1 {
     font-family: jakartaBold;
@@ -29,6 +30,46 @@
     margin-bottom: 20px;
   }
 }
+
+.containerSection::-webkit-scrollbar {
+  width: 8px;
+}
+
+.containerSectionMedia {
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-family: jakartaBold;
+    font-style: bold;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 140%;
+    margin-bottom: 20px;
+  }
+
+  img {
+    width: 720px;
+    @media screen and (max-width: 420px) {
+      width: 375px;
+    }
+
+  }
+
+  img:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  
+}
+
+// .containerSectionMedia:hover {
+//   cursor: pointer;
+//   opacity: 0.8;
+// }
 
 .box1 {
   background-color: orange;
@@ -149,3 +190,4 @@
   max-height: auto;
   margin: 0 auto;
 }
+

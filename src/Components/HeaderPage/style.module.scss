@@ -44,6 +44,52 @@
   }
 }
 
+.containerSenator {
+  margin: 0 auto;
+
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  color: black;
+
+  h1 {
+    font-family: jakarta;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 120%;
+  }
+
+  p {
+    font-family: jakarta;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+  }
+
+  @media screen and (max-width: 420px) {
+    justify-content: center;
+    h1 {
+      font-family: jakarta;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 32px;
+      line-height: 140%;
+
+      text-align: center;
+    }
+  }
+}
+
 .content {
   display: flex;
   flex-direction: column;

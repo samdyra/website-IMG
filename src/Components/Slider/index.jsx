@@ -85,10 +85,11 @@ const Gallery = (props) => {
     slidesToShow: 5,
     autoplay: false,
     autoplaySpeed: 2000,
-    arrows: false,
+    arrows: true,
     vertical: true,
     verticalSwiping: true,
     swipeToSlide: true,
+    dots: true,
   };
 
   const gallerySettings2 = {
