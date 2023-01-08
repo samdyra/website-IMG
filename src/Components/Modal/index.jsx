@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import style from "./style.module.scss";
 import { isMobile } from "../../Helpers/mobileResponsive";
 
-const Modal = ({ ModalName, open, onClose, data }) => {
+const Modal = ({
+  ModalName, open, onClose, data 
+}) => {
   const {
-    modalButton,
     overlay,
     modalContainer,
     modalContainer2,
@@ -15,10 +16,7 @@ const Modal = ({ ModalName, open, onClose, data }) => {
     closeBtnMobile
   } = style;
 
-  // `${container} isTrue && ${suatukkelas}`;
-  const windowOffset = window.scrollY;
   if (!open) return null;
-  const [counter, setCounter] = useState(0);
 
   return (
     <div>
@@ -42,7 +40,7 @@ const Modal = ({ ModalName, open, onClose, data }) => {
                 <h2>{data.date}</h2>
                 {isMobile && <img src={data.image}></img>}
                 <p>
-                  {data.redaksi}
+                  {data?.redaksi ? data.redaksi : data?.desc}
                 </p>
               </div>
               {!isMobile && <img src={data.image}></img>}

@@ -1,6 +1,7 @@
 .container {
   background-color: white;
   padding-top: 100px;
+  font-family: jakarta;
 
   h1 {
     font-family: jakarta;
@@ -15,6 +16,7 @@
   align-items: center;
   flex-direction: column;
   gap: 20px;
+
   h1 {
     font-weight: bold;
     text-align: center;
@@ -37,10 +39,10 @@
     align-items: center;
     padding: 16px 24px;
     gap: 10px;
-    width: 380px;
+    width: 280px;
     height: 40px;
     border: none;
-
+    margin-bottom: 30px;
     /* Orange */
 
     background: #ff4a01;

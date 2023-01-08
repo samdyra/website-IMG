@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import style from "./style.module.scss";
 import Slider from "react-slick";
-import { SliderData } from "../../assets/object/SliderData";
 import { Modal } from "../../Components";
-import { isMobile } from "../../Helpers/mobileResponsive";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -29,13 +27,13 @@ const Gallery = (props) => {
     verticalCardImage,
     verticalCardContent,
     verticalCardButton,
-    verticalCardWrapper,
     slidecontainer,
     modalImgContainer,
     modalImgSlider,
+    verticalTitle
   } = style;
 
-  const [openModal, setOpenModal] = useState(false);
+  const [ openModal, setOpenModal ] = useState(false);
 
   const sliderData = props?.data || [];
   const sliderImage = props?.dataImage || [];
@@ -106,12 +104,11 @@ const Gallery = (props) => {
     centerPadding: "200px",
   };
 
-  const ReversedData = sliderImage.slice(0).reverse();
   useEffect(() => {
     openModal
       ? (document.body.style.overflowY = "hidden")
       : (document.body.style.overflowY = "auto");
-  }, [openModal]);
+  }, [ openModal ]);
 
   return (
     <div>
@@ -131,13 +128,11 @@ const Gallery = (props) => {
                 data-aos-offset="300"
               >
                 <Slider {...gallerySettings} className={wrapperGallery}>
-                  {sliderImage.map((slide) => {
-                    return (
-                      <div className={galleryElementContainer}>
-                        <img src={slide.image}></img>
-                      </div>
-                    );
-                  })}
+                  {sliderImage.map((slide) => (
+                    <div className={galleryElementContainer}>
+                      <img src={slide.image}></img>
+                    </div>
+                  ))}
                 </Slider>
               </div>
               <div
@@ -147,13 +142,11 @@ const Gallery = (props) => {
                 data-aos-offset="250"
               >
                 <Slider {...gallerySettings2} className={wrapperGallery}>
-                  {sliderImage?.map((slide) => {
-                    return (
-                      <div className={galleryElementContainer}>
-                        <img src={slide.image}></img>
-                      </div>
-                    );
-                  })}
+                  {sliderImage?.map((slide) => (
+                    <div className={galleryElementContainer}>
+                      <img src={slide.image}></img>
+                    </div>
+                  ))}
                 </Slider>
               </div>
             </div>
@@ -161,62 +154,57 @@ const Gallery = (props) => {
         ) : sliderName == "card" ? (
           <div className={madeElementWrapper}>
             <Slider {...cardSettings} className={wrapperCard}>
-              {sliderData.map((slide) => {
-                return (
-                  <div className={madeElementContainer}>
-                    <div className={madeElementImage}>
-                      <img src={slide.image}></img>
+              {sliderData.map((slide) => (
+                <div className={madeElementContainer}>
+                  <div className={madeElementImage}>
+                    <img src={slide.image}></img>
+                  </div>
+                  <div className={madeElementContent}>
+                    <div
+                      style={{
+                        display: "flex",
+                        marginTop: "20px",
+                        marginBottom: "5px",
+                        justifyContent: "space-between",
+                        width: "100%",
+                      }}
+                    >
+                      <h1>{slide.judul}</h1>
+                      <h3>{slide.date}</h3>
                     </div>
-                    <div className={madeElementContent}>
-                      <div
-                        style={{
-                          display: "flex",
-                          marginTop: "20px",
-                          marginBottom: "5px",
-                          justifyContent: "space-between",
-                          width: "100%",
-                        }}
-                      >
-                        <h1>{slide.judul}</h1>
-                        <h3>{slide.date}</h3>
-                      </div>
-                      <p>{slide.redaksi}</p>
-                      <div
-                        className={madeElementButton}
-                        onClick={() => handlePressItem(slide)}
-                      >
-                        Lihat Selengkapnya
-                      </div>
+                    <p>{slide.redaksi}</p>
+                    <div
+                      className={madeElementButton}
+                      onClick={() => handlePressItem(slide)}
+                    >
+                      Lihat Selengkapnya
                     </div>
                   </div>
-                );
-              })}
+                </div>
+              ))}
             </Slider>
           </div>
         ) : sliderName == "verticalcard" ? (
           <div>
             <Slider {...verticalcardSettings} className={wrapperVerticalCard}>
-              {SliderData.map((slide) => {
-                return (
-                  <div className={verticalCardContainer}>
-                    <div className={verticalCardImage}>
-                      <img src={slide.image}></img>
-                      <div className={verticalCardContent}>
-                        <h1>WEBGIS</h1>
-                        <p>
-                          Web based GIS (Geographic Information System) of ITB
-                          Kampus Jatinangor. We hope this feature would
-                          contribute to realized a continuous monitoring and
-                          sustainable development of ITB Kampus Jatinangor.
-                        </p>
-                        <button className={verticalCardButton}>
-                          Click Here
-                        </button>
+              {sliderData.map((slide) => (
+                <div className={verticalCardContainer}>
+                  <div className={verticalCardImage}>
+                    <img src={slide.image}></img>
+                    <div className={verticalCardContent}>
+                      <div className={verticalTitle}>{slide.judul}</div>
+                      <p>
+                        {slide.desc}
+                      </p>
+                      <div className={verticalCardButton}
+                        onClick={() => handlePressItem(slide)}
+                      >
+                        Read More
                       </div>
                     </div>
                   </div>
-                );
-              })}
+                </div>
+              ))}
             </Slider>
           </div>
         ) : sliderName == "modalimg" ? (
@@ -227,13 +215,11 @@ const Gallery = (props) => {
           // data-aos-offset="300"
           >
             <Slider {...modalImgSettings} className={modalImgSlider}>
-              {sliderImage.map((slide) => {
-                return (
-                  <div className={modalImgContainer}>
-                    <img src={slide.image}></img>
-                  </div>
-                );
-              })}
+              {sliderImage.map((slide) => (
+                <div className={modalImgContainer}>
+                  <img src={slide.image}></img>
+                </div>
+              ))}
             </Slider>
           </div>
         ) : null}

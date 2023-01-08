@@ -250,7 +250,7 @@
 .verticalCardContainer {
   max-width: 1100px;
   max-height: 1500px;
-  background: #d9d9d9;
+  background: #ffffff;
   border-radius: 25px;
   margin-block: 10px;
   margin-left: 50px;
@@ -277,7 +277,7 @@
   height: 200px;
   border-radius: 25px 0 0 25px;
   margin: 0 0 0 0;
-  object-fit: fill;
+  object-fit: cover;
   margin-left: -25px;
   @media screen and (max-width: 420px) {
     width: 150px;
@@ -288,66 +288,60 @@
   width: 900px;
   display: flex;
   font-weight: 400;
-  font-size: 12px;
   color: #000000;
   flex-direction: column;
-  padding-left: 50px;
   text-align: left;
-  gap: 20px;
-  padding-top: 20px;
+  justify-content: space-around;
+  padding-left: 20px;
+  padding-block: 10px;
 
-  h1 {
+
+  .verticalTitle {
     max-width: fit-content;
     text-align: left;
     font-style: normal;
-    font-weight: 500;
+    font-size: 24px;
+    font-family: jakartaBold;;
+  }
+
+  p {
+    padding-bottom: 2px;
+    text-align: justify;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* number of lines to show */
+            line-clamp: 5; 
+    -webkit-box-orient: vertical;
     font-size: 15px;
   }
 
   @media screen and (max-width: 420px) {
     width: 50vw;
-    padding-left: 20px;
     padding-top: 0;
-    gap: 0;
-    max-height: 200px;
-    h1 {
-      margin-bottom: 0 0 0 0;
-    }
     p {
-      margin-bottom: 10px;
+      text-align: left;
     }
   }
 }
 
 .verticalCardButton {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 10px;
-  align-items: left;
-  text-align: center;
+  background: #ff4a01;
+  padding: 8px 18px;
   border-radius: 11px;
-  padding: 9px 25px;
-  margin-bottom: 25px;
-  text-decoration: none;
-  max-width: 150px;
-  max-height: 13px;
-
-  background: #ff8735;
-  border-bottom: none;
+  max-width: 120px;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  
   @media screen and (max-width: 420px) {
-    padding-bottom: 15px;
   }
 }
 
 .verticalCardButton:hover {
-  background: white;
-  border-radius: 11px;
   cursor: pointer;
   transition-duration: 300ms;
-
-  p {
-    color: #ff8735;
-  }
+  // background: #ee8945;
 }
 
 .verticalCardCard {
