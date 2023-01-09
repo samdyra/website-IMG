@@ -18,7 +18,7 @@ export { default as bintanghome } from "./images/bintanghome.png";
 export { default as gegepceremony } from "./images/gegepceremony.png";
 export { default as gegepwebinar } from "./images/gegepwebinar.png";
 export { default as Organogram } from "./object/Organogram";
-export { default as intel } from "./images/intel.png";
+export { default as intel } from "./images/intell.png";
 
 export { default as gegepgeospasial } from "./images/gegepgeospasial.png";
 export { default as gegepgts } from "./images/gegepgts.png";
