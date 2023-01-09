@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../../Components/HeaderPage";
-import backgroundIntel from "../../assets/images/intel.png"
 import { Majalah } from "../../Components";
+import { intel } from "../../assets";
 
 
 const Locus = () => {
@@ -10,7 +10,7 @@ const Locus = () => {
 
   return (
     <div>
-      <Header title={title} desc={desc} background={backgroundIntel} />
+      <Header title={title} desc={desc} background={intel} />
       <Majalah db="locus" title="LOCUS" />
     </div>
   );
