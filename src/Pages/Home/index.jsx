@@ -9,7 +9,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
-import { SliderData, SliderText } from "../../assets/object/SliderData";
+import { SliderText } from "../../assets/object/SliderData";
 import Carousel from "../../Components/Carousel/Carousel";
 import Gallery from "../../Components/Slider";
 import {
@@ -18,6 +18,7 @@ import {
 import { Modal } from "../../Components";
 import { isMobile } from "../../Helpers/mobileResponsive";
 import useLoadData from "../../Helpers/useLoadData";
+import { Organogram } from "../../assets";
 
 const HomeScreen = () => {
   const navigate = useNavigate();
@@ -291,7 +292,7 @@ const HomeScreen = () => {
             data-aos-offset={isMobile ? "200" : "430"}
           >
             {/* {isMobile ? null : <Carousel slides={SliderData} />} */}
-            <Carousel slides={SliderData} />
+            <Carousel slides={Organogram} />
           </div>
         </div>
 

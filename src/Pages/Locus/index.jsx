@@ -11,7 +11,7 @@ const Locus = () => {
   return (
     <div>
       <Header title={title} desc={desc} background={background} />
-      <Majalah db="majalah" title="LOCUS" />
+      <Majalah db="locus" title="LOCUS" />
     </div>
   );
 };

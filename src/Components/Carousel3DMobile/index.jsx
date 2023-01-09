@@ -1,6 +1,5 @@
-import React, { useRef, useCallback } from "react";
+import React, { useRef } from "react";
 import "./Carousel3DMobile.css";
-import { SliderData } from "../../assets/object/SliderData";
 import { useEffect } from "react";
 import {
   slidernavigacity,

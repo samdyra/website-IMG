@@ -15,11 +15,10 @@
   color: white;
 
   h1 {
-    font-family: jakarta;
+    font-family: jakartaBold;
     font-style: normal;
-    font-weight: 800;
-    font-size: 48px;
     line-height: 120%;
+    color: #FF4A01;
   }
 
   p {
@@ -33,11 +32,11 @@
   @media screen and (max-width: 420px) {
     justify-content: center;
     h1 {
-      font-family: jakarta;
+      font-family: jakartaBold;
       font-style: normal;
-      font-weight: 800;
       font-size: 32px;
       line-height: 140%;
+      color: #FF4A01;
 
       text-align: center;
     }
@@ -97,10 +96,10 @@
   justify-content: center;
 
   h1 {
-    font-family: jakarta;
+    font-family: jakartaBold;
     font-style: normal;
     font-weight: 700;
-    font-size: 40px;
+    font-size: 56px;
     line-height: 125%;
     text-align: center;
     margin-bottom: 80px;
@@ -120,10 +119,10 @@
     justify-content: center;
     width: 100vw;
     h1 {
-      font-family: jakarta;
+      font-family: jakartaBold;
       font-style: normal;
       font-weight: 800;
-      font-size: 32px;
+      font-size: 46px;
       line-height: 140%;
       text-align: center;
     }

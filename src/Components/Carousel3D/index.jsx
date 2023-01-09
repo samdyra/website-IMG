@@ -1,6 +1,6 @@
 import React, { useRef, useCallback } from "react";
 import "./Carousel3D.css";
-import { SliderData } from "../../assets/object/SliderData";
+
 import { useEffect } from "react";
 import {
   slidernavigacity,

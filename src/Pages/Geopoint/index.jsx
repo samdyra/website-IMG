@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { SliderData } from "../../assets/object/SliderData";
 import { isMobile } from "../../Helpers/mobileResponsive";
 import {
   Carousel3D,

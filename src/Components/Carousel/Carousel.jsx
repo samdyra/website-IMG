@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { SliderData } from "../../assets/object/SliderData";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 import "./Carousel.css";
 import { isMobile } from "../../Helpers/mobileResponsive";
 
-const Carousel = ({ slides, props }) => {
-  const [current, setCurrent] = useState(0);
+const Carousel = ({ slides }) => {
+  const [ current, setCurrent ] = useState(0);
   const length = slides.length;
 
   const nextSlide = () => {
@@ -21,7 +20,7 @@ const Carousel = ({ slides, props }) => {
   }
 
   return (
-    <section className="sliderWin">
+    <div className="sliderWin">
       <FaArrowAltCircleLeft
         className={isMobile ? "left-arrow-mobile" : "left-arrow"}
         onClick={prevSlide}
@@ -30,23 +29,23 @@ const Carousel = ({ slides, props }) => {
         className={isMobile ? "right-arrow-mobile" : "right-arrow"}
         onClick={nextSlide}
       />
-      {slides.map((slide, index) => {
-        return (
-          <div
-            className={index === current ? "slideWin active" : "slideWin"}
-            key={index}
-          >
-            {index === current && (
+      {slides.map((slide, index) => (
+        <div
+          className={index === current ? "slideWin active" : "slideWin"}
+          key={index}
+        >
+          {index === current && (
+            <div className={isMobile ? "imageSliderMobilex" : "imageSliderx"}>
               <img
                 src={slide.image}
                 alt="travel image"
-                className={isMobile ? "imageSliderMobile" : "imageSlider"}
               />
-            )}
-          </div>
-        );
-      })}
-    </section>
+            </div>
+
+          )}
+        </div>
+      ))}
+    </div>
   );
 };
 

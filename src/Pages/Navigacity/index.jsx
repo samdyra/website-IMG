@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { SliderData } from "../../assets/object/SliderData";
 import { useNavigate } from "react-router-dom";
 
 import {
