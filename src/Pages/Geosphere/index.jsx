@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../../Components/HeaderPage";
-import background from "../../assets/images/intel.png";
 import { Majalah } from "../../Components";
+import { intel } from "../../assets";
 
 
 const Geosphere = () => {
@@ -9,7 +9,7 @@ const Geosphere = () => {
   const desc = "Geosphere merupakan majalah keilmuan yang memiliki tujuan untuk mengenalkan serta memberikan wawasan kepada pembaca seputar keilmuan dan keprofesian Teknik Geodesi dan Geomatika."
   return (
     <div>
-      <Header title={title} desc={desc} background={background} />
+      <Header title={title} desc={desc} background={intel} />
       <Majalah db="geosphere" title="GEOSPHERE" />
     </div>
   );
