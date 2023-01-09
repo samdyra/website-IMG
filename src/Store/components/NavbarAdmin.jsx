@@ -12,6 +12,7 @@ const NavbarAdmin = () => (
       <a href="/admin/georeference">GEOREFERENCE</a>
       <a href="/admin/locus">LOCUS</a>
       <a href="/admin/geosphere">GEOSPHERE</a>
+      <a href="/admin/imgx">IMGX</a>
       <a href="/admin/signup">SIGN UP</a>
       <a href="/admin/signupuserlevel9">USER LEVEL 9</a>
     </div>

@@ -12,6 +12,8 @@ export { default as StudentChapterAdmin } from "./StudentChapter";
 export { default as GeoreferenceAdmin } from "./Georeference";
 export { default as LocusAdmin } from "./Locus";
 export { default as GeosphereAdmin } from "./Geosphere";
+export { default as IMGXAdmin } from "./IMGX";
+
 
 
 

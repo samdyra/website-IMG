@@ -32,7 +32,8 @@ import {
   StudentChapterAdmin,
   GeoreferenceAdmin,
   LocusAdmin,
-  GeosphereAdmin
+  GeosphereAdmin,
+  IMGXAdmin
 } from "./Store";
 import isUserLevel9 from "./Helpers/isUserLevel9";
 import { isMobile } from "./Helpers/mobileResponsive";
@@ -92,6 +93,10 @@ function App() {
             <Route
               path="/admin/geosphere"
               element={<GeosphereAdmin />}
+            ></Route>
+             <Route
+              path="/admin/imgx"
+              element={<IMGXAdmin />}
             ></Route>
           </>
         )}

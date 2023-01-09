@@ -1,0 +1,57 @@
+.testContainer {
+  display: flex;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 20px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.adminContainer {
+  display: flex;
+  flex-direction: column;
+  /* position: absolute; */
+}
+
+.kameradContainerz {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  border-bottom: 1px solid black;
+}
+
+.kamerad-container-id {
+  display: flex;
+  /* border: 3px solid red; */
+}
+
+.kamerad-container-id img {
+  border-radius: 20px;
+  object-fit: cover;
+  /* border: 3px solid red; */
+}
+
+.kamerad-idz {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  justify-content: space-between;
+  font-family: poppins;
+}
+
+
+.deleteButton button {
+  border: 2px solid red;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 128, 0);
+  color: red;
+}
+
+.deleteButton button:hover {
+  cursor: pointer;
+  color: rgb(252, 81, 81);
+  border: 2px solid rgb(242, 98, 98);
+}
