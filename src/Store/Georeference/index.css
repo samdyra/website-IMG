@@ -47,25 +47,6 @@
   font-size: small;
 }
 
-.admin-navbar a {
-  padding-right: 40px;
-  text-decoration: none;
-  color: rgb(9, 9, 115);
-  text-align: center;
-  font-family: poppins;
-}
-
-.admin-navbar a:hover {
-  color: blue;
-}
-
-.admin-navbar {
-  width: 1280px;
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  padding-block: 20px;
-}
 
 .deleteButton button {
   border: 2px solid red;

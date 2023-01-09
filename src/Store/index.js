@@ -10,6 +10,10 @@ export { default as Parwis } from "./Parwis";
 export { default as Kesenatoran } from "./Kesenatoran";
 export { default as StudentChapterAdmin } from "./StudentChapter";
 export { default as GeoreferenceAdmin } from "./Georeference";
+export { default as LocusAdmin } from "./Locus";
+export { default as GeosphereAdmin } from "./Geosphere";
+
+
 
 
 

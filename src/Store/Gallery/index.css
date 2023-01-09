@@ -59,15 +59,21 @@
 }
 
 .admin-navbar a {
-  padding-right: 40px;
+  margin-right: 20px;
+  padding-inline: 10px;
   text-decoration: none;
-  color: rgb(9, 9, 115);
   text-align: center;
-  font-family: poppins;
+  font-family: jakarta;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 
 .admin-navbar a:hover {
-  color: blue;
+  color: black;
+  text-decoration: underline;
+
 }
 
 .admin-navbar {
@@ -75,7 +81,14 @@
   display: flex;
   justify-content: center;
   margin: auto;
-  padding-block: 20px;
+  padding-block: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 30px;
+  border: 1px solid black;
+  align-items: center;
+  justify-content: center;
 }
 
 .deleteButton button {

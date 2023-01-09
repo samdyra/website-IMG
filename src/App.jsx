@@ -1,4 +1,6 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router, Route, Routes 
+} from "react-router-dom";
 import {
   HomeScreen,
   Pojokimg,
@@ -29,6 +31,8 @@ import {
   Kesenatoran,
   StudentChapterAdmin,
   GeoreferenceAdmin,
+  LocusAdmin,
+  GeosphereAdmin
 } from "./Store";
 import isUserLevel9 from "./Helpers/isUserLevel9";
 import { isMobile } from "./Helpers/mobileResponsive";
@@ -80,6 +84,14 @@ function App() {
             <Route
               path="/admin/internal"
               element={<InternalActivities />}
+            ></Route>
+            <Route
+              path="/admin/locus"
+              element={<LocusAdmin />}
+            ></Route>
+            <Route
+              path="/admin/geosphere"
+              element={<GeosphereAdmin />}
             ></Route>
           </>
         )}
