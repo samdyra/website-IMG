@@ -21,7 +21,6 @@ export default function DoubleSlider(props) {
     slider2,
     title,
     madeElementButton,
-    titleMajalah,
     descContainer2,
     kontur,
   } = style;
@@ -33,7 +32,6 @@ export default function DoubleSlider(props) {
     setDataMajalah(props?.data)
   }, [ props ])
 
-  const sliderName = props.sliderName;
 
   const [ nav1, setNav1 ] = useState();
   const [ nav2, setNav2 ] = useState();
@@ -48,13 +46,12 @@ export default function DoubleSlider(props) {
         data-aos-offset="100"
       >
         <div className={title}>
-          {isMobile ? null : sliderName === "paradewisuda" ? (
-            <h1>Majalah Parade Wisuda</h1>
-          ) : sliderName === "locus" ? (
-            <h1>Majalah LOCUS</h1>
-          ) : sliderName === "geosphere" ? (
-            <h1>Majalah GEOSHPERE</h1>
-          ) : null}
+          {isMobile ? null : 
+            <div style={style.titleContainer}>
+            <h2>MAJALAH</h2>
+            <h1>{props.title}</h1>
+          </div>
+          }
         </div>
 
         <div>
@@ -67,18 +64,13 @@ export default function DoubleSlider(props) {
           >
             {dataMajalah.map((text) => (
               <div>
-                {isMobile ? null : (
-                  <div className={titleMajalah}>
-                    <h2>{text?.judul}</h2>
-                  </div>
-                )}
-
                 <div className={descContainer}>
+                  <h1 >{text?.judul}</h1>
                   <div className={descContainer2}>
-                    <p style={{ paddingInline: "20px" }}>{text?.desc}</p>
+                    <p>{text?.desc}</p>
                   </div>
                   <div className={madeElementButton}>
-                    <p onClick={() => window.open(text?.pdf)} >See Majalah</p>
+                    <p onClick={() => window.open(text?.pdf)}>READ MORE</p>
                   </div>
                 </div>
               </div>
@@ -96,7 +88,6 @@ export default function DoubleSlider(props) {
           focusOnSelect={true}
           className={slider2}
           arrows={true}
-          dots={true}
         >
           {dataMajalah.map((data) => (
             <div className={galleryElementContainer2}>
@@ -108,13 +99,7 @@ export default function DoubleSlider(props) {
 
       {isMobile ? (
         <div className={title}>
-          {sliderName === "paradewisuda" ? (
-            <h1>Majalah Parade Wisuda</h1>
-          ) : sliderName === "locus" ? (
-            <h1>Majalah LOCUS</h1>
-          ) : sliderName === "geosphere" ? (
-            <h1>Majalah GEOSHPERE</h1>
-          ) : null}
+          <h1>{props.title}</h1>
         </div>
       ) : null}
     </div>

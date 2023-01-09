@@ -132,6 +132,7 @@ const MobileNavbar = () => {
             <a href="/Locus">Locus</a>
             <a href="/Geosphere">Geosphere</a>
             <a href="/IMGx">IMG-X</a>
+            <a href="/login">Login</a>
           </div>
         </div>
       ) : linkName === "/Geopoint" ||
@@ -170,6 +171,7 @@ const MobileNavbar = () => {
             <a href="/Locus">Locus</a>
             <a href="/Geosphere">Geosphere</a>
             <a href="/IMGx">IMG-X</a>
+            <a href="/login">Login</a>
           </div>
         </div>
       ) : linkName === "/DPM" ? null : (
@@ -206,6 +208,7 @@ const MobileNavbar = () => {
             <a href="/Locus">Locus</a>
             <a href="/Geosphere">Geosphere</a>
             <a href="/IMGx">IMG-X</a>
+            <a href="/login">Login</a>
           </div>
         </div>
       )}

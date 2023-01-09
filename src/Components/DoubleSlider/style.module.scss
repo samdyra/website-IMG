@@ -1,39 +1,57 @@
 .descContainer {
   width: 600px;
-  height: 220px;
+  height: 300px;
   display: flex;
-  background: #ff7045;
+  background: #FF4A01;
   border-radius: 25px;
   margin: 0 auto;
   display: flex;
-  gap: 20px;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+
+
+  h1 {
+    text-align: center;
+    color: white;
+    font-family: jakartaBold;
+    font-size: 48px;
+    margin-top: 15px;
+  }
+  
 
   @media screen and (max-width: 420px) {
-    margin-top: 90px;
     width: 88vw;
-    height: 120px;
+    height: 220px;
+
+    h1 {
+      text-align: center;
+      color: white;
+      font-family: jakartaBold;
+      font-size: 32px;
+      margin-top: 15px;
+    }
   }
 }
 
 .madeElementButton {
-  border-radius: 25px;
+  border-radius: 15px;
   padding: 0 auto;
-  padding-top: 15px;
-  width: 200px;
-  height: 48px;
-  background: #ff9f78;
+  width: 180px;
+  height: 50px;
   font-family: jakarta;
-
+  border: 1px solid white;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 
   p {
     text-align: center;
     font-style: normal;
     text-decoration: none;
-
-    font-size: 17px;
+    color: white;
+    font-size: 12px;
   }
 
   @media screen and (max-width: 420px) {
@@ -54,8 +72,8 @@
 }
 
 .madeElementButton:hover {
-  background: white;
-  color: #fb8252;
+  background: #fa7b49;
+  cursor: pointer;
 }
 .slider2 {
   display: flex;
@@ -72,6 +90,9 @@
 .galleryElementContainer2 {
   max-width: 500px;
   height: 600px;
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+margin-block: 10px;
+
 
   @media screen and (max-width: 420px) {
     max-width: 90vw;
@@ -84,6 +105,11 @@
   height: 590px;
   object-fit: cover;
   border-radius: 20px;
+  padding-inline: 10px;
+
+
+
+
 
   @media screen and (max-width: 420px) {
     width: 90vw;
@@ -98,10 +124,18 @@
   h1 {
     max-width: 350px;
     max-height: 190px;
-    font-size: 89px;
+    font-size: 86px;
     font-weight: 300;
-    color: #4b8579;
+    color: black;
     font-family: jakartabold;
+  }
+
+  h2 {
+    font-family: jakartaBold;
+    font-size: 24PX;
+    padding-left: 5px;
+    line-height: 1px;
+
   }
 
   @media screen and (max-width: 420px) {
@@ -136,15 +170,16 @@
 
 .halfpage {
   max-width: 600px;
-  max-height: 700px;
+  height: 590px;
   display: flex;
   flex-direction: column;
-  gap: 125px;
-
+  justify-content: space-between;
+  
   @media screen and (max-width: 420px) {
     max-width: 100vw;
-    max-height: 100vh;
+    height: 350px;
     gap: 0;
+    margin-bottom: 100px;
   }
 }
 
@@ -156,25 +191,23 @@
   }
 }
 
-.titleMajalah {
-  font-family: jakarta;
-  h2 {
-    font-size: 32px;
-    font-weight: 600;
-    color: #4b8579;
-    margin-bottom: 20px;
-    // margin-left: 50px;
-  }
-}
-
 .descContainer2 {
-  height: 100px;
   overflow-y: hidden;
   font-family: jakarta;
 
   p {
     font-size: 20px;
     text-align: justify;
+    color: white;
+    height: 150px;
+    padding-inline: 50px;
+    overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 5; /* number of lines to show */
+           line-clamp: 5; 
+   -webkit-box-orient: vertical;
+
   }
 
   @media screen and (max-width: 420px) {
@@ -183,12 +216,20 @@
     height: 100px;
 
     p {
+    padding-inline: 20px;
       text-align: justify;
       font-family: jakarta;
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
       line-height: 140%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3; /* number of lines to show */
+              line-clamp: 3; 
+      -webkit-box-orient: vertical;
+
     }
   }
 }
