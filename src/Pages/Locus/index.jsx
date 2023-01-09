@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../../Components/HeaderPage";
-import background from "../../assets/images/intel.png";
+import backgroundIntel from "../../assets/images/intel.png"
 import { Majalah } from "../../Components";
 
 
@@ -10,7 +10,7 @@ const Locus = () => {
 
   return (
     <div>
-      <Header title={title} desc={desc} background={background} />
+      <Header title={title} desc={desc} background={backgroundIntel} />
       <Majalah db="locus" title="LOCUS" />
     </div>
   );
