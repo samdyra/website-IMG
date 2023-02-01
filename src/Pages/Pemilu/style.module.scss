@@ -1,6 +1,93 @@
 .wrapper {
   margin: 0 auto;
   max-width: 1280px;
-  padding: 60px;
+}
+
+.backgroundTop {
+  background: #1a1b1f;
+  width: 100vw;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
   height: 100vh;
+}
+
+.containerTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 40px;
+  height: 100vh;
+  gap: 45px;
+
+  img {
+    height: 300px;
+  }
+
+  h1 {
+    font-family: "Black Harbour";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 65px;
+    line-height: 18px;
+    /* identical to box height, or 28% */
+
+    letter-spacing: 0.05em;
+
+    color: #ffffff;
+  }
+
+  h2 {
+    font-family: "Black Harbour";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 110%;
+    max-width: 570px;
+    text-align: center;
+
+    color: #ffffff;
+  }
+}
+
+.buttonDokumen {
+  background: #800000;
+  box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.3);
+  border-radius: 7px;
+  padding-inline: 26px;
+  padding-block: 12px;
+  font-family: "Black Harbour";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.buttonDokumen:hover {
+  background: #d00707;
+  transform: scale3d(1.1, 1.1, 2);
+}
+
+.container {
+  height: 100vh;
+
+  h1 {
+    font-family: "Black Harbour";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 119px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+  }
 }
