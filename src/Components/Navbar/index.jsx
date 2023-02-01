@@ -24,7 +24,7 @@ const Navbar = () => {
     containeractive,
     containerGeopoint,
   } = style;
-  const [, setFix] = useState(false);
+  const [fix, setFix] = useState(false);
 
   const changeBackground = () => {
     if (window.scrollY >= 680) {

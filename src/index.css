@@ -204,7 +204,12 @@ input:focus {
 
 @font-face {
   font-family: bambino;
-  src: url(./assets/fonts/BambinoBlack.ttf) format("woff2")
+  src: url(./assets/fonts/BambinoBlack.ttf) format("woff2");
+}
+
+@font-face {
+  font-family: BlackHarbour;
+  src: url(./assets/fonts/BlackHarbour.ttf) format("woff2");
 }
 
 body {

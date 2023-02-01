@@ -19,6 +19,7 @@ const Pemilu = () => {
         <button className={buttonDokumen}>Dokumen Pemilu IMG-ITB 2023</button>
       </div>
       <ProgressBar />
+
       <div className={s.container}>
         <h1>who’s the next pirate king?</h1>
       </div>

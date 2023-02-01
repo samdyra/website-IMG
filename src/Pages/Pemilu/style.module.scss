@@ -10,7 +10,7 @@
   z-index: -1;
   left: 0;
   top: 0;
-  height: 100vh;
+  height: 120vh;
 }
 
 .containerTop {
@@ -19,15 +19,16 @@
   align-items: center;
   flex-direction: column;
   margin-bottom: 40px;
-  height: 100vh;
+  height: 120vh;
   gap: 45px;
+  position: relative;
 
   img {
     height: 300px;
   }
 
   h1 {
-    font-family: "Black Harbour";
+    font-family: "BlackHarbour";
     font-style: normal;
     font-weight: 400;
     font-size: 65px;
@@ -40,7 +41,7 @@
   }
 
   h2 {
-    font-family: "Black Harbour";
+    font-family: "BlackHarbour";
     font-style: normal;
     font-weight: 400;
     font-size: 25px;
@@ -58,7 +59,7 @@
   border-radius: 7px;
   padding-inline: 26px;
   padding-block: 12px;
-  font-family: "Black Harbour";
+  font-family: "BlackHarbour";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -78,15 +79,21 @@
 
 .container {
   height: 100vh;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   h1 {
-    font-family: "Black Harbour";
+    font-family: "BlackHarbour";
     font-style: normal;
     font-weight: 400;
     font-size: 100px;
     line-height: 119px;
     display: flex;
     align-items: center;
+    text-align: center;
 
     color: #000000;
   }
