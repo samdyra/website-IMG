@@ -12,7 +12,7 @@ const Navbar = () => {
 
   const linkName = location.pathname;
 
-  const [ , setNavbar ] = useState(false);
+  const [, setNavbar] = useState(false);
   const {
     container,
     linkContainer,
@@ -24,13 +24,12 @@ const Navbar = () => {
     containeractive,
     containerGeopoint,
   } = style;
-  const [ , setFix ] = useState(false);
+  const [, setFix] = useState(false);
 
   const changeBackground = () => {
     if (window.scrollY >= 680) {
       setNavbar(false);
-    }
-    else {
+    } else {
       setNavbar(true);
     }
   };
@@ -45,15 +44,14 @@ const Navbar = () => {
   //   }
   // };
 
-  const [ offset, setOffset ] = useState(0);
+  const [offset, setOffset] = useState(0);
 
   window.addEventListener("scroll", () => setOffset(window.pageYOffset / 600));
 
   function setFixed() {
     if (window.scrollY >= 392) {
       setFix(true);
-    }
-    else {
+    } else {
       setFix(false);
     }
   }
@@ -61,10 +59,14 @@ const Navbar = () => {
   window.addEventListener("scroll", setFixed);
   return (
     <div>
-      {linkName === "/" ? (
+      {linkName === "/" || linkName === "/Pemilu" ? (
         <div
           className={containeractive}
-          style={{ background: `rgba(75,133,121, ${offset})` }}
+          style={
+            linkName === "/Pemilu"
+              ? { background: `rgba(128,0,0, ${offset})` }
+              : { background: `rgba(75,133,121, ${offset})` }
+          }
         >
           <div className={container}>
             <div>
@@ -96,64 +98,64 @@ const Navbar = () => {
       ) : linkName === "/Geopoint" ||
         linkName === "/Geopoint/Navigacity" ||
         linkName === "/Geopoint/Ceremony" ? (
-          <div className={containerGeopoint}>
-            <div className={container}>
-              <div>
-                <Link className={logo} to="/">
-                  <img src={LogoIMG} />
-                  <div className={logotext}>
-                    <h1 style={{ fontFamily: "jakartabold" }}>
-                      IKATAN MAHASISWA GEODESI
-                    </h1>
-                    <h1>INSTITUT TEKNOLOGI BANDUNG</h1>
-                  </div>
-                </Link>
-              </div>
-
-              <div className={linkContainer}>
-                <Dropdown menuName="activities" />
-                <Dropdown menuName="karya" />
-                <Link className={link} to="/Pojokimg">
-                  <div>Pojok IMG</div>
-                </Link>
-              </div>
-              <a href="/login">
-                <div className={searchIcon}>
-                  <img src={login} />
+        <div className={containerGeopoint}>
+          <div className={container}>
+            <div>
+              <Link className={logo} to="/">
+                <img src={LogoIMG} />
+                <div className={logotext}>
+                  <h1 style={{ fontFamily: "jakartabold" }}>
+                    IKATAN MAHASISWA GEODESI
+                  </h1>
+                  <h1>INSTITUT TEKNOLOGI BANDUNG</h1>
                 </div>
-              </a>
+              </Link>
             </div>
-          </div>
-        ) : linkName === "/DPM" ? null : (
-          <div className={containerbig}>
-            <div className={container}>
-              <div>
-                <Link className={logo} to="/">
-                  <img src={LogoIMG} />
-                  <div className={logotext}>
-                    <h1 style={{ fontFamily: "jakartabold" }}>
-                      IKATAN MAHASISWA GEODESI
-                    </h1>
-                    <h1>INSTITUT TEKNOLOGI BANDUNG</h1>
-                  </div>
-                </Link>
-              </div>
 
-              <div className={linkContainer}>
-                <Dropdown menuName="activities" />
-                <Dropdown menuName="karya" />
-                <Link className={link} to="/Pojokimg">
-                  <div>Pojok IMG</div>
-                </Link>
-              </div>
-              <a href="/login">
-                <div className={searchIcon}>
-                  <img src={login} />
-                </div>
-              </a>
+            <div className={linkContainer}>
+              <Dropdown menuName="activities" />
+              <Dropdown menuName="karya" />
+              <Link className={link} to="/Pojokimg">
+                <div>Pojok IMG</div>
+              </Link>
             </div>
+            <a href="/login">
+              <div className={searchIcon}>
+                <img src={login} />
+              </div>
+            </a>
           </div>
-        )}
+        </div>
+      ) : linkName === "/DPM" ? null : (
+        <div className={containerbig}>
+          <div className={container}>
+            <div>
+              <Link className={logo} to="/">
+                <img src={LogoIMG} />
+                <div className={logotext}>
+                  <h1 style={{ fontFamily: "jakartabold" }}>
+                    IKATAN MAHASISWA GEODESI
+                  </h1>
+                  <h1>INSTITUT TEKNOLOGI BANDUNG</h1>
+                </div>
+              </Link>
+            </div>
+
+            <div className={linkContainer}>
+              <Dropdown menuName="activities" />
+              <Dropdown menuName="karya" />
+              <Link className={link} to="/Pojokimg">
+                <div>Pojok IMG</div>
+              </Link>
+            </div>
+            <a href="/login">
+              <div className={searchIcon}>
+                <img src={login} />
+              </div>
+            </a>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

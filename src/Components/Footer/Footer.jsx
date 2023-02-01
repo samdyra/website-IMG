@@ -44,6 +44,7 @@ const Footer = () => {
               ? containerGeopoint
               : container
           }
+          style={linkName === "/Pemilu" ? { background: "#800000" } : null}
         >
           <div
             className={containertopcontact}
@@ -52,6 +53,8 @@ const Footer = () => {
               linkName === "/Geopoint/Navigacity" ||
               linkName === "/Geopoint/Ceremony"
                 ? { background: "#211954" }
+                : linkName === "/Pemilu"
+                ? { background: " #5B0000" }
                 : null
             }
           >
@@ -64,6 +67,8 @@ const Footer = () => {
                     linkName === "/Geopoint/Navigacity" ||
                     linkName === "/Geopoint/Ceremony"
                       ? { background: "#281F64" }
+                      : linkName === "/Pemilu"
+                      ? { background: " #800000" }
                       : null
                   }
                 >
@@ -87,6 +92,8 @@ const Footer = () => {
                     linkName === "/Geopoint/Navigacity" ||
                     linkName === "/Geopoint/Ceremony"
                       ? { background: " #281F64" }
+                      : linkName === "/Pemilu"
+                      ? { background: " #800000" }
                       : null
                   }
                 >

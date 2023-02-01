@@ -11,3 +11,4 @@ export { default as Geosphere } from "./Geosphere";
 export { default as Georeference } from "./Georeference";
 export { default as Navigacity } from "./Navigacity";
 export { default as Ceremony } from "./Ceremony";
+export { default as Pemilu } from "./Pemilu";

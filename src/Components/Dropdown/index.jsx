@@ -11,7 +11,6 @@ const Dropdown = (props) => {
 
   const linkName = location.pathname;
 
-
   // : linkName === "/Geopoint" || linkName === "/Geopoint/Navigacity" ?
   return (
     <div style={{ marginRight: 12 }}>
@@ -33,6 +32,7 @@ const Dropdown = (props) => {
 
               <a href="/KabarkeSenatoran">Kabar Kesenatoran</a>
               <a href="/Geopoint">GEOPOINT</a>
+              <a href="/Pemilu">PEMILU</a>
             </div>
           </>
         ) : menuName == "karya" ? (

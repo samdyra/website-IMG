@@ -1,6 +1,4 @@
-import {
-  BrowserRouter as Router, Route, Routes 
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import {
   HomeScreen,
   Pojokimg,
@@ -15,6 +13,7 @@ import {
   Georeference,
   Navigacity,
   Ceremony,
+  Pemilu,
 } from "./Pages";
 import Navbar from "./Components/Navbar";
 import MobileNavbar from "./Components/MobileNavbar";
@@ -33,7 +32,7 @@ import {
   GeoreferenceAdmin,
   LocusAdmin,
   GeosphereAdmin,
-  IMGXAdmin
+  IMGXAdmin,
 } from "./Store";
 import isUserLevel9 from "./Helpers/isUserLevel9";
 import { isMobile } from "./Helpers/mobileResponsive";
@@ -62,6 +61,7 @@ function App() {
         <Route path="/Geopoint/Navigacity" element={<Navigacity />}></Route>
         <Route path="/Geopoint/Ceremony" element={<Ceremony />}></Route>
         <Route path="/DPM" element={<DpmScreen />}></Route>
+        <Route path="/Pemilu" element={<Pemilu />}></Route>
         {/* Admin Screens */}
         {isUserLevel9() && (
           <>
@@ -86,18 +86,9 @@ function App() {
               path="/admin/internal"
               element={<InternalActivities />}
             ></Route>
-            <Route
-              path="/admin/locus"
-              element={<LocusAdmin />}
-            ></Route>
-            <Route
-              path="/admin/geosphere"
-              element={<GeosphereAdmin />}
-            ></Route>
-             <Route
-              path="/admin/imgx"
-              element={<IMGXAdmin />}
-            ></Route>
+            <Route path="/admin/locus" element={<LocusAdmin />}></Route>
+            <Route path="/admin/geosphere" element={<GeosphereAdmin />}></Route>
+            <Route path="/admin/imgx" element={<IMGXAdmin />}></Route>
           </>
         )}
       </Routes>
