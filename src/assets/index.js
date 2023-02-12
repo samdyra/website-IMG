@@ -34,3 +34,5 @@ export { default as medal } from "./images/medal.png";
 
 export { default as daki } from "./images/daki.jpg";
 export { default as TBA } from "./images/TBA.png";
+
+export { default as videoluffy } from "./video/videoplayback.webm";

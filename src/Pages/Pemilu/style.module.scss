@@ -7,10 +7,24 @@
   background: #1a1b1f;
   width: 100vw;
   position: absolute;
-  z-index: -1;
+  z-index: -3;
   left: 0;
   top: 0;
-  height: 120vh;
+  height: fit-content;
+
+  // filter: grayscale(30%) brightness(50%) contrast(60%);
+}
+
+.backgroundTop2 {
+  background: #000000c7;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  // filter: grayscale(80%) brightness(50%) contrast(60%);
 }
 
 .containerTop {
@@ -78,11 +92,8 @@
 }
 
 .container {
-  height: 100vh;
-  padding-top: 50px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 
   h1 {
@@ -97,4 +108,65 @@
 
     color: #000000;
   }
+}
+
+.text_container {
+  box-sizing: border-box;
+  width: 400px;
+
+  border: 3px solid #800000;
+  border-radius: 31px;
+  padding: 20px;
+
+  p {
+    font-family: "BlackHarbour";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 26px;
+
+    text-align: justify;
+
+    color: #1a1b1f;
+  }
+
+  h1 {
+    font-family: "BlackHarbour";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 34px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    color: #1a1b1f;
+  }
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin: 0 auto;
+  margin-bottom: 200px;
+}
+
+.vote_button {
+  font-family: "BlackHarbour";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 54px;
+
+  background: #1a1b1f;
+  border-radius: 15px;
+
+  padding-inline: 40px;
+  padding-block: 15px;
+
+  color: #ffffff;
+  margin-bottom: 150px;
 }
