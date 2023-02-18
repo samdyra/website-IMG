@@ -4,6 +4,7 @@ import { isMobile } from "../../Helpers/mobileResponsive";
 import LogoPansusFix from "../../assets/images/LogoPansusFix.png";
 import ProgressBar from "./ProgressBar";
 import videoplayback from "../../assets/video/videoplayback.webm";
+import { video_mobile } from "../../assets";
 import { Adam_Caketum1, Venta_Caketum2 } from "../../assets";
 
 const Pemilu = () => {
@@ -15,8 +16,8 @@ const Pemilu = () => {
           autoPlay
           muted
           loop
-          src={videoplayback}
-          style={{ minHeight: "100vh", minWidth: "100vw" }}
+          src={isMobile ? video_mobile : videoplayback}
+          style={isMobile ? null : { minHeight: "100vh", minWidth: "100vw" }}
         />
         <div className={s.backgroundTop2}></div>
       </div>
