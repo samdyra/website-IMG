@@ -205,6 +205,13 @@
   @media screen and (max-width: 450px) {
     background: white;
     margin-top: -500px;
+
+    @media screen and (max-height: 760px) {
+      margin-top: -400px;
+      @media screen and (max-height: 680px) {
+        margin-top: -350px;
+      }
+    }
   }
 }
 
