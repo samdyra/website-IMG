@@ -1,3 +1,3 @@
 const ScreenWidth = window.innerWidth;
 
-export const isMobile = ScreenWidth <= 420;
+export const isMobile = ScreenWidth <= 450;
