@@ -2,6 +2,14 @@
   margin: 0 auto;
   max-width: 1280px;
   overflow-x: hidden;
+
+  @media screen and (max-width: 450px) {
+    max-width: 100%;
+  }
+
+  @media screen and (min-width: 1280px) {
+    max-width: 1300px;
+  }
 }
 
 .backgroundTop {
@@ -13,6 +21,21 @@
   height: fit-content;
 
   // filter: grayscale(30%) brightness(50%) contrast(60%);
+  video {
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+
+  @media screen and (max-width: 450px) {
+    max-height: 100vh;
+    overflow: hidden;
+    video {
+      min-height: none;
+      height: auto;
+      min-width: 400vw;
+      margin-left: -150vw;
+    }
+  }
 }
 
 .backgroundTop2 {
