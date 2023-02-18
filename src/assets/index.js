@@ -33,6 +33,9 @@ export { default as jersey } from "./images/jersey.png";
 export { default as medal } from "./images/medal.png";
 
 export { default as daki } from "./images/daki.jpg";
+export { default as Adam_Caketum1 } from "./images/Adam_caketum1.png";
+export { default as Venta_Caketum2 } from "./images/Venta_caketum2.png";
+
 export { default as TBA } from "./images/TBA.png";
 
 export { default as videoluffy } from "./video/videoplayback.webm";

@@ -1,4 +1,5 @@
 import React from "react";
+import { isMobile } from "../../../Helpers/mobileResponsive";
 import style from "./style.module.scss";
 
 const ProgressBar = ({ page }) => {
@@ -19,7 +20,7 @@ const ProgressBar = ({ page }) => {
       <div className={progressBarContainer}>
         <div className={bar}></div>
         <div className={miniDotsContainer}>
-          <div className={miniDots} style={{ background: "black" }}></div>
+          <div className={miniDots}></div>
           <div className={miniDots}></div>
         </div>
         <div className={progressBar}>
@@ -30,22 +31,22 @@ const ProgressBar = ({ page }) => {
           </div>
           <div className={dotsContainer}>
             <h2 style={{ width: "180px" }}>30 Januari - 1 Februari 2023</h2>
-            <div className={dots}></div>
+            <div className={dotsActive}></div>
             <h2 style={{ width: "150px" }}>Pengambilan Berkas</h2>
           </div>
           <div className={dotsContainer}>
             <h2 style={{ width: "180px" }}>3 februari - 6 februari 2023</h2>
-            <div className={dots}></div>
+            <div className={dotsActive}></div>
             <h2 style={{ width: "150px" }}>pengembalian berkas</h2>
           </div>
           <div className={dotsContainer}>
             <h2 style={{ width: "150px" }}>9 februari 2023</h2>
-            <div className={dots}></div>
+            <div className={dotsActive}></div>
             <h2 style={{ width: "150px" }}>verifikasi berkas</h2>
           </div>
           <div className={dotsContainer}>
             <h2 style={{ width: "150px" }}>15 februari 2023</h2>
-            <div className={dots}></div>
+            <div className={dotsActive}></div>
             <h2 style={{ width: "150px" }}>sidang mpa pp</h2>
           </div>
         </div>

@@ -32,6 +32,7 @@ const MobileNavbar = () => {
     burgerbar2,
     burgerbarunclicked,
     menuVisible,
+    menuVisiblePemilu,
     menuVisibleGeopoint,
     menuHidden,
     wrapper,
@@ -52,6 +53,8 @@ const MobileNavbar = () => {
       linkName === "/Geopoint/Navigacity" ||
       linkName === "/Geopoint/Ceremony"
         ? setMenuClass(menuVisibleGeopoint)
+        : linkName === "/Pemilu"
+        ? setMenuClass(menuVisiblePemilu)
         : setMenuClass(menuVisible);
     } else {
       setBurgerClass(burgerbarunclicked);
@@ -94,12 +97,16 @@ const MobileNavbar = () => {
 
   window.addEventListener("scroll", setFixed);
   return (
-    <div style={{fontFamily: "jakarta"}}>
-      {linkName === "/" ? (
+    <div style={{ fontFamily: "jakarta" }}>
+      {linkName === "/" || linkName === "/Pemilu" ? (
         <div>
           <div
             className={containeractive}
-            style={{ background: `rgba(75,133,121, ${offset})` }}
+            style={
+              linkName === "/Pemilu"
+                ? { background: `rgba(128,0,0, ${offset})` }
+                : { background: `rgba(75,133,121, ${offset})` }
+            }
           >
             <div className={container}>
               <div>
@@ -133,6 +140,7 @@ const MobileNavbar = () => {
             <a href="/Geosphere">Geosphere</a>
             <a href="/IMGx">IMG-X</a>
             <a href="/login">Login</a>
+            <a href="/Pemilu">Pemilu</a>
           </div>
         </div>
       ) : linkName === "/Geopoint" ||
@@ -172,6 +180,7 @@ const MobileNavbar = () => {
             <a href="/Geosphere">Geosphere</a>
             <a href="/IMGx">IMG-X</a>
             <a href="/login">Login</a>
+            <a href="/Pemilu">Pemilu</a>
           </div>
         </div>
       ) : linkName === "/DPM" ? null : (
@@ -209,6 +218,7 @@ const MobileNavbar = () => {
             <a href="/Geosphere">Geosphere</a>
             <a href="/IMGx">IMG-X</a>
             <a href="/login">Login</a>
+            <a href="/Pemilu">Pemilu</a>
           </div>
         </div>
       )}

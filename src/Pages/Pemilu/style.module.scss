@@ -1,11 +1,11 @@
 .wrapper {
   margin: 0 auto;
   max-width: 1280px;
+  overflow-x: hidden;
 }
 
 .backgroundTop {
   background: #1a1b1f;
-  width: 100vw;
   position: absolute;
   z-index: -3;
   left: 0;
@@ -33,7 +33,7 @@
   align-items: center;
   flex-direction: column;
   margin-bottom: 40px;
-  height: 120vh;
+  height: 100vh;
   gap: 45px;
   position: relative;
 
@@ -65,6 +65,29 @@
 
     color: #ffffff;
   }
+
+  @media screen and (max-width: 420px) {
+    justify-content: flex-start;
+    padding-top: 15vh;
+    margin-bottom: 20vh;
+    height: 130vh;
+    gap: 18px;
+    h1 {
+      max-width: 90vw;
+      font-size: 38px;
+      text-align: center;
+      line-height: 45px;
+    }
+    h2 {
+      font-size: 20px;
+      max-width: 75vw;
+    }
+
+    img {
+      height: 250px;
+      width: auto;
+    }
+  }
 }
 
 .buttonDokumen {
@@ -95,6 +118,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 100px;
 
   h1 {
     font-family: "BlackHarbour";
@@ -108,11 +132,18 @@
 
     color: #000000;
   }
+
+  @media screen and (max-width: 420px) {
+    h1 {
+      font-size: 70px;
+      line-height: 75px;
+    }
+  }
 }
 
 .text_container {
   box-sizing: border-box;
-  width: 400px;
+  width: 350px;
 
   border: 3px solid #800000;
   border-radius: 31px;
@@ -143,6 +174,28 @@
 
     color: #1a1b1f;
   }
+
+  @media screen and (max-width: 450px) {
+    width: 90vw;
+    padding: 10px;
+    p {
+      font-size: 20px;
+    }
+    h1 {
+      font-size: 30px;
+    }
+  }
+}
+
+.caketum_container {
+  position: relative;
+
+  @media screen and (max-width: 450px) {
+    img {
+      max-width: 90vw;
+      height: auto;
+    }
+  }
 }
 
 .section {
@@ -152,6 +205,10 @@
   gap: 50px;
   margin: 0 auto;
   margin-bottom: 200px;
+
+  @media screen and (max-width: 450px) {
+    flex-direction: column;
+  }
 }
 
 .vote_button {
@@ -169,4 +226,28 @@
 
   color: #ffffff;
   margin-bottom: 150px;
+}
+
+.no_caketum {
+  width: 51px;
+  height: 51px;
+  position: absolute;
+  z-index: 1;
+  border-radius: 100%;
+  right: 20px;
+  top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "BlackHarbour";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 34px;
+  /* identical to box height */
+
+  color: #ffffff;
+
+  background: #1a1b1f;
 }
