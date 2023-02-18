@@ -206,12 +206,15 @@
     background: white;
     margin-top: -500px;
 
-    @media screen and (max-height: 9500px) {
+    @media screen and (max-height: 950px) {
       margin-top: -650px;
-      @media screen and (max-height: 760px) {
-        margin-top: -400px;
-        @media screen and (max-height: 680px) {
-          margin-top: -350px;
+      @media screen and (max-height: 850px) {
+        margin-top: -550px;
+        @media screen and (max-height: 760px) {
+          margin-top: -450px;
+          @media screen and (max-height: 680px) {
+            margin-top: -350px;
+          }
         }
       }
     }
