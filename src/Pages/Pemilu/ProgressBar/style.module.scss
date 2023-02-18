@@ -184,11 +184,12 @@
   @media screen and (max-width: 1280px) {
     padding-inline: 20px;
     padding-block: 20px;
-    top: 85vh;
+    top: 95vh;
   }
 
   @media screen and (max-width: 450px) {
     background: white;
+    top: 85vh;
   }
 }
 
