@@ -39,4 +39,3 @@ export { default as Venta_Caketum2 } from "./images/Venta_caketum2.png";
 export { default as TBA } from "./images/TBA.png";
 
 export { default as videoluffy } from "./video/videoplayback.webm";
-export { default as video_mobile } from "./video/video_mobile.mp4";
