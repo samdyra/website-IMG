@@ -1,10 +1,11 @@
 .wrapper {
   margin: 0 auto;
   max-width: 1280px;
-  overflow-x: hidden;
 
-  @media screen and (max-width: 450px) {
-    max-width: 100%;
+  overflow: hidden;
+
+  @media screen and (max-width: 500px) {
+    max-width: 100vw;
   }
 
   @media screen and (min-width: 1280px) {
@@ -27,8 +28,12 @@
   }
 
   @media screen and (max-width: 450px) {
-    max-height: 100vh;
-    overflow: hidden;
+    max-width: 100vw;
+    overflow-x: hidden !important;
+    overflow-y: hidden;
+
+    overflow: hidden !important;
+
     video {
       min-height: none;
       height: auto;

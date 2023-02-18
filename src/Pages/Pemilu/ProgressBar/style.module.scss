@@ -200,6 +200,13 @@
     max-width: 90vw;
     margin: 0 auto;
     margin-top: -110px;
+
+    @media screen and (max-height: 700px) {
+      margin-top: -70px;
+      @media screen and (max-height: 650px) {
+        margin-top: -40px;
+      }
+    }
   }
 
   @media screen and (max-width: 450px) {
