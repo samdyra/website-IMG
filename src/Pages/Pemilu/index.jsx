@@ -11,7 +11,7 @@ const Pemilu = () => {
   return (
     <div className={s.wrapper}>
       <div className={s.backgroundTop}>
-        <video autoPlay muted loop src={videoplayback} />
+        <video autoPlay playsInline muted loop src={videoplayback} />
         <div className={s.backgroundTop2}></div>
       </div>
 
