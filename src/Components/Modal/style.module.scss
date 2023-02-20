@@ -56,7 +56,6 @@
     align-items: center;
     gap: 35px;
 
-
     h1 {
       font-family: jakartaBold;
       font-style: normal;
@@ -65,13 +64,11 @@
       line-height: 125%;
       color: #000000;
       width: 500px;
-
     }
 
     h2 {
       margin-block: 20px;
       width: 500px;
-
     }
 
     p {
@@ -80,7 +77,6 @@
       overflow-y: scroll;
       height: 400px;
       line-height: 20px;
-
     }
 
     p::-webkit-scrollbar {
@@ -109,7 +105,6 @@
   background-color: white;
   background-size: cover;
 
-
   .content2 {
     justify-content: center;
     align-items: center;
@@ -131,7 +126,6 @@
       margin-block: 20px;
       width: 500px;
       color: gray;
-
     }
 
     p {
@@ -155,8 +149,6 @@
   }
 }
 
-
-
 .modalContainer img {
   width: 800px;
   object-fit: cover;
@@ -170,27 +162,45 @@
 
 .closeBtn {
   position: fixed;
-  font-family: jakartaBold;
-  color: rgb(228, 57, 57);
-  top: 30px;
-  right: 30px;
-  font-size: 40px;
+  font-family: jakartaBold !important;
+  color: rgb(228, 57, 57) !important;
+  top: 30px !important;
+  right: 30px !important;
+  font-size: 40px !important;
 
   p {
-    font-size: 50px;
+    font-size: 50px !important;
   }
 }
 
 .closeBtnMobile {
-  position: fixed;
-  font-family: jakartaBold;
-  color: rgb(228, 57, 57);
-  top: 30px;
-  right: 30px;
-  font-size: 25px;
+  position: fixed !important;
+  font-family: jakartaBold !important;
+  color: rgb(228, 57, 57) !important;
+  top: 30px !important;
+  right: 30px !important;
+  font-size: 25px !important;
 
   p {
-    font-size: 50px;
+    font-size: 50px !important;
+  }
+}
+
+.closeBtnMobilePemilu {
+  position: fixed !important;
+  font-family: jakartaBold !important;
+  color: rgb(228, 57, 57) !important;
+  top: 30px !important;
+  left: 30px !important;
+  margin-right: -200px !important;
+  font-size: 25px !important;
+  display: flex;
+  justify-content: flex-end;
+  padding-inline: 10px;
+  padding-top: 5px;
+
+  p {
+    font-size: 50px !important;
   }
 }
 
@@ -259,5 +269,94 @@
 
   .heading {
     margin: 1rem;
+  }
+}
+
+.modalContainerPemilu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 1100px;
+  height: 650px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 40px;
+
+  background-color: white;
+  background-size: cover;
+  padding-inline: 50px;
+
+  br {
+    margin-top: 15px;
+  }
+
+  p {
+    font-family: "BlackHarbour";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+
+    color: #1a1b1f;
+  }
+}
+
+.modalContainerPemiluMobile {
+  width: 90vw;
+  height: 90vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 40px;
+  font-family: jakarta;
+  background-color: white;
+  background-size: cover;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 20px;
+
+  h1 {
+    font-family: jakartaBold;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 125%;
+    color: #000000;
+    width: 275px;
+  }
+
+  h2 {
+    margin-block: 20px;
+    width: 500px;
+    color: gray;
+  }
+
+  p {
+    width: 300px;
+    text-align: justify;
+
+    line-height: 20px;
+    font-size: 11px;
+  }
+
+  img {
+    max-width: 300px;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 20px;
   }
 }

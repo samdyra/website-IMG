@@ -1,13 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import s from "./style.module.scss";
 import { isMobile } from "../../Helpers/mobileResponsive";
 import LogoPansusFix from "../../assets/images/LogoPansusFix.png";
 import ProgressBar from "./ProgressBar";
 import videoplayback from "../../assets/video/videoplayback.webm";
 import { Adam_Caketum1, Venta_Caketum2 } from "../../assets";
+import { Modal } from "../../Components";
 
 const Pemilu = () => {
   const { buttonDokumen } = s;
+  const [openModalAdam, setOpenModalAdam] = useState(false);
+  const [openModalVenta, setOpenModalVenta] = useState(false);
+
+  useEffect(() => {
+    openModalAdam
+      ? (document.body.style.overflowY = "hidden")
+      : (document.body.style.overflowY = "auto");
+  }, [openModalAdam]);
+
+  useEffect(() => {
+    openModalVenta
+      ? (document.body.style.overflowY = "hidden")
+      : (document.body.style.overflowY = "auto");
+  }, [openModalVenta]);
+
   return (
     <div className={s.wrapper}>
       <div className={s.backgroundTop}>
@@ -57,11 +73,10 @@ const Pemilu = () => {
             <div className={s.text_container} style={{ height: "376px" }}>
               <h1>VISI</h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur. Et faucibus vulputate
-                massa nec libero mattis habitant mauris sagittis. Sagittis sem
-                lectus interdum.
+                IMG-ITB sebagai suar dan ruang pengembangan anggotanya dalam
+                rangka mewujudkan pembelajar abadi yang memiliki orientasi
+                kebermanfaatan
               </p>
-              <h1>MISI</h1>
             </div>
           </div>
           {!isMobile && (
@@ -71,17 +86,86 @@ const Pemilu = () => {
             </div>
           )}
 
-          <div className={s.text_container} style={{ height: "500px" }}>
-            <h1>program kerja</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur. Et faucibus vulputate
-              massa nec libero mattis habitant mauris sagittis. Sagittis sem
-              lectus interdum. Lorem ipsum dolor sit amet consectetur. Et
-              faucibus vulputate massa nec libero mattis habitant mauris
-              sagittis. Sagittis sem lectus interdum.
+          <div
+            className={s.text_container}
+            style={{
+              height: "500px",
+              fontSize: "13px",
+              lineHeight: "14px",
+            }}
+          >
+            <h1>MISI</h1>
+            <p style={{ marginBottom: "20px" }}>
+              1.Mengusahakan pengembangan dan pemerataan keterampilan Anggota
+              IMG-ITB dalam keprofesian Teknik Geodesi dan Geomatika berdasarkan
+              Tujuan Pendidikan dan Capaian Lulusan Program Studi Teknik Geodesi
+              dan Geomatika ITB serta Draft RUK IMG-ITB. <br /> 2.Menyediakan
+              wadah pengembangan kepribadian yang dimanfaatkan oleh Anggota
+              IMG-ITB untuk mendidik diri dalam rangka menciptakan anggota
+              IMG-ITB yang mencerminkan nilai-nilai IMG-ITB dalam pribadinya.
             </p>
+            <button
+              className={buttonDokumen}
+              onClick={() => setOpenModalAdam(true)}
+              style={{ margin: "0 auto" }}
+            >
+              Read More
+            </button>
           </div>
         </div>
+        <Modal
+          ModalName="pemilu"
+          open={openModalAdam}
+          onClose={() => setOpenModalAdam(false)}
+        >
+          <h1>Misi</h1>
+          <p>
+            1. Mengusahakan pengembangan dan pemerataan keterampilan Anggota
+            IMG-ITB dalam keprofesian Teknik Geodesi dan Geomatika berdasarkan
+            Tujuan Pendidikan dan Capaian Lulusan Program Studi Teknik Geodesi
+            dan Geomatika ITB serta Draft RUK IMG-ITB.
+            <br /> 2. Menyediakan wadah pengembangan kepribadian yang
+            dimanfaatkan oleh Anggota IMG-ITB untuk mendidik diri dalam rangka
+            menciptakan anggota IMG-ITB yang mencerminkan nilai-nilai IMG-ITB
+            dalam pribadinya. <br />
+            3. Menciptakan kesejahteraan anggota melalui usaha-usaha pemenuhan
+            kebutuhan, penyelesaian masalah, dan pensuasanaan lingkungan yang
+            bersifat kekeluargaan.
+            <br /> 4. Menjalankan hubungan kerja sama dengan lembaga-lembaga
+            kemahasiswaan di ITB atau lembaga-lembaga lainnya dalam rangka
+            pencapaian visi serta memelihara hubungan kekeluargaan dengan Alumni
+            IMG-ITB
+            <br /> 5. Mengusahakan optimasi komunikasi dalam rangka meningkatkan
+            ketersampaian informasi kepada Anggota IMG-ITB.
+            <br /> 6. Mengoptimumkan fungsi dan peran sumber daya finansial,
+            material, dan informasi untuk menunjang pelaksanaan program
+            kepengurusan serta peningkatan kualitas dan kuantitas sumber daya.
+            <br /> 7. Menyediakan wadah penyaluran kebermanfaatan Anggota
+            IMG-ITB sebagai luaran dari pengembangan diri Anggota IMG-ITB
+          </p>
+        </Modal>
+        <Modal
+          ModalName="pemilu"
+          open={openModalVenta}
+          onClose={() => setOpenModalVenta(false)}
+        >
+          <h1>Misi</h1>
+          <p>
+            1. Membentuk suatu sistem organisasi yang efektif dan efisien serta
+            terintegrasi. <br /> 2. Menciptakan sistem alur informasi yang
+            efektif dan atraktif. <br /> 3. Meningkatkan hubungan baik dengan
+            pihak luar IMG-ITB dengan memperhatikan sumber daya dan kebutuhan
+            anggota IMG-ITB. <br /> 4. Meningkatkan wadah pengembangan
+            keprofesian guna menambah wawasan anggota IMG-ITB serta
+            mengimplementasikan keilmuan Teknik Geodesi dan Geomatika. <br /> 5.
+            Meningkatkan pengembangan kepribadian anggota IMG-ITB secara
+            progresif menyesuaikan dengan minat anggota IMG-ITB. <br /> 6.
+            Memenuhi kebutuhan terkait kesejahteraan anggota IMG-ITB. <br /> 7.
+            Memfasilitasi anggota IMG-ITB untuk berperan dalam kegiatan
+            kemasyarakatan dengan memanfaatkan keilmuan Teknik Geodesi dan
+            Geomatika.
+          </p>
+        </Modal>
         {/* <div className={s.vote_button}>VOTE YOUR PIRATE KING NOW!</div> */}
       </div>
       <div className={s.container}>
@@ -100,11 +184,10 @@ const Pemilu = () => {
             <div className={s.text_container} style={{ height: "376px" }}>
               <h1>VISI</h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur. Et faucibus vulputate
-                massa nec libero mattis habitant mauris sagittis. Sagittis sem
-                lectus interdum.
+                IMG-ITB dengan segala sumber dayanya berkembang secara adaptif
+                terhadap perkembangan zaman serta dapat berkreasi sesuai minat
+                dan kebutuhannya
               </p>
-              <h1>MISI</h1>
             </div>
           </div>
           {!isMobile && (
@@ -115,14 +198,23 @@ const Pemilu = () => {
           )}
 
           <div className={s.text_container} style={{ height: "500px" }}>
-            <h1>program kerja</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur. Et faucibus vulputate
-              massa nec libero mattis habitant mauris sagittis. Sagittis sem
-              lectus interdum. Lorem ipsum dolor sit amet consectetur. Et
-              faucibus vulputate massa nec libero mattis habitant mauris
-              sagittis. Sagittis sem lectus interdum.
+            <h1>MISI</h1>
+            <p style={{ marginBottom: "20px" }}>
+              1. Membentuk suatu sistem organisasi yang efektif dan efisien
+              serta terintegrasi. <br /> 2. Menciptakan sistem alur informasi
+              yang efektif dan atraktif. <br /> 3. Meningkatkan hubungan baik
+              dengan pihak luar IMG-ITB dengan memperhatikan sumber daya dan
+              kebutuhan anggota IMG-ITB. <br /> 4. Meningkatkan wadah
+              pengembangan keprofesian guna menambah wawasan anggota IMG-ITB
+              serta mengimplementasikan keilmuan Teknik Geodesi dan Geomatika.{" "}
             </p>
+            <button
+              className={buttonDokumen}
+              onClick={() => setOpenModalVenta(true)}
+              style={{ margin: "0 auto" }}
+            >
+              Read More
+            </button>
           </div>
         </div>
         {/* <div className={s.vote_button}>VOTE YOUR PIRATE KING NOW!</div> */}

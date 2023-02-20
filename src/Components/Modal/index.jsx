@@ -2,9 +2,7 @@ import React from "react";
 import style from "./style.module.scss";
 import { isMobile } from "../../Helpers/mobileResponsive";
 
-const Modal = ({
-  ModalName, open, onClose, data 
-}) => {
+const Modal = ({ ModalName, open, onClose, data, children }) => {
   const {
     overlay,
     modalContainer,
@@ -13,7 +11,10 @@ const Modal = ({
     modalRight,
     closeBtn,
     modalContainer2Mobile,
-    closeBtnMobile
+    closeBtnMobile,
+    modalContainerPemilu,
+    modalContainerPemiluMobile,
+    closeBtnMobilePemilu,
   } = style;
 
   if (!open) return null;
@@ -31,7 +32,10 @@ const Modal = ({
             }}
             className={!isMobile ? modalContainer2 : modalContainer2Mobile}
           >
-            <p className={isMobile ? closeBtnMobile : closeBtn} onClick={onClose}>
+            <p
+              className={isMobile ? closeBtnMobile : closeBtn}
+              onClick={onClose}
+            >
               X
             </p>
             <div className={content2}>
@@ -39,9 +43,7 @@ const Modal = ({
                 <h1>{data.judul}</h1>
                 <h2>{data.date}</h2>
                 {isMobile && <img src={data.image}></img>}
-                <p>
-                  {data?.redaksi ? data.redaksi : data?.desc}
-                </p>
+                <p>{data?.redaksi ? data.redaksi : data?.desc}</p>
               </div>
               {!isMobile && <img src={data.image}></img>}
             </div>
@@ -63,6 +65,28 @@ const Modal = ({
                 X
               </p>
             </div>
+          </div>
+        </div>
+      ) : ModalName === "pemilu" ? (
+        <div onClick={onClose} className={overlay}>
+          <div
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
+            onScroll={(e) => {
+              e.stopPropagation();
+            }}
+            className={
+              !isMobile ? modalContainerPemilu : modalContainerPemiluMobile
+            }
+          >
+            <p
+              className={isMobile ? closeBtnMobilePemilu : closeBtn}
+              onClick={onClose}
+            >
+              X
+            </p>
+            <div>{children}</div>
           </div>
         </div>
       ) : null}
