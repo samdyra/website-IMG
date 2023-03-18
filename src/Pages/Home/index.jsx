@@ -291,7 +291,6 @@ const HomeScreen = () => {
             data-aos-duration="750"
             data-aos-offset={isMobile ? "200" : "430"}
           >
-            {/* {isMobile ? null : <Carousel slides={SliderData} />} */}
             <Carousel slides={Organogram} />
           </div>
         </div>

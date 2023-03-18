@@ -172,7 +172,7 @@ const Gallery = (props) => {
                       <h1>{slide.judul}</h1>
                       <h3>{slide.date}</h3>
                     </div>
-                    <p>{slide.redaksi}</p>
+                    <p dangerouslySetInnerHTML={{ __html: slide?.redaksi }}/>
                     <div
                       className={madeElementButton}
                       onClick={() => handlePressItem(slide)}

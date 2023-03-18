@@ -2,7 +2,9 @@ import React from "react";
 import style from "./style.module.scss";
 import { isMobile } from "../../Helpers/mobileResponsive";
 
-const Modal = ({ ModalName, open, onClose, data, children }) => {
+const Modal = ({
+  ModalName, open, onClose, data, children 
+}) => {
   const {
     overlay,
     modalContainer,
@@ -43,7 +45,7 @@ const Modal = ({ ModalName, open, onClose, data, children }) => {
                 <h1>{data.judul}</h1>
                 <h2>{data.date}</h2>
                 {isMobile && <img src={data.image}></img>}
-                <p>{data?.redaksi ? data.redaksi : data?.desc}</p>
+                <p dangerouslySetInnerHTML={{ __html:data?.redaksi ? data.redaksi : data?.desc }} />
               </div>
               {!isMobile && <img src={data.image}></img>}
             </div>

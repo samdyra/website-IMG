@@ -92,6 +92,11 @@ video {
   vertical-align: baseline;
 }
 
+div  {
+  white-space: pre-line;
+}
+
+
 article,
 aside,
 details,
