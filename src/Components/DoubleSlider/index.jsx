@@ -47,10 +47,10 @@ export default function DoubleSlider(props) {
       >
         <div className={title}>
           {isMobile ? null : 
-            <div style={style.titleContainer}>
-            <h2>MAJALAH</h2>
-            <h1>{props.title}</h1>
-          </div>
+          <div style={style.titleContainer}>
+              <h2>MAJALAH</h2>
+              <h1>{props.title}</h1>
+            </div>
           }
         </div>
 
@@ -69,8 +69,8 @@ export default function DoubleSlider(props) {
                   <div className={descContainer2}>
                     {!isMobile && <p>{text?.desc}</p>}
                   </div>
-                  <div className={madeElementButton}>
-                    <p onClick={() => window.open(text?.pdf)}>READ MORE</p>
+                  <div className={madeElementButton} onClick={() => window.open(text?.pdf)}>
+                    <p>READ MORE</p>
                   </div>
                 </div>
               </div>
