@@ -2,13 +2,12 @@ import React from "react";
 import { isMobile } from "../../../Helpers/mobileResponsive";
 import style from "./style.module.scss";
 
-const ProgressBar = ({ page }) => {
+const ProgressBar = () => {
   const {
     background,
     progressBarContainer,
     progressBar,
     bar,
-    dots,
     dotsContainer,
     dotsActive,
     miniDots,
@@ -47,7 +46,7 @@ const ProgressBar = ({ page }) => {
           <div className={dotsContainer}>
             <h2 style={{ width: "150px" }}>15 februari 2023</h2>
             <div className={dotsActive}></div>
-            <h2 style={{ width: "150px" }}>sidang mpa pp</h2>
+            <h2 style={{ width: "150px" }}>Sidang MPA PP </h2>
           </div>
         </div>
       </div>

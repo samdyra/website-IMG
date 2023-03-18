@@ -1,9 +1,9 @@
 module.exports = {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [ "./index.html", "./src/**/*.{js,ts,jsx,tsx}" ],
   theme: {
     extend: {},
     fontFamily: {
-      'code': ['cascadiaCode']
+      'code': [ 'cascadiaCode' ], 'jakarta': [ 'jakarta' ], 'BlackHarbour': [ 'BlackHarbour' ] 
     }
   },
   plugins: [],
