@@ -50,13 +50,14 @@ const MobileNavbar = () => {
       setBurgerClass(burgerbar2);
       setMenuClass(menuVisible);
       linkName === "/Geopoint" ||
-      linkName === "/Geopoint/Navigacity" ||
-      linkName === "/Geopoint/Ceremony"
+        linkName === "/Geopoint/Navigacity" ||
+        linkName === "/Geopoint/Ceremony"
         ? setMenuClass(menuVisibleGeopoint)
         : linkName === "/Pemilu"
-        ? setMenuClass(menuVisiblePemilu)
-        : setMenuClass(menuVisible);
-    } else {
+          ? setMenuClass(menuVisiblePemilu)
+          : setMenuClass(menuVisible);
+    }
+    else {
       setBurgerClass(burgerbarunclicked);
       setMenuClass(menuHidden);
     }
@@ -66,7 +67,8 @@ const MobileNavbar = () => {
   const changeBackground = () => {
     if (window.scrollY >= 680) {
       setNavbar(false);
-    } else {
+    }
+    else {
       setNavbar(true);
     }
   };
@@ -83,14 +85,13 @@ const MobileNavbar = () => {
 
   const [offset, setOffset] = useState(0);
 
-  window.addEventListener("scroll", (e) => {
-    return setOffset(window.pageYOffset / 850);
-  });
+  window.addEventListener("scroll", (e) => setOffset(window.pageYOffset / 850));
 
   function setFixed() {
     if (window.scrollY >= 392) {
       setFix(true);
-    } else {
+    }
+    else {
       setFix(false);
     }
   }
@@ -141,6 +142,8 @@ const MobileNavbar = () => {
             <a href="/IMGx">IMG-X</a>
             <a href="/login">Login</a>
             <a href="/Pemilu">Pemilu</a>
+            <a href="/Pojokimg">Pojok IMG</a>
+
           </div>
         </div>
       ) : linkName === "/Geopoint" ||
