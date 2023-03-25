@@ -21,6 +21,8 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { toast } from "react-toastify";
 import { collection, addDoc } from "firebase/firestore";
 import Gallery from "../../Components/Slider";
+import kontur1 from "../../assets/images/kontur1.svg";
+
 
 
 const Pojokimg = () => {
@@ -38,7 +40,11 @@ const Pojokimg = () => {
     curhatContainer,
     formInput,
     formInput2,
-    buttonTitle
+    buttonTitle,
+    kontur1s,
+    kontur2s,
+    kontur3s,
+    kontur4s
   } = style;
 
   const dataFAQ = useLoadDataWithOffset("FAQ", 3)
@@ -179,7 +185,13 @@ const Pojokimg = () => {
 
 
   return (
-    <div>
+    <div style={{ position: "relative" }}>
+      <img src={kontur1} alt="kontur1" className={kontur1s} />
+      <img src={kontur1} alt="kontur2" className={kontur2s} />
+      <img src={kontur1} alt="kontur3" className={kontur3s} />
+      <img src={kontur1} alt="kontur4" className={kontur4s} />
+
+
       <div className={containerSection}>
         <div>
           <h1>Arsip Kamerad</h1>

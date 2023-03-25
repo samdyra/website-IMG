@@ -265,3 +265,60 @@
   font-size: 21.6432px;
   line-height: 140%;
 }
+
+.kontur1s {
+  position: absolute;
+  width: auto;
+  height: 700px;
+  top: -220px;
+  left: -230px;
+  rotate: 110deg;
+
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.kontur2s {
+  position: absolute;
+  width: auto;
+  height: 800px;
+
+  top: -250px;
+  right: -300px;
+
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.kontur3s {
+  position: absolute;
+  width: auto;
+  height: 1000px;
+
+  top: 100vh;
+  left: -400px;
+
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.kontur4s {
+  position: absolute;
+  width: auto;
+  height: 750px;
+
+  top: 110vh;
+  right: -450px;
+  rotate: 55deg;
+
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

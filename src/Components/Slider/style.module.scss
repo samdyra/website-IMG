@@ -372,11 +372,11 @@
 }
 
 .curhatContainer {
-  height: 30px;
+  min-height: 30px;
   background: #d9d9d9;
   border-radius: 25px;
   padding-inline: 20px;
-  padding-top: 7px;
+  padding-block: 5px;
   width: fit-content;
 }
 .curhatWrapper {
