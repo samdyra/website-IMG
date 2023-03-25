@@ -313,3 +313,4 @@ input:checked:focus + .switch-left + .switch-right {
 .button:hover .box:before {
   transform: translateY(0);
 }
+

@@ -185,7 +185,7 @@ const Pojokimg = () => {
 
 
   return (
-    <div style={{ position: "relative" }}>
+    <div style={{ position: "relative", overflow: "hidden" }}>
       <img src={kontur1} alt="kontur1" className={kontur1s} />
       <img src={kontur1} alt="kontur2" className={kontur2s} />
       <img src={kontur1} alt="kontur3" className={kontur3s} />

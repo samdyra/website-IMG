@@ -44,12 +44,43 @@
   filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.2));
   cursor: pointer;
   user-select: none;
+  overflow: hidden;
 }
 
 .iconContainer:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+  outline: 2px solid #21a188;
+  box-shadow: 4px 5px 17px -4px #21a188;
   transform: scale3d(1.1, 1.1, 1.1);
   transition: all 0.3s ease-in-out;
-  background: #d9f1cc;
+  img {
+    filter: invert(31%) sepia(88%) saturate(1906%) hue-rotate(358deg)
+      brightness(100%) contrast(103%);
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.iconContainer::before {
+  content: "";
+  position: absolute;
+  left: -100px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #21a188;
+
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+  img {
+    filter: invert(31%) sepia(88%) saturate(1906%) hue-rotate(358deg)
+      brightness(100%) contrast(103%);
+  }
+}
+
+.iconContainer:hover::before {
+  width: 250%;
 }
 
 .iconWrapper {
