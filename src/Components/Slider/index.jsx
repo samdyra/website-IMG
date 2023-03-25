@@ -33,7 +33,7 @@ const Gallery = (props) => {
     verticalTitle
   } = style;
 
-  const [ openModal, setOpenModal ] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
 
   const sliderData = props?.data || [];
   const sliderImage = props?.dataImage || [];
@@ -108,7 +108,7 @@ const Gallery = (props) => {
     openModal
       ? (document.body.style.overflowY = "hidden")
       : (document.body.style.overflowY = "auto");
-  }, [ openModal ]);
+  }, [openModal]);
 
   return (
     <div>
@@ -172,7 +172,7 @@ const Gallery = (props) => {
                       <h1>{slide.judul}</h1>
                       <h3>{slide.date}</h3>
                     </div>
-                    <p dangerouslySetInnerHTML={{ __html: slide?.redaksi }}/>
+                    <p dangerouslySetInnerHTML={{ __html: slide?.redaksi }} />
                     <div
                       className={madeElementButton}
                       onClick={() => handlePressItem(slide)}
@@ -185,6 +185,29 @@ const Gallery = (props) => {
             </Slider>
           </div>
         ) : sliderName == "verticalcard" ? (
+          <div>
+            <Slider {...verticalcardSettings} className={wrapperVerticalCard}>
+              {sliderData.map((slide) => (
+                <div className={verticalCardContainer}>
+                  <div className={verticalCardImage}>
+                    <img src={slide.image}></img>
+                    <div className={verticalCardContent}>
+                      <div className={verticalTitle}>{slide.judul}</div>
+                      <p>
+                        {slide.desc}
+                      </p>
+                      <div className={verticalCardButton}
+                        onClick={() => handlePressItem(slide)}
+                      >
+                        Read More
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </Slider>
+          </div>
+        ) : sliderName == "curhatan" ? (
           <div>
             <Slider {...verticalcardSettings} className={wrapperVerticalCard}>
               {sliderData.map((slide) => (

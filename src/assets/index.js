@@ -39,3 +39,14 @@ export { default as Venta_Caketum2 } from "./images/Venta_caketum2.png";
 export { default as TBA } from "./images/TBA.png";
 
 export { default as videoluffy } from "./video/videoplayback.webm";
+
+export { default as ic_kognitif } from "./images/ic_kognitif.svg";
+export { default as ic_diskasi } from "./images/ic_diskasi.svg";
+export { default as ic_akademik } from "./images/ic_akademik.svg";
+export { default as ic_dokumentasi } from "./images/ic_dokumentasi.svg";
+export { default as ic_eksternal } from "./images/ic_eksternal.svg";
+export { default as ic_gbhk } from "./images/ic_gbhk.svg";
+export { default as ic_keuangan } from "./images/ic_keuangan.svg";
+export { default as ic_perpustakaan } from "./images/ic_perpustakaan.svg";
+export { default as ic_software } from "./images/ic_software.svg";
+export { default as ic_tutorial } from "./images/ic_tutorial.svg";

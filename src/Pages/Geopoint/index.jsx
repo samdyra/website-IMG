@@ -16,10 +16,8 @@ import { gegepdesc } from "../../assets";
 const Geopoint = () => {
   const {
     container,
-    carouselcontainer,
     pageBackground,
     title,
-    containerModal,
     containerMascot,
     buttonMascot,
     mascotText,
@@ -123,9 +121,9 @@ const Geopoint = () => {
         </div>
         <div
           className={container}
-          // data-aos="fade-up"
-          // data-aos-duration="600"
-          // data-aos-offset="625"
+        // data-aos="fade-up"
+        // data-aos-duration="600"
+        // data-aos-offset="625"
         >
           <ProgressBarCarousel />
         </div>

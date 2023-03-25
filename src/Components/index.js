@@ -6,3 +6,4 @@ export { default as Modal } from "./Modal";
 export { default as VideoEmbed } from "./VideoEmbed";
 export { default as Carousel3DMobile } from "./Carousel3DMobile";
 export { default as Majalah } from "./Majalah";
+export { default as Accordion } from "./Accordion/Accordion";

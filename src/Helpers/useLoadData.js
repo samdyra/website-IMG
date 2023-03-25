@@ -4,10 +4,16 @@ import {
 } from "firebase/firestore";
 import { db } from "../Config/firebase";
 
-const useLoadData = (dbName, limitData=10) => {
-  const [ data, setData ] = useState([ {
-    judul: "", desc: "", pdf: "", image: "", tanggal: ""
-  } ]);
+const useLoadData = (dbName, limitData = 10) => {
+  const [ data, setData ] = useState([
+    {
+      judul: "",
+      desc: "",
+      pdf: "",
+      image: "",
+      tanggal: "",
+    },
+  ]);
 
   useEffect(() => {
     const dbCollection = collection(db, dbName);
@@ -21,7 +27,7 @@ const useLoadData = (dbName, limitData=10) => {
     });
   }, []);
 
-  return data
+  return data;
 };
 
-export default useLoadData
+export default useLoadData;
