@@ -257,9 +257,9 @@ const HomeScreen = () => {
         <div className={containerSection} style={{ overflow: "hidden" }}>
           <div
             className={judulSection3}
-            data-aos={isMobile ? "fade-up" : "fade-left"}
+            data-aos={isMobile ? "fade-up" : "fade-right"}
             data-aos-duration="750"
-            data-aos-offset="10"
+            data-aos-offset={isMobile ? "200" : "250"}
           >
             <h1>Susunan Kepengurusan IMG-ITB 2022/2023</h1>
             <div
