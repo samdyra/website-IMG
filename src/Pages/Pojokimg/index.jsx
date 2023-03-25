@@ -174,8 +174,7 @@ const Pojokimg = () => {
     }));
   };
 
-  console.log(formData)
-  console.log(dataCurhat)
+
 
   const dataCurhatTampil = dataCurhat?.filter((item) => item.ditampilkan === 1);
   const minHeight = dataFAQ?.length * 16;

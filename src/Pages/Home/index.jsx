@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unknown-property */
 import React, {
-  useRef, useState, useEffect 
+  useRef, useState, useEffect
 } from "react";
 import style from "./style.module.scss";
 import { useNavigate } from "react-router-dom";
@@ -13,7 +13,7 @@ import { SliderText } from "../../assets/object/SliderData";
 import Carousel from "../../Components/Carousel/Carousel";
 import Gallery from "../../Components/Slider";
 import {
-  gegep1, gegep2, daki 
+  gegep1, gegep2, daki
 } from "../../assets";
 import { Modal } from "../../Components";
 import { isMobile } from "../../Helpers/mobileResponsive";
@@ -54,9 +54,9 @@ const HomeScreen = () => {
   } = style;
   const dataKegiatan = useLoadData("kegiatan")
   const dataFoto = useLoadData("fotoHome")
-  const [ index, setIndex ] = useState(0);
-  const [ gegepImage, setGegepImage ] = useState(gegep1);
-  const [ dataModal, setDataModal ] = useState({})
+  const [index, setIndex] = useState(0);
+  const [gegepImage, setGegepImage] = useState(gegep1);
+  const [dataModal, setDataModal] = useState({})
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
@@ -88,8 +88,8 @@ const HomeScreen = () => {
       <Typewriter
         options={{
           strings: gegepImage.includes("gegep1")
-            ? [ "Hi I'm Gegep! Welcome!", "See more about Geopoint here!" ]
-            : [ "Click Me!" ],
+            ? ["Hi I'm Gegep! Welcome!", "See more about Geopoint here!"]
+            : ["Click Me!"],
           autoStart: true,
           loop: true,
         }}
@@ -97,7 +97,7 @@ const HomeScreen = () => {
     );
   }
 
-  const [ openModal, setOpenModal ] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
 
   const handleOpenModal = (item) => {
     setDataModal(item)
@@ -107,7 +107,7 @@ const HomeScreen = () => {
     openModal
       ? (document.body.style.overflowY = "hidden")
       : (document.body.style.overflowY = "auto");
-  }, [ openModal ]);
+  }, [openModal]);
 
 
   return (
@@ -154,11 +154,11 @@ const HomeScreen = () => {
                     isMobile
                       ? {
                         fov: 20,
-                        position: [ 50, 40, 35 ],
+                        position: [50, 40, 35],
                       }
                       : {
                         fov: 36,
-                        position: [ 50, 40, 35 ],
+                        position: [50, 40, 35],
                       }
                   }
                 >
@@ -175,19 +175,7 @@ const HomeScreen = () => {
             </div>
           </div>
         </div>
-        <div className={type}>
-          <TypeWriter></TypeWriter>
-        </div>
-        <div className={gegep}>
-          <img
-            onMouseEnter={() => setGegepImage(gegep2)}
-            onMouseLeave={() => setGegepImage(gegep1)}
-            onClick={() => {
-              navigate("/Geopoint");
-            }}
-            src={gegepImage}
-          ></img>
-        </div>
+
         <div className={oval}></div>
         <div
           className={!isMobile ? containerSection2 : containerSection2Mobile}

@@ -32,7 +32,8 @@ const Gallery = (props) => {
     modalImgSlider,
     verticalTitle,
     curhatContainer,
-    curhatWrapper
+    curhatWrapper,
+    cardVerticalCard
   } = style;
 
   const [openModal, setOpenModal] = useState(false);
@@ -228,7 +229,7 @@ const Gallery = (props) => {
           </div>
         ) : sliderName == "curhatan" ? (
           <div>
-            <Slider {...curhatCardSettings} className={wrapperVerticalCard} >
+            <Slider {...curhatCardSettings} className={cardVerticalCard} >
               {sliderData?.map((slide, index) => (
                 <div className={curhatWrapper} key={slide.id} >
                   <div className={curhatContainer} key={slide.id} style={index % 2 !== 0 ? { marginRight: `${paddingLeftRandom()}px` } : { marginLeft: `${paddingLeftRandom()}px` }}>

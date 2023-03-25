@@ -29,6 +29,16 @@
 
     color: #000000;
   }
+
+  @media screen and (max-width: 420px) {
+    margin-top: 200px;
+    h1 {
+      font-size: 40px;
+    }
+    h2 {
+      font-size: 18px;
+    }
+  }
 }
 
 .iconContainer {
@@ -45,6 +55,16 @@
   cursor: pointer;
   user-select: none;
   overflow: hidden;
+
+  @media screen and (max-width: 450px) {
+    width: 150px;
+    height: 150px;
+
+    img {
+      width: auto;
+      height: 100px;
+    }
+  }
 }
 
 .iconContainer:hover {
@@ -143,6 +163,16 @@
 
     border-bottom: 3px solid #ff4a01;
   }
+
+  @media screen and (max-width: 450px) {
+    h1 {
+      font-size: 32px;
+    }
+    h2 {
+      font-size: 24px;
+    }
+    margin-top: 200px;
+  }
 }
 
 .questionContainer {
@@ -183,6 +213,13 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
+
+  @media screen and (max-width: 450px) {
+    flex-direction: column;
+    height: 240vh;
+    gap: 25px;
+    margin-bottom: -20px;
+  }
 }
 
 .curhatInputContainer {
@@ -192,6 +229,11 @@
 
   background: linear-gradient(165.05deg, #e1eeeb -1.3%, #4b8579 96.03%);
   border-radius: 25px;
+  @media screen and (max-width: 450px) {
+    margin-top: 50px;
+    width: 90vw;
+    height: 650px;
+  }
 }
 
 .curhatHalfPage {
@@ -223,12 +265,32 @@
     color: #ffffff;
     margin-bottom: 20px;
   }
+
+  @media screen and (max-width: 450px) {
+    gap: 25px;
+
+    h1 {
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 120%;
+    }
+    h2 {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .curhatWrapper {
   display: flex;
   width: 518px;
   height: fit-content;
+
+  @media screen and (max-width: 450px) {
+    width: 90vw;
+  }
 }
 
 .curhatContainer {
@@ -309,6 +371,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  @media screen and (max-width: 450px) {
+    width: auto;
+    height: 500px;
+    top: -70px;
+    left: -80px;
+  }
 }
 
 .kontur2s {
@@ -323,6 +392,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  @media screen and (max-width: 450px) {
+    width: auto;
+    height: 400px;
+    top: 370px;
+    right: -30px;
+  }
 }
 
 .kontur3s {
@@ -337,6 +413,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  @media screen and (max-width: 450px) {
+    width: auto;
+    height: 700px;
+    top: 150vh;
+    left: 0px;
+  }
 }
 
 .kontur4s {
@@ -352,4 +435,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  @media screen and (max-width: 450px) {
+    width: auto;
+    height: 550px;
+    rotate: 100deg;
+
+    top: 237vh;
+    right: 0px;
+  }
 }

@@ -65,7 +65,6 @@
   filter: drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.558));
 
   @media screen and (max-width: 420px) {
-    border: red 3px solid;
   }
 }
 
@@ -237,10 +236,25 @@
   max-width: 1200px;
   margin: 0 auto;
 
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 450px) {
     width: 100vw;
     height: 1000px;
     padding-left: 4vw;
+  }
+}
+
+.cardVerticalCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 450px) {
+    width: 100vw;
+    height: 40vh;
   }
 }
 
@@ -378,6 +392,14 @@
   padding-inline: 20px;
   padding-block: 5px;
   width: fit-content;
+
+  @media screen and (max-width: 450px) {
+    max-width: 70vw;
+    padding-inline: 10px;
+    padding-block: 5px;
+    max-height: 350px;
+    overflow: hidden;
+  }
 }
 .curhatWrapper {
   display: flex !important;
@@ -385,4 +407,8 @@
   margin-block: 10px;
   justify-content: center !important;
   align-items: center;
+
+  @media screen and (max-width: 450px) {
+    width: 100vw;
+  }
 }
