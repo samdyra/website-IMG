@@ -20,6 +20,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 
 import { toast } from "react-toastify";
 import { collection, addDoc } from "firebase/firestore";
+import Gallery from "../../Components/Slider";
 
 
 const Pojokimg = () => {
@@ -36,12 +37,15 @@ const Pojokimg = () => {
     curhatWrapper,
     curhatContainer,
     formInput,
+    formInput2,
+    buttonTitle
   } = style;
 
   const dataFAQ = useLoadDataWithOffset("FAQ", 3)
-  const dataCurhat = useLoadDataWithOffset("CurhatanKamerad", 3)
+  const dataCurhat = useLoadDataWithOffset("CurhatanKamerad", 20)
 
   const [user] = useAuthState(auth);
+
 
 
 
@@ -126,8 +130,9 @@ const Pojokimg = () => {
 
   const [formData, setFormData] = useState({
     nama: "",
+    email: "",
     curhat: "",
-    ditampilkan: 1,
+    ditampilkan: 0,
   });
 
   const handleChange = (e) => {
@@ -153,6 +158,21 @@ const Pojokimg = () => {
         toast("adding story", { type: "error" });
       });
   };
+  const handleRadioChange = (event) => {
+    const { checked } = event.target;
+    const newValue = checked ? 1 : 0;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      ditampilkan: newValue,
+    }));
+  };
+
+  console.log(formData)
+  console.log(dataCurhat)
+
+  const dataCurhatTampil = dataCurhat?.filter((item) => item.ditampilkan === 1);
+  const minHeight = dataFAQ?.length * 16;
+
 
 
 
@@ -178,7 +198,7 @@ const Pojokimg = () => {
         <div>
           <h2>FAQ</h2>
         </div>
-        <div className={questionWrapper}>
+        <div className={questionWrapper} style={{ minHeight: `${minHeight}vh` }}>
           {dataFAQ?.map((section, index) => (
             <Accordion key={index} section={section} />
           ))}
@@ -190,11 +210,9 @@ const Pojokimg = () => {
           <h1>Curhatan <br /> Kamerad</h1>
           <h2>Mau confess? Mau cerita? Disini aman kok! </h2>
           <div className={curhatWrapper}>
-            {dataCurhat?.map((item, index) => (
-              <div className={curhatContainer} >
-                {item.curhat}
-              </div>
-            ))}
+
+            <Gallery sliderName="curhatan" data={dataCurhatTampil} />
+
 
           </div>
         </div>
@@ -210,6 +228,16 @@ const Pojokimg = () => {
               onChange={(e) => handleChange(e)}
             />
           </div>
+          <div className={formInput}>
+            <label htmlFor="">Alamat Email</label>
+            <input
+              type="text"
+              name="email"
+              className="formik"
+              value={formData.email}
+              onChange={(e) => handleChange(e)}
+            />
+          </div>
 
 
           <div className={formInput}>
@@ -222,9 +250,26 @@ const Pojokimg = () => {
               rows="10"
             />
           </div>
-          <button className="formbutton" onClick={handlePublish}>
-            Publish
-          </button>
+          <div className={formInput2}>
+            <label htmlFor="" className={buttonTitle}>Mau Ditampilin??</label>
+            <label className="rocker rocker-small">
+              <input type="checkbox" onChange={handleRadioChange} />
+              <span className="switch-left">Yes</span>
+              <span className="switch-right">No</span>
+            </label>
+          </div>
+
+          <div className={formInput}>
+            <div className="button" onClick={handlePublish}>
+              <div className="box">S</div>
+              <div className="box">U</div>
+              <div className="box">B</div>
+              <div className="box">M</div>
+              <div className="box">I</div>
+              <div className="box">T</div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div >

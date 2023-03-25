@@ -30,7 +30,10 @@ const Gallery = (props) => {
     slidecontainer,
     modalImgContainer,
     modalImgSlider,
-    verticalTitle
+    verticalTitle,
+    curhatContainer,
+    wrapperCurhatCard,
+    curhatWrapper
   } = style;
 
   const [openModal, setOpenModal] = useState(false);
@@ -91,6 +94,18 @@ const Gallery = (props) => {
     swipeToSlide: true,
   };
 
+  const curhatCardSettings = {
+    infinite: true,
+    speed: 900,
+    slidesToShow: 8,
+    autoplay: true,
+    autoplaySpeed: 800,
+    arrows: false,
+    vertical: true,
+    verticalSwiping: true,
+    swipeToSlide: true,
+  };
+
   const gallerySettings2 = {
     infinite: true,
     speed: 1500,
@@ -109,6 +124,11 @@ const Gallery = (props) => {
       ? (document.body.style.overflowY = "hidden")
       : (document.body.style.overflowY = "auto");
   }, [openModal]);
+
+  const paddingLeftRandom = () => {
+    const random = Math.floor(Math.random() * 80);
+    return random;
+  };
 
   return (
     <div>
@@ -209,24 +229,14 @@ const Gallery = (props) => {
           </div>
         ) : sliderName == "curhatan" ? (
           <div>
-            <Slider {...verticalcardSettings} className={wrapperVerticalCard}>
-              {sliderData.map((slide) => (
-                <div className={verticalCardContainer}>
-                  <div className={verticalCardImage}>
-                    <img src={slide.image}></img>
-                    <div className={verticalCardContent}>
-                      <div className={verticalTitle}>{slide.judul}</div>
-                      <p>
-                        {slide.desc}
-                      </p>
-                      <div className={verticalCardButton}
-                        onClick={() => handlePressItem(slide)}
-                      >
-                        Read More
-                      </div>
-                    </div>
+            <Slider {...curhatCardSettings} className={wrapperVerticalCard} >
+              {sliderData?.map((slide, index) => (
+                <div className={curhatWrapper} >
+                  <div className={curhatContainer} style={index % 2 !== 0 ? { marginRight: `${paddingLeftRandom()}px` } : { marginLeft: `${paddingLeftRandom()}px` }}>
+                    {slide.curhat}
                   </div>
                 </div>
+
               ))}
             </Slider>
           </div>

@@ -127,7 +127,6 @@
   text-align: center;
   padding-inline: 20px;
 
-
   h1 {
     font-style: normal;
     font-size: 18px;
@@ -146,11 +145,11 @@
     // overflow: hidden;
     // text-overflow: ellipsis;
     overflow: hidden;
-   text-overflow: ellipsis;
-   display: -webkit-box;
-   -webkit-line-clamp: 6; /* number of lines to show */
-           line-clamp: 6; 
-   -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 6; /* number of lines to show */
+    line-clamp: 6;
+    -webkit-box-orient: vertical;
   }
 
   h3 {
@@ -190,7 +189,6 @@
   border-bottom: none;
 
   div {
-   
   }
 }
 
@@ -201,7 +199,6 @@
 }
 
 .madeElementWrapper {
-
   // display: flex;
   // flex-direction: column;
   // margin: 0 auto;
@@ -232,6 +229,22 @@
 }
 
 .wrapperVerticalCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 420px) {
+    width: 100vw;
+    height: 1000px;
+    padding-left: 4vw;
+  }
+}
+
+.wrapperCurhatCard {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -296,13 +309,12 @@
   padding-block: 10px;
   font-family: jakarta;
 
-
   .verticalTitle {
     max-width: fit-content;
     text-align: left;
     font-style: normal;
     font-size: 24px;
-    font-family: jakartaBold;;
+    font-family: jakartaBold;
   }
 
   p {
@@ -312,7 +324,7 @@
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 5; /* number of lines to show */
-            line-clamp: 5; 
+    line-clamp: 5;
     -webkit-box-orient: vertical;
     font-size: 15px;
   }
@@ -334,7 +346,7 @@
   text-align: center;
   color: white;
   font-weight: 500;
-  
+
   @media screen and (max-width: 420px) {
   }
 }
@@ -357,4 +369,20 @@
   /* border: 3px solid red; */
   margin-inline: 25px;
   border-radius: 24px;
+}
+
+.curhatContainer {
+  height: 30px;
+  background: #d9d9d9;
+  border-radius: 25px;
+  padding-inline: 20px;
+  padding-top: 7px;
+  width: fit-content;
+}
+.curhatWrapper {
+  display: flex !important;
+
+  margin-block: 10px;
+  justify-content: center !important;
+  align-items: center;
 }
