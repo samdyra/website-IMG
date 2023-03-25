@@ -32,7 +32,6 @@ const Gallery = (props) => {
     modalImgSlider,
     verticalTitle,
     curhatContainer,
-    wrapperCurhatCard,
     curhatWrapper
   } = style;
 
@@ -97,7 +96,7 @@ const Gallery = (props) => {
   const curhatCardSettings = {
     infinite: true,
     speed: 900,
-    slidesToShow: 8,
+    slidesToShow: 7,
     autoplay: true,
     autoplaySpeed: 800,
     arrows: false,
@@ -231,8 +230,8 @@ const Gallery = (props) => {
           <div>
             <Slider {...curhatCardSettings} className={wrapperVerticalCard} >
               {sliderData?.map((slide, index) => (
-                <div className={curhatWrapper} >
-                  <div className={curhatContainer} style={index % 2 !== 0 ? { marginRight: `${paddingLeftRandom()}px` } : { marginLeft: `${paddingLeftRandom()}px` }}>
+                <div className={curhatWrapper} key={slide.id} >
+                  <div className={curhatContainer} key={slide.id} style={index % 2 !== 0 ? { marginRight: `${paddingLeftRandom()}px` } : { marginLeft: `${paddingLeftRandom()}px` }}>
                     {slide.curhat}
                   </div>
                 </div>

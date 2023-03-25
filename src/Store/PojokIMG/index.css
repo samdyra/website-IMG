@@ -273,7 +273,7 @@ input:checked:focus + .switch-left + .switch-right {
 }
 
 .box:before {
-  content: " ";
+  content: "!";
   position: absolute;
   top: 0;
   background: #ff4a01;
@@ -307,7 +307,7 @@ input:checked:focus + .switch-left + .switch-right {
 .box:nth-child(6)::before {
     transform: translateY(-100%);
 
-  content: ' ';
+  content: '!';
 }
 
 .button:hover .box:before {
