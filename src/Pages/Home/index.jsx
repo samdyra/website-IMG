@@ -37,6 +37,7 @@ const HomeScreen = () => {
     containerSectionTop,
     containerSectionKegiatan,
     containerSection2,
+    containerSectionKetua,
     desctujuan,
     fadeIn,
     fadeOut,
@@ -114,9 +115,10 @@ const HomeScreen = () => {
   const container3 = useRef(null);
   const container4 = useRef(null);
   const container5 = useRef(null);
-  const wrapper = useRef(null);
+  const container6 = useRef(null);
 
-  const refs = [ container1, container2, container3, container4, container5 ];
+
+  const refs = [ container1, container2, container3, container4, container5,container6 ];
 
 
 
@@ -132,8 +134,8 @@ const HomeScreen = () => {
         data={dataModal}
       ></Modal>
 
-      <div className={container} style={{ overflow: "hidden" }} ref={wrapper}>
-        <SideNav refs={refs} containerRef={wrapper}/>
+      <div className={container} style={{ overflow: "hidden" }} >
+        <SideNav refs={refs} />
         <div className={containerSectionTop} ref={container1}
         >
           <div className={star}>
@@ -324,7 +326,9 @@ const HomeScreen = () => {
           </div>
         </div>
 
-        <div className={container}
+        <div className={containerSectionKetua}
+          ref={container5}
+
         >
           <div
             className={ketuaContainer}
@@ -363,7 +367,7 @@ const HomeScreen = () => {
           </div>
         </div>
 
-        <div className={judulSection5} ref={container5}
+        <div className={judulSection5} ref={container6}
         >
           <h1>Our Delightful Moments</h1>
         </div>

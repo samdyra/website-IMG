@@ -31,7 +31,7 @@
 
 .containerSection2 {
   margin: 20px auto 0 auto;
-  height: 70vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -118,6 +118,7 @@
 .containerSectionKegiatan {
   margin: 0 auto 0 auto;
   z-index: 1;
+  height: 100vh;
 }
 
 .containerSectionTop {
@@ -632,7 +633,6 @@
   background: #ff4a01;
   border-radius: 25px;
   color: #ffffff;
-  margin-bottom: 150px;
 
   p {
     font-family: jakarta;
@@ -669,7 +669,6 @@
     height: 100%;
     flex-direction: column;
     gap: 50px;
-    margin-bottom: 50px;
     padding-block: 10vh;
 
     p {
@@ -710,4 +709,11 @@
       font-size: 12px;
     }
   }
+}
+
+.containerSectionKetua {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
