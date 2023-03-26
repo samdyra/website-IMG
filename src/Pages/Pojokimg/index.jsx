@@ -47,8 +47,8 @@ const Pojokimg = () => {
     kontur4s
   } = style;
 
-  const dataFAQ = useLoadDataWithOffset("FAQ", 3)
-  const dataCurhat = useLoadDataWithOffset("CurhatanKamerad", 8, 1)
+  const dataFAQ = useLoadDataWithOffset("FAQ", 10)
+  const dataCurhat = useLoadDataWithOffset("CurhatanKamerad", 15, 1)
   console.log(dataCurhat)
 
   const [user] = useAuthState(auth);

@@ -19,6 +19,7 @@ import { Modal } from "../../Components";
 import { isMobile } from "../../Helpers/mobileResponsive";
 import useLoadData from "../../Helpers/useLoadData";
 import { Organogram } from "../../assets";
+import SideNav from "../../Components/SideNav";
 
 const HomeScreen = () => {
   const navigate = useNavigate();
@@ -54,9 +55,9 @@ const HomeScreen = () => {
   } = style;
   const dataKegiatan = useLoadData("kegiatan")
   const dataFoto = useLoadData("fotoHome")
-  const [index, setIndex] = useState(0);
-  const [gegepImage, setGegepImage] = useState(gegep1);
-  const [dataModal, setDataModal] = useState({})
+  const [ index, setIndex ] = useState(0);
+  const [ gegepImage, setGegepImage ] = useState(gegep1);
+  const [ dataModal, setDataModal ] = useState({})
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
@@ -88,8 +89,8 @@ const HomeScreen = () => {
       <Typewriter
         options={{
           strings: gegepImage.includes("gegep1")
-            ? ["Hi I'm Gegep! Welcome!", "See more about Geopoint here!"]
-            : ["Click Me!"],
+            ? [ "Hi I'm Gegep! Welcome!", "See more about Geopoint here!" ]
+            : [ "Click Me!" ],
           autoStart: true,
           loop: true,
         }}
@@ -97,7 +98,7 @@ const HomeScreen = () => {
     );
   }
 
-  const [openModal, setOpenModal] = useState(false);
+  const [ openModal, setOpenModal ] = useState(false);
 
   const handleOpenModal = (item) => {
     setDataModal(item)
@@ -107,7 +108,19 @@ const HomeScreen = () => {
     openModal
       ? (document.body.style.overflowY = "hidden")
       : (document.body.style.overflowY = "auto");
-  }, [openModal]);
+  }, [ openModal ]);
+
+  const container1 = useRef(null);
+  const container3 = useRef(null);
+  const container4 = useRef(null);
+  const container5 = useRef(null);
+  const wrapper = useRef(null);
+
+  const refs = [ container1, container2, container3, container4, container5 ];
+
+
+
+
 
 
   return (
@@ -118,8 +131,11 @@ const HomeScreen = () => {
         onClose={() => setOpenModal(false)}
         data={dataModal}
       ></Modal>
-      <div className={container} style={{ overflow: "hidden" }}>
-        <div className={containerSectionTop}>
+
+      <div className={container} style={{ overflow: "hidden" }} ref={wrapper}>
+        <SideNav refs={refs} containerRef={wrapper}/>
+        <div className={containerSectionTop} ref={container1}
+        >
           <div className={star}>
             <div className={landingPage}>
               <div className={desc}>
@@ -154,11 +170,11 @@ const HomeScreen = () => {
                     isMobile
                       ? {
                         fov: 20,
-                        position: [50, 40, 35],
+                        position: [ 50, 40, 35 ],
                       }
                       : {
                         fov: 36,
-                        position: [50, 40, 35],
+                        position: [ 50, 40, 35 ],
                       }
                   }
                 >
@@ -254,7 +270,8 @@ const HomeScreen = () => {
           )}
         </div>
 
-        <div className={containerSection} style={{ overflow: "hidden" }}>
+        <div className={containerSection} ref={container3}
+          style={{ overflow: "hidden" }}>
           <div
             className={judulSection3}
             data-aos={isMobile ? "fade-up" : "fade-right"}
@@ -285,6 +302,7 @@ const HomeScreen = () => {
 
         <div
           className={containerSectionKegiatan}
+          ref={container4}
           style={{ overflow: "hidden" }}
         >
           <div className={judulSection4}>
@@ -306,7 +324,8 @@ const HomeScreen = () => {
           </div>
         </div>
 
-        <div className={container}>
+        <div className={container}
+        >
           <div
             className={ketuaContainer}
             data-aos="fade-up"
@@ -344,7 +363,8 @@ const HomeScreen = () => {
           </div>
         </div>
 
-        <div className={judulSection5}>
+        <div className={judulSection5} ref={container5}
+        >
           <h1>Our Delightful Moments</h1>
         </div>
         <div style={{ marginBottom: "100px" }}>
