@@ -51,7 +51,7 @@ const Pojokimg = () => {
   const dataCurhat = useLoadDataWithOffset("CurhatanKamerad", 15, 1)
   console.log(dataCurhat)
 
-  const [user] = useAuthState(auth);
+  const [ user ] = useAuthState(auth);
 
 
 
@@ -135,7 +135,7 @@ const Pojokimg = () => {
     </div>
   );
 
-  const [formData, setFormData] = useState({
+  const [ formData, setFormData ] = useState({
     nama: "",
     email: "",
     curhat: "",

@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, {
+  useState, useEffect, useMemo 
+} from "react";
 import style from "./style.module.scss";
 import Slider from "react-slick";
 import { Modal } from "../../Components";
@@ -36,7 +38,7 @@ const Gallery = (props) => {
     cardVerticalCard
   } = style;
 
-  const [openModal, setOpenModal] = useState(false);
+  const [ openModal, setOpenModal ] = useState(false);
 
   const sliderData = props?.data || [];
   const sliderImage = props?.dataImage || [];
@@ -97,7 +99,7 @@ const Gallery = (props) => {
   const curhatCardSettings = {
     infinite: true,
     speed: 900,
-    slidesToShow: 7,
+    slidesToShow: 10,
     autoplay: true,
     autoplaySpeed: 800,
     arrows: false,
@@ -123,12 +125,14 @@ const Gallery = (props) => {
     openModal
       ? (document.body.style.overflowY = "hidden")
       : (document.body.style.overflowY = "auto");
-  }, [openModal]);
+  }, [ openModal ]);
 
-  const paddingLeftRandom = () => {
+ 
+  const paddingLeftRandom = useMemo(() => {
     const random = Math.floor(Math.random() * 80);
     return random;
-  };
+  }, []); 
+
 
   return (
     <div>
@@ -232,7 +236,7 @@ const Gallery = (props) => {
             <Slider {...curhatCardSettings} className={cardVerticalCard} >
               {sliderData?.map((slide, index) => (
                 <div className={curhatWrapper} key={slide.id} >
-                  <div className={curhatContainer} key={slide.id} style={index % 2 !== 0 ? { marginRight: `${paddingLeftRandom()}px` } : { marginLeft: `${paddingLeftRandom()}px` }}>
+                  <div className={curhatContainer} key={slide.id} style={index % 2 !== 0 ? { marginRight: `${paddingLeftRandom}px` } : { marginLeft: `${paddingLeftRandom}px` }}>
                     {slide.curhat}
                   </div>
                 </div>

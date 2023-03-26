@@ -130,7 +130,7 @@
   align-items: center;
   flex-direction: column;
   min-height: 100vh;
-  max-height: 155vh;
+  max-height: none;
   gap: 25px;
   margin-bottom: 25px;
   transition: all 0.3s ease-in-out;
@@ -200,7 +200,7 @@
   justify-content: space-around;
   align-items: space-between;
 
-  max-height: 120vh;
+  max-height: none;
   transition: all 0.3s ease-in-out;
 }
 .containerSection3 {
@@ -209,16 +209,23 @@
   align-items: center;
   gap: 75px;
   margin-top: 50px;
-  height: 105vh;
+  height: 110vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
 
   @media screen and (max-width: 450px) {
     flex-direction: column;
+    justify-content: space-around;
     height: 240vh;
     gap: 25px;
     margin-bottom: -20px;
+    @media screen and (max-height: 600px) {
+      padding-bottom: 20px;
+      padding-top: -10px;
+
+      justify-content: space-between;
+    }
   }
 }
 
@@ -238,6 +245,7 @@
 
 .curhatHalfPage {
   height: 650px;
+  padding-top: 50px;
 
   display: flex;
   flex-direction: column;
@@ -263,11 +271,12 @@
     line-height: 140%;
 
     color: #ffffff;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   @media screen and (max-width: 450px) {
-    gap: 25px;
+    gap: 10px;
+    height: fit-content;
 
     h1 {
       font-weight: 400;

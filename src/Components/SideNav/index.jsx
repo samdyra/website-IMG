@@ -10,7 +10,7 @@ const SideNav = ({ refs, }) => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       const containerBottom = scrollTop + window.innerHeight;
-      const offset = 50; // Add a 100 pixel offset
+      const offset = 60; 
 
       for (let i = 0; i < refs.length; i++) {
         const refTop = refs[i].current.offsetTop - offset;
