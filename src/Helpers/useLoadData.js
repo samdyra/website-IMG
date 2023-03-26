@@ -4,7 +4,7 @@ import {
 } from "firebase/firestore";
 import { db } from "../Config/firebase";
 
-const useLoadData = (dbName, limitData = 10) => {
+const useLoadData = (dbName, limitData = 15) => {
   const [ data, setData ] = useState([
     {
       judul: "",

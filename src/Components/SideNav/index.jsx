@@ -10,12 +10,8 @@ const SideNav = ({ refs }) => {
 
   useEffect(() => {
     const handleScroll = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       if (!clickInProgress) {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const containerBottom = scrollTop + window.innerHeight;
-        console.log('containerBottom',containerBottom)
-        console.log('scrollTop',scrollTop)
-
         for (let i = 1; i < refs.length -1 ; i++) {
           const offset = 50;
 
@@ -25,17 +21,19 @@ const SideNav = ({ refs }) => {
           
           if (scrollTop >= refTop && scrollTop < refBottom ) {
             setActiveIndex(i);
-            console.log("eeeeeeeeeeeeeeeeee")
             break;
           }
-        }
 
-        if (scrollTop >= 0 && scrollTop < 400 && activeIndex !== 0) {
-          setActiveIndex(0);
+          if (scrollTop >= 0 && scrollTop < 550 && activeIndex !== 0) {
+            setActiveIndex(0);
+          }
+          if (scrollTop > refs.length*570 && activeIndex !== refs.length-1) {
+            setActiveIndex(refs.length-1);
+          }
         }
-        if (scrollTop > 3400 && activeIndex !== refs.length-1) {
-          setActiveIndex(refs.length-1);
-        }
+        
+
+        
 
       }
     };
