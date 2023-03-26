@@ -48,7 +48,7 @@ const Pojokimg = () => {
   } = style;
 
   const dataFAQ = useLoadDataWithOffset("FAQ", 10)
-  const dataCurhat = useLoadDataWithOffset("CurhatanKamerad", 15, 1)
+  const dataCurhat = useLoadDataWithOffset("CurhatanKamerad", 100, 1)
   console.log(dataCurhat)
 
   const [ user ] = useAuthState(auth);
