@@ -372,7 +372,7 @@ const HomeScreen = () => {
           <h1>Our Delightful Moments</h1>
         </div>
         <div style={{ marginBottom: "100px" }}>
-          <Gallery dataImage={dataFoto} sliderName={isMobile ? "modalimg" : "gallery"} />
+          <Gallery dataImage={dataFoto} sliderName={isMobile ? "modalimg" : "gallery"} limitData={30} />
         </div>
       </div>
     </div>
