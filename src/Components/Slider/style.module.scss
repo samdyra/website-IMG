@@ -393,6 +393,8 @@
   padding-inline: 20px;
   padding-block: 5px;
   width: fit-content;
+  min-width: 20px;
+  min-height: 20px;
 
   @media screen and (max-width: 450px) {
     max-width: 70vw;

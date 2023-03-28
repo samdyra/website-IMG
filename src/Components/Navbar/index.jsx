@@ -93,9 +93,9 @@ const Navbar = () => {
               <Link className={link} to="/Pojokimg">
                 <div>Pojok IMG</div>
               </Link>
-              <Link className={link} to="/IMGTweet">
+              {/* <Link className={link} to="/IMGTweet">
                 <div>IMGTweet</div>
-              </Link>
+              </Link> */}
             </div>
             <a href="/login">
               <div className={searchIcon}>

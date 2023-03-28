@@ -49,8 +49,7 @@ const Pojokimg = () => {
   } = style;
 
   const dataFAQ = useLoadDataWithOffset("FAQ", 10)
-  const dataCurhat = useLoadDataWithOffset("CurhatanKamerad", 50)
-  console.log(dataCurhat)
+  const dataCurhat = useLoadDataWithOffset("CurhatanKamerad", 100)
 
   const [ user ] = useAuthState(auth);
 
@@ -179,6 +178,8 @@ const Pojokimg = () => {
 
   const dataCurhatTampil = dataCurhat?.filter((item) => item.ditampilkan === 1);
   const minHeight = dataFAQ?.length * 16;
+
+  console.log('aaaa',dataCurhatTampil)
 
 
 
