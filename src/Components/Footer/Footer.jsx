@@ -35,7 +35,7 @@ const Footer = () => {
   } = style;
   return (
     <div>
-      {linkName === "/DPM" ? null : (
+      {linkName === "/DPM" ? null : linkName === "/IMGTweet" ? null :(
         <div
           className={
             linkName === "/Geopoint" ||
@@ -54,8 +54,8 @@ const Footer = () => {
               linkName === "/Geopoint/Ceremony"
                 ? { background: "#211954" }
                 : linkName === "/Pemilu"
-                ? { background: " #5B0000" }
-                : null
+                  ? { background: " #5B0000" }
+                  : null
             }
           >
             <div className={detail}>
@@ -68,8 +68,8 @@ const Footer = () => {
                     linkName === "/Geopoint/Ceremony"
                       ? { background: "#281F64" }
                       : linkName === "/Pemilu"
-                      ? { background: " #800000" }
-                      : null
+                        ? { background: " #800000" }
+                        : null
                   }
                 >
                   <img src={phone}></img>
@@ -93,8 +93,8 @@ const Footer = () => {
                     linkName === "/Geopoint/Ceremony"
                       ? { background: " #281F64" }
                       : linkName === "/Pemilu"
-                      ? { background: " #800000" }
-                      : null
+                        ? { background: " #800000" }
+                        : null
                   }
                 >
                   <img src={map}></img>

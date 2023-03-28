@@ -454,3 +454,17 @@
     right: 0px;
   }
 }
+
+.buttoncontainer {
+  display: flex;
+  gap: 30px;
+  margin: 0 auto;
+  margin-top: 30px;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: 450px) {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

@@ -98,8 +98,10 @@ const Gallery = (props) => {
 
   const curhatCardSettings = {
     infinite: true,
+    
+
     speed: 900,
-    slidesToShow: 10,
+    slidesToShow:6,
     autoplay: true,
     autoplaySpeed: 800,
     arrows: false,

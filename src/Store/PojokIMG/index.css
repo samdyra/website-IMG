@@ -53,7 +53,6 @@
   margin-bottom: 20px;
 }
 
-
 .deleteButton button {
   border: 2px solid red;
   padding: 5px;
@@ -133,7 +132,7 @@
 
 .rocker-small {
   font-size: 1em;
- /* Sizes the switch */
+  /* Sizes the switch */
   margin: 10px;
 }
 
@@ -251,24 +250,26 @@ input:checked:focus + .switch-left + .switch-right {
   color: #333;
 }
 
-
 .button {
   display: flex;
+  width: max-content;
 }
 
 .box {
-  width: 35px;
-  height: 40px;
+  width: 15px;
+  height: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 700;
+  font-family: "jakarta";
+
   color: #fff;
-  transition: all .8s;
+  transition: all 0.8s;
   cursor: pointer;
   position: relative;
-  background: #42cb5f;
+  background: #ff4a01;
   overflow: hidden;
 }
 
@@ -276,41 +277,135 @@ input:checked:focus + .switch-left + .switch-right {
   content: "!";
   position: absolute;
   top: 0;
-  background: #ff4a01;
+  background: #ff9f78;
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   transform: translateY(100%);
-  transition: transform .4s;
+  transition: transform 0.4s;
+}
+
+.box:nth-child(1)::before {
+  content: "!";
+  border-radius: 20px 0 0 20px;
+  margin-right: -3px;
+}
+.box:nth-child(1) {
+  border-radius: 20px 0 0 20px;
+  width: 50px;
+  justify-content: flex-end;
+  padding-right: 3px;
 }
 
 .box:nth-child(2)::before {
   transform: translateY(-100%);
-  content: 'Y';
+  content: "Y";
 }
 
 .box:nth-child(3)::before {
-  content: 'E';
+  content: "E";
 }
 
 .box:nth-child(4)::before {
   transform: translateY(-100%);
-  content: 'A';
+  content: "A";
 }
 
 .box:nth-child(5)::before {
-  content: 'Y';
+  content: "Y";
 }
 
 .box:nth-child(6)::before {
-    transform: translateY(-100%);
+  transform: translateY(-100%);
+  border-radius: 0 20px 20px 0;
+  margin-left: -3px;
+  content: "!";
+}
 
-  content: '!';
+.box:nth-child(6) {
+  border-radius: 0 20px 20px 0;
+  width: 50px;
+  justify-content: flex-start;
+  padding-left: 3px;
 }
 
 .button:hover .box:before {
   transform: translateY(0);
 }
 
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 170px;
+  height: 34px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #3c3c3c;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #ff4a01;
+}
+
+input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #2196f3;
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(135px);
+}
+
+/*------ ADDED CSS ---------*/
+.slider:after {
+  content: "Tidak Tampil";
+  color: white;
+  display: block;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: max-content;
+  text-align: center;
+  font-size: 15px;
+  font-family: Verdana, sans-serif;
+}
+
+input:checked + .slider:after {
+  content: "Tampil";
+}
+
+/*--------- END --------*/

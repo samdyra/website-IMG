@@ -44,11 +44,12 @@ const Pojokimg = () => {
     kontur1s,
     kontur2s,
     kontur3s,
-    kontur4s
+    kontur4s,
+    buttoncontainer
   } = style;
 
   const dataFAQ = useLoadDataWithOffset("FAQ", 10)
-  const dataCurhat = useLoadDataWithOffset("CurhatanKamerad", 100, 1)
+  const dataCurhat = useLoadDataWithOffset("CurhatanKamerad", 50)
   console.log(dataCurhat)
 
   const [ user ] = useAuthState(auth);
@@ -259,26 +260,27 @@ const Pojokimg = () => {
               className="formik"
               value={formData.curhat}
               onChange={(e) => handleChange(e)}
-              rows="10"
+              rows="13"
             />
           </div>
-          <div className={formInput2}>
-            <label htmlFor="" className={buttonTitle}>Mau Ditampilin??</label>
-            <label className="rocker rocker-small">
-              <input type="checkbox" onChange={handleRadioChange} />
-              <span className="switch-left">Yes</span>
-              <span className="switch-right">No</span>
-            </label>
-          </div>
+          <div className={buttoncontainer}>
+            <div className={formInput2}>
+            
+              <label className="switch">
+                <input type="checkbox" onChange={handleRadioChange} />
+                <span className="slider"></span>
+              </label>
+            </div>
 
-          <div className={formInput}>
-            <div className="button" onClick={handlePublish}>
-              <div className="box">S</div>
-              <div className="box">U</div>
-              <div className="box">B</div>
-              <div className="box">M</div>
-              <div className="box">I</div>
-              <div className="box">T</div>
+            <div className={formInput}>
+              <div className="button" onClick={handlePublish}>
+                <div className="box">S</div>
+                <div className="box">U</div>
+                <div className="box">B</div>
+                <div className="box">M</div>
+                <div className="box">I</div>
+                <div className="box">T</div>
+              </div>
             </div>
           </div>
 

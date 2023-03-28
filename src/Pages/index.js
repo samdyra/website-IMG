@@ -12,3 +12,5 @@ export { default as Georeference } from "./Georeference";
 export { default as Navigacity } from "./Navigacity";
 export { default as Ceremony } from "./Ceremony";
 export { default as Pemilu } from "./Pemilu";
+export { default as IMGTweet } from "./IMGTweet";
+

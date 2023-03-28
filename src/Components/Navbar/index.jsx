@@ -12,7 +12,7 @@ const Navbar = () => {
 
   const linkName = location.pathname;
 
-  const [, setNavbar] = useState(false);
+  const [ , setNavbar ] = useState(false);
   const {
     container,
     linkContainer,
@@ -23,13 +23,18 @@ const Navbar = () => {
     containerbig,
     containeractive,
     containerGeopoint,
+    containerbigTweet,
+    containerTweet,
+    linkContainerTweet,
+    logotextTweet
   } = style;
-  const [fix, setFix] = useState(false);
+  const [ fix, setFix ] = useState(false);
 
   const changeBackground = () => {
     if (window.scrollY >= 680) {
       setNavbar(false);
-    } else {
+    }
+    else {
       setNavbar(true);
     }
   };
@@ -44,14 +49,15 @@ const Navbar = () => {
   //   }
   // };
 
-  const [offset, setOffset] = useState(0);
+  const [ offset, setOffset ] = useState(0);
 
   window.addEventListener("scroll", () => setOffset(window.pageYOffset / 600));
 
   function setFixed() {
     if (window.scrollY >= 392) {
       setFix(true);
-    } else {
+    }
+    else {
       setFix(false);
     }
   }
@@ -87,6 +93,9 @@ const Navbar = () => {
               <Link className={link} to="/Pojokimg">
                 <div>Pojok IMG</div>
               </Link>
+              <Link className={link} to="/IMGTweet">
+                <div>IMGTweet</div>
+              </Link>
             </div>
             <a href="/login">
               <div className={searchIcon}>
@@ -98,64 +107,94 @@ const Navbar = () => {
       ) : linkName === "/Geopoint" ||
         linkName === "/Geopoint/Navigacity" ||
         linkName === "/Geopoint/Ceremony" ? (
-        <div className={containerGeopoint}>
-          <div className={container}>
-            <div>
-              <Link className={logo} to="/">
-                <img src={LogoIMG} />
-                <div className={logotext}>
-                  <h1 style={{ fontFamily: "jakartabold" }}>
-                    IKATAN MAHASISWA GEODESI
-                  </h1>
-                  <h1>INSTITUT TEKNOLOGI BANDUNG</h1>
-                </div>
-              </Link>
-            </div>
-
-            <div className={linkContainer}>
-              <Dropdown menuName="activities" />
-              <Dropdown menuName="karya" />
-              <Link className={link} to="/Pojokimg">
-                <div>Pojok IMG</div>
-              </Link>
-            </div>
-            <a href="/login">
-              <div className={searchIcon}>
-                <img src={login} />
+          <div className={containerGeopoint}>
+            <div className={container}>
+              <div>
+                <Link className={logo} to="/">
+                  <img src={LogoIMG} />
+                  <div className={logotext}>
+                    <h1 style={{ fontFamily: "jakartabold" }}>
+                      IKATAN MAHASISWA GEODESI
+                    </h1>
+                    <h1>INSTITUT TEKNOLOGI BANDUNG</h1>
+                  </div>
+                </Link>
               </div>
-            </a>
-          </div>
-        </div>
-      ) : linkName === "/DPM" ? null : (
-        <div className={containerbig}>
-          <div className={container}>
-            <div>
-              <Link className={logo} to="/">
-                <img src={LogoIMG} />
-                <div className={logotext}>
-                  <h1 style={{ fontFamily: "jakartabold" }}>
-                    IKATAN MAHASISWA GEODESI
-                  </h1>
-                  <h1>INSTITUT TEKNOLOGI BANDUNG</h1>
-                </div>
-              </Link>
-            </div>
 
-            <div className={linkContainer}>
-              <Dropdown menuName="activities" />
-              <Dropdown menuName="karya" />
-              <Link className={link} to="/Pojokimg">
-                <div>Pojok IMG</div>
-              </Link>
-            </div>
-            <a href="/login">
-              <div className={searchIcon}>
-                <img src={login} />
+              <div className={linkContainer}>
+                <Dropdown menuName="activities" />
+                <Dropdown menuName="karya" />
+                <Link className={link} to="/Pojokimg">
+                  <div>Pojok IMG</div>
+                </Link>
               </div>
-            </a>
+              <a href="/login">
+                <div className={searchIcon}>
+                  <img src={login} />
+                </div>
+              </a>
+            </div>
           </div>
-        </div>
-      )}
+        ) : linkName === "/DPM" ? null : linkName === "/IMGTweet" ? (
+          <div className={containerbigTweet}>
+            <div className={containerTweet}>
+              <div>
+                <Link className={logo} to="/">
+                  <img src={LogoIMG} />
+                  <div className={logotextTweet}>
+                    <h1 style={{ fontFamily: "jakartabold" }}>
+                      IKATAN MAHASISWA GEODESI
+                    </h1>
+                    <h1>INSTITUT TEKNOLOGI BANDUNG</h1>
+                  
+                  </div>
+                </Link>
+              </div>
+
+              <div className={linkContainerTweet}>
+                <Dropdown menuName="activities" />
+                <Dropdown menuName="karya" />
+                <Link className={link} to="/Pojokimg">
+                  <div>Pojok IMG</div>
+                </Link>
+              </div>
+              <a href="/login">
+                <div className={searchIcon}>
+                  <img src={login} />
+                </div>
+              </a>
+            </div>
+          </div>
+        ): (
+          <div className={containerbig}>
+            <div className={container}>
+              <div>
+                <Link className={logo} to="/">
+                  <img src={LogoIMG} />
+                  <div className={logotext}>
+                    <h1 style={{ fontFamily: "jakartabold" }}>
+                      IKATAN MAHASISWA GEODESI
+                    </h1>
+                    <h1>INSTITUT TEKNOLOGI BANDUNG</h1>
+                  </div>
+                </Link>
+              </div>
+
+              <div className={linkContainer}>
+                <Dropdown menuName="activities" />
+                <Dropdown menuName="karya" />
+                <Link className={link} to="/Pojokimg">
+                  <div>Pojok IMG</div>
+                </Link>
+              </div>
+              <a href="/login">
+                <div className={searchIcon}>
+                  <img src={login} />
+                </div>
+              </a>
+            </div>
+          </div>
+        )}
     </div>
   );
 };
