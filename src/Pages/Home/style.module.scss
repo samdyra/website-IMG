@@ -41,15 +41,15 @@
 }
 
 .containerSection2Mobile {
-  margin: 120px auto 0 auto;
-  height: 55vh;
+  margin: 80px auto 0 auto;
+  height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   align-self: center;
-  z-index: 2;
-  margin-bottom: 100px;
+  z-index: 99999;
+  margin-bottom: 80px;
 }
 
 .type {
@@ -119,6 +119,11 @@
   margin: 0 auto 0 auto;
   z-index: 1;
   height: 100vh;
+
+  @media screen and (max-width: 420px) {
+  height: 750px;
+  margin-bottom: 50px;
+  }
 }
 
 .containerSectionTop {
@@ -558,6 +563,12 @@
     text-align: center;
     margin-top: 10px;
   }
+
+  @media screen and (max-width: 420px) {
+    h3 {
+      padding-inline: 10px;
+    }
+  }
 }
 
 .desctujuan {
@@ -666,9 +677,9 @@
 
   @media screen and (max-width: 420px) {
     width: 90vw;
-    height: 100%;
+    height: 103%;
     flex-direction: column;
-    gap: 50px;
+    gap: 20px;
     padding-block: 10vh;
 
     p {
@@ -712,8 +723,14 @@
 }
 
 .containerSectionKetua {
-  height: 100vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 420px) {
+  height: 720px;
+  margin-bottom: 50px;
+
+  }
 }

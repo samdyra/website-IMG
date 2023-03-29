@@ -3,8 +3,6 @@ import React, {
   useRef, useState, useEffect
 } from "react";
 import style from "./style.module.scss";
-import { useNavigate } from "react-router-dom";
-import Typewriter from "typewriter-effect";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { Canvas, useFrame } from "@react-three/fiber";
@@ -12,9 +10,7 @@ import { OrbitControls, useGLTF } from "@react-three/drei";
 import { SliderText } from "../../assets/object/SliderData";
 import Carousel from "../../Components/Carousel/Carousel";
 import Gallery from "../../Components/Slider";
-import {
-  gegep1, gegep2, daki
-} from "../../assets";
+import { daki } from "../../assets";
 import { Modal } from "../../Components";
 import { isMobile } from "../../Helpers/mobileResponsive";
 import useLoadData from "../../Helpers/useLoadData";
@@ -22,8 +18,6 @@ import { Organogram } from "../../assets";
 import SideNav from "../../Components/SideNav";
 
 const HomeScreen = () => {
-  const navigate = useNavigate();
-
   const {
     container,
     desc,
@@ -48,8 +42,6 @@ const HomeScreen = () => {
     learnMoreButton,
     arrow,
     oval,
-    gegep,
-    type,
     landingPage,
     sifatMobile,
     containerSection2Mobile
@@ -57,7 +49,7 @@ const HomeScreen = () => {
   const dataKegiatan = useLoadData("kegiatan")
   const dataFoto = useLoadData("fotoHome")
   const [ index, setIndex ] = useState(0);
-  const [ gegepImage, setGegepImage ] = useState(gegep1);
+
   const [ dataModal, setDataModal ] = useState({})
   useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -83,19 +75,6 @@ const HomeScreen = () => {
           scale={isMobile ? 10 : 18}
         />
       </group>
-    );
-  }
-  function TypeWriter() {
-    return (
-      <Typewriter
-        options={{
-          strings: gegepImage.includes("gegep1")
-            ? [ "Hi I'm Gegep! Welcome!", "See more about Geopoint here!" ]
-            : [ "Click Me!" ],
-          autoStart: true,
-          loop: true,
-        }}
-      />
     );
   }
 
