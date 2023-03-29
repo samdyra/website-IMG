@@ -1,4 +1,6 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router, Route, Routes 
+} from "react-router-dom";
 import {
   HomeScreen,
   Pojokimg,
@@ -14,6 +16,7 @@ import {
   Navigacity,
   Ceremony,
   Pemilu,
+  IMGTweet
 } from "./Pages";
 import Navbar from "./Components/Navbar";
 import MobileNavbar from "./Components/MobileNavbar";
@@ -36,6 +39,9 @@ import {
 } from "./Store";
 import isUserLevel9 from "./Helpers/isUserLevel9";
 import { isMobile } from "./Helpers/mobileResponsive";
+import React from "react";
+import { RecoilRoot } from "recoil";
+
 
 function App() {
   return (
@@ -62,6 +68,10 @@ function App() {
         <Route path="/Geopoint/Ceremony" element={<Ceremony />}></Route>
         <Route path="/DPM" element={<DpmScreen />}></Route>
         <Route path="/Pemilu" element={<Pemilu />}></Route>
+        <Route path="/IMGTweet" element={ <RecoilRoot>
+          <IMGTweet />       </RecoilRoot>
+        }></Route>
+
         {/* Admin Screens */}
         {isUserLevel9() && (
           <>

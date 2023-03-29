@@ -4,7 +4,7 @@ import {
 } from "firebase/firestore";
 import { db } from "../Config/firebase";
 
-const useLoadDataWithOffset = (dbName, limitData = 5, page = 1) => {
+const useLoadDataWithOffset = (dbName, limitData = 5, page = 1,) => {
   const [ data, setData ] = useState([]);
   const shownData = page * limitData;
 

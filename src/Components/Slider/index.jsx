@@ -97,15 +97,17 @@ const Gallery = (props) => {
   };
 
   const curhatCardSettings = {
-    infinite: true,
+
     speed: 900,
-    slidesToShow: 10,
+    slidesToShow:10,
     autoplay: true,
     autoplaySpeed: 800,
     arrows: false,
     vertical: true,
     verticalSwiping: true,
     swipeToSlide: true,
+    infinite: true,
+
   };
 
   const gallerySettings2 = {
@@ -237,7 +239,7 @@ const Gallery = (props) => {
               {sliderData?.map((slide, index) => (
                 <div className={curhatWrapper} key={slide.id} >
                   <div className={curhatContainer} key={slide.id} style={index % 2 !== 0 ? { marginRight: `${paddingLeftRandom}px` } : { marginLeft: `${paddingLeftRandom}px` }}>
-                    {slide.curhat}
+                    {slide?.curhat}
                   </div>
                 </div>
 

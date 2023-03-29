@@ -1,0 +1,39 @@
+.tweet-background {
+  background-image: url("../../assets/images/bintanghome.png");
+
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: none;
+}
+
+.tweet-wrapper {
+  margin: 0 auto;
+  background: #05141c;
+
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.feed-wrapper {
+  /* From https://css.glass */
+  /* From https://css.glass */
+  background: rgba(47, 67, 82, 0.459);
+  box-shadow: 0 4px 30px rgba(55, 55, 55, 0.1);
+  backdrop-filter: blur(9.2px);
+  -webkit-backdrop-filter: blur(9.2px);
+  border-radius: 15px;
+  margin-block: 15px;
+}
+
+.color-white {
+  color: rgba(255, 255, 255, 0.892);
+}
+
+.hover-heart:hover {
+  background: #722f2fb6;
+  border-radius: 100%;
+}
