@@ -28,7 +28,7 @@ const Navbar = () => {
     linkContainerTweet,
     logotextTweet
   } = style;
-  const [ fix, setFix ] = useState(false);
+  const [ , setFix ] = useState(false);
 
   const changeBackground = () => {
     if (window.scrollY >= 680) {

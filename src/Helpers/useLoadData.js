@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import {
-  query, collection, onSnapshot, limit 
+  query, collection, onSnapshot, limit, orderBy 
 } from "firebase/firestore";
 import { db } from "../Config/firebase";
 
@@ -17,7 +17,7 @@ const useLoadData = (dbName, limitData = 15) => {
 
   useEffect(() => {
     const dbCollection = collection(db, dbName);
-    const q = query(dbCollection, limit(limitData));
+    const q = query(dbCollection, limit(limitData), orderBy("terbitan"));
     onSnapshot(q, (snapshot) => {
       const response = snapshot.docs.map((doc) => ({
         id: doc.id,

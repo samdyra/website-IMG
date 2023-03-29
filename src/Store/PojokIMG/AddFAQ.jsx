@@ -6,17 +6,18 @@ import { collection, addDoc } from "firebase/firestore";
 import { Link } from "react-router-dom";
 
 const AddStory = () => {
-  const [formData, setFormData] = useState({
+  const [ formData, setFormData ] = useState({
     tanya: "",
     jawab: "",
+    terbitan: 0
   });
-  const [user] = useAuthState(auth);
+  const [ user ] = useAuthState(auth);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handlePublish = (e) => {
+  const handlePublish = () => {
     if (!formData.tanya || !formData.jawab) {
       toast("Please fill all the fields");
       return;
@@ -26,11 +27,12 @@ const AddStory = () => {
     addDoc(storyRef, {
       tanya: formData.tanya,
       jawab: formData.jawab,
+      terbitan: formData.terbitan
     })
       .then(() => {
         toast("added successfully", { type: "success" });
       })
-      .catch((err) => {
+      .catch(() => {
         toast("adding story", { type: "error" });
       });
   };
@@ -56,6 +58,7 @@ const AddStory = () => {
               onChange={(e) => handleChange(e)}
             />
           </div>
+          
 
           <div className="formadmin">
             <label htmlFor="">Answers</label>
@@ -65,6 +68,16 @@ const AddStory = () => {
               value={formData.jawab}
               onChange={(e) => handleChange(e)}
               rows="7"
+            />
+          </div>
+
+          <div className="formadmin">
+            <label htmlFor="">terbitan</label>
+            <textarea
+              name="terbitan"
+              className="form-control"
+              value={formData.terbitan}
+              onChange={(e) => handleChange(e)}
             />
           </div>
           <button className="formbutton" onClick={handlePublish}>

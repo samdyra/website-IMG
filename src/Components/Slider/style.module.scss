@@ -415,3 +415,13 @@
     width: 100vw;
   }
 }
+
+.curhatContent {
+  height: 500px;
+  overflow-y: scroll;
+
+}
+
+.curhatContent::-webkit-scrollbar {
+  width: 0px; 
+}

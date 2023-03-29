@@ -18,6 +18,7 @@ export default function AddKamerad() {
     desc: "",
     pdf: "",
     image: "",
+    terbitan: 0
   });
 
   const [ progress, setProgress ] = useState(0);
@@ -65,7 +66,8 @@ export default function AddKamerad() {
             judul: formData.judul,
             image: url,
             pdf: formData.pdf,
-            desc: formData.desc
+            desc: formData.desc,
+            terbitan: formData.terbitan,
           })
             .then(() => {
               toast("geosphere lahir", { type: "success" });
@@ -115,6 +117,15 @@ export default function AddKamerad() {
               name="desc"
               className="form-control"
               value={formData.desc}
+              onChange={(e) => handleChange(e)}
+            />
+          </div>
+          <div className="formadmin">
+            <label htmlFor="">terbitan</label>
+            <textarea
+              name="terbitan"
+              className="form-control"
+              value={formData.terbitan}
               onChange={(e) => handleChange(e)}
             />
           </div>

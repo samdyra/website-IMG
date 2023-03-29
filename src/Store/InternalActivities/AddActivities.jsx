@@ -19,6 +19,7 @@ export default function AddKamerad() {
     desc: "",
     date: "3 Agustus 2022",
     image: "",
+    terbitan: 0
   });
 
   const [ progress, setProgress ] = useState(0);
@@ -58,7 +59,7 @@ export default function AddKamerad() {
           judul: "",
           pembuat: "",
           desc: "",
-          date: ""
+          date: "",
         });
 
         getDownloadURL(uploadImage.snapshot.ref).then((url) => {
@@ -68,7 +69,8 @@ export default function AddKamerad() {
             image: url,
             date: formData.date,
             pembuat: formData.pembuat,
-            desc: formData.desc
+            desc: formData.desc,
+            terbitan: formData.terbitan
           })
             .then(() => {
               toast("internal lahir", { type: "success" });
@@ -127,6 +129,15 @@ export default function AddKamerad() {
               name="pembuat"
               className="form-control"
               value={formData.pembuat}
+              onChange={(e) => handleChange(e)}
+            />
+          </div>
+          <div className="formadmin">
+            <label htmlFor="">terbitan</label>
+            <textarea
+              name="terbitan"
+              className="form-control"
+              value={formData.terbitan}
               onChange={(e) => handleChange(e)}
             />
           </div>

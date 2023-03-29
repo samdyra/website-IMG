@@ -35,7 +35,7 @@ const Gallery = (props) => {
     verticalTitle,
     curhatContainer,
     curhatWrapper,
-    cardVerticalCard
+
   } = style;
 
   const [ openModal, setOpenModal ] = useState(false);
@@ -94,20 +94,6 @@ const Gallery = (props) => {
     vertical: true,
     verticalSwiping: true,
     swipeToSlide: true,
-  };
-
-  const curhatCardSettings = {
-
-    speed: 900,
-    slidesToShow:10,
-    autoplay: true,
-    autoplaySpeed: 800,
-    arrows: false,
-    vertical: true,
-    verticalSwiping: true,
-    swipeToSlide: true,
-    infinite: true,
-
   };
 
   const gallerySettings2 = {
@@ -180,7 +166,7 @@ const Gallery = (props) => {
         ) : sliderName == "card" ? (
           <div className={madeElementWrapper}>
             <Slider {...cardSettings} className={wrapperCard}>
-              {sliderData.map((slide) => (
+              {sliderData?.map((slide) => (
                 <div className={madeElementContainer}>
                   <div className={madeElementImage}>
                     <img src={slide.image}></img>
@@ -213,7 +199,7 @@ const Gallery = (props) => {
         ) : sliderName == "verticalcard" ? (
           <div>
             <Slider {...verticalcardSettings} className={wrapperVerticalCard}>
-              {sliderData.map((slide) => (
+              {sliderData?.map((slide) => (
                 <div className={verticalCardContainer}>
                   <div className={verticalCardImage}>
                     <img src={slide.image}></img>
@@ -234,17 +220,14 @@ const Gallery = (props) => {
             </Slider>
           </div>
         ) : sliderName == "curhatan" ? (
-          <div>
-            <Slider {...curhatCardSettings} className={cardVerticalCard} >
-              {sliderData?.map((slide, index) => (
-                <div className={curhatWrapper} key={slide.id} >
-                  <div className={curhatContainer} key={slide.id} style={index % 2 !== 0 ? { marginRight: `${paddingLeftRandom}px` } : { marginLeft: `${paddingLeftRandom}px` }}>
-                    {slide?.curhat}
-                  </div>
+          <div className={style.curhatContent}>
+            {sliderData?.map((slide, index) => (
+              <div className={curhatWrapper} key={slide.id} >
+                <div className={curhatContainer} key={slide.id} style={index % 2 !== 0 ? { marginRight: `${paddingLeftRandom}px` } : { marginLeft: `${paddingLeftRandom}px` }}>
+                  {slide?.curhat}
                 </div>
-
-              ))}
-            </Slider>
+              </div>
+            ))}
           </div>
         ) : sliderName == "modalimg" ? (
           <div

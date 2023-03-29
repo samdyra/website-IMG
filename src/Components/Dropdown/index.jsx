@@ -1,10 +1,11 @@
 import React from "react";
 import style from "./style.module.scss";
-import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
 const Dropdown = (props) => {
-  const { dropdown, dropbtn, dropdowncontent, dropdowncontentGeopoint } = style;
+  const {
+    dropdown, dropbtn, dropdowncontent, dropdowncontentGeopoint 
+  } = style;
   const menuName = props.menuName;
 
   const location = useLocation();

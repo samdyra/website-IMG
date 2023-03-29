@@ -18,6 +18,7 @@ export default function AddKamerad() {
     image: "",
     date: "3 Agustus 2022",
     desc: "",
+    terbitan: 0
   });
 
   const [ progress, setProgress ] = useState(0);
@@ -67,6 +68,7 @@ export default function AddKamerad() {
             image: url,
             date: formData.date,
             desc: formData.desc,
+            terbitan: formData.terbitan
           })
             .then(() => {
               toast("keigatan lahir", { type: "success" });
@@ -116,6 +118,15 @@ export default function AddKamerad() {
               name="desc"
               className="form-control"
               value={formData.desc}
+              onChange={(e) => handleChange(e)}
+            />
+          </div>
+          <div className="formadmin">
+            <label htmlFor="">terbitan</label>
+            <textarea
+              name="terbitan"
+              className="form-control"
+              value={formData.terbitan}
               onChange={(e) => handleChange(e)}
             />
           </div>

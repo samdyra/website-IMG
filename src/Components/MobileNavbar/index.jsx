@@ -1,9 +1,7 @@
 import React from "react";
 import style from "./style.module.scss";
 import LogoIMG from "../../assets/images/LogoIMG.png";
-import login from "../../assets/images/login.png";
 import { useState } from "react";
-import Dropdown from "../Dropdown";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
@@ -12,13 +10,10 @@ const MobileNavbar = () => {
 
   const linkName = location.pathname;
 
-  const [navbar, setNavbar] = useState(false);
+  const [ , setNavbar ] = useState(false);
   const {
     container,
-    linkContainer,
     logo,
-    searchIcon,
-    link,
     logotext,
     containerbig,
     containeractive,
@@ -26,23 +21,19 @@ const MobileNavbar = () => {
     nav,
     burgermenu,
     burgerbar,
-    menu,
-    hidden,
-    visible,
     burgerbar2,
     burgerbarunclicked,
     menuVisible,
     menuVisiblePemilu,
     menuVisibleGeopoint,
     menuHidden,
-    wrapper,
   } = style;
-  const [fix, setFix] = useState(false);
+  const [ , setFix ] = useState(false);
 
   //hamburfer menu
-  const [burger_class, setBurgerClass] = useState(burgerbar);
-  const [menu_class, setMenuClass] = useState(menuHidden);
-  const [isMenuClicked, setIsMenuClicked] = useState(false);
+  const [ burger_class, setBurgerClass ] = useState(burgerbar);
+  const [ menu_class, setMenuClass ] = useState(menuHidden);
+  const [ isMenuClicked, setIsMenuClicked ] = useState(false);
 
   // toggle burger menu change
   const updateMenu = () => {
@@ -83,9 +74,9 @@ const MobileNavbar = () => {
   //   }
   // };
 
-  const [offset, setOffset] = useState(0);
+  const [ offset, setOffset ] = useState(0);
 
-  window.addEventListener("scroll", (e) => setOffset(window.pageYOffset / 850));
+  window.addEventListener("scroll", () => setOffset(window.pageYOffset / 850));
 
   function setFixed() {
     if (window.scrollY >= 392) {
@@ -149,82 +140,85 @@ const MobileNavbar = () => {
       ) : linkName === "/Geopoint" ||
         linkName === "/Geopoint/Navigacity" ||
         linkName === "/Geopoint/Ceremony" ? (
-        <div>
-          <div className={containerGeopoint}>
-            <div className={container}>
-              <div>
-                <Link className={logo} to="/">
-                  <img src={LogoIMG} />
-                  <div className={logotext}>
-                    <h1 style={{ fontFamily: "jakartabold" }}>
-                      IKATAN MAHASISWA GEODESI
-                    </h1>
-                    <h1>INSTITUT TEKNOLOGI BANDUNG</h1>
-                  </div>
-                </Link>
-              </div>
-              <div>
-                <div className={nav}>
-                  <div className={burgermenu} onClick={updateMenu}>
-                    <div className={burger_class}></div>
-                    <div className={burger_class}></div>
-                    <div className={burger_class}></div>
+          <div>
+            <div className={containerGeopoint}>
+              <div className={container}>
+                <div>
+                  <Link className={logo} to="/">
+                    <img src={LogoIMG} />
+                    <div className={logotext}>
+                      <h1 style={{ fontFamily: "jakartabold" }}>
+                        IKATAN MAHASISWA GEODESI
+                      </h1>
+                      <h1>INSTITUT TEKNOLOGI BANDUNG</h1>
+                    </div>
+                  </Link>
+                </div>
+                <div>
+                  <div className={nav}>
+                    <div className={burgermenu} onClick={updateMenu}>
+                      <div className={burger_class}></div>
+                      <div className={burger_class}></div>
+                      <div className={burger_class}></div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+            <div className={menu_class} onClick={() => setIsMenuClicked(true)}>
+              <a href="/InternalEvent">Internal Event</a>
+              <a href="/ParadeWisuda">Parade Wisuda</a>
+              <a href="/KabarkeSenatoran">Kabar Kesenatoran</a>
+              <a href="/Geopoint">GEOPOINT</a>
+              <a href="/Locus">Locus</a>
+              <a href="/Geosphere">Geosphere</a>
+              <a href="/IMGx">IMG-X</a>
+              <a href="/login">Login</a>
+              <a href="/Pemilu">Pemilu</a>
+              <a href="/Pojokimg">Pojok IMG</a>
+
+            </div>
           </div>
-          <div className={menu_class} onClick={() => setIsMenuClicked(true)}>
-            <a href="/InternalEvent">Internal Event</a>
-            <a href="/ParadeWisuda">Parade Wisuda</a>
-            <a href="/KabarkeSenatoran">Kabar Kesenatoran</a>
-            <a href="/Geopoint">GEOPOINT</a>
-            <a href="/Locus">Locus</a>
-            <a href="/Geosphere">Geosphere</a>
-            <a href="/IMGx">IMG-X</a>
-            <a href="/login">Login</a>
-            <a href="/Pemilu">Pemilu</a>
-          </div>
-        </div>
-      ) : linkName === "/DPM" ? null : (
-        <div>
-          <div className={containerbig}>
-            <div className={container}>
-              <div>
-                <Link className={logo} to="/">
-                  <img src={LogoIMG} />
-                  <div className={logotext}>
-                    <h1 style={{ fontFamily: "jakartabold" }}>
-                      IKATAN MAHASISWA GEODESI
-                    </h1>
-                    <h1>INSTITUT TEKNOLOGI BANDUNG</h1>
-                  </div>
-                </Link>
-              </div>
-              <div>
-                <div className={nav}>
-                  <div className={burgermenu} onClick={updateMenu}>
-                    <div className={burger_class}></div>
-                    <div className={burger_class}></div>
-                    <div className={burger_class}></div>
+        ) : linkName === "/DPM" ? null : (
+          <div>
+            <div className={containerbig}>
+              <div className={container}>
+                <div>
+                  <Link className={logo} to="/">
+                    <img src={LogoIMG} />
+                    <div className={logotext}>
+                      <h1 style={{ fontFamily: "jakartabold" }}>
+                        IKATAN MAHASISWA GEODESI
+                      </h1>
+                      <h1>INSTITUT TEKNOLOGI BANDUNG</h1>
+                    </div>
+                  </Link>
+                </div>
+                <div>
+                  <div className={nav}>
+                    <div className={burgermenu} onClick={updateMenu}>
+                      <div className={burger_class}></div>
+                      <div className={burger_class}></div>
+                      <div className={burger_class}></div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+            <div className={menu_class} onClick={() => setIsMenuClicked(true)}>
+              <a href="/InternalEvent">Internal Event</a>
+              <a href="/ParadeWisuda">Parade Wisuda</a>
+              <a href="/KabarkeSenatoran">Kabar Kesenatoran</a>
+              <a href="/Geopoint">GEOPOINT</a>
+              <a href="/Locus">Locus</a>
+              <a href="/Geosphere">Geosphere</a>
+              <a href="/IMGx">IMG-X</a>
+              <a href="/login">Login</a>
+              <a href="/Pemilu">Pemilu</a>
+              <a href="/Pojokimg">Pojok IMG</a>
+            </div>
           </div>
-          <div className={menu_class} onClick={() => setIsMenuClicked(true)}>
-            <a href="/InternalEvent">Internal Event</a>
-            <a href="/ParadeWisuda">Parade Wisuda</a>
-            <a href="/KabarkeSenatoran">Kabar Kesenatoran</a>
-            <a href="/Geopoint">GEOPOINT</a>
-            <a href="/Locus">Locus</a>
-            <a href="/Geosphere">Geosphere</a>
-            <a href="/IMGx">IMG-X</a>
-            <a href="/login">Login</a>
-            <a href="/Pemilu">Pemilu</a>
-          </div>
-        </div>
-      )}
+        )}
     </div>
   );
 };

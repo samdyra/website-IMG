@@ -18,6 +18,7 @@ export default function AddKamerad() {
     image: "",
     date: "3 Agustus 2022",
     redaksi: "",
+    terbitan: 0
   });
 
   const [ progressCompress, setProgressCompress ] = useState(0);
@@ -58,7 +59,8 @@ export default function AddKamerad() {
           judul: "",
           image: "",
           date: "",
-          redaksi: ""
+          redaksi: "",
+          terbitan: 0
         });
 
         getDownloadURL(uploadImage.snapshot.ref).then((url) => {
@@ -68,6 +70,7 @@ export default function AddKamerad() {
             image: url,
             date: formData.date,
             redaksi: formData.redaksi,
+            terbitan: formData.terbitan
           })
             .then(() => {
               toast("keigatan lahir", { type: "success" });
@@ -117,6 +120,15 @@ export default function AddKamerad() {
               name="redaksi"
               className="form-control"
               value={formData.redaksi}
+              onChange={(e) => handleChange(e)}
+            />
+          </div>
+          <div className="formadmin">
+            <label htmlFor="">terbitan</label>
+            <textarea
+              name="terbitan"
+              className="form-control"
+              value={formData.terbitan}
               onChange={(e) => handleChange(e)}
             />
           </div>

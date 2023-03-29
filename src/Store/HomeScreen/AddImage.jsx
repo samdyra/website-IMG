@@ -13,13 +13,18 @@ import UseCompressImage from "../../Helpers/useCompressImage";
 
 export default function AddImage() {
   const [ user ] = useAuthState(auth),
-    [ formData, setFormData ] = useState({ image: "" }),
+    [ formData, setFormData ] = useState({ image: "", terbitan: 0 }),
     [ progressCompress, setProgressCompress ] = useState(0),
     [ progress, setProgress ] = useState(0),
 
     handleImageChange = (e) => {
       UseCompressImage(e, formData, setFormData, setProgressCompress);
     },
+
+    handleChange = (e) => {
+      setFormData({ ...formData, [e.target.name]: e.target.value });
+    },
+  
 
     handlePublish = () => {
 
@@ -43,7 +48,7 @@ export default function AddImage() {
 
           getDownloadURL(uploadImage.snapshot.ref).then((url) => {
             const kameradRef = collection(db, "fotoHome");
-            addDoc(kameradRef, { image: url, })
+            addDoc(kameradRef, { image: url, terbitan: formData.terbitan })
               .then(() => {
                 toast("foto lahir", { type: "success" });
                 setProgress(0);
@@ -75,6 +80,15 @@ export default function AddImage() {
               accept="image/*"
               className="form-control"
               onChange={(e) => handleImageChange(e)}
+            />
+          </div>
+          <div className="formadmin">
+            <label htmlFor="">terbitan</label>
+            <textarea
+              name="terbitan"
+              className="form-control"
+              value={formData.terbitan}
+              onChange={(e) => handleChange(e)}
             />
           </div>
           {progress === 0 ? null : (

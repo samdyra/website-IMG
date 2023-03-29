@@ -15,9 +15,7 @@ import {
 } from "../../assets";
 import { Accordion } from "../../Components";
 import useLoadDataWithOffset from "../../Helpers/useLoadDataWithOffset";
-import { auth, db } from "../../Config/firebase/index"
-import { useAuthState } from "react-firebase-hooks/auth";
-
+import { db } from "../../Config/firebase/index"
 import { toast } from "react-toastify";
 import { collection, addDoc } from "firebase/firestore";
 import Gallery from "../../Components/Slider";
@@ -37,10 +35,8 @@ const Pojokimg = () => {
     curhatInputContainer,
     curhatHalfPage,
     curhatWrapper,
-    curhatContainer,
     formInput,
     formInput2,
-    buttonTitle,
     kontur1s,
     kontur2s,
     kontur3s,
@@ -50,11 +46,6 @@ const Pojokimg = () => {
 
   const dataFAQ = useLoadDataWithOffset("FAQ", 10)
   const dataCurhat = useLoadDataWithOffset("CurhatanKamerad", 100)
-
-  const [ user ] = useAuthState(auth);
-
-
-
 
   const menuGroup = [
     {
@@ -145,8 +136,7 @@ const Pojokimg = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
-  const handlePublish = (e) => {
+  const handlePublish = () => {
     if (!formData.nama || !formData.curhat) {
       toast("Please fill all the fields");
       return;
@@ -157,11 +147,12 @@ const Pojokimg = () => {
       nama: formData.nama,
       curhat: formData.curhat,
       ditampilkan: formData.ditampilkan,
+      terbitan: Date.now()
     })
       .then(() => {
         toast("added successfully", { type: "success" });
       })
-      .catch((err) => {
+      .catch(() => {
         toast("adding story", { type: "error" });
       });
   };
@@ -174,16 +165,8 @@ const Pojokimg = () => {
     }));
   };
 
-
-
-  const dataCurhatTampil = dataCurhat?.filter((item) => item.ditampilkan === 1);
-  const minHeight = dataFAQ?.length * 16;
-
-  console.log('aaaa',dataCurhatTampil)
-
-
-
-
+  const dataCurhatTampil = dataCurhat
+  const minHeight = dataFAQ && dataFAQ?.length * 16;
 
   return (
     <div style={{ position: "relative", overflow: "hidden" }}>
@@ -224,10 +207,7 @@ const Pojokimg = () => {
           <h1>Curhatan <br /> Kamerad</h1>
           <h2>Mau confess? Mau cerita? Disini aman kok! </h2>
           <div className={curhatWrapper}>
-
             <Gallery sliderName="curhatan" data={dataCurhatTampil} />
-
-
           </div>
         </div>
 

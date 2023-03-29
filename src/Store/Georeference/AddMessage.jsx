@@ -7,21 +7,22 @@ import { Link } from "react-router-dom";
 import "../PojokIMG/index.css";
 
 const AddMessage = () => {
-  const [formData, setFormData] = useState({
+  const [ formData, setFormData ] = useState({
     judul: "",
     penerbit: "",
     kategori: "",
     sarjana: "",
     tahun: "",
     abstrak: "",
+    terbitan: 0
   });
-  const [user] = useAuthState(auth);
+  const [ user ] = useAuthState(auth);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handlePublish = (e) => {
+  const handlePublish = () => {
     if (
       !formData.judul ||
       !formData.penerbit ||
@@ -42,11 +43,12 @@ const AddMessage = () => {
       sarjana: formData.sarjana,
       tahun: formData.tahun,
       abstrak: formData.abstrak,
+      terbitan: formData.terbitan,
     })
       .then(() => {
         toast("message added successfully", { type: "success" });
       })
-      .catch((err) => {
+      .catch(() => {
         toast("Error adding article", { type: "error" });
       });
   };
@@ -120,7 +122,15 @@ const AddMessage = () => {
               onChange={(e) => handleChange(e)}
             />
           </div>
-
+          <div className="formadmin">
+            <label htmlFor="">terbitan</label>
+            <textarea
+              name="terbitan"
+              className="form-control"
+              value={formData.terbitan}
+              onChange={(e) => handleChange(e)}
+            />
+          </div>
           <button className="formbutton" onClick={handlePublish}>
             Publish
           </button>

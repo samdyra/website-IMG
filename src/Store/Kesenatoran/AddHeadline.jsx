@@ -6,29 +6,26 @@ import { collection, addDoc } from "firebase/firestore";
 import { Link } from "react-router-dom";
 
 const AddCurhat = () => {
-  const [formData, setFormData] = useState({
-    headline: "",
-  });
-  const [user] = useAuthState(auth);
+  const [ formData, setFormData ] = useState({ headline: "", terbitan: 0 });
+  const [ user ] = useAuthState(auth);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+  
 
-  const handlePublish = (e) => {
+  const handlePublish = () => {
     if (!formData.headline) {
       toast("Please fill all the fields");
       return;
     }
 
     const storyRef = collection(db, "headlineKesenatoran");
-    addDoc(storyRef, {
-      headline: formData.headline,
-    })
+    addDoc(storyRef, { headline: formData.headline, terbitan: formData.terbitan })
       .then(() => {
         toast("added successfully", { type: "success" });
       })
-      .catch((err) => {
+      .catch(() => {
         toast("adding story", { type: "error" });
       });
   };
@@ -51,6 +48,15 @@ const AddCurhat = () => {
               name="headline"
               className="formik"
               value={formData.headline}
+              onChange={(e) => handleChange(e)}
+            />
+          </div>
+          <div className="formadmin">
+            <label htmlFor="">terbitan</label>
+            <textarea
+              name="terbitan"
+              className="form-control"
+              value={formData.terbitan}
               onChange={(e) => handleChange(e)}
             />
           </div>
