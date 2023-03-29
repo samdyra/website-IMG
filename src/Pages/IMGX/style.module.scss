@@ -57,9 +57,11 @@
         .card {
             height: 200px;
             border-top: 1px solid #aaaaaa;
-            padding-block: 30px;
+            padding-block: 20px;
             display: flex;
             justify-content: space-between;
+            overflow-y: hidden;
+
 
             h1 {
                 color: rgba(0, 0, 0, 0.254);
@@ -72,7 +74,7 @@
                 color: rgb(0, 0, 0);
                 font-size: 20px;
                 font-family: jakartaBold;
-                margin-bottom: 30px;
+                margin-bottom: 20px;
                 text-align: left;
             }
 
@@ -155,7 +157,6 @@
     .carousel {
         width: 530px;
         border-bottom: 1px solid #aaaaaa;
-
 
 
 

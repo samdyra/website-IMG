@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import style from "./style.module.scss";
 import Header from "../../Components/HeaderPage";
 import Gallery from "../../Components/Slider";
@@ -16,9 +16,9 @@ const kabarKesenatoran = () => {
     setDataModal(item)
     setOpenModal(true);
   };
-  const desc = "Di bulan September, Tim Kesenatoran IMG-ITB berhadapan dengan isu di dalam atmosfer eksekutif KM ITB, yaitu Pengesahan Kabinet KM ITB dan Tim PJS MWA WM, FPT dan Pengesahan Panitia Pelaksana Pemilu Raya KM ITB, serta Audiensi Keikutsertaan KM ITB pada Rakernas BEM SI ke-XV."
   const dataInternal = useLoadData("isuKampus", 10)
-
+  const dataSenator = useLoadData("headlineKesenatoran", 1)
+  const descSenator = dataSenator && dataSenator[0]?.headline
 
   return (
     <div>
@@ -28,7 +28,7 @@ const kabarKesenatoran = () => {
         onClose={() => setOpenModal(false)}
         data={dataModal}
       ></Modal>
-      <Header desc={desc} background={background} isSenator/>
+      <Header desc={descSenator} background={background} isSenator/>
       <div className={containerSectionMedia}>
         <h1>Media Kesenatoran</h1>
         <img onClick={() => window.open("https://www.instagram.com/kesenatoranimg/")} src={insta}></img>

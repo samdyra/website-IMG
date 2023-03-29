@@ -36,7 +36,7 @@ const IMGX = () => {
           <h1>{mainCard.judul}</h1>
           <div><span className={s.span}>{`${mainCard.judul}`}</span>{` - ${mainCard.desc}`}</div>
         </div>
-        {isMobile && <h5 style={{fontSize: 20, marginBottom: 10}}>Read More</h5>}
+        {isMobile && <h5 style={{ fontSize: 20, marginBottom: 10 }}>Read More</h5>}
         <div className={s.carousel}>
           {data && data.map((el) => (
             <div className={s.card} onClick={() => handleClickCard(el)}>
