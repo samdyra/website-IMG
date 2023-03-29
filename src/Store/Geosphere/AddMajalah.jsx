@@ -130,7 +130,7 @@ export default function AddKamerad() {
             />
           </div>
           <div className="formadmin">
-            <label htmlFor="">Image</label>
+            <label htmlFor="">Images</label>
             <input
               type="file"
               name="image"
