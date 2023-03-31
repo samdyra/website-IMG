@@ -134,6 +134,8 @@ const MobileNavbar = () => {
             <a href="/login">Login</a>
             <a href="/Pemilu">Pemilu</a>
             <a href="/Pojokimg">Pojok IMG</a>
+            <a href="/Georeference">Georeference</a>
+
 
           </div>
         </div>
@@ -176,6 +178,8 @@ const MobileNavbar = () => {
               <a href="/login">Login</a>
               <a href="/Pemilu">Pemilu</a>
               <a href="/Pojokimg">Pojok IMG</a>
+              <a href="/Georeference">Georeference</a>
+
 
             </div>
           </div>
