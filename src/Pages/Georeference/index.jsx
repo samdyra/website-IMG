@@ -1,23 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import { Header } from "../../Components";
 import {
   imgx, calendar, book 
 } from "../../assets";
 import useLoadData from "../../Helpers/useLoadData";
+import { Modal } from "../../Components";
 
 
 const Georeference = () => {
   const title = "GEOREFERENCE";
   const desc = "Georeference memiliki tujuan untuk mendokumentasikan dan mengarsipkan artikel ilmiah dari anggota IMG-ITB sebagai ajang diseminasi ilmu pengetahuan seputar implementasi keilmuan Teknik Geodesi dan Geomatika dalam bentuk penelitian."
   const data = useLoadData("georeference")
+  const [ openModal, setOpenModal ] = useState(false);
+  const [ dataModal, setDataModal ] = useState({});
   console.log(data)
+  const handleOpenModal = (item) => {
+    const param = {
+      judul: item?.judul,
+      desc: item?.abstrak,
+      date: item?.penerbit,
+      geo: true
+    }
+    setDataModal(param)
+    setOpenModal(true);
+  };
+
   return (
     <>
+      <Modal
+        ModalName="geo"
+        open={openModal}
+        onClose={() => setOpenModal(false)}
+        data={dataModal}
+      ></Modal>
+
       <Header title={title} desc={desc} background={imgx} />
-      <div className="h-full w-full justify-center mt-10 flex flex-col items-center font-jakarta mb-20">
+      <div className="h-full w-full justify-center mt-10 flex flex-col items-center font-jakarta mb-20 cursor-pointer">
         <h1 className="font-jakarta font-semibold text-[30px] mb-8 ">Publikasi Georeference</h1>
         {data && data?.map((el) => (
-          <div className="px-5 mb-8 w-full md:w-[720px]">
+          <div className="px-5 mb-8 w-full md:w-[720px] hover:bg-slate-200 " onClick={() => handleOpenModal(el)}>
             <h2 className="font-semibold mb-1 text-justify leading-5 md:text-[20px] md:leading-6">{el?.judul}</h2>
             <div className="flex flex-col text-[12px] gap-1">
               <div className="flex justify-between">

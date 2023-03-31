@@ -17,6 +17,8 @@ const Modal = ({
     modalContainerPemilu,
     modalContainerPemiluMobile,
     closeBtnMobilePemilu,
+    modalContainer3,
+    modalContainer3Mobile
   } = style;
 
   if (!open) return null;
@@ -44,10 +46,10 @@ const Modal = ({
               <div>
                 <h1>{data.judul}</h1>
                 <h2>{data.date}</h2>
-                {isMobile && <img src={data.image}></img>}
+                {isMobile && !data?.geo && <img src={data.image}></img>}
                 <p dangerouslySetInnerHTML={{ __html:data?.redaksi ? data.redaksi : data?.desc }} />
               </div>
-              {!isMobile && <img src={data.image}></img>}
+              {!isMobile && !data?.geo && <img src={data.image}></img>}
             </div>
           </div>
         </div>
@@ -91,7 +93,36 @@ const Modal = ({
             <div>{children}</div>
           </div>
         </div>
-      ) : null}
+      ) : ModalName === "geo" ? (
+        <div onClick={onClose} className={overlay}>
+          <div
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
+            onScroll={(e) => {
+              e.stopPropagation();
+            }}
+            className={!isMobile ? modalContainer3 : modalContainer3Mobile}
+          >
+            <p
+              className={isMobile ? closeBtnMobile : closeBtn}
+              onClick={onClose}
+            >
+              X
+            </p>
+            <div className={content2}>
+              <div>
+                <h1>{data.judul}</h1>
+                <h2>{data.date}</h2>
+                {isMobile && !data?.geo && <img src={data.image}></img>}
+                <p dangerouslySetInnerHTML={{ __html:data?.redaksi ? data.redaksi : data?.desc }} />
+              </div>
+              {!isMobile && !data?.geo && <img src={data.image}></img>}
+            </div>
+          </div>
+        </div>
+      ) :
+        null}
     </div>
   );
 };
