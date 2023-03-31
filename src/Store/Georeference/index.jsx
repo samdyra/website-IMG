@@ -29,7 +29,7 @@ const Messages = () => {
             <span className="visually-hidden">Loading...</span>
           ) : (
             dataGeo.map(({
-              id, judul, penerbit, kategori, sarjana, tahun, abstrak 
+              id, judul, penerbit, kategori, sarjana, tahun, abstrak, link 
             }) => (
               <div className="kameradContainer">
                 <div key={id} className="kamerad-container-id">
@@ -39,6 +39,7 @@ const Messages = () => {
                     <div>{`${judul}`}</div>
                     <div>{kategori}</div>
                     <div>{sarjana}</div>
+                    <div>{link}</div>
                     <div>{tahun}</div>
                     {user && <UseDeleteData id={id} type="georeference" />}
                   </div>

@@ -14,6 +14,7 @@ const AddMessage = () => {
     sarjana: "",
     tahun: "",
     abstrak: "",
+    link: "",
     terbitan: 0
   });
   const [ user ] = useAuthState(auth);
@@ -44,6 +45,7 @@ const AddMessage = () => {
       tahun: formData.tahun,
       abstrak: formData.abstrak,
       terbitan: formData.terbitan,
+      link: formData.link,
     })
       .then(() => {
         toast("message added successfully", { type: "success" });
@@ -119,6 +121,15 @@ const AddMessage = () => {
               name="abstrak"
               className="formik"
               value={formData.abstrak}
+              onChange={(e) => handleChange(e)}
+            />
+          </div>
+          <div className="formadmin">
+            <label htmlFor="">link</label>
+            <textarea
+              name="link"
+              className="form-control"
+              value={formData.link}
               onChange={(e) => handleChange(e)}
             />
           </div>

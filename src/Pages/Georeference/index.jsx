@@ -1,42 +1,15 @@
 import React from "react";
-import style from "./style.module.scss";
+import { Header } from "../../Components";
+import { imgx } from "../../assets";
+
 
 const Georeference = () => {
-  const {
-    container,
-    desc,
-    logo,
-    welcome,
-    containerSection,
-    judulSection2,
-    descSection2,
-    nilai,
-    judulSection3,
-    organogram,
-  } = style;
-
+  const title = "GEOREFERENCE";
+  const desc = "Georeference memiliki tujuan untuk mendokumentasikan dan mengarsipkan artikel ilmiah dari anggota IMG-ITB sebagai ajang diseminasi ilmu pengetahuan seputar implementasi keilmuan Teknik Geodesi dan Geomatika dalam bentuk penelitian."
   return (
-    <div className={container}>
-      <div className={containerSection}>
-        <div>
-          <h3>Majalah keprofesian</h3>
-          <h1>Georeference</h1>
-          <h2>Ikatan Mahasiswa Geodesi ITB</h2>
-        </div>
-        <div>
-          <p>bla bla bla bla bla bla bla bla bla bla balab alba</p>
-        </div>
-      </div>
+    <Header title={title} desc={desc} background={imgx} />
 
-      <div className={containerSection}>
-        <div>list paper</div>
-      </div>
-
-      <div className={containerSection}>
-        <div>list paper</div>
-      </div>
-    </div>
-  );
-};
+  )
+}
 
 export default Georeference;

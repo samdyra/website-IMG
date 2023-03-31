@@ -51,6 +51,7 @@ const Dropdown = (props) => {
               <a href="/Locus">Locus</a>
               <a href="/Geosphere">Geosphere</a>
               <a href="/IMGx">IMG-X</a>
+              <a href="/Georeference">Georeference</a>
             </div>
           </>
         ) : null}

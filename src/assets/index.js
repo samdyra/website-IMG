@@ -19,6 +19,8 @@ export { default as gegepceremony } from "./images/gegepceremony.png";
 export { default as gegepwebinar } from "./images/gegepwebinar.png";
 export { default as Organogram } from "./object/Organogram";
 export { default as intel } from "./images/bekgron.png";
+export { default as imgx } from "./images/imgx.png";
+
 
 export { default as gegepgeospasial } from "./images/gegepgeospasial.png";
 export { default as gegepgts } from "./images/gegepgts.png";
