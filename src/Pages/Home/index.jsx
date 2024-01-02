@@ -317,12 +317,12 @@ const HomeScreen = () => {
           >
             <div>
               <p>
-                Kami adalah 306 orang yang percaya bahwa lebih baik mati daripada kami harus berhenti untuk belajar. 
-                Dan apabila kau tidak percaya, cobalah hentikan kami! maka, api semangatmu akan ikut berkobar bersama 
-                semangat jingga kami, yang dimana silaunya akan menyalakan suar dan kesatuannya akan membangun ruang untuk berkembang.
-                Kami percaya bahwa belajar adalah langkah kami untuk dapat terus berkembang. Dan dengan perkembangan itu, kami, manusia yang percaya bahwa kesempurnaan 
-                tidak dapat digapai oleh manusia, dapat merangkak tapak demi tapak untuk mendekat menuju kesempurnaan.
-                
+              Kami adalah 306 insan muda yang percaya bahwa lebih baik mati daripada menjadi seseorang 
+              yang berdamai dengan kekurangan. Cobalah hentikan kami apabila tidak percaya! Niscaya api 
+              semangatmu akan ikut berkobar bersama semangat jingga kami. Semangat yang akan memantik 
+              hidupnya suatu suar untuk mencapai perkembangan. Semangat yang akan mendorong kami, 
+              manusia-manusia yang percaya bahwa kesempurnaan tidak mungkin digapai oleh manusia, untuk 
+              merangkak tapak demi tapak demi menjadi satu langkah lebih dekat dengan kesempuranaan.
 
               </p>
             </div>
