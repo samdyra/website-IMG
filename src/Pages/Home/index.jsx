@@ -10,7 +10,7 @@ import { OrbitControls, useGLTF } from "@react-three/drei";
 import { SliderText } from "../../assets/object/SliderData";
 import Carousel from "../../Components/Carousel/Carousel";
 import Gallery from "../../Components/Slider";
-import { daki } from "../../assets";
+import { Ketum } from "../../assets";
 import { Modal } from "../../Components";
 import { isMobile } from "../../Helpers/mobileResponsive";
 import useLoadData from "../../Helpers/useLoadData";
@@ -317,14 +317,13 @@ const HomeScreen = () => {
           >
             <div>
               <p>
-                Banyak proses yang sudah dijalani, Jatuh bangun telah dilewati,
-                Menangis dan tertawa sudah pasti, Pertanyaannya, akan jadi apa
-                IMG kedepannya? Ketahuilah Kamerad, Jawaban tersebut ada di
-                tangan kita semua Bersama-sama membangun IMG-ITB Menyalakan api
-                gelora semangat dalam jiwa kita, dalam hati kita. Jiwa
-                persatuan, demi satu tujuan. Kejayaan IMG-ITB. Akhir kata, IMG
-                Sampai Mampus! Sekali Kamerad, Selamanya Kamerad! IMG Satu Jiwa,
-                Kita Kompak Pasti Jaya!
+                Kami adalah 306 orang yang percaya bahwa lebih baik mati daripada kami harus berhenti untuk belajar. 
+                Dan apabila kau tidak percaya, cobalah hentikan kami! maka, api semangatmu akan ikut berkobar bersama 
+                semangat jingga kami, yang dimana silaunya akan menyalakan suar dan kesatuannya akan membangun ruang untuk berkembang.
+                Kami percaya bahwa belajar adalah langkah kami untuk dapat terus berkembang. Dan dengan perkembangan itu, kami, manusia yang percaya bahwa kesempurnaan 
+                tidak dapat digapai oleh manusia, dapat merangkak tapak demi tapak untuk mendekat menuju kesempurnaan.
+                
+
               </p>
             </div>
             <div
@@ -336,11 +335,11 @@ const HomeScreen = () => {
               }}
             >
               <div className={ketuaImage}>
-                <img src={daki} alt="daki" />
+                <img src={Ketum} alt="ketum" />
               </div>
               <div>
-                <h1>M. Daffa Rizki El-Islami .S</h1>
-                <h2>Ketua Umum BPH IMG-ITB 2022/2023</h2>
+                <h1>Zachary Adam Hidayat</h1>
+                <h2>Ketua Umum BPH IMG-ITB 2023/2024</h2>
               </div>
             </div>
           </div>
