@@ -10,7 +10,7 @@ import { OrbitControls, useGLTF } from "@react-three/drei";
 import { SliderText } from "../../assets/object/SliderData";
 import Carousel from "../../Components/Carousel/Carousel";
 import Gallery from "../../Components/Slider";
-import { daki } from "../../assets";
+import { Ketum } from "../../assets";
 import { Modal } from "../../Components";
 import { isMobile } from "../../Helpers/mobileResponsive";
 import useLoadData from "../../Helpers/useLoadData";
@@ -259,7 +259,7 @@ const HomeScreen = () => {
             data-aos-duration="750"
             data-aos-offset={isMobile ? "200" : "250"}
           >
-            <h1>Susunan Kepengurusan IMG-ITB 2022/2023</h1>
+            <h1>Susunan Kepengurusan IMG-ITB 2023/2024</h1>
             <div
               style={
                 isMobile
@@ -317,14 +317,13 @@ const HomeScreen = () => {
           >
             <div>
               <p>
-                Banyak proses yang sudah dijalani, Jatuh bangun telah dilewati,
-                Menangis dan tertawa sudah pasti, Pertanyaannya, akan jadi apa
-                IMG kedepannya? Ketahuilah Kamerad, Jawaban tersebut ada di
-                tangan kita semua Bersama-sama membangun IMG-ITB Menyalakan api
-                gelora semangat dalam jiwa kita, dalam hati kita. Jiwa
-                persatuan, demi satu tujuan. Kejayaan IMG-ITB. Akhir kata, IMG
-                Sampai Mampus! Sekali Kamerad, Selamanya Kamerad! IMG Satu Jiwa,
-                Kita Kompak Pasti Jaya!
+              Kami adalah 306 insan muda yang percaya bahwa lebih baik mati daripada menjadi seseorang 
+              yang berdamai dengan kekurangan. Cobalah hentikan kami apabila tidak percaya! Niscaya api 
+              semangatmu akan ikut berkobar bersama semangat jingga kami. Semangat yang akan memantik 
+              hidupnya suatu suar untuk mencapai perkembangan. Semangat yang akan mendorong kami, 
+              manusia-manusia yang percaya bahwa kesempurnaan tidak mungkin digapai oleh manusia, untuk 
+              merangkak tapak demi tapak demi menjadi satu langkah lebih dekat dengan kesempuranaan.
+
               </p>
             </div>
             <div
@@ -336,11 +335,11 @@ const HomeScreen = () => {
               }}
             >
               <div className={ketuaImage}>
-                <img src={daki} alt="daki" />
+                <img src={Ketum} alt="ketum" />
               </div>
               <div>
-                <h1>M. Daffa Rizki El-Islami .S</h1>
-                <h2>Ketua Umum BPH IMG-ITB 2022/2023</h2>
+                <h1>Zachary Adam Hidayat</h1>
+                <h2>Ketua Umum BPH IMG-ITB 2023/2024</h2>
               </div>
             </div>
           </div>

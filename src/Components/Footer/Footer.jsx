@@ -80,7 +80,7 @@ const Footer = () => {
                     window.open("https://wa.me/6285641010317", "_blank")
                   }
                 >
-                  Hubungan Luar ITB : 085641010317 (Afnan)
+                  Hubungan Luar ITB : 081316262145 (Tiara Vani)
                 </div>
               </div>
 
@@ -202,7 +202,7 @@ const Footer = () => {
 
             <div className={bottom}>
               <h1>© 2022 IMG-ITB | All rights reserved.</h1>
-              <h1>#EratBerdampak</h1>
+              <h1>#SuarPengembangan</h1>
             </div>
           </div>
         </div>
