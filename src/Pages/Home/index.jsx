@@ -8,7 +8,7 @@ import { OrbitControls, useGLTF } from "@react-three/drei";
 import { SliderText } from "../../assets/object/SliderData";
 import Carousel from "../../Components/Carousel/Carousel";
 import Gallery from "../../Components/Slider";
-import Ketum from "../../assets/images/ketum.jpg";
+import Ketum from "../../assets/images/ketum.png";
 import { Modal } from "../../Components";
 import { isMobile } from "../../Helpers/mobileResponsive";
 import useLoadData from "../../Helpers/useLoadData";
