@@ -35,7 +35,7 @@ export { default as bib } from "./images/bib.png";
 export { default as jersey } from "./images/jersey.png";
 export { default as medal } from "./images/medal.png";
 
-export { default as Ketum } from "./images/ketum.jpg";
+// export { default as Ketum } from "./images/ketum.jpg";
 export { default as Adam_Caketum1 } from "./images/Adam_caketum1.png";
 export { default as Venta_Caketum2 } from "./images/Venta_caketum2.png";
 

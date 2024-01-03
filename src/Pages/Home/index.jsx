@@ -1,7 +1,5 @@
 /* eslint-disable react/no-unknown-property */
-import React, {
-  useRef, useState, useEffect
-} from "react";
+import React, { useRef, useState, useEffect } from "react";
 import style from "./style.module.scss";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -10,7 +8,7 @@ import { OrbitControls, useGLTF } from "@react-three/drei";
 import { SliderText } from "../../assets/object/SliderData";
 import Carousel from "../../Components/Carousel/Carousel";
 import Gallery from "../../Components/Slider";
-import { Ketum } from "../../assets";
+import Ketum from "../../assets/images/ketum.jpg";
 import { Modal } from "../../Components";
 import { isMobile } from "../../Helpers/mobileResponsive";
 import useLoadData from "../../Helpers/useLoadData";
@@ -44,13 +42,13 @@ const HomeScreen = () => {
     oval,
     landingPage,
     sifatMobile,
-    containerSection2Mobile
+    containerSection2Mobile,
   } = style;
-  const dataKegiatan = useLoadData("kegiatan")
-  const dataFoto = useLoadData("fotoHome")
-  const [ index, setIndex ] = useState(0);
+  const dataKegiatan = useLoadData("kegiatan");
+  const dataFoto = useLoadData("fotoHome");
+  const [index, setIndex] = useState(0);
 
-  const [ dataModal, setDataModal ] = useState({})
+  const [dataModal, setDataModal] = useState({});
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
@@ -78,17 +76,17 @@ const HomeScreen = () => {
     );
   }
 
-  const [ openModal, setOpenModal ] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
 
   const handleOpenModal = (item) => {
-    setDataModal(item)
+    setDataModal(item);
     setOpenModal(true);
   };
   useEffect(() => {
     openModal
       ? (document.body.style.overflowY = "hidden")
       : (document.body.style.overflowY = "auto");
-  }, [ openModal ]);
+  }, [openModal]);
 
   const container1 = useRef(null);
   const container3 = useRef(null);
@@ -96,13 +94,14 @@ const HomeScreen = () => {
   const container5 = useRef(null);
   const container6 = useRef(null);
 
-
-  const refs = [ container1, container2, container3, container4, container5,container6 ];
-
-
-
-
-
+  const refs = [
+    container1,
+    container2,
+    container3,
+    container4,
+    container5,
+    container6,
+  ];
 
   return (
     <div>
@@ -113,10 +112,9 @@ const HomeScreen = () => {
         data={dataModal}
       ></Modal>
 
-      <div className={container} style={{ overflow: "hidden" }} >
+      <div className={container} style={{ overflow: "hidden" }}>
         <SideNav refs={refs} />
-        <div className={containerSectionTop} ref={container1}
-        >
+        <div className={containerSectionTop} ref={container1}>
           <div className={star}>
             <div className={landingPage}>
               <div className={desc}>
@@ -150,13 +148,13 @@ const HomeScreen = () => {
                   camera={
                     isMobile
                       ? {
-                        fov: 20,
-                        position: [ 50, 40, 35 ],
-                      }
+                          fov: 20,
+                          position: [50, 40, 35],
+                        }
                       : {
-                        fov: 36,
-                        position: [ 50, 40, 35 ],
-                      }
+                          fov: 36,
+                          position: [50, 40, 35],
+                        }
                   }
                 >
                   <ambientLight color={300} intensity={10}></ambientLight>
@@ -218,9 +216,9 @@ const HomeScreen = () => {
                 style={
                   isMobile
                     ? {
-                      height: "300px",
-                      marginTop: "40px",
-                    }
+                        height: "300px",
+                        marginTop: "40px",
+                      }
                     : null
                 }
               >
@@ -251,8 +249,11 @@ const HomeScreen = () => {
           )}
         </div>
 
-        <div className={containerSection} ref={container3}
-          style={{ overflow: "hidden" }}>
+        <div
+          className={containerSection}
+          ref={container3}
+          style={{ overflow: "hidden" }}
+        >
           <div
             className={judulSection3}
             data-aos={isMobile ? "fade-up" : "fade-right"}
@@ -301,14 +302,15 @@ const HomeScreen = () => {
             data-aos-offset="400"
             style={{ overflow: "hidden" }}
           >
-            <Gallery sliderName="card" pressItem={handleOpenModal} data={dataKegiatan} />
+            <Gallery
+              sliderName="card"
+              pressItem={handleOpenModal}
+              data={dataKegiatan}
+            />
           </div>
         </div>
 
-        <div className={containerSectionKetua}
-          ref={container5}
-
-        >
+        <div className={containerSectionKetua} ref={container5}>
           <div
             className={ketuaContainer}
             data-aos="fade-up"
@@ -317,13 +319,15 @@ const HomeScreen = () => {
           >
             <div>
               <p>
-              Kami adalah 306 insan muda yang percaya bahwa lebih baik mati daripada menjadi seseorang 
-              yang berdamai dengan kekurangan. Cobalah hentikan kami apabila tidak percaya! Niscaya api 
-              semangatmu akan ikut berkobar bersama semangat jingga kami. Semangat yang akan memantik 
-              hidupnya suatu suar untuk mencapai perkembangan. Semangat yang akan mendorong kami, 
-              manusia-manusia yang percaya bahwa kesempurnaan tidak mungkin digapai oleh manusia, untuk 
-              merangkak tapak demi tapak demi menjadi satu langkah lebih dekat dengan kesempuranaan.
-
+                Kami adalah 306 insan muda yang percaya bahwa lebih baik mati
+                daripada menjadi seseorang yang berdamai dengan kekurangan.
+                Cobalah hentikan kami apabila tidak percaya! Niscaya api
+                semangatmu akan ikut berkobar bersama semangat jingga kami.
+                Semangat yang akan memantik hidupnya suatu suar untuk mencapai
+                perkembangan. Semangat yang akan mendorong kami, manusia-manusia
+                yang percaya bahwa kesempurnaan tidak mungkin digapai oleh
+                manusia, untuk merangkak tapak demi tapak demi menjadi satu
+                langkah lebih dekat dengan kesempuranaan.
               </p>
             </div>
             <div
@@ -345,12 +349,15 @@ const HomeScreen = () => {
           </div>
         </div>
 
-        <div className={judulSection5} ref={container6}
-        >
+        <div className={judulSection5} ref={container6}>
           <h1>Our Delightful Moments</h1>
         </div>
         <div style={{ marginBottom: "100px" }}>
-          <Gallery dataImage={dataFoto} sliderName={isMobile ? "modalimg" : "gallery"} limitData={30} />
+          <Gallery
+            dataImage={dataFoto}
+            sliderName={isMobile ? "modalimg" : "gallery"}
+            limitData={30}
+          />
         </div>
       </div>
     </div>
