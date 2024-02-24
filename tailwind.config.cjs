@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      'code': [ 'cascadiaCode' ], 'jakarta': [ 'jakarta' ], 'BlackHarbour': [ 'BlackHarbour' ] 
+      'code': [ 'cascadiaCode' ], 'jakarta': [ 'jakarta' ], 'BlackHarbour': [ 'BlackHarbour' ], 'montserratbold': [ 'montserratbold' ], 'montserratsemibold': [ 'montserratsemibold' ], 'montserratmedium': [ 'montserratmedium' ]
     }
   },
   plugins: [],

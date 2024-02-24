@@ -217,6 +217,21 @@ input:focus {
   src: url(./assets/fonts/BlackHarbour.ttf) format("woff2");
 }
 
+@font-face {
+  font-family: montserratbold;
+  src: url(./assets/fonts/Montserrat-Bold.ttf) format("woff2");
+}
+
+@font-face {
+  font-family: montserratmedium;
+  src: url(./assets/fonts/Montserrat-Medium.ttf) format("woff2");
+}
+
+@font-face {
+  font-family: montserratsemibold;
+  src: url(./assets/fonts/Montserrat-SemiBold.ttf) format("woff2");
+}
+
 body {
   margin: 0;
 
