@@ -70,10 +70,10 @@
   }
 
   h1 {
-    font-family: "BlackHarbour";
+    font-family: "montserratbold";
     font-style: normal;
     font-weight: 400;
-    font-size: 65px;
+    font-size: 55px;
     line-height: 18px;
     /* identical to box height, or 28% */
 
@@ -83,7 +83,7 @@
   }
 
   h2 {
-    font-family: "BlackHarbour";
+    font-family: "montserratmedium";
     font-style: normal;
     font-weight: 400;
     font-size: 25px;
@@ -119,12 +119,12 @@
 }
 
 .buttonDokumen {
-  background: #800000;
+  background: #FF4A01;
   box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.3);
   border-radius: 7px;
   padding-inline: 26px;
   padding-block: 12px;
-  font-family: "BlackHarbour";
+  font-family: "montserratmedium";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -149,11 +149,11 @@
   margin-top: 100px;
 
   h1 {
-    font-family: "BlackHarbour";
+    font-family: "montserratbold";
     font-style: normal;
     font-weight: 400;
-    font-size: 100px;
-    line-height: 119px;
+    font-size: 65px;
+    line-height: 80px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -173,16 +173,16 @@
   box-sizing: border-box;
   width: 350px;
 
-  border: 3px solid #800000;
+  border: 3px solid #FF4A01;
   border-radius: 31px;
   padding: 20px;
 
   p {
-    font-family: "BlackHarbour";
+    font-family: "montserratmedium";
     font-style: normal;
     font-weight: 400;
-    font-size: 25px;
-    line-height: 26px;
+    font-size: 18px;
+    line-height: 24px;
 
     text-align: justify;
 
@@ -190,10 +190,10 @@
   }
 
   h1 {
-    font-family: "BlackHarbour";
+    font-family: "montserratsemibold";
     font-style: normal;
     font-weight: 400;
-    font-size: 35px;
+    font-size: 25px;
     line-height: 34px;
     /* identical to box height */
 
@@ -217,6 +217,7 @@
 
 .caketum_container {
   position: relative;
+  flex-direction: row;
 
   @media screen and (max-width: 450px) {
     img {

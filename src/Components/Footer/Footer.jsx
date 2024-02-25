@@ -44,7 +44,8 @@ const Footer = () => {
               ? containerGeopoint
               : container
           }
-          style={linkName === "/Pemilu" ? { background: "#800000" } : null}
+          style={linkName === "/Pemilu" ? { background: "#FF4A01" } : null}
+
         >
           <div
             className={containertopcontact}
@@ -54,7 +55,7 @@ const Footer = () => {
               linkName === "/Geopoint/Ceremony"
                 ? { background: "#211954" }
                 : linkName === "/Pemilu"
-                  ? { background: " #5B0000" }
+                  ? { background: " #EC3700" }
                   : null
             }
           >
@@ -68,7 +69,7 @@ const Footer = () => {
                     linkName === "/Geopoint/Ceremony"
                       ? { background: "#281F64" }
                       : linkName === "/Pemilu"
-                        ? { background: " #800000" }
+                        ? { background: " #FF4A01" }
                         : null
                   }
                 >
@@ -77,10 +78,10 @@ const Footer = () => {
                 <div
                   style={isMobile ? null : { width: "220px" }}
                   onClick={() =>
-                    window.open("https://wa.me/6285641010317", "_blank")
+                    window.open("https://wa.me/6281316262145", "_blank")
                   }
                 >
-                  Hubungan Luar ITB : 081316262145 (Tiara Vani)
+                  Hubungan Luar ITB : 081316262145 (Monica Andini)
                 </div>
               </div>
 
@@ -93,7 +94,7 @@ const Footer = () => {
                     linkName === "/Geopoint/Ceremony"
                       ? { background: " #281F64" }
                       : linkName === "/Pemilu"
-                        ? { background: " #800000" }
+                        ? { background: " #FF4A01" }
                         : null
                   }
                 >

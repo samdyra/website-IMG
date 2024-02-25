@@ -70,8 +70,8 @@ const Navbar = () => {
           className={containeractive}
           style={
             linkName === "/Pemilu"
-              ? { background: `rgba(128,0,0, ${offset})` }
-              : { background: `rgba(75,133,121, ${offset})` }
+              ? { background: `rgba(236,55,0, ${offset})` }
+              : { background: `rgba(255,74,1, ${offset})` }
           }
         >
           <div className={container}>

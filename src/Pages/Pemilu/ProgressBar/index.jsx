@@ -24,30 +24,40 @@ const ProgressBar = () => {
         </div>
         <div className={progressBar}>
           <div className={dotsContainer}>
-            <h2 style={{ width: "150px" }}>23 januari 2023</h2>
+            <h2 style={{ width: "150px" }}>21 Februari 2024</h2>
             <div className={dotsActive}></div>
-            <h2 style={{ width: "150px" }}>Forum sosialisasi</h2>
+            <h2 style={{ width: "150px" }}>MPA 1</h2>
           </div>
           <div className={dotsContainer}>
-            <h2 style={{ width: "180px" }}>30 Januari - 1 Februari 2023</h2>
+            <h2 style={{ width: "150px" }}>23 Februari 2024</h2>
             <div className={dotsActive}></div>
-            <h2 style={{ width: "150px" }}>Pengambilan Berkas</h2>
+            <h2 style={{ width: "150px" }}>MPA 2</h2>
           </div>
           <div className={dotsContainer}>
-            <h2 style={{ width: "180px" }}>3 februari - 6 februari 2023</h2>
+            <h2 style={{ width: "150px" }}>26 Februari 2024</h2>
             <div className={dotsActive}></div>
-            <h2 style={{ width: "150px" }}>pengembalian berkas</h2>
+            <h2 style={{ width: "150px" }}>MPA 3</h2>
           </div>
           <div className={dotsContainer}>
-            <h2 style={{ width: "150px" }}>9 februari 2023</h2>
+            <h2 style={{ width: "150px" }}>28 Februari 2024</h2>
             <div className={dotsActive}></div>
-            <h2 style={{ width: "150px" }}>verifikasi berkas</h2>
+            <h2 style={{ width: "150px" }}>MPA 4</h2>
           </div>
           <div className={dotsContainer}>
             <h2 style={{ width: "150px" }}>15 februari 2023</h2>
             <div className={dotsActive}></div>
-            <h2 style={{ width: "150px" }}>Sidang MPA PP </h2>
+            <h2 style={{ width: "150px" }}>MPA 5</h2>
           </div>
+          <div className={dotsContainer}>
+            <h2 style={{ width: "150px" }}>4 Maret 2024</h2>
+            <div className={dotsActive}></div>
+            <h2 style={{ width: "150px" }}>MPA 6</h2>
+          </div>
+          <div className={dotsContainer}>
+            <h2 style={{ width: "150px" }}>6 Maret 2024</h2>
+            <div className={dotsActive}></div>
+            <h2 style={{ width: "150px" }}>MPA 7</h2>
+          </div> 
         </div>
       </div>
     </div>
