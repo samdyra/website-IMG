@@ -71,7 +71,7 @@ const Navbar = () => {
           style={
             linkName === "/Pemilu"
               ? { background: `rgba(236,55,0, ${offset})` }
-              : { background: `rgba(255,74,1, ${offset})` }
+              : { background: `#4b8579` }
           }
         >
           <div className={container}>
