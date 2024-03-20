@@ -29,6 +29,7 @@ const Footer = () => {
     detail,
     detailAddress,
     connect,
+    sosmedText,
     containerGeopoint,
     containertopcontact,
     contactLogoContainer,
@@ -76,12 +77,16 @@ const Footer = () => {
                   <img src={phone}></img>
                 </div>
                 <div
-                  style={isMobile ? null : { width: "220px" }}
+                  style={isMobile ? null : { width: "85px" }}
                   onClick={() =>
                     window.open("https://wa.me/6281316262145", "_blank")
                   }
                 >
-                  Hubungan Luar ITB : 081316262145 (Monica Andini)
+                  Hubungan Luar ITB : 
+                  <br />  
+                  081316262145
+                  <br />
+                  (Monica Andini)
                 </div>
               </div>
 
@@ -128,10 +133,13 @@ const Footer = () => {
                     </div>
                   </div>
                 </div>
-                <h1 style={isMobile ? { fontSize: "1rem" } : null}>
-                  Kunjungi media sosial resmi himpunan kami di sini!
-                </h1>
-                <div className={imageContainer}>
+                <div classname={sosmedText} style={{marginTop:40}}>
+                  <h1 style={isMobile ? { fontSize: "1rem" } : null}>
+                    Kunjungi media sosial resmi himpunan kami di sini!
+                  </h1>
+                </div>
+                <div className={imageContainer} >
+                  
                   <img
                     src={instagram}
                     onClick={() =>
