@@ -13,6 +13,8 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { gegepdesc } from "../../assets";
 
+import { sosmedgeo } from "../../assets";
+
 const Geopoint = () => {
   const {
     container,
@@ -23,8 +25,12 @@ const Geopoint = () => {
     mascotText,
     titleText,
     teaser,
+    timeline,
+    sosmed,
+    containerMov,
   } = style;
 
+  const [dataModal, setDataModal ] = useState({})
   const [openModal, setOpenModal] = useState(false);
 
   useEffect(() => {
@@ -42,64 +48,38 @@ const Geopoint = () => {
         ModalName="geopoint"
         open={openModal}
         onClose={() => setOpenModal(false)}
+        data={dataModal}
       ></Modal>
       {/* Geopoint IMG-ITB 2023 */}
       <div className={pageBackground}>
-        <div className={container} style={{ flexDirection: "column" }}>
           <div className={title}>
-            <div className={titleText}>
+            <div className={titleText}
+            >
               <h1>
-                Geopoint <br></br> IMG-ITB 2023
+                GEOPOINT <br></br> IMG-ITB 2024
               </h1>
-              <h2>Spread The Joy in Our Journey</h2>
             </div>
-          </div>
-          {isMobile ? <Carousel3DMobile /> : <Carousel3D />}
-        </div>
-
-        {isMobile ? (
-          <div>
-            <div
-              className={buttonMascot}
-              onClick={() =>
-                window.open(
-                  "https://docs.google.com/forms/d/e/1FAIpQLSfcwaxn3v5iwfw6tSZjugCLMr3HaAB94PH4IwsMStXRiL5D-w/viewform",
-                  "_blank"
-                )
-              }
-            >
-              Daftar Navigacity Disini!
-            </div>
-            <div
-              className={buttonMascot}
-              onClick={() =>
-                window.open(
-                  "https://docs.google.com/forms/d/e/1FAIpQLSfcwaxn3v5iwfw6tSZjugCLMr3HaAB94PH4IwsMStXRiL5D-w/viewform",
-                  "_blank"
-                )
-              }
-            >
-              Daftar Geospasial Disini!
-            </div>
-          </div>
-        ) : null}
-
-        <div className={containerMascot}>
+            <div className={containerMascot}>
           <div
             style={
               isMobile
-                ? { flexDirection: "collumn" }
-                : { flexDirection: "collumn", marginLeft: "50px" }
+                ? { flexDirection: "Row" }
+                : { flexDirection: "Row", marginLeft: "50px", }
             }
             data-aos="fade-right"
             data-aos-duration="600"
             data-aos-offset={isMobile ? "175" : "300"}
           >
-            <div className={mascotText}>
+            <div className={mascotText}
+            
+            >
               <p>
-                Perkenalkan, Gegep dan Eggy! Dua sejoli ini adalah teman
-                perjalanan kamu di Geopoint IMG–ITB yang akan menemani dan
-                memberikan informasi yang kamu butuhkan.
+              Geopoint IMG-ITB 2024 merupakan kegiatan yang dipersembahkan
+               oleh BSO Geopoint Ikatan Mahasiswa Geodesi ITB (IMG-ITB).
+               GEOPOINT IMG-ITB 2024 bertujuan untuk mengenalkan 
+               keilmuan geodesi dan menyalurkan kebermanfaatan keilmuan 
+               Geodesi dan Geomatika kepada masyarakat serta sebagai wadah 
+               pengembangan bagi anggota IMG-ITB.
               </p>
             </div>
             <div
@@ -109,26 +89,57 @@ const Geopoint = () => {
               }}
             >
               Read More
-            </div>
+            </div> 
           </div>
           <img
             src={gegepdesc}
             alt=""
             data-aos="fade-left"
             data-aos-duration="600"
-            data-aos-offset="300"
+            data-aos-offset={isMobile ? "175" : "200"}
           />
         </div>
-        <div
-          className={container}
-        // data-aos="fade-up"
-        // data-aos-duration="600"
-        // data-aos-offset="625"
-        >
+        </div>
+        
+
+        {/* <div className={container} style={{ flexDirection: "column" }}>
+        </div>
+          {isMobile ? <Carousel3DMobile /> : <Carousel3D />} */}
+
+
+
+
+        <div className={container} 
+            style={{
+            flexDirection: "column",
+            paddingBottom: "170px",
+            marginTop: "180px",
+          }}
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-offset="300">
+          <div className={timeline}>
+              <h1>Our Timeline</h1>
+          </div>
+        <div className={teaser}>
+          </div>
+        {isMobile ? <Carousel3DMobile /> : <Carousel3D />}
+        <div style={
+              isMobile
+                ? { marginTop: "200px" }
+                : null }
+                 >
           <ProgressBarCarousel />
         </div>
+        </div>
+
+
+
+
+
+
         <div
-          className={container}
+          className={containerMov}
           style={{
             flexDirection: "column",
             paddingBottom: "170px",
@@ -137,14 +148,24 @@ const Geopoint = () => {
           data-aos="fade-up"
           data-aos-duration="600"
           data-aos-offset="300"
-        >
+        >        
           <div className={teaser}>
-            <h1>Teaser Geopoint IMG-ITB 2023</h1>
+            <h1>After Movie</h1>
           </div>
           <div>
             <VideoEmbed />
           </div>
+
         </div>
+        <div className={sosmed}>
+            <img
+              src={sosmedgeo}
+              alt=""
+              data-aos="fade-left"
+              data-aos-duration="600"
+              data-aos-offset="50"
+            />
+          </div>
       </div>
     </>
   );

@@ -232,6 +232,21 @@ input:focus {
   src: url(./assets/fonts/Montserrat-SemiBold.ttf) format("woff2");
 }
 
+@font-face {
+  font-family: quicksand;
+  src: url(./assets/fonts/Quicksand-Regular.ttf) format("woff2");
+}
+
+@font-face {
+  font-family: firasans;
+  src: url(./assets/fonts/FiraSansExtraCondensed-Bold.ttf) format("woff2");
+}
+
+@font-face {
+  font-family: firasans-s;
+  src: url(./assets/fonts/FiraSansExtraCondensed-SemiBold.ttf) format("woff2");
+}
+
 body {
   margin: 0;
 

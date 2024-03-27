@@ -42,6 +42,7 @@ const MobileNavbar = () => {
       setMenuClass(menuVisible);
       linkName === "/Geopoint" ||
         linkName === "/Geopoint/Navigacity" ||
+        linkName === "/Geopoint/Gemas" ||
         linkName === "/Geopoint/Ceremony"
         ? setMenuClass(menuVisibleGeopoint)
         : linkName === "/Pemilu"
@@ -128,6 +129,7 @@ const MobileNavbar = () => {
             <a href="/ParadeWisuda">Parade Wisuda</a>
             <a href="/KabarkeSenatoran">Kabar Kesenatoran</a>
             <a href="/Geopoint">GEOPOINT</a>
+            <a href="/Geopoint/Gemas">GEMAS</a>
             <a href="/Locus">Locus</a>
             <a href="/Geosphere">Geosphere</a>
             <a href="/IMGx">IMG-X</a>
@@ -140,7 +142,7 @@ const MobileNavbar = () => {
           </div>
         </div>
       ) : linkName === "/Geopoint" ||
-        linkName === "/Geopoint/Navigacity" ||
+        linkName === "/Geopoint/Gemas" ||
         linkName === "/Geopoint/Ceremony" ? (
           <div>
             <div className={containerGeopoint}>
@@ -172,6 +174,7 @@ const MobileNavbar = () => {
               <a href="/ParadeWisuda">Parade Wisuda</a>
               <a href="/KabarkeSenatoran">Kabar Kesenatoran</a>
               <a href="/Geopoint">GEOPOINT</a>
+              <a href="/Geopoint/Gemas">GEMAS</a>
               <a href="/Locus">Locus</a>
               <a href="/Geosphere">Geosphere</a>
               <a href="/IMGx">IMG-X</a>
@@ -214,6 +217,7 @@ const MobileNavbar = () => {
               <a href="/ParadeWisuda">Parade Wisuda</a>
               <a href="/KabarkeSenatoran">Kabar Kesenatoran</a>
               <a href="/Geopoint">GEOPOINT</a>
+              <a href="/Geopoint/Gemas">GEMAS</a>
               <a href="/Locus">Locus</a>
               <a href="/Geosphere">Geosphere</a>
               <a href="/IMGx">IMG-X</a>

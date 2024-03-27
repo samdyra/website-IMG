@@ -5,6 +5,7 @@
 .container {
   display: flex;
   justify-content: center;
+
 }
 
 #slider3D {
@@ -15,13 +16,15 @@
 
   perspective: 1000px;
   transform-style: preserve-3d;
+  
 }
 
 .container img {
   height: 455px;
   width: 801px;
-  object-fit: cover;
+  object-fit:inherit;
   border-radius: 20px;
+  
 }
 
 #slider3D label {

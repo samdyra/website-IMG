@@ -12,7 +12,7 @@ import Ketum from "../../assets/images/ketum.png";
 import { Modal } from "../../Components";
 import { isMobile } from "../../Helpers/mobileResponsive";
 import useLoadData from "../../Helpers/useLoadData";
-import { Organogram } from "../../assets";
+import { GemasSlider, Organogram } from "../../assets";
 import SideNav from "../../Components/SideNav";
 
 const HomeScreen = () => {
@@ -43,6 +43,7 @@ const HomeScreen = () => {
     landingPage,
     sifatMobile,
     containerSection2Mobile,
+    containerSection3Mobile,
   } = style;
   const dataKegiatan = useLoadData("kegiatan");
   const dataFoto = useLoadData("fotoHome");
@@ -277,6 +278,7 @@ const HomeScreen = () => {
             data-aos={isMobile ? "fade-up" : "fade-left"}
             data-aos-duration="750"
             data-aos-offset={isMobile ? "200" : "430"}
+            
           >
             <Carousel slides={Organogram} />
           </div>
@@ -318,6 +320,7 @@ const HomeScreen = () => {
             data-aos-offset="1"
           >
             <div>
+
               <p>
                 Kami adalah 306 insan muda yang percaya bahwa lebih baik mati
                 daripada menjadi seseorang yang berdamai dengan kekurangan.

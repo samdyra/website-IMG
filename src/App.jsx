@@ -16,7 +16,8 @@ import {
   Navigacity,
   Ceremony,
   Pemilu,
-  IMGTweet
+  IMGTweet,
+  Gemas
 } from "./Pages";
 import Navbar from "./Components/Navbar";
 import MobileNavbar from "./Components/MobileNavbar";
@@ -65,6 +66,7 @@ function App() {
         {/* Geopoint Screens */}
         <Route path="/Geopoint" element={<Geopoint />}></Route>
         <Route path="/Geopoint/Navigacity" element={<Navigacity />}></Route>
+        <Route path="/Geopoint/Gemas" element={<Gemas />}></Route>
         <Route path="/Geopoint/Ceremony" element={<Ceremony />}></Route>
         <Route path="/DPM" element={<DpmScreen />}></Route>
         <Route path="/Pemilu" element={<Pemilu />}></Route>

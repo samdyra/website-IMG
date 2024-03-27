@@ -34,6 +34,22 @@
   background-size: cover;
 }
 
+.modalContainerMobile {
+  width: 350px;
+  height: 600px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 40px;
+ 
+  background-image: url("../../assets/images/gegepmodalmobile.png");
+  background-color: darkblue;
+  background-size: cover;
+}
+
 .modalContainer2 {
   width: 1100px;
   height: 650px;

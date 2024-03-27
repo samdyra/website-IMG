@@ -6,7 +6,7 @@
   flex-direction: column;
   z-index: 6;
   position: relative;
-  font-size: 16px;
+  font-size: 12px;
   overflow-x: hidden;
 }
 
@@ -19,7 +19,7 @@
   flex-direction: column;
   z-index: 6;
   position: relative;
-  font-size: 16px;
+  font-size: 12px;
   overflow-x: hidden;
 }
 
@@ -59,7 +59,7 @@
   flex-direction: row;
   justify-content: space-between;
   color: white;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 
   @media screen and (max-width: 420px) {
     flex-direction: column;
@@ -71,7 +71,7 @@
   flex-direction: column;
   h1 {
     // font-family: jakartaBold;
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 
@@ -237,5 +237,5 @@
   display: flex;
   margin-top: 30px;
   margin-bottom: 10px;
-
+  font-size: smaller;
 }

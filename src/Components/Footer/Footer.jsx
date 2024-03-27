@@ -41,6 +41,7 @@ const Footer = () => {
           className={
             linkName === "/Geopoint" ||
             linkName === "/Geopoint/Navigacity" ||
+            linkName === "/Geopoint/Gemas" ||
             linkName === "/Geopoint/Ceremony"
               ? containerGeopoint
               : container
@@ -53,6 +54,7 @@ const Footer = () => {
             style={
               linkName === "/Geopoint" ||
               linkName === "/Geopoint/Navigacity" ||
+              linkName === "/Geopoint/Gemas" ||
               linkName === "/Geopoint/Ceremony"
                 ? { background: "#211954" }
                 : linkName === "/Pemilu"
@@ -67,6 +69,7 @@ const Footer = () => {
                   style={
                     linkName === "/Geopoint" ||
                     linkName === "/Geopoint/Navigacity" ||
+                    linkName === "/Geopoint/Gemas" ||
                     linkName === "/Geopoint/Ceremony"
                       ? { background: "#281F64" }
                       : linkName === "/Pemilu"
@@ -96,6 +99,7 @@ const Footer = () => {
                   style={
                     linkName === "/Geopoint" ||
                     linkName === "/Geopoint/Navigacity" ||
+                    linkName === "/Geopoint/Gemas" ||
                     linkName === "/Geopoint/Ceremony"
                       ? { background: " #281F64" }
                       : linkName === "/Pemilu"

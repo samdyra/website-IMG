@@ -33,6 +33,7 @@ const Dropdown = (props) => {
 
               <a href="/KabarkeSenatoran">Kabar Kesenatoran</a>
               <a href="/Geopoint">GEOPOINT</a>
+              <a href="/Geopoint/Gemas">GEMAS</a>
               <a href="/Pemilu">PEMILU</a>
             </div>
           </>
