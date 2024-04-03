@@ -243,7 +243,12 @@
 }
 
 .sosmed{
-  max-width: 500px;
   padding-inline: 50px;
-  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width:40vw;
+  @media screen and (max-width: 450px) {
+  width: 100vw;
+  }
 }

@@ -188,7 +188,7 @@ const Gemas = () => {
             <img
               src={sosmedgeo}
               alt=""
-              data-aos="fade-left"
+              data-aos="fade-up"
               data-aos-duration="600"
               data-aos-offset="50"
             />
