@@ -41,8 +41,9 @@
     font-family: jakarta;
   }
 
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 450px) {
     flex-direction: column;
+    height: 600px;
 
     h1 {
       bottom: 200px;
@@ -55,7 +56,9 @@
       position: absolute;
       width: 300px;
       top: 320px;
+      margin-bottom: 300px;
       left: 495px;
+      font-size: 14px;
     }
   }
 }
@@ -71,7 +74,7 @@
   object-fit: fill;
   margin-bottom: 10px;
 
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 450px) {
     margin: 0 auto;
     top: 100px;
     right: 2%;

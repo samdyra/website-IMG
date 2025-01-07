@@ -10,7 +10,6 @@ import {
 import style from "./style.module.scss";
 import { CountDown } from "../Navigacity/Components";
 import ProgressBar from "./ProgressBar";
-import { gegepcere1, fasilitascere, TBA } from "../../assets";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { isMobile } from "../../Helpers/mobileResponsive";
@@ -113,9 +112,7 @@ const Ceremony = () => {
             <div className={titleTextH2}>
               <h1>Closing Ceremony</h1>
             </div>
-            <div className={gegepHeader}>
-              <img src={gegepcere1} alt="gegepnavi1" />
-            </div>
+
           </div>
         </div>
         <div className={containerMascot}>

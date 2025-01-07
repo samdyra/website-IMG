@@ -22,8 +22,8 @@
   display: flex;
   justify-self: center;
   margin: 0 auto;
-  width: 320px;
-  height: 230px;
+  width: 300px;
+  height: auto;
   border-radius: 10px;
 }
 

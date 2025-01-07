@@ -35,7 +35,7 @@ const ProgressBarCarousel = () => {
     },
 
     appendDots: (dots) => (
-      <div style={{ marginTop: "30px" }}>
+      <div style={{  marginTop: "30px" }}>
         <ul
           style={{
             display: "flex",
@@ -44,8 +44,8 @@ const ProgressBarCarousel = () => {
             // alignItems: "center",
             listStyle: "none",
             fontFamily: "jakarta",
-            width: isMobile ? "375px" : "1100px",
-            marginRight: isMobile ? 471 : 135,
+            width: isMobile ? "325px" : "1100px",
+            marginRight: isMobile ? 491 : 135,
           }}
         >
           {dots}
@@ -54,11 +54,11 @@ const ProgressBarCarousel = () => {
           style={{
             position: "relative",
             zIndex: "-1",
-            top: "40px",
-            left: isMobile ? "475px" : "100px",
+            top: isMobile ? "120px":"40px",
+            left: isMobile ? "500px" : "100px",
             fontFamily: "jakarta",
             backgroundColor: "#D5A33B",
-            width: isMobile ? "350px" : "1080px",
+            width: isMobile ? "300px" : "1080px",
             height: "6px",
           }}
         ></div>
@@ -73,7 +73,7 @@ const ProgressBarCarousel = () => {
             textAlign: "center",
             alignItems: "center",
             width: isMobile ? 58 : 120,
-            height: 30,
+            height: isMobile ? 110 : 30,
 
             // marginBottom: 30
           }}
@@ -82,6 +82,7 @@ const ProgressBarCarousel = () => {
             style={{
               color: "#f5fcb5",
               fontSize: isMobile ? 8 : 12,
+              marginTop: isMobile ? "110px": null,
             }}
           >
             {GeopointSlider[i].date}

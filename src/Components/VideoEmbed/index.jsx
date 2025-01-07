@@ -12,7 +12,7 @@ const VideoEmbed = () => {
               height={isMobile ? "180.46px" : "500px"}
               style={{ borderRadius: "25px" }}
               className="embed-responsive-item"
-              src="https://www.youtube.com/embed/WGJWaKeMzOs"
+              src="https://www.youtube.com/embed/rpWtRXSIjbc"
               frameBorder="0"
               allowFullScreen
             ></iframe>

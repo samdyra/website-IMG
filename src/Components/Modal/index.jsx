@@ -8,6 +8,7 @@ const Modal = ({
   const {
     overlay,
     modalContainer,
+    modalContainerMobile,
     modalContainer2,
     content2,
     modalRight,
@@ -62,7 +63,7 @@ const Modal = ({
             onScroll={(e) => {
               e.stopPropagation();
             }}
-            className={modalContainer}
+            className={!isMobile ? modalContainer : modalContainerMobile}
           >
             <div className={modalRight}>
               <p className={closeBtn} onClick={onClose}>

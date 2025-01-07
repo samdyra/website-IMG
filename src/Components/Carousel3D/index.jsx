@@ -3,10 +3,9 @@ import "./Carousel3D.css";
 
 import { useEffect } from "react";
 import {
-  slidernavigacity,
   slidergts,
   slidergeospasial,
-  sliderceremony,
+  slidergemas,
   sliderseminar,
 } from "../../assets";
 import { BrowserRouter as Router, Link, useNavigate } from "react-router-dom";
@@ -32,7 +31,6 @@ const Carousel3D = () => {
         <input type="radio" name="slider3D" id="s2" />
         <input type="radio" name="slider3D" id="s3" />
         <input type="radio" name="slider3D" id="s4" />
-        <input type="radio" name="slider3D" id="s5" ref={image} />
 
         <label for="s1" id="slide1">
           <img src={sliderseminar} />
@@ -40,8 +38,8 @@ const Carousel3D = () => {
 
         <label for="s2" id="slide2">
           <img
-            src={sliderceremony}
-            onDoubleClick={() => navigate("/Geopoint/Ceremony")}
+            src={slidergemas}
+            onDoubleClick={() => navigate("/Geopoint/Gemas")}
           />
         </label>
         <label for="s3" id="slide3">
@@ -49,12 +47,6 @@ const Carousel3D = () => {
         </label>
         <label className="gts" for="s4" id="slide4">
           <img src={slidergts} />
-        </label>
-        <label for="s5" id="slide5">
-          <img
-            src={slidernavigacity}
-            onDoubleClick={() => navigate("/Geopoint/Navigacity")}
-          />
         </label>
       </section>
     </div>

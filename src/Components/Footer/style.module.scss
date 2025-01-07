@@ -6,7 +6,7 @@
   flex-direction: column;
   z-index: 6;
   position: relative;
-  font-size: 16px;
+  font-size: 12px;
   overflow-x: hidden;
 }
 
@@ -19,7 +19,7 @@
   flex-direction: column;
   z-index: 6;
   position: relative;
-  font-size: 16px;
+  font-size: 12px;
   overflow-x: hidden;
 }
 
@@ -33,13 +33,13 @@
   overflow-x: hidden;
 
   @media screen and (max-width: 420px) {
-    max-width: 100vw;
+    max-width: 100vw;   
   }
 }
 
 .container2 {
   width: 1180px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 
   @media screen and (max-width: 1180px) {
     width: 90vw;
@@ -71,7 +71,7 @@
   flex-direction: column;
   h1 {
     // font-family: jakartaBold;
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 
@@ -231,4 +231,11 @@
   a {
     margin-bottom: 15px;
   }
+}
+
+.sosmedText{
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: smaller;
 }

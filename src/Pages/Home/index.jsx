@@ -12,7 +12,7 @@ import Ketum from "../../assets/images/ketum.png";
 import { Modal } from "../../Components";
 import { isMobile } from "../../Helpers/mobileResponsive";
 import useLoadData from "../../Helpers/useLoadData";
-import { Organogram } from "../../assets";
+import { GemasSlider, Organogram } from "../../assets";
 import SideNav from "../../Components/SideNav";
 
 const HomeScreen = () => {
@@ -43,6 +43,7 @@ const HomeScreen = () => {
     landingPage,
     sifatMobile,
     containerSection2Mobile,
+    containerSection3Mobile,
   } = style;
   const dataKegiatan = useLoadData("kegiatan");
   const dataFoto = useLoadData("fotoHome");
@@ -277,6 +278,7 @@ const HomeScreen = () => {
             data-aos={isMobile ? "fade-up" : "fade-left"}
             data-aos-duration="750"
             data-aos-offset={isMobile ? "200" : "430"}
+            
           >
             <Carousel slides={Organogram} />
           </div>
@@ -318,16 +320,20 @@ const HomeScreen = () => {
             data-aos-offset="1"
           >
             <div>
+
               <p>
-                Kami adalah 306 insan muda yang percaya bahwa lebih baik mati
-                daripada menjadi seseorang yang berdamai dengan kekurangan.
-                Cobalah hentikan kami apabila tidak percaya! Niscaya api
-                semangatmu akan ikut berkobar bersama semangat jingga kami.
-                Semangat yang akan memantik hidupnya suatu suar untuk mencapai
-                perkembangan. Semangat yang akan mendorong kami, manusia-manusia
-                yang percaya bahwa kesempurnaan tidak mungkin digapai oleh
-                manusia, untuk merangkak tapak demi tapak demi menjadi satu
-                langkah lebih dekat dengan kesempuranaan.
+                Kami adalah 338 orang berdarah jingga yang memiliki potensi 
+                tak ternilai. Ya, setiap diri kami yang berdiri di sini mungkin 
+                tidak sepenuhnya sama. Tapi jika ada keraguan di hati kalian,
+                lihatlah ikatan kuat yang mengikat setiap jiwa kita! Lihatlah
+                semangat kami layaknya api jingga yang akan terus berkobar!
+                IMG adalah ikatan yang agung, itu hal yang sering kami dengar
+                dan akan selamanya kami banggakan. Namun, sudah saatnya 
+                giliran IMG yang membanggakan kamerad-kamerad di dalamnya.
+                Sudah cukup Sang Jingga di Ufuk Tenggara terlelap dalam tidurnya,
+                karena Kebangkitan Eksistensi akan segera tiba.Kembangkan 
+                Potensimu dan Tunjukkan Eksitensimu! Karena IMG tidak akan 
+                pernah lebih keren dari kamerad-kamerad di dalamnya!
               </p>
             </div>
             <div
@@ -342,8 +348,8 @@ const HomeScreen = () => {
                 <img src={Ketum} alt="ketum" />
               </div>
               <div>
-                <h1>Zachary Adam Hidayat</h1>
-                <h2>Ketua Umum BPH IMG-ITB 2023/2024</h2>
+                <h1>Andrew Ringgas Naoki Hutasoit</h1>
+                <h2>Ketua Umum BPH IMG-ITB 2024/2025</h2>
               </div>
             </div>
           </div>

@@ -2,10 +2,9 @@ import React, { useRef } from "react";
 import "./Carousel3DMobile.css";
 import { useEffect } from "react";
 import {
-  slidernavigacity,
   slidergts,
   slidergeospasial,
-  sliderceremony,
+  slidergemas,
   sliderseminar,
 } from "../../assets";
 import { BrowserRouter as Router, Link, useNavigate } from "react-router-dom";
@@ -31,7 +30,6 @@ const Carousel3DMobile = () => {
         <input type="radio" name="slider3DMobile" id="s2Mobile" />
         <input type="radio" name="slider3DMobile" id="s3Mobile" />
         <input type="radio" name="slider3DMobile" id="s4Mobile" />
-        <input type="radio" name="slider3DMobile" id="s5Mobile" ref={image} />
 
         <label for="s1Mobile" id="slide1Mobile">
           <img src={sliderseminar} />
@@ -39,8 +37,8 @@ const Carousel3DMobile = () => {
 
         <label for="s2Mobile" id="slide2Mobile">
           <img
-            src={sliderceremony}
-            onDoubleClick={() => navigate("/Geopoint/Ceremony")}
+            src={slidergemas}
+            onDoubleClick={() => navigate("/Geopoint/Gemas")}
           />
         </label>
         <label for="s3Mobile" id="slide3Mobile">
@@ -49,12 +47,7 @@ const Carousel3DMobile = () => {
         <label className="gts" for="s4Mobile" id="slide4Mobile">
           <img src={slidergts} />
         </label>
-        <label for="s5Mobile" id="slide5Mobile">
-          <img
-            src={slidernavigacity}
-            onDoubleClick={() => navigate("/Geopoint/Navigacity")}
-          />
-        </label>
+
       </section>
     </div>
   );
