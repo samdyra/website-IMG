@@ -1,5 +1,7 @@
 /* eslint-disable react/no-unknown-property */
-import React, { useRef, useState, useEffect } from "react";
+import React, {
+  useRef, useState, useEffect 
+} from "react";
 import style from "./style.module.scss";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -13,7 +15,7 @@ import { Modal } from "../../Components";
 import { isMobile } from "../../Helpers/mobileResponsive";
 import useLoadData from "../../Helpers/useLoadData";
 import { Organogram } from "../../assets";
-import SideNav from "../../Components/SideNav";
+
 
 const HomeScreen = () => {
   const {
@@ -46,9 +48,10 @@ const HomeScreen = () => {
   } = style;
   const dataKegiatan = useLoadData("kegiatan");
   const dataFoto = useLoadData("fotoHome");
-  const [index, setIndex] = useState(0);
 
-  const [dataModal, setDataModal] = useState({});
+  const [ index, setIndex ] = useState(0);
+
+  const [ dataModal, setDataModal ] = useState({});
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
@@ -76,7 +79,7 @@ const HomeScreen = () => {
     );
   }
 
-  const [openModal, setOpenModal] = useState(false);
+  const [ openModal, setOpenModal ] = useState(false);
 
   const handleOpenModal = (item) => {
     setDataModal(item);
@@ -86,7 +89,7 @@ const HomeScreen = () => {
     openModal
       ? (document.body.style.overflowY = "hidden")
       : (document.body.style.overflowY = "auto");
-  }, [openModal]);
+  }, [ openModal ]);
 
   const container1 = useRef(null);
   const container3 = useRef(null);
@@ -113,7 +116,7 @@ const HomeScreen = () => {
       ></Modal>
 
       <div className={container} style={{ overflow: "hidden" }}>
-        <SideNav refs={refs} />
+        {/* <SideNav refs={refs} /> */}
         <div className={containerSectionTop} ref={container1}>
           <div className={star}>
             <div className={landingPage}>
@@ -148,13 +151,13 @@ const HomeScreen = () => {
                   camera={
                     isMobile
                       ? {
-                          fov: 20,
-                          position: [50, 40, 35],
-                        }
+                        fov: 20,
+                        position: [ 50, 40, 35 ],
+                      }
                       : {
-                          fov: 36,
-                          position: [50, 40, 35],
-                        }
+                        fov: 36,
+                        position: [ 50, 40, 35 ],
+                      }
                   }
                 >
                   <ambientLight color={300} intensity={10}></ambientLight>
@@ -216,9 +219,9 @@ const HomeScreen = () => {
                 style={
                   isMobile
                     ? {
-                        height: "300px",
-                        marginTop: "40px",
-                      }
+                      height: "300px",
+                      marginTop: "40px",
+                    }
                     : null
                 }
               >
