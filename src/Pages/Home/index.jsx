@@ -263,7 +263,7 @@ const HomeScreen = () => {
             data-aos-duration="750"
             data-aos-offset={isMobile ? "200" : "250"}
           >
-            <h1>Susunan Kepengurusan IMG-ITB 2023/2024</h1>
+            <h1>Susunan Kepengurusan IMG-ITB 2024/2025</h1>
             <div
               style={
                 isMobile
