@@ -1,7 +1,7 @@
-import BPH from "../images/BPH.jpg";
-import DPM from "../images/DPM.png";
-import TIMSEN from "../images/TIMSEN.png";
-import GEOPOINT from "../images/GEOPOINT.jpg";
+import BPH from "../images/BPH21.jpg";
+import DPM from "../images/DPM21.png";
+import TIMSEN from "../images/TIMSEN1.png";
+import GEOPOINT from "../images/GP1.jpg";
 
 const SliderData = [
     {image: BPH,},//Organogram BPH

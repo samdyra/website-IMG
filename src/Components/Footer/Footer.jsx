@@ -78,10 +78,10 @@ const Footer = () => {
                 <div
                   style={isMobile ? null : { width: "220px" }}
                   onClick={() =>
-                    window.open("https://wa.me/6281316262145", "_blank")
+                    window.open("https://wa.me/62895360321396", "_blank")
                   }
                 >
-                  Hubungan Luar ITB : 081316262145 (Monica Andini)
+                  Hubungan Luar ITB : 0895360321396 (Fahrul Rozi Subakti)
                 </div>
               </div>
 
@@ -203,7 +203,7 @@ const Footer = () => {
 
             <div className={bottom}>
               <h1>© 2022 IMG-ITB | All rights reserved.</h1>
-              <h1>#SuarPengembangan</h1>
+              <h1>#PotensiEksistensi</h1>
             </div>
           </div>
         </div>
