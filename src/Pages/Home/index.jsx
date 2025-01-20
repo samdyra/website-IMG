@@ -8,7 +8,7 @@ import { OrbitControls, useGLTF } from "@react-three/drei";
 import { SliderText } from "../../assets/object/SliderData";
 import Carousel from "../../Components/Carousel/Carousel";
 import Gallery from "../../Components/Slider";
-import Ketum from "../../assets/images/ketum.png";
+import Ketum from "../../assets/images/ketumringgas.png";
 import { Modal } from "../../Components";
 import { isMobile } from "../../Helpers/mobileResponsive";
 import useLoadData from "../../Helpers/useLoadData";
@@ -319,15 +319,17 @@ const HomeScreen = () => {
           >
             <div>
               <p>
-                Kami adalah 306 insan muda yang percaya bahwa lebih baik mati
-                daripada menjadi seseorang yang berdamai dengan kekurangan.
-                Cobalah hentikan kami apabila tidak percaya! Niscaya api
-                semangatmu akan ikut berkobar bersama semangat jingga kami.
-                Semangat yang akan memantik hidupnya suatu suar untuk mencapai
-                perkembangan. Semangat yang akan mendorong kami, manusia-manusia
-                yang percaya bahwa kesempurnaan tidak mungkin digapai oleh
-                manusia, untuk merangkak tapak demi tapak demi menjadi satu
-                langkah lebih dekat dengan kesempuranaan.
+                Kami adalah 338 orang berdarah jingga yang memiliki potensi 
+                tak ternilai. Ya, setiap diri kami yang berdiri di sini mungkin 
+                tidak sepenuhnya sama. Tapi jika ada keraguan di hati kalian,
+                lihatlah ikatan kuat yang mengikat setiap jiwa kita! 
+                Lihatlah semangat kami layaknya api jingga yang akan terus berkobar!
+                IMG adalah ikatan yang agung, itu hal yang sering kami dengar
+                dan akan selamanya kami banggakan. Namun, sudah saatnya giliran IMG
+                yang membanggakan kamerad-kamerad di dalamnya. Sudah cukup Sang Jingga
+                di Ufuk Tenggara terlelap dalam tidurnya, karena Kebangkitan Eksistensi
+                akan segera tiba.Kembangkan Potensimu dan Tunjukkan Eksitensimu!
+                Karena IMG tidak akan pernah lebih keren dari kamerad-kamerad di dalamnya!
               </p>
             </div>
             <div
@@ -342,8 +344,8 @@ const HomeScreen = () => {
                 <img src={Ketum} alt="ketum" />
               </div>
               <div>
-                <h1>Zachary Adam Hidayat</h1>
-                <h2>Ketua Umum BPH IMG-ITB 2023/2024</h2>
+                <h1>Andrew Ringgas Naoki Hutasoit</h1>
+                <h2>Ketua Umum BPH IMG-ITB 2024/2025</h2>
               </div>
             </div>
           </div>
