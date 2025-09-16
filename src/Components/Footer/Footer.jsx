@@ -81,7 +81,7 @@ const Footer = () => {
                     window.open("https://wa.me/62895360321396", "_blank")
                   }
                 >
-                  Hubungan Luar ITB : 0895360321396 (Fahrul Rozi Subakti)
+                  Hubungan Luar ITB : 082289084189 (Firza Apta Zahranda)
                 </div>
               </div>
 
@@ -203,7 +203,7 @@ const Footer = () => {
 
             <div className={bottom}>
               <h1>© 2022 IMG-ITB | All rights reserved.</h1>
-              <h1>#PotensiEksistensi</h1>
+              <h1>#TitikIkat</h1>
             </div>
           </div>
         </div>
