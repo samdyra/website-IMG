@@ -78,7 +78,7 @@ const Footer = () => {
                 <div
                   style={isMobile ? null : { width: "220px" }}
                   onClick={() =>
-                    window.open("https://wa.me/62895360321396", "_blank")
+                    window.open("https://wa.me/6282289084189", "_blank")
                   }
                 >
                   Hubungan Luar ITB : 082289084189 (Firza Apta Zahranda)
