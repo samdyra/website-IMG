@@ -322,17 +322,15 @@ const HomeScreen = () => {
           >
             <div>
               <p>
-                Kami adalah 338 orang berdarah jingga yang memiliki potensi 
-                tak ternilai. Ya, setiap diri kami yang berdiri di sini mungkin 
-                tidak sepenuhnya sama. Tapi jika ada keraguan di hati kalian,
-                lihatlah ikatan kuat yang mengikat setiap jiwa kita! 
-                Lihatlah semangat kami layaknya api jingga yang akan terus berkobar!
-                IMG adalah ikatan yang agung, itu hal yang sering kami dengar
-                dan akan selamanya kami banggakan. Namun, sudah saatnya giliran IMG
-                yang membanggakan kamerad-kamerad di dalamnya. Sudah cukup Sang Jingga
-                di Ufuk Tenggara terlelap dalam tidurnya, karena Kebangkitan Eksistensi
-                akan segera tiba.Kembangkan Potensimu dan Tunjukkan Eksitensimu!
-                Karena IMG tidak akan pernah lebih keren dari kamerad-kamerad di dalamnya!
+                IMG-ITB menjadi titik ikat bagi anggotanya untuk melakukan internalisasi dan aktualisasi diri. Selayaknya titik ikat yang memiliki referensi yang pasti, IMG-ITB memiliki nilai-nilai yang dipegang teguh oleh anggotanya. Mulai dari Kemahasiswaan yang Berdasar, Pengembangan Keprofesian, Pengembangan Kepribadian, dan Kekeluargaan. 
+
+                Bersatu padu dalam satu ikatan dan semangat pengembangan. Ikatan jingga dari ufuk tenggara bumi Ganesha. Maka, mampus-mampuslah Kameradku! Mampuslah dalam segala pengembangan diri, pembelajaran abadi, dan kebermanfaatan yang selalu menjadi orientasi.
+
+                Karena diam bukanlah jawaban, berhentilah mengutuk keadaan, ambil bagian, dan buatlah perubahan Kamerad!
+
+                <br />IMG SAMPAI MAMPUS,
+                IMG SATU JIWA,
+                KITA KOMPAK PASTI JAYA!
               </p>
             </div>
             <div
