@@ -10,7 +10,7 @@ import { OrbitControls, useGLTF } from "@react-three/drei";
 import { SliderText } from "../../assets/object/SliderData";
 import Carousel from "../../Components/Carousel/Carousel";
 import Gallery from "../../Components/Slider";
-import Ketum from "../../assets/images/ketumringgas.png";
+import Ketum from "../../assets/images/ketum22.jpg";
 import { Modal } from "../../Components";
 import { isMobile } from "../../Helpers/mobileResponsive";
 import useLoadData from "../../Helpers/useLoadData";
@@ -263,7 +263,7 @@ const HomeScreen = () => {
             data-aos-duration="750"
             data-aos-offset={isMobile ? "200" : "250"}
           >
-            <h1>Susunan Kepengurusan IMG-ITB 2024/2025</h1>
+            <h1>Susunan Kepengurusan IMG-ITB 2025/2026</h1>
             <div
               style={
                 isMobile
@@ -322,17 +322,15 @@ const HomeScreen = () => {
           >
             <div>
               <p>
-                Kami adalah 338 orang berdarah jingga yang memiliki potensi 
-                tak ternilai. Ya, setiap diri kami yang berdiri di sini mungkin 
-                tidak sepenuhnya sama. Tapi jika ada keraguan di hati kalian,
-                lihatlah ikatan kuat yang mengikat setiap jiwa kita! 
-                Lihatlah semangat kami layaknya api jingga yang akan terus berkobar!
-                IMG adalah ikatan yang agung, itu hal yang sering kami dengar
-                dan akan selamanya kami banggakan. Namun, sudah saatnya giliran IMG
-                yang membanggakan kamerad-kamerad di dalamnya. Sudah cukup Sang Jingga
-                di Ufuk Tenggara terlelap dalam tidurnya, karena Kebangkitan Eksistensi
-                akan segera tiba.Kembangkan Potensimu dan Tunjukkan Eksitensimu!
-                Karena IMG tidak akan pernah lebih keren dari kamerad-kamerad di dalamnya!
+                IMG-ITB menjadi titik ikat bagi anggotanya untuk melakukan internalisasi dan aktualisasi diri. Selayaknya titik ikat yang memiliki referensi yang pasti, IMG-ITB memiliki nilai-nilai yang dipegang teguh oleh anggotanya. Mulai dari Kemahasiswaan yang Berdasar, Pengembangan Keprofesian, Pengembangan Kepribadian, dan Kekeluargaan. 
+
+                Bersatu padu dalam satu ikatan dan semangat pengembangan. Ikatan jingga dari ufuk tenggara bumi Ganesha. Maka, mampus-mampuslah Kameradku! Mampuslah dalam segala pengembangan diri, pembelajaran abadi, dan kebermanfaatan yang selalu menjadi orientasi.
+
+                Karena diam bukanlah jawaban, berhentilah mengutuk keadaan, ambil bagian, dan buatlah perubahan Kamerad!
+
+                <br />IMG SAMPAI MAMPUS,
+                IMG SATU JIWA,
+                KITA KOMPAK PASTI JAYA!
               </p>
             </div>
             <div
@@ -347,8 +345,8 @@ const HomeScreen = () => {
                 <img src={Ketum} alt="ketum" />
               </div>
               <div>
-                <h1>Andrew Ringgas Naoki Hutasoit</h1>
-                <h2>Ketua Umum BPH IMG-ITB 2024/2025</h2>
+                <h1>Andhika Prasetya Adi Nugroho</h1>
+                <h2>Ketua Umum BPH IMG-ITB 2025/2026</h2>
               </div>
             </div>
           </div>
