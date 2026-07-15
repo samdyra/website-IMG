@@ -78,10 +78,10 @@ const Footer = () => {
                 <div
                   style={isMobile ? null : { width: "220px" }}
                   onClick={() =>
-                    window.open("https://wa.me/6282289084189", "_blank")
+                    window.open("https://wa.me/6282119393727", "_blank")
                   }
                 >
-                  Hubungan Luar ITB : 082289084189 (Firza Apta Zahranda)
+                  Hubungan Luar ITB : 082119393727 (Labiibah)
                 </div>
               </div>
 
@@ -203,7 +203,7 @@ const Footer = () => {
 
             <div className={bottom}>
               <h1>© 2022 IMG-ITB | All rights reserved.</h1>
-              <h1>#TitikIkat</h1>
+              <h1>#MekarMengakar</h1>
             </div>
           </div>
         </div>
